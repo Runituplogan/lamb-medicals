@@ -8,12 +8,14 @@ import DiamondGlow from "./_components/DiamondGlow";
 import Dermaplanning from "./_components/Dermaplanning";
 import Peels from "./_components/Peels";
 import Image from "next/image";
+import EllebanaLashList from "./_components/EllebanaLashLift";
 
 const facialServicesTabItems = [
   { href: "#aqua-gold", label: "Aqua Gold" },
   { href: "#diamond-glow", label: "Diamond Glow" },
   { href: "#dermaplanning", label: "Dermaplanning" },
-  { href: "#Peels", label: "Peels" },
+  { href: "#peels", label: "Peels" },
+  { href: "#ellebana-lash-lift", label: "Ellebana Lash Lift" },
 ];
 
 export default function FacialServices() {
@@ -67,6 +69,7 @@ export default function FacialServices() {
       <DiamondGlow />
       <Dermaplanning />
       <Peels />
+      <EllebanaLashList/>
     </Fragment>
   );
 }

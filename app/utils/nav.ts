@@ -51,16 +51,16 @@ export const navItems: INavItems[] = [
       { href: "/services/memberships", label: "Memberships" },
     ],
   },
-  { href: "/subcription", label: "Subscription" },
-  { href: "/schedule-online", label: "Schedule Online" },
+  { href: "/services/memberships", label: "Subscription" },
   { href: "/blog", label: "Blog" },
-  {
-    href: "/shop",
-    label: "Shop",
-    subItems: [
-      { href: "/services/zo-skin", label: "ZO Skin" },
-      { href: "/services/skin-medica", label: "SkinMedica" },
-      { href: "/services/exosomes", label: "Exosomes - (Plated)" },
-    ],
-  },
+  { href: "/schedule-online", label: "Schedule Online" },
+  // {
+  //   href: "/shop",
+  //   label: "Shop",
+  //   subItems: [
+  //     { href: "/services/zo-skin", label: "ZO Skin" },
+  //     { href: "/services/skin-medica", label: "SkinMedica" },
+  //     { href: "/services/exosomes", label: "Exosomes - (Plated)" },
+  //   ],
+  // },
 ];

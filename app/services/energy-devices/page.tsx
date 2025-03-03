@@ -7,10 +7,10 @@ import Sofwave from "./components/sofwave";
 import Miconeedling from "./components/miconeedling";
 
 const energyDevicesTabItems = [
-  { href: "#softwave", label: "Sofwave" },
-  { href: "#ipl", label: "IPL" },
-  { href: "#miconeedling", label: "Miconeedling" },
   { href: "#ageject", label: "AgeJect" },
+  { href: "#sofwave", label: "Sofwave" },
+  { href: "#ipl", label: "IPL" },
+  { href: "#microneedling", label: "Miconeedling" },
 ];
 
 export default function EnergyDevices() {

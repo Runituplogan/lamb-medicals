@@ -7,7 +7,7 @@ import { miconeedlingFAQs } from "@/app/utils/data";
 
 export default function Miconeedling() {
   return (
-    <Wrapper id="ipl" className="grid gap-[4rem]">
+    <Wrapper id="microneedling" className="grid gap-[4rem]">
       <ServicesIntro
         title="Microneedling"
         description="RF MicroNeedling is becoming the new go-to for treating acne scars, helping to resurface textural irregularities, and tightening and firming aging skin by boosting collagen production. Microneedling causes very small controlled punctures into the skin causing your own immune system to rush to the area to encourage healing.  This process can help pores appear smaller, diminish wrinkles, and remodel the skin. "

@@ -34,7 +34,7 @@ const AboutSection = () => {
           data-aos="fade-up"
           className="mt-8 flex h-max items-center justify-center gap-6 font-poppins font-semibold md:justify-start md:gap-10"
         >
-          <Link href="#">
+          <Link href="/schedule-online">
             <button className="h-20 rounded-md bg-primary px-20 xs:px-12 text-sm text-white transition hover:opacity-70 sm:text-base md:px-14">
               Schedule Online
             </button>
