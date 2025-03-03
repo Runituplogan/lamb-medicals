@@ -14,7 +14,7 @@ const Testimonials = () => {
             Testimonials
           </p>
           <p className="text-[#032759] md:text-3xl font-bold">
-            Here’s what they say about VY
+            Here's what they say about VY
           </p>
         </div>
       </div>
@@ -74,10 +74,10 @@ const Testimonials = () => {
               <p className="text-sm">⭐⭐⭐⭐⭐</p>
             </div>
             <p className="p-2 text-[#323232] text-sm">
-              Really really happy with VY Construction’s work. We had dry rot on
+              Really really happy with VY Construction's work. We had dry rot on
               our siding and window trim. They were prompt to do an estimate and
               prompt to do the work. Crew was amazing — cleanup was spotless.
-              Quality of the work was excellent. I’d definitely recommend this
+              Quality of the work was excellent. I'd definitely recommend this
               company!
             </p>
           </div>

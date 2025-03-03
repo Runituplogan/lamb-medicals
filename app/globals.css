@@ -93,3 +93,8 @@ html {
   height: 16px;
   opacity: 1;
 }
+
+.inline-flex {
+  will-change: transform;
+  backface-visibility: hidden;
+}

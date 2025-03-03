@@ -63,4 +63,13 @@ export const navItems: INavItems[] = [
   //     { href: "/services/exosomes", label: "Exosomes - (Plated)" },
   //   ],
   // },
+  {
+    href: "/shop",
+    label: "Shop",
+    subItems: [
+      { href: "/services/zo-skin", label: "ZO Skin" },
+      { href: "/services/skin-medica", label: "SkinMedica" },
+      { href: "/services/exosomes", label: "Exosomes - (Plated)" },
+    ],
+  },
 ];

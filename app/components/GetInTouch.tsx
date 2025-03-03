@@ -47,10 +47,10 @@ const GetInTouch = () => {
   return (
     <section className="w-full px-5 xs:py-10 py-14 md:py-36">
       <div className="w-full mx-auto max-w-[1200px] flex flex-col md:flex-row gap-7 md:gap-8 lg:gap-20 xl:gap-28">
-        <div className="w-full">
+        <div className="md:w-[50%]">
           <h1
             data-aos="fade-up"
-            className="font-bold text-[32px] sm:text-2xl md:text-3xl xl:text-5xl py-7 lg:text-4xl text-[#282828] font-rubik"
+            className="font-bold text-[32px] sm:text-2xl md:text-3xl xl:text-5xl pb-7  lg:text-4xl text-[#282828] font-rubik"
           >
             Get in touch
           </h1>
@@ -81,10 +81,10 @@ const GetInTouch = () => {
             data-aos="fade-up"
           />
         </div>
-        <div data-aos="fade-up">
+        <div data-aos="fade-up " className="md:w-[50%] w-full">
           <form
             onSubmit={sendEmail}
-            className="w-full space-y-5 xs:space-y-10 font-work_sans"
+            className="w-full h-full flex flex-col justify-between space-y-5 xs:space-y-10 font-work_sans"
           >
             <input
               className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
@@ -109,7 +109,7 @@ const GetInTouch = () => {
               name="service"
             />
 
-            <button className="h-20 w-full xs:w-max px-10 lg:w-full bg-primary text-white font-medium font-poppins rounded-xl transition outline-none focus:outline-grey-100">
+            <button className="h-20 w-full xs:w-max px-10 lg:w-full bg-primary text-white font-medium font-poppins rounded-xl transition outline-none hover:bg-opacity-70">
               Submit
             </button>
           </form>

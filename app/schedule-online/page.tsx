@@ -26,7 +26,7 @@ const Page = () => {
           data-aos="fade-up"
           className="font-medium text-sm lg:text-[16px] text-grey-750 font-work_sans md:w-[90%] mt-5"
         >
-          Scheduling with Lamb Medicals is the first step toward a personalized
+          Scheduling with Lamb Medical is the first step toward a personalized
           care experience that puts you at the center.
         </p>
 
@@ -34,19 +34,19 @@ const Page = () => {
           <form className="w-full space-y-8 xs:space-y-10 font-work_sans">
             <div className="w-full">
               <label className="text-[#121212]" htmlFor="name">
-              Your Name <span className="text-primary">*</span>
+                Your Name <span className="text-primary">*</span>
               </label>
               <input
                 className="mt-3 px-5 py-3.5 w-full border border-[#DAE0E6] placeholder:text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
-                placeholder="Enter name..."
+                placeholder="Enter name…"
                 name="name"
                 id="name"
               />
             </div>
 
             <div className="w-full">
-              <label className="text-[#121212]" htmlFor="email">
-              Email Address <span className="text-primary">*</span>
+              <label className="text-[#121212]" htmlFor="name">
+                Email Address* <span className="text-primary">*</span>
               </label>
               <input
                 className="mt-3 px-5 py-3.5 w-full border border-[#DAE0E6] placeholder:text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"

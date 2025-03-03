@@ -58,6 +58,7 @@ const Navbar = () => {
     >
       <Wrapper>
         <div className="flex items-center justify-between px-6 py-3 md:px-8 md:py-4 lg:px-8">
+          {/* Desktop Navigation */}
           {/* Logo */}
           <Link href="/">
             <Image
@@ -68,12 +69,11 @@ const Navbar = () => {
               className="cursor-pointer"
             />
           </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden items-center gap-14 font-medium text-[#8E9BAE] lg:flex">
-            {navItems.map((item: INavItems, index) => (
-              <NavLink item={item} key={index} />
-            ))}
+          {navItems.map((item: INavItems, index) => (
+            <span className="hidden lg:flex items-center gap-6" key={index}>
+              <NavLink item={item} />
+            </span>
+          ))}
               <div className="relative group inline-block">
               <button className="flex items-center gap-2 text-[#8E9BAE] px-4 py-2 rounded-md">
                 Shop
@@ -85,19 +85,18 @@ const Navbar = () => {
                 <Link href="https://platedskinscience.com/?sca_ref=7318344.Bc0qwtup7w" className="block px-4 py-2 hover:bg-gray-200">Exosomes - (plated)</Link>
               </div>
             </div>
-          </div>
 
-          {/* Mobile Hamburger Menu */}
-          <div
-            className="z-50 cursor-pointer text-3xl lg:hidden"
-            onClick={() => setIsMobileNavOpen((prev) => !prev)}
-          >
-            {isMobileNavOpen ? (
-              <IoMdClose className="transition text-primary" />
-            ) : (
-              <IoMdMenu className="transition text-primary" />
-            )}
-          </div>
+           {/* Mobile Hamburger Menu */}
+        <div
+          className="z-50 cursor-pointer text-3xl lg:hidden"
+          onClick={() => setIsMobileNavOpen((prev) => !prev)}
+        >
+          {isMobileNavOpen ? (
+            <IoMdClose className="transition text-primary" />
+          ) : (
+            <IoMdMenu className="transition text-primary" />
+          )}
+        </div>
         </div>
 
         {/* Mobile Navigation Menu */}

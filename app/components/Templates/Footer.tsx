@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Wrapper from "../Wrapper";
-import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
+
 const Footer = () => {
   return (
     <footer className="w-full bg-primary px-5 pb-10 pt-14 font-work_sans text-white md:p-10 lg:p-14 ">
@@ -22,8 +25,11 @@ const Footer = () => {
             </p>
 
             <div className="mt-3 flex items-center justify-start gap-4">
-                <Link href="https://www.instagram.com/lambmedical/">
-              <button className="ease transition-all hover:opacity-55">
+              <Link
+                href=" https://www.instagram.com/lambmedical/"
+                target="_blank"
+                className="ease transition-all hover:opacity-55"
+              >
                 <svg
                   width="32"
                   height="32"
@@ -36,10 +42,13 @@ const Footer = () => {
                     fill="white"
                   />
                 </svg>
-              </button>
-                </Link>
-              <Link href="https://www.facebook.com/lambmedical/">
-              <button className="ease transition-all hover:opacity-55">
+              </Link>
+
+              <Link
+                href=" https://www.facebook.com/lambmedical/"
+                target="_blank"
+                className="ease transition-all hover:opacity-55"
+              >
                 <svg
                   width="25"
                   height="25"
@@ -52,7 +61,6 @@ const Footer = () => {
                     fill="white"
                   />
                 </svg>
-              </button>
               </Link>
             </div>
           </div>
@@ -84,22 +92,27 @@ const Footer = () => {
           <div className="w-full pl-0 text-[16px] md:text-base lg:pl-10 lg:text-lg xl:pl-20">
             <h2 className="font-semibold">Contact</h2>
 
-            <div className="mt-6 flex w-full flex-col space-y-4 md:text-base text-xs">
-              <div className="flex gap-2  items-center">
-                <MdPhone size={20}/> <span> <span className="font-bold">Phone: </span> 724-969-LAMB (5262)</span>
-              </div>
-              <div className="flex gap-2  items-center">
-                <MdPhone size={20}/> <span> <span className="font-bold">PHI Fax: </span> 724-821-9700</span>
-              </div>
-              <div className="flex gap-2  items-center">
-                <MdPhone size={20}/> <span> <span className="font-bold">Text:</span> 724-969-5262</span>
-              </div>
-              <div className="flex gap-2  items-center">
-                <MdEmail size={20}/> <span> <span className="font-bold">Email:</span> info@lambmedical.com</span>
-              </div>
-              <div className="flex gap-2  items-center">
-                <MdLocationOn size={20}/> <span> <span className="font-bold">Location:</span>3323 Washington Road, Suite 100 McMurray, PA 15317</span>
-              </div>
+            <div className="mt-6 flex w-full flex-col space-y-4">
+              <p className="flex items-center justify-start">
+                <FaPhoneAlt className="mr-4" />
+                Phone: 724-969-LAMB (5262)
+              </p>
+              <p className="flex items-center justify-start">
+                <FaPhoneAlt className="mr-4" />
+                PHI Fax: 724-821-9700
+              </p>
+              <p className="flex items-center justify-start">
+                <FaPhoneAlt className="mr-4" />
+                Text: 724-969-5262
+              </p>
+              <p className="flex items-center justify-start">
+                <MdEmail className="mr-4 text-xl" />
+                info@lambmedical.com
+              </p>
+              <p className="flex items-start justify-start">
+                <FaLocationDot className="mr-4 text-xl ml-1 mt-2" />
+                3323 Washington Road, Suite 100 McMurray, PA 15317
+              </p>
             </div>
           </div>
         </div>
