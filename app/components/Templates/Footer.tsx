@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Wrapper from "../Wrapper";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -22,7 +25,11 @@ const Footer = () => {
             </p>
 
             <div className="mt-3 flex items-center justify-start gap-4">
-              <button className="ease transition-all hover:opacity-55">
+              <Link
+                href=" https://www.instagram.com/lambmedical/"
+                target="_blank"
+                className="ease transition-all hover:opacity-55"
+              >
                 <svg
                   width="32"
                   height="32"
@@ -35,9 +42,13 @@ const Footer = () => {
                     fill="white"
                   />
                 </svg>
-              </button>
+              </Link>
 
-              <button className="ease transition-all hover:opacity-55">
+              <Link
+                href=" https://www.facebook.com/lambmedical/"
+                target="_blank"
+                className="ease transition-all hover:opacity-55"
+              >
                 <svg
                   width="25"
                   height="25"
@@ -50,7 +61,7 @@ const Footer = () => {
                     fill="white"
                   />
                 </svg>
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -82,20 +93,33 @@ const Footer = () => {
             <h2 className="font-semibold">Contact</h2>
 
             <div className="mt-6 flex w-full flex-col space-y-4">
-              <p className="">
+              <p className="flex items-center justify-start">
+                <FaPhoneAlt className="mr-4" />
+                Phone: 724-969-LAMB (5262)
+              </p>
+              <p className="flex items-center justify-start">
+                <FaPhoneAlt className="mr-4" />
+                PHI Fax: 724-821-9700
+              </p>
+              <p className="flex items-center justify-start">
+                <FaPhoneAlt className="mr-4" />
+                Text: 724-969-5262
+              </p>
+              <p className="flex items-center justify-start">
+                <MdEmail className="mr-4 text-xl" />
+                info@lambmedical.com
+              </p>
+              <p className="flex items-start justify-start">
+                <FaLocationDot className="mr-4 text-xl ml-1 mt-2" />
                 3323 Washington Road, Suite 100 McMurray, PA 15317
               </p>
-              <p className="">info@lambmedical.com</p>
-              <p className="">Phone: 724-969-LAMB (5262)</p>
-              <p className="">PHI Fax: 724-821-9700</p>
-              <p className="">Text: 724-969-5262</p>
             </div>
           </div>
         </div>
 
         <div className="mt-10 w-full border-t border-white pb-10 pt-16 text-center">
           <p className="text-[16px] text-white sm:text-sm lg:text-base">
-            Copyright © 2025 Lamb Medical all rights reserved
+            © 2025 Lamb Medical. All rights reserved.
           </p>
         </div>
       </Wrapper>

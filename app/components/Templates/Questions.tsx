@@ -19,9 +19,9 @@ const Questions = () => {
               so here are a few, answered.
             </p>
 
-            <button className="h-20 xs:h-16 rounded-xl bg-primary text-white font-poppins mt-8 px-7 w-full xs:w-max font-semibold">
+            {/* <button className="h-20 xs:h-16 rounded-xl bg-primary text-white font-poppins mt-8 px-7 w-full xs:w-max font-semibold">
               Find More FAQs
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

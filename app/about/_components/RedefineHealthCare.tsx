@@ -15,7 +15,7 @@ const RedefineHealthCare = () => {
             data-aos="fade-up"
             className="text-white lg:block hidden font-rubik font-semibold text-6xl xl:text-[70px] leading-tight"
           >
-            Let’s Redefine
+            Let's Redefine
             <br /> Healthcare
             <br /> Together
           </h1>
@@ -23,7 +23,7 @@ const RedefineHealthCare = () => {
             data-aos="fade-up"
             className="lg:hidden block text-white font-rubik font-semibold text-[32px] sm:text-5xl md:text-6xl lg:text-7xl leading-loose"
           >
-            Let’s Redefine Healthcare Together
+            Let's Redefine Healthcare Together
           </h1>
           <p
             data-aos="fade-up"
@@ -39,12 +39,12 @@ const RedefineHealthCare = () => {
             data-aos="fade-up"
             className="xs:flex hidden justify-start items-center gap-5 mt-10 md:mt-16 font-poppins font-semibold"
           >
-            <Link href="#">
+            <Link href="/schedule-online">
               <button className="text-white h-20 px-12 md:px-14 rounded-md bg-primary transition hover:opacity-70 sm:text-base text-sm">
                 Book Online
               </button>
             </Link>
-            <Link href="#">
+            <Link href="https://squareup.com/gift/7K57RX20Y6T10/order" >
               <button className="bg-white h-20 px-12 md:px-14 rounded-md text-primary transition hover:opacity-70 sm:text-base text-sm">
                 Gift Cards
               </button>

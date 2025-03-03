@@ -26,7 +26,7 @@ const Page = () => {
           data-aos="fade-up"
           className="font-medium text-sm lg:text-[16px] text-grey-750 font-work_sans md:w-[90%] mt-5"
         >
-          Scheduling with Lamb Medicals is the first step toward a personalized
+          Scheduling with Lamb Medical is the first step toward a personalized
           care experience that puts you at the center.
         </p>
 
@@ -34,11 +34,11 @@ const Page = () => {
           <form className="w-full space-y-8 xs:space-y-10 font-work_sans">
             <div className="w-full">
               <label className="text-[#121212]" htmlFor="name">
-                Your name <span className="text-primary">*</span>
+                Your Name <span className="text-primary">*</span>
               </label>
               <input
                 className="mt-3 px-5 py-3.5 w-full border border-[#DAE0E6] placeholder:text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
-                placeholder="Name"
+                placeholder="Enter name…"
                 name="name"
                 id="name"
               />
@@ -46,11 +46,11 @@ const Page = () => {
 
             <div className="w-full">
               <label className="text-[#121212]" htmlFor="name">
-                Email address <span className="text-primary">*</span>
+                Email Address* <span className="text-primary">*</span>
               </label>
               <input
                 className="mt-3 px-5 py-3.5 w-full border border-[#DAE0E6] placeholder:text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
-                placeholder="johndoe@company.com"
+                placeholder="Enter email…"
                 id="email"
                 type="email"
                 name="email"
@@ -86,7 +86,7 @@ const Page = () => {
               <textarea
                 rows={4}
                 className="mt-3 px-5 py-3.5 w-full border border-[#DAE0E6] placeholder:text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
-                placeholder="Write here..."
+                placeholder="Write your message here…"
                 name="service"
               />
             </div>

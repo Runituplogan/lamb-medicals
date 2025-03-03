@@ -15,6 +15,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { ReactQueryProvider } from "./request/ReactQueryProvider";
+import { HomePageProvider } from "./contexts/homepageContext";
 
 export const metadata: Metadata = {
   title: "Lamb Medical Aestheics",
@@ -61,16 +62,17 @@ export default function RootLayout({
         className={`${workSans.variable} ${rubik.variable} ${nunito_sans.variable} ${poppins.variable}`}
       >
         <ReactQueryProvider>
-          <Navbar />
-          <ToastContainer
-            autoClose={2000}
-            hideProgressBar={true}
-            theme="colored"
-          />
-          <Preloader />
-          <AOSInitializer /> {/* Initialize AOS */}
-          {children}
-          <Footer />
+          <HomePageProvider>
+            <Navbar />
+            <ToastContainer
+              autoClose={2000}
+              hideProgressBar={true}
+              theme="colored"
+            />
+            <AOSInitializer /> {/* Initialize AOS */}
+            {children}
+            <Footer />
+          </HomePageProvider>
         </ReactQueryProvider>
       </body>
     </html>

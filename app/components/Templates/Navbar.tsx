@@ -58,6 +58,7 @@ const Navbar = () => {
     >
       <Wrapper>
         <div className="flex items-center justify-between px-6 py-3 md:px-8 md:py-4 lg:px-8">
+          {/* Desktop Navigation */}
           {/* Logo */}
           <Link href="/">
             <Image
@@ -68,25 +69,23 @@ const Navbar = () => {
               className="cursor-pointer"
             />
           </Link>
+          {navItems.map((item: INavItems, index) => (
+            <span className="hidden lg:flex items-center gap-6" key={index}>
+              <NavLink item={item} />
+            </span>
+          ))}
 
-          {/* Desktop Navigation */}
-          <div className="hidden items-center gap-14 font-medium text-[#8E9BAE] lg:flex">
-            {navItems.map((item: INavItems, index) => (
-              <NavLink item={item} key={index} />
-            ))}
-          </div>
-
-          {/* Mobile Hamburger Menu */}
-          <div
-            className="z-50 cursor-pointer text-3xl lg:hidden"
-            onClick={() => setIsMobileNavOpen((prev) => !prev)}
-          >
-            {isMobileNavOpen ? (
-              <IoMdClose className="transition text-primary" />
-            ) : (
-              <IoMdMenu className="transition text-primary" />
-            )}
-          </div>
+           {/* Mobile Hamburger Menu */}
+        <div
+          className="z-50 cursor-pointer text-3xl lg:hidden"
+          onClick={() => setIsMobileNavOpen((prev) => !prev)}
+        >
+          {isMobileNavOpen ? (
+            <IoMdClose className="transition text-primary" />
+          ) : (
+            <IoMdMenu className="transition text-primary" />
+          )}
+        </div>
         </div>
 
         {/* Mobile Navigation Menu */}

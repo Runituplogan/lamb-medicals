@@ -50,7 +50,8 @@ export const all_services: IServices[] = [
   {
     title: "Sexual Wellness",
     bgImgSrc: "/21.png",
-    description: "",
+    description:
+      "For services like; PRP Breast Rejuvenation, Vampire Wing Lift, O-Shot, MonaLisa Touch, and miraDry",
     link: "/services/sexual-wellness",
   },
   {

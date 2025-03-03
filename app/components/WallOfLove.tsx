@@ -1,10 +1,54 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { IWallLove, wall_of_love } from "../data/wall_of_love";
 
 const WallOfLove = () => {
+  const [slides] = useState([...wall_of_love, ...wall_of_love]); // Static duplicated array
+  const controls = useAnimation();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const itemWidth = useRef(0);
+  const animation = useRef<ReturnType<typeof controls.start>>(null);
+
+  // Calculate card width and setup animationf
+  useEffect(() => {
+    const calculateWidth = () => {
+      if (containerRef.current) {
+        const card = containerRef.current.querySelector(".card-item");
+        if (card) {
+          const style = window.getComputedStyle(card);
+          itemWidth.current =
+            card.clientWidth +
+            parseFloat(style.marginLeft) +
+            parseFloat(style.marginRight);
+        }
+      }
+    };
+
+    calculateWidth();
+    window.addEventListener("resize", calculateWidth);
+
+    // Start infinite animation
+    const startAnimation = () => {
+      animation.current = controls.start({
+        x: [-itemWidth.current * (slides.length / 2), 0],
+        transition: {
+          duration: 20,
+          ease: "linear",
+          repeat: Infinity,
+        },
+      });
+    };
+
+    startAnimation();
+
+    return () => {
+      window.removeEventListener("resize", calculateWidth);
+      //      animation.current?.stop(); // Stop animation on unmount
+    };
+  }, [controls, slides.length]);
+
   return (
     <section className="h-full w-full bg-white py-28 md:pb-32 md:pt-56">
       <h1
@@ -14,49 +58,27 @@ const WallOfLove = () => {
         Wall of love
       </h1>
 
-      <div className="mt-20 h-full w-full" data-aos="fade-up">
-        <Swiper
-          className="h-full"
-          autoplay={true}
-          modules={[Autoplay]}
-          speed={3000}
-          navigation={false}
-          scrollbar={false}
-          spaceBetween={30}
-          breakpoints={{
-            320: {
-              slidesPerView: 1.3,
-            },
-            640: {
-              slidesPerView: 1.6,
-            },
-            768: {
-              slidesPerView: 1.6,
-            },
-            1024: {
-              slidesPerView: 2.6,
-            },
-          }}
-          // how many slides to show
-          slidesPerView={3.6}
-        >
-          {wall_of_love.map((item, index) => (
-            <SwiperSlide key={index} className="h-full py-4">
-              <Card
-                avatar={item.avatar}
-                comment={item.comment}
-                name={item.name}
-                occupation={item.occupation}
-                social={item.social}
-                username={item.username}
-              />
-            </SwiperSlide>
+      <div
+        className="mt-20 h-full w-full overflow-hidden"
+        data-aos="fade-up"
+        ref={containerRef}
+      >
+        <motion.div className="flex space-x-8" animate={controls}>
+          {slides.map((item, index) => (
+            <div
+              key={`${item.username}-${index}`}
+              className="card-item h-full py-4 flex-shrink-0"
+            >
+              <Card {...item} />
+            </div>
           ))}
-        </Swiper>
+        </motion.div>
       </div>
     </section>
   );
 };
+
+// Keep Card component exactly the same as your original code
 
 const Card = ({
   avatar,
@@ -67,7 +89,7 @@ const Card = ({
   username,
 }: IWallLove) => {
   return (
-    <div className="h-full w-full rounded-md bg-white px-5 py-7 font-work_sans shadow-md shadow-[#00000012] lg:px-8">
+    <div className="h-full w-[500px] rounded-md bg-white px-5 py-7 font-work_sans shadow-md shadow-[#00000012] lg:px-8">
       <div className="gap3 flex w-full items-center justify-between">
         <div className="flex items-center justify-start gap-3">
           <img src={avatar} alt={name} />

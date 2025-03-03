@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const BuilidngTrust = () => {
   return (
-    <section className="h-full w-full py-10 lg:py-32 xl:pb-44 xl:pt-44 px-0 md:px-10">
+    <section className="h-full w-full py-10 !pt-0 lg:py-32 xl:pb-44 xl:pt-44 px-0 md:px-10">
       <div className="w-full">
         <div className="mx-auto w-full max-w-[1000px] p-8 py-14 sm:p-10 md:px-14">
           <h1
