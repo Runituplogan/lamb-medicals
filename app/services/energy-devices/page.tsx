@@ -8,7 +8,9 @@ import Sofwave from "./components/sofwave";
 import Miconeedling from "./components/miconeedling";
 import { useEnergyDevicesPage } from "@/app/contexts/energyDevices"; 
 import Preloader from "@/app/components/Preloader";
-import { AgejectType } from "./types/energyDevicesCustomType";
+import { AgeJectFaqs, AgejectType, IPLFAQs, IPLType, MicroneedlingFaq, MicroneedlingType, SofwaveFaqs, SofwaveType } from "./types/energyDevicesCustomType";
+import ServicesFAQ from "../components/services-faq";
+import { agejectFAQs } from "@/app/utils/data";
 const energyDevicesTabItems = [
   { href: "#ageject", label: "AgeJect" },
   { href: "#sofwave", label: "Sofwave" },
@@ -26,6 +28,27 @@ export default function EnergyDevices() {
     );
     const ageject: AgejectType | undefined = energyDevicesPageData.content.find(
       (item: any) => item.type === "section1"
+    );
+    const agejectFaqs: AgeJectFaqs | undefined = energyDevicesPageData.content.find(
+      (item: any) => item.type === "section2"
+    );
+    const sofwave: SofwaveType | undefined = energyDevicesPageData.content.find(
+      (item: any) => item.type === "section3"
+    );
+    const sofwaveFaqs: SofwaveFaqs | undefined = energyDevicesPageData.content.find(
+      (item: any) => item.type === "section4"
+    );
+    const ipl: IPLType | undefined = energyDevicesPageData.content.find(
+      (item: any) => item.type === "section5"
+    );
+    const iplFaq: IPLFAQs | undefined = energyDevicesPageData.content.find(
+      (item: any) => item.type === "section6"
+    );
+    const microneedling: MicroneedlingType | undefined = energyDevicesPageData.content.find(
+      (item: any) => item.type === "section7"
+    );
+    const microneedlingFaq: MicroneedlingFaq | undefined = energyDevicesPageData.content.find(
+      (item: any) => item.type === "section8"
     );
   return (
     <Fragment>
@@ -74,9 +97,29 @@ export default function EnergyDevices() {
       </div>
       <ServicesTab tabItems={energyDevicesTabItems} />
       <AgeJect data={ageject} />
-      <Sofwave />
-      <IPL />
-      <Miconeedling />
+      <ServicesFAQ
+        title={`${agejectFaqs?.headerText}`}
+        description={`${agejectFaqs?.textBody}`}
+        faqs={agejectFaqs?.questions}
+      />
+      <Sofwave data={sofwave} />
+      <ServicesFAQ
+        title={`${sofwaveFaqs?.headerText}`}
+        description={`${sofwaveFaqs?.textBody}`}
+        faqs={sofwaveFaqs?.questions}
+      />
+      <IPL data={ipl}/>
+      <ServicesFAQ
+        title={`${iplFaq?.headerText}`}
+        description={`${iplFaq?.textBody}`}
+        faqs={iplFaq?.questions}
+      />
+      <Miconeedling data={microneedling} />
+      <ServicesFAQ
+        title={`${microneedlingFaq?.headerText}`}
+        description={`${microneedlingFaq?.textBody}`}
+        faqs={microneedlingFaq?.questions}
+      />
     </Fragment>
   );
 }
