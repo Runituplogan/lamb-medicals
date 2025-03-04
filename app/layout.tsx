@@ -19,6 +19,7 @@ import { HomePageProvider } from "./contexts/homepageContext";
 import { FacialServicesPageProvider } from "./contexts/facialService";
 import { AboutPageProvider } from "./contexts/aboutPageContext";
 import { EnergyDevicesPageProvider } from "./contexts/energyDevices";
+import { InjectableTreatmentPageProvider } from "./contexts/injectableTreatmentContext";
 
 export const metadata: Metadata = {
   title: "Lamb Medical Aestheics",
@@ -67,6 +68,7 @@ export default function RootLayout({
         <ReactQueryProvider>
           <HomePageProvider>
           <AboutPageProvider>
+            <InjectableTreatmentPageProvider>
             <FacialServicesPageProvider>
               <EnergyDevicesPageProvider>
               <Navbar />
@@ -80,6 +82,7 @@ export default function RootLayout({
               <Footer />
               </EnergyDevicesPageProvider>
             </FacialServicesPageProvider>
+            </InjectableTreatmentPageProvider>
             </AboutPageProvider>
           </HomePageProvider>
         </ReactQueryProvider>

@@ -26,7 +26,6 @@ export function FacialServicesPageProvider({ children }: { children: React.React
 
   // Handle errors
   if (errorPageData) {
-    console.error("Error fetching data:", errorPageData);
     return <div>Something went wrong</div>;
   }
 

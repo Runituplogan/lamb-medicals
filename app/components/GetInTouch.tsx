@@ -5,7 +5,7 @@ import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 
 interface getInTouchProps {
-  data: HomepageSection7;
+  data?: HomepageSection7;
 }
 
 const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
@@ -36,13 +36,11 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
       )
       .then(
         (response) => {
-          console.log("SUCCESS!", response.status, response.text);
           setLoading(false);
           setFormData({ name: "", email: "", phone: "", message: "" });
           toast.success("Request sent successfully!");
         },
         (error) => {
-          console.log("FAILED...", error);
           setLoading(false);
         }
       );

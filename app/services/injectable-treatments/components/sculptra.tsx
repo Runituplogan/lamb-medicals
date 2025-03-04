@@ -4,32 +4,34 @@ import ServicesIntro from "../../components/services-intro";
 import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
 import { sculptraFAQs } from "@/app/utils/data";
+import { Section5 } from "../types/InjectableTreatmentType";
 
-export default function Sculptra() {
+interface SculptraProps {
+  data: Section5;
+}
+
+const Sculptra: React.FC<SculptraProps> = ({ data }) => {
   return (
     <Wrapper id="sculptra" className="grid gap-[4rem]">
-      <ServicesIntro
-        title="Sculptra"
-        description="Good news! It’s possible to boost your body’s natural collagen production! Sculptra Aesthetic works subtly and gradually over time within the deep, dermis layer of the skin, correcting shallow to deep facial wrinkles and folds such as smile lines for a more youthful-looking appearance. Sculptra Aesthetic helps stimulate your skin’s own natural collagen production over time, helping to reinforce skin’s inner structure and increase facial volume that has been lost to aging"
-      />
-
+      <ServicesIntro title={data?.headerText} description={data?.bodyText} />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[50rem]">
         <div className="relative h-full col-span-full" data-aos="fade-right">
           <Image
-            src="/images/injectable-treatments/sculptra.png"
+            src={data?.image}
             alt=""
             fill
             className="absolute object-cover xs:block hidden"
+            unoptimized
           />
           <img
-            src="/images/injectable-treatments/sculptra.png"
+            src={data?.image}
             alt="sculptra"
             className="xs:hidden block object-cover "
           />
         </div>
       </ServicesAfterEffects>
       <ServicesAfterEffects
-        title="Before/After Photos"
+        title={data?.subsection?.headerText}
         className="grid-cols-1 grid-rows-none [&>figcaption]:text-left"
       >
         <div
@@ -88,4 +90,6 @@ export default function Sculptra() {
       />
     </Wrapper>
   );
-}
+};
+
+export default Sculptra;
