@@ -51,7 +51,7 @@ export default function FacialServices() {
     (item: any) => item.type === "section6"
   );
   return (
-    <Fragment>
+    <Fragment> 
       <div className="hidden w-full xs:block">
         <ServicesHero
          // image="facial-services/facial-service-image.png"

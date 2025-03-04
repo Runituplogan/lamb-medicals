@@ -55,7 +55,6 @@ const MeetTheTeam: React.FC<MeetTheTeamSectionProps> = ({data}) => {
     remainingWidth / inactiveCount
   );
 
-  console.log(data?.teamMembers)
 
   return (
     <section className="w-full py-20 lg:py-28">

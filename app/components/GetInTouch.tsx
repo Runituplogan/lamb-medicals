@@ -36,13 +36,11 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
       )
       .then(
         (response) => {
-          console.log("SUCCESS!", response.status, response.text);
           setLoading(false);
           setFormData({ name: "", email: "", phone: "", message: "" });
           toast.success("Request sent successfully!");
         },
         (error) => {
-          console.log("FAILED...", error);
           setLoading(false);
         }
       );
