@@ -9,44 +9,58 @@ import {
   sofwaveFAQs,
   sofwaveSatisfactions,
 } from "@/app/utils/data";
+import { SofwaveType } from "../types/energyDevicesCustomType";
 
-export default function Sofwave() {
+
+interface SoftwaveProps{
+  data?:SofwaveType
+}
+const  Sofwave:React.FC<SoftwaveProps>=({data})=> {
   return (
     <Wrapper id="sofwave" className="grid gap-[4rem]">
       <ServicesIntro
-        title="The Sofwave™ Simple Solution"
-        description="From the founders of the aesthetic industry, Sofwave™ Medical brings a novel approach to skin tightening using SUPERB™ Synchronous Ultrasound Parallel Beam Technology.
-        Sofwave™’s breakthrough technology delivers a new standard of care to aesthetic treatments, providing safe aesthetic treatments for patients."
+        title={`${data?.headerText}`}
+        description={`${data?.bodyText}`}
       />
       <ServicesBenefits
-        title="SMART Yet SIMPLE Skin Treatment"
-        benefits={sofwaveBenefits}
+        title={`${data?.[0].headerText}`}
+        benefits={data?.[0].bodyText??[]}
       />
       <figure
         className="relative h-[62.3rem] overflow-hidden rounded xs:block hidden"
         data-aos="zoom-in"
       >
-        <Image
+        {/* <Image
           src="/images/energy-devices/softwave.png"
           alt=""
           role="presentation"
           fill
           className="object-cover"
+        /> */}
+        {data?.[0].images.map((item,index)=>
+        <Image
+         key={index}
+         src={`/${item}`}
+          alt=""
+          role="presentation"
+          fill
+          className="object-cover"
         />
+        )}
       </figure>
-
+{/* 
       <img
         data-aos="zoom-in"
         src="/images/energy-devices/softwave-mobile.png"
         alt="softwave-mobile"
         className="object-cover xs:hidden block"
-      />
+      /> */}
 
       <ServicesBenefits
-        title="HIGH Patient Satisfaction"
-        benefits={sofwaveSatisfactions}
+        title={`${data?.[1].headerText}`}
+        benefits={data?.[1].bodyText??[]}
       />
-      <p
+      {/* <p
         className="text-grey-750 font-work_sans text-[14px] xs:text-md font-medium leading-[4rem] tracking-[0.02em] text-opacity-80"
         data-aos="fade-right"
       >
@@ -58,41 +72,46 @@ export default function Sofwave() {
         Sofwave’s unique ultrasound delivery, stimulates the production of new
         collagen and elastin which leads to the reduction in fine lines and
         wrinkles.
-      </p>
+      </p> */}
       <ServicesAfterEffects className="xs:grid-cols-2">
-        <div className="relative h-full" data-aos="fade-left">
-          <Image
-            src="/images/energy-devices/sofwave-before-and-after-1.png"
-            alt="sofwave-before-and-after-1"
-            fill
-            className="absolute object-cover xs:block hidden"
-          />
-          <img
-            src="/images/energy-devices/sofwave-before-and-after-1-2.png"
-            alt=""
-            className="object-cover block xs:hidden"
-          />
-        </div>
-        <img
+        {
+          data?.[1].images.map((item,i)=>
+          <div className="relative h-full" data-aos="fade-left" key={i}>
+            <Image
+              
+              src={`/${item}`}
+              alt="sofwave-before-and-after-1"
+              fill
+              className="absolute object-cover xs:block hidden"
+            />
+            {/* <img
+              src="/images/energy-devices/sofwave-before-and-after-1-2.png"
+              alt=""
+              className="object-cover block xs:hidden"
+            /> */}
+          </div>
+          )
+        }
+        {/* <img
           data-aos="zoom-in"
           src="/images/energy-devices/softwave-mobile.png"
           alt="softwave-mobile"
           className="object-cover xs:hidden block"
-        />
-        <div className="relative h-full" data-aos="fade-right">
+        /> */}
+        {/* <div className="relative h-full" data-aos="fade-right">
           <Image
             src="/images/energy-devices/sofwave-before-and-after-2.png"
             alt="sofwave-before-and-after-2"
             fill
             className="absolute object-cover xs:block hidden"
           />
-          {/* <img
+          <img
             src="/images/energy-devices/sofwave-before-and-after-2.png"
             alt="sofwave-before-and-after"
             className="object-cover block xs:hidden"
-          /> */}
-        </div>
-        <div className="relative h-full" data-aos="fade-left">
+          />
+        </div> */}
+        {/* <div className="relative h-full" data-aos="fade-left">
           <Image
             src="/images/energy-devices/sofwave-before-and-after-3.png"
             alt="sofwave-before-and-after-3"
@@ -104,8 +123,8 @@ export default function Sofwave() {
             alt="sofwave-before-and-after-3"
             className="object-cover block xs:hidden"
           />
-        </div>
-        <div className="relative h-full" data-aos="fade-right">
+        </div> */}
+        {/* <div className="relative h-full" data-aos="fade-right">
           <Image
             src="/images/energy-devices/sofwave-before-and-after-4.png"
             alt=""
@@ -117,13 +136,10 @@ export default function Sofwave() {
             alt="sofwave-before-and-after-4"
             className="object-cover block xs:hidden"
           />
-        </div>
+        </div> */}
       </ServicesAfterEffects>
-      <ServicesFAQ
-        title="Sofwave FAQs: Your questions answered"
-        description="Curious about Sofwave? Get answers to common questions about how it works, what to expect, and how it can help you feel confident"
-        faqs={sofwaveFAQs}
-      />
     </Wrapper>
   );
 }
+
+export default Sofwave
