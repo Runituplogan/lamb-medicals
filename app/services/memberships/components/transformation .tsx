@@ -48,9 +48,7 @@ export default function Transformation() {
             className="block xs:hidden mt-16"
           />
         </div>
-        <BookNowButton className="self-start mt-10" data-aos="fade-up">
-          Get Touch
-        </BookNowButton>
+       
       </figure>
     </Wrapper>
   );

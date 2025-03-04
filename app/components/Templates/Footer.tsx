@@ -6,7 +6,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-primary px-5 pb-10 pt-14 font-work_sans text-white md:p-10 lg:p-14">
+    <footer className="w-full bg-primary px-5 pb-10 pt-14 font-work_sans text-white md:p-10 lg:p-14 ">
       <Wrapper>
         <div className="grid w-full gap-5 gap-y-10 sm:grid-cols-2 sm:gap-7 md:grid-cols-3 lg:gap-10 xl:gap-20">
           <div className="w-full">

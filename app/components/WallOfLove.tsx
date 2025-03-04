@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { IWallLove } from "../data/wall_of_love";
 
 interface Section5Props {
-  data: HomepageSection5;
+  data?: HomepageSection5;
 }
 
 const WallOfLove: React.FC<Section5Props> = ({ data }) => {

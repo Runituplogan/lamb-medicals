@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BookNowButton from "../../components/book-now-button";
 import ServiceImageContentLayout from "../../components/service-image-content-layout";
 
@@ -15,7 +16,9 @@ export default function ElectronicCommunication() {
         and scheduling. For more information about these communication tools,
         please click the button below
       </p>
+      <Link href="/schedule-online">
       <BookNowButton className="self-start">Learn more</BookNowButton>
+      </Link>
     </ServiceImageContentLayout>
   );
 }

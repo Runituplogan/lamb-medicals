@@ -3,22 +3,14 @@
 import { IoAddCircleSharp } from "react-icons/io5";
 import { IoIosCloseCircle } from "react-icons/io";
 import { useEffect, useRef, useState } from "react";
+import { IFaq } from "@/app/data/faq";
 
-interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-interface FAQProps {
-  data: HomepageSection6;
-}
-
-const FAQ: React.FC<FAQProps> = ({ data }) => {
+const FAQ = ({ data }: { data?: IFaq[] }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
   const handleToggle = (index: number) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+  
 
   return (
     <section className="w-full bg-white py-10 md:py-20 px-8 md:px-10 xl:px-5">
@@ -26,7 +18,7 @@ const FAQ: React.FC<FAQProps> = ({ data }) => {
         data-aos="fade-up"
         className="flex w-full max-w-[1200px] flex-col gap-7 divide-y-[0.4px] divide-[#D9D9D9] md:gap-10 mx-auto"
       >
-        {data?.faqs?.map((item, index) => (
+        {data?.map((item: IFaq, index) => (
           <FaqItemButton
             key={index}
             item={item}
@@ -40,7 +32,7 @@ const FAQ: React.FC<FAQProps> = ({ data }) => {
 };
 
 interface FaqItemButtonProps {
-  item: FAQItem;
+  item: IFaq;
   isExpanded: boolean;
   onToggle: () => void;
 }
@@ -53,7 +45,7 @@ const FaqItemButton: React.FC<FaqItemButtonProps> = ({ item, isExpanded, onToggl
     if (contentRef.current) {
       setHeight(contentRef.current.scrollHeight);
     }
-  }, [isExpanded, item.answer]);
+  }, [isExpanded, item?.answer]);
 
   return (
     <div className={`${isExpanded ? "" : "pb-8"} w-full pt-5`}>
