@@ -74,7 +74,7 @@ const Navbar = () => {
               <NavLink item={item} />
             </span>
           ))}
-              <div className="relative group inline-block">
+              {/* <div className="relative group inline-block">
               <button className="flex items-center gap-2 text-[#8E9BAE] px-4 py-2 rounded-md">
                 Shop
                 <FaChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
@@ -84,7 +84,7 @@ const Navbar = () => {
                 <Link href="https://lambmedical.brilliantconnections.com/" className="block px-4 py-2 hover:bg-gray-200">SkinMedica</Link>
                 <Link href="https://platedskinscience.com/?sca_ref=7318344.Bc0qwtup7w" className="block px-4 py-2 hover:bg-gray-200">Exosomes - (plated)</Link>
               </div>
-            </div>
+            </div> */}
 
            {/* Mobile Hamburger Menu */}
         <div
@@ -176,7 +176,7 @@ const Navbar = () => {
               </div>
               
             ))}
-              <div className="relative group flex flex-col items-center">
+              {/* <div className="relative group flex flex-col items-center">
                 <button className="flex items-center gap-2 text-[#8E9BAE] px-4 py-2 rounded-md">
                   Shop
                   <FaChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
@@ -186,7 +186,7 @@ const Navbar = () => {
                   <Link href="https://lambmedical.brilliantconnections.com/" className="block px-4 py-2 hover:bg-gray-200">SkinMedica</Link>
                   <Link href="https://platedskinscience.com/?sca_ref=7318344.Bc0qwtup7w" className="block px-4 py-2 hover:bg-gray-200">Exosomes - (plated)</Link>
                 </div>
-            </div>
+            </div> */}
             </div>
           </div>
         )}

@@ -5,12 +5,16 @@ import ServicesBenefits from "../../components/services-benefits";
 import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
 import { agejectBenefits, agejectFAQs } from "@/app/utils/data";
+import { AgejectType } from "../types/energyDevicesCustomType";
 
-export default function AgeJect() {
+interface AgeJectProps {
+  data?:AgejectType
+}
+const AgeJect:React.FC<AgeJectProps>=({data})=> {
   return (
     <Wrapper id="ageject" className="grid gap-[4rem] pt-14">
       <ServicesIntro
-        title="Ageject"
+        title={`${data?.headerText}`}
         description="AgeJet is a dramatically different, safe, and FDA-cleared skin resurfacing procedure for the face, neck, décolletage, hands, body and external vaginal area. Just one AgeJet treatment will significantly improve skin quality. It is unique in its ability to safely treat the upper and lower eyelids resulting it what many people describe as a “non-surgical blepharoplasty”. Unlike laser procedures which require corneal shields, the plasma energy delivered to the eyelid tissue does not penetrate through to the eye, making this procedure incredibly safe all the way up to the eyelash margin. The results are consistent and dramatic leaving you with a natural more refreshed appearance."
       />
       <figure
@@ -88,3 +92,6 @@ export default function AgeJect() {
     </Wrapper>
   );
 }
+
+
+export default AgeJect

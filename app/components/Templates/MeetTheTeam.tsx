@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { MdChevronRight } from "react-icons/md";
+import { MeetTeamType } from "@/app/about/types/aboutCustomTypes";
 
 interface TeamMember {
   name: string;
@@ -66,7 +67,11 @@ const teamMembers: TeamMember[] = [
 const MAX_ACTIVE_WIDTH = 300;
 const MAX_INACTIVE_WIDTH = 150;
 
-const MeetTheTeam: React.FC = () => {
+interface MeetTheTeamSectionProps {
+  data?: MeetTeamType;
+}
+
+const MeetTheTeam: React.FC<MeetTheTeamSectionProps> = ({data}) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [containerWidth, setContainerWidth] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -101,12 +106,13 @@ const MeetTheTeam: React.FC = () => {
   return (
     <section className="w-full py-20 lg:py-28">
       <div className="max-w-[1400px] mx-auto px-8">
-        <h1 className="text-[#12121299] font-rubik font-semibold text-5xl">Meet the Team</h1>
+        <h1 className="text-[#12121299] font-rubik font-semibold text-5xl">{data?.headerText}</h1>
         <h2 className="text-[#12121299] font-work_sans text-lg mt-5">
-          Get to know the passionate professionals behind Lamb Medical.
+          {/* Get to know the passionate professionals behind Lamb Medical. */}
+          {data?.bodyText}
         </h2>
         <div ref={containerRef} className="flex w-full mt-10">
-          {teamMembers.map((member, index) => (
+          {data?.teamMembers.map((member, index) => (
             <div
               key={index}
               className="relative overflow-hidden cursor-pointer transition-all duration-300 ease-in-out flex-shrink-0"
@@ -114,7 +120,7 @@ const MeetTheTeam: React.FC = () => {
               onClick={() => handleClick(index)}
             >
               <Image
-                src={member.imgSrc}
+                src={`/${member.image}`}
                 width={1000}
                 height={100}
                 className="h-[400px] w-full object-cover transition-all duration-300"
@@ -134,7 +140,7 @@ const MeetTheTeam: React.FC = () => {
 
                   <div className={`w-full flex flex-col items-center ${index > 0 && index < teamMembers.length - 1 ? "text-center" : "text-left"}`}>
                     <h3 className="font-bold text-lg">{member.name}</h3>
-                    <p className="text-sm font-medium text-gray-600">{member.position}</p>
+                    <p className="text-sm font-medium text-gray-600">{member.role}</p>
                   </div>
 
                   {index < teamMembers.length - 1 && (

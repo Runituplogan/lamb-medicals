@@ -4,7 +4,7 @@ import { IFaq } from "@/app/data/faq";
 interface ServicesFAQProps {
   title: string;
   description: string;
-  faqs: IFaq[];
+  faqs?: IFaq[];
   className?: string;
   align?: "left" | "center";
 }

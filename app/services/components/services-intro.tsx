@@ -1,13 +1,19 @@
+import Link from "next/link";
 import BookNowButton from "./book-now-button";
 
 interface ServicesIntroProps {
   title: string;
   description: string | React.ReactNode;
+  btnText?:string,
+  btnLink?:string,
+  btnStyle?:string,
 }
 
 export default function ServicesIntro({
   title,
   description,
+  btnText='Book Now',
+  btnLink = "/",
 }: ServicesIntroProps) {
   return (
     <section className="space-y-[2rem] pt-[2rem]" data-aos="fade-left">
@@ -18,7 +24,9 @@ export default function ServicesIntro({
       <div className="grid gap-8  font-work_sans text-[14px] xs:text-lg font-medium leading-[3.6rem] tracking-[0.02rem] text-grey-750 opacity-80">
         {description}
       </div>
-      <BookNowButton>Book Now</BookNowButton>
+      <Link href={`${btnLink}`}>
+      <BookNowButton>{btnText}</BookNowButton>
+      </Link>
     </section>
   );
 }
