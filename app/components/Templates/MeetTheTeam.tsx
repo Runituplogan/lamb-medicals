@@ -5,64 +5,9 @@ import Image from "next/image";
 import { MdChevronRight } from "react-icons/md";
 import { MeetTeamType } from "@/app/about/types/aboutCustomTypes";
 
-interface TeamMember {
-  name: string;
-  position: string;
-  imgSrc: string;
+interface Section4Props {
+  data: HomepageSection4;
 }
-
-const teamMembers: TeamMember[] = [
-  {
-    name: "Mary Parks Lamb, MD",
-    position: "Founder and Director",
-    imgSrc: "/team/team1.png",
-  },
-  {
-    name: "John Doe",
-    position: "Medical Specialist",
-    imgSrc: "/team/team1.png",
-  },
-  {
-    name: "Jane Smith",
-    position: "Health Consultant",
-    imgSrc: "/team/team1.png",
-  },
-  {
-    name: "Alice Johnson",
-    position: "Senior Nurse",
-    imgSrc: "/team/team1.png",
-  },
-  {
-    name: "Michael Brown",
-    position: "Research Lead",
-    imgSrc: "/team/team1.png",
-  },
-  {
-    name: "Mary Parks Lamb, MD",
-    position: "Founder and Director",
-    imgSrc: "/team/team1.png",
-  },
-  {
-    name: "John Doe",
-    position: "Medical Specialist",
-    imgSrc: "/team/team1.png",
-  },
-  {
-    name: "Jane Smith",
-    position: "Health Consultant",
-    imgSrc: "/team/team1.png",
-  },
-  {
-    name: "Alice Johnson",
-    position: "Senior Nurse",
-    imgSrc: "/team/team1.png",
-  },
-  {
-    name: "Michael Brown",
-    position: "Research Lead",
-    imgSrc: "/team/team1.png",
-  },
-];
 
 const MAX_ACTIVE_WIDTH = 300;
 const MAX_INACTIVE_WIDTH = 150;
@@ -91,17 +36,26 @@ const MeetTheTeam: React.FC<MeetTheTeamSectionProps> = ({data}) => {
   const handleClick = (index: number, direction?: "left" | "right") => {
     if (direction === "left" && index > 0) {
       setActiveIndex(index - 1);
-    } else if (direction === "right" && index < teamMembers.length - 1) {
+    } else if (
+      direction === "right" &&
+      data?.teamMembers &&
+      index < data?.teamMembers?.length - 1
+    ) {
       setActiveIndex(index + 1);
     } else if (activeIndex !== index) {
       setActiveIndex(index);
     }
   };
 
-  const totalMembers = teamMembers.length;
+  const totalMembers = data?.teamMembers?.length;
   const remainingWidth = containerWidth - MAX_ACTIVE_WIDTH;
-  const inactiveCount = totalMembers - 1;
-  const inactiveWidth = Math.min(MAX_INACTIVE_WIDTH, remainingWidth / inactiveCount);
+  const inactiveCount = (totalMembers && totalMembers - 1) || 0;
+  const inactiveWidth = Math.min(
+    MAX_INACTIVE_WIDTH,
+    remainingWidth / inactiveCount
+  );
+
+  console.log(data?.teamMembers)
 
   return (
     <section className="w-full py-20 lg:py-28">
@@ -116,7 +70,12 @@ const MeetTheTeam: React.FC<MeetTheTeamSectionProps> = ({data}) => {
             <div
               key={index}
               className="relative overflow-hidden cursor-pointer transition-all duration-300 ease-in-out flex-shrink-0"
-              style={{ width: activeIndex === index ? `${MAX_ACTIVE_WIDTH}px` : `${inactiveWidth}px` }}
+              style={{
+                width:
+                  activeIndex === index
+                    ? `${MAX_ACTIVE_WIDTH}px`
+                    : `${inactiveWidth}px`,
+              }}
               onClick={() => handleClick(index)}
             >
               <Image
@@ -125,6 +84,7 @@ const MeetTheTeam: React.FC<MeetTheTeamSectionProps> = ({data}) => {
                 height={100}
                 className="h-[400px] w-full object-cover transition-all duration-300"
                 alt={member.name}
+                unoptimized
               />
 
               {activeIndex === index && (
@@ -138,23 +98,28 @@ const MeetTheTeam: React.FC<MeetTheTeamSectionProps> = ({data}) => {
                     </div>
                   )}
 
-                  <div className={`w-full flex flex-col items-center ${index > 0 && index < teamMembers.length - 1 ? "text-center" : "text-left"}`}>
+                  <div
+                    className={`w-full flex flex-col items-center ${index > 0 && data?.teamMembers && index < data?.teamMembers?.length - 1 ? "text-center" : "text-left"}`}
+                  >
                     <h3 className="font-bold text-lg">{member.name}</h3>
                     <p className="text-sm font-medium text-gray-600">{member.role}</p>
                   </div>
 
-                  {index < teamMembers.length - 1 && (
-                    <div
-                      onClick={() => handleClick(index, "right")}
-                      className="p-2 bg-[#F1F1F1] rounded-full absolute right-2 cursor-pointer"
-                    >
-                      <MdChevronRight className="text-[#8E9BAE] text-xl" />
-                    </div>
-                  )}
+                  {data?.teamMembers &&
+                    index < data?.teamMembers.length - 1 && (
+                      <div
+                        onClick={() => handleClick(index, "right")}
+                        className="p-2 bg-[#F1F1F1] rounded-full absolute right-2 cursor-pointer"
+                      >
+                        <MdChevronRight className="text-[#8E9BAE] text-xl" />
+                      </div>
+                    )}
                 </div>
               )}
 
-              {activeIndex !== index && <div className="h-full w-full bg-[black] opacity-50 absolute left-0 top-0" />}
+              {activeIndex !== index && (
+                <div className="h-full w-full bg-[black] opacity-50 absolute left-0 top-0" />
+              )}
             </div>
           ))}
         </div>

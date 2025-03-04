@@ -1,9 +1,9 @@
 "use client";
 
-import { IFaq } from "@/app/data/faq";
 import { IoAddCircleSharp } from "react-icons/io5";
-import { useEffect, useRef, useState } from "react";
 import { IoIosCloseCircle } from "react-icons/io";
+import { useEffect, useRef, useState } from "react";
+import { IFaq } from "@/app/data/faq";
 
 const FAQ = ({ data }: { data?: IFaq[] }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -31,17 +31,15 @@ const FAQ = ({ data }: { data?: IFaq[] }) => {
   );
 };
 
-const FaqItemButton = ({
-  item,
-  isExpanded,
-  onToggle,
-}: {
+interface FaqItemButtonProps {
   item: IFaq;
   isExpanded: boolean;
   onToggle: () => void;
-}) => {
+}
+
+const FaqItemButton: React.FC<FaqItemButtonProps> = ({ item, isExpanded, onToggle }) => {
   const contentRef = useRef<HTMLDivElement | null>(null);
-  const [height, setHeight] = useState<number | "auto">(0);
+  const [height, setHeight] = useState(0);
 
   useEffect(() => {
     if (contentRef.current) {

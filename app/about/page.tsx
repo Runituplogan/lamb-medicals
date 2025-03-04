@@ -42,7 +42,7 @@ export default function Page() {
       <MeetTheTeam data={meetTheTeam ?? undefined} />
       <Questions data={faqSection ?? undefined} />
       <FAQ data={faqSection?.faqs} />
-      <GetInTouch />
+      {/* <GetInTouch /> */}
     </section>
   );
 }
