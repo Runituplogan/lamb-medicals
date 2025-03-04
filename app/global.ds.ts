@@ -158,7 +158,6 @@ interface HomepageSection6 {
 }
 
 //contact form types
-
 interface ContactFormField {
   name: string;
   type: "text" | "email" | "textarea";
