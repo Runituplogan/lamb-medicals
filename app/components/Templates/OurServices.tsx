@@ -1,17 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ServiceCard from "../ServiceCard";
-import { all_services, IServices } from "@/app/data/services";
 
-const OurServices = () => {
+interface Section3Props {
+  data: HomepageSection3;
+}
+const OurServices: React.FC<Section3Props> = ({data}) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const first_three_Services = all_services.slice(0, 3);
-  const [services, setServices] = useState<IServices[]>(first_three_Services);
+  const first_three_Services = data?.features?.slice(0, 3);
+  const [services, setServices] = useState(first_three_Services);
 
   useEffect(() => {
     if (isExpanded) {
-      setServices(all_services);
+      setServices(data?.features);
     } else {
       setServices(first_three_Services);
     }
@@ -24,32 +26,31 @@ const OurServices = () => {
           data-aos="fade-up"
           className="font-rubik text-[32px] font-semibold leading-tight text-[#12121299] sm:text-4xl md:text-5xl lg:text-6xl"
         >
-          Our Services
+         {data?.headerText}
         </h1>
 
         <h2
           data-aos="fade-up"
           className="mt-5 font-work_sans leading-loose text-[#12121299] md:text-lg lg:w-[70%] xl:w-[60%]"
         >
-          Discover our range of innovative solutions designed to support your
-          health, wellness, and confidence.
+          {data?.bodyText}
         </h2>
-        <button
+       {data?.features && data?.features?.length > 3 && <button
           data-aos="fade-up"
           onClick={() => setIsExpanded((prev) => !prev)}
           className="xs:w-max w-full font-poppins mt-10 h-20 rounded-md bg-primary px-12 text-sm font-semibold text-white transition hover:opacity-70 sm:text-base md:px-14"
         >
           {isExpanded ? "See Less" : "See all services"}
-        </button>
+        </button>}
 
         <div className="mt-28 grid w-full grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
-          {services.map((item, index) => (
+          {services?.map((item, index) => (
             <ServiceCard
               key={index}
               title={item.title}
               description={item.description}
-              bgImgSrc={item.bgImgSrc}
-              link={item.link}
+              bgImgSrc={item.image}
+              link={item.title}
             />
           ))}
         </div>

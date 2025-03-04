@@ -4,7 +4,11 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 
-const GetInTouch = () => {
+interface getInTouchProps {
+  data: HomepageSection7;
+}
+
+const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
   const [formData, setFormData] = useState<any>({
     name: "",
     email: "",
@@ -52,22 +56,20 @@ const GetInTouch = () => {
             data-aos="fade-up"
             className="font-bold text-[32px] sm:text-2xl md:text-3xl xl:text-5xl pb-7  lg:text-4xl text-[#282828] font-rubik"
           >
-            Get in touch
+            {data?.headerText}
           </h1>
 
           <p
             data-aos="fade-up"
             className="xl:block hidden text-lg leading-loose w-full text-[#8E9BAE]"
           >
-            Your care. Your time. Your way. Schedule online and experience the
-            personalized, concierge-style medical care you deserve.
+            {data?.BodyText}
           </p>
           <p
             data-aos="fade-up"
             className="lg:hidden block text-base leading-loose w-full text-[#8E9BAE] mt-3"
           >
-            Your care. Your time. Your way. Schedule online and experience the
-            personalized, concierge-style medical care you deserve.
+            {data?.BodyText}
           </p>
           {/* <p className="sm:hidden block text-sm leading-normal w-full text-[#8E9BAE]">
             Your care. Your time. Your way. Schedule online and experience the
@@ -75,7 +77,7 @@ const GetInTouch = () => {
           </p> */}
 
           <img
-            src="/location.png"
+            src={data?.map || "/location.png"}
             alt="location map"
             className="mt-7 w-full md:w-auto md:h-auto"
             data-aos="fade-up"
@@ -86,31 +88,29 @@ const GetInTouch = () => {
             onSubmit={sendEmail}
             className="w-full h-full flex flex-col justify-between space-y-5 xs:space-y-10 font-work_sans"
           >
-            <input
-              className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
-              placeholder="Name"
-              name="name"
-            />
-            <input
-              className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
-              placeholder="Email address"
-              type="email"
-              name="email"
-            />
-            <input
-              className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
-              placeholder="Desired services"
-              name="service"
-            />
-            <textarea
-              rows={4}
-              className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
-              placeholder="Message"
-              name="service"
-            />
-
+            {data?.form?.fields.map((field: ContactFormField) => (
+              <div key={field.name} className="w-full">
+                {field.type === "textarea" ? (
+                  <textarea
+                    rows={4}
+                    className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
+                    placeholder={field.placeholder}
+                    name={field.name}
+                    required={field.required}
+                  />
+                ) : (
+                  <input
+                    className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
+                    placeholder={field.placeholder}
+                    name={field.name}
+                    type={field.type}
+                    required={field.required}
+                  />
+                )}
+              </div>
+            ))}
             <button className="h-20 w-full xs:w-max px-10 lg:w-full bg-primary text-white font-medium font-poppins rounded-xl transition outline-none hover:bg-opacity-70">
-              Submit
+              {data?.form?.primaryButton?.text}
             </button>
           </form>
         </div>

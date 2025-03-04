@@ -21,7 +21,7 @@ const ServiceCard = ({ title, description, link, bgImgSrc }: IServices) => {
           </p>
         </div>
 
-        <Link href={!!link ? link : "#"} className="w-full">
+        <Link href={link ? `/services/${link.replace(/\s+/g, "-").toLowerCase()}` : "#"} className="w-full">
           <div className="flex w-full items-center justify-between gap-2 rounded bg-white px-5 py-4 md:px-7 lg:px-8">
             <p className="text-[21.44px] font-semibold md:text-lg">
               Learn more
