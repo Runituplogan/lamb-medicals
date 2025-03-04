@@ -12,6 +12,7 @@ import ExperienceLamb from "./components/ExperienceLamb";
 import WallOfLove from "./components/WallOfLove";
 import { useHomePage } from "./contexts/homepageContext";
 import Preloader from "./components/Preloader"; // Ensure this component exists
+import { FaqSection, MeetTeamType } from "./about/types/aboutCustomTypes";
 
 export default function Home() {
   const { homePageData } = useHomePage();
@@ -41,7 +42,7 @@ export default function Home() {
     (item: any) => item.type === "section3"
   );
 
-  const section4: HomepageSection4 | undefined = homePageData.content.find(
+  const section4: MeetTeamType | undefined = homePageData.content.find(
     (item: any) => item.type === "Section4"
   );
 
@@ -49,7 +50,7 @@ export default function Home() {
     (item: any) => item.type === "section5"
   );
 
-  const section6: HomepageSection6 | undefined = homePageData.content.find(
+  const section6: FaqSection  | undefined = homePageData.content.find(
     (item: any) => item.type === "section6"
   );
 
@@ -87,7 +88,7 @@ export default function Home() {
           </div>
           <div data-aos="fade-up">
             <Image
-              src={section1?.image as string}
+              src={section1?.image as string ?? "/test.png"}
               width={1000}
               height={1000}
               className="w-full h-full"
@@ -101,10 +102,10 @@ export default function Home() {
       {/* Experience the lamb look */}
       <ExperienceLamb data={section2 ?? {type: 'section2'}}/>
       <OurServices data={section3 ?? {type: 'section3'}}/>
-      <MeetTheTeam data={section4 ?? {type: 'Section4'}}/>
-      <WallOfLove data={section5 ?? {type: 'section5'}}/>
-      <Questions data={section6 ?? {type: 'section6'}}/>
-      <FAQ data={section6 ?? {type: 'section6'}} />
+      <MeetTheTeam data={section4 }/>
+      <WallOfLove data={section5 }/>
+      <Questions data={section6}/>
+      <FAQ data={section6?.faqs} />
       <GetInTouch data={section7 ?? {type: 'section7'}}/>
     </section>
   );

@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BuildTrustType,RefineHealthCareType } from "../types/aboutCustomTypes";
 
-const RedefineHealthCare = () => {
+
+interface RedefineHealthCareProps {
+  data?: RefineHealthCareType;
+}
+
+const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
   return (
     <div
       style={{
@@ -15,31 +21,34 @@ const RedefineHealthCare = () => {
             data-aos="fade-up"
             className="text-white lg:block hidden font-rubik font-semibold text-6xl xl:text-[70px] leading-tight"
           >
-            Let's Redefine
+            {/* Let's Redefine
             <br /> Healthcare
-            <br /> Together
+            <br /> Together */}
+            {data?.headerText}
           </h1>
           <h1
             data-aos="fade-up"
             className="lg:hidden block text-white font-rubik font-semibold text-[32px] sm:text-5xl md:text-6xl lg:text-7xl leading-loose"
           >
-            Let's Redefine Healthcare Together
+            {data?.headerText}
+            {/* Let's Redefine Healthcare Together */}
           </h1>
           <p
             data-aos="fade-up"
             className="text-white mt-6 text-base md:text-lg lg:text-xl font-work_sans"
           >
-            We invite you to experience the difference that true personalized
+            {data?.bodyText}
+            {/* We invite you to experience the difference that true personalized
             care can make in your life. Take the first step towards a healthier,
             happier you. Reach out to Lamb Medicals to schedule your
-            consultation and learn more about our concierge-style services.
+            consultation and learn more about our concierge-style services. */}
           </p>
 
           <div
             data-aos="fade-up"
             className="xs:flex hidden justify-start items-center gap-5 mt-10 md:mt-16 font-poppins font-semibold"
           >
-            <Link href="/schedule-online">
+            {/* <Link href="/schedule-online">
               <button className="text-white h-20 px-12 md:px-14 rounded-md bg-primary transition hover:opacity-70 sm:text-base text-sm">
                 Book Online
               </button>
@@ -48,7 +57,14 @@ const RedefineHealthCare = () => {
               <button className="bg-white h-20 px-12 md:px-14 rounded-md text-primary transition hover:opacity-70 sm:text-base text-sm">
                 Gift Cards
               </button>
-            </Link>
+            </Link> */}
+            {data?.buttons.map((item,i)=> (
+               <Link href={item.link} key={i}>
+               <button className={`bg-white h-20 px-12 md:px-14 rounded-md text-primary transition hover:opacity-70 sm:text-base text-sm ${item.style}`}>
+                 {item.text}
+               </button>
+             </Link> 
+            ))}
           </div>
           <div
             data-aos="fade-up"
@@ -68,7 +84,7 @@ const RedefineHealthCare = () => {
         </div>
         <div data-aos="fade-up" className="xs:block hidden">
           <Image
-            src="/31.png"
+            src={`/${data?.image}}`}
             width={1000}
             height={1000}
             className="w-full h-full"

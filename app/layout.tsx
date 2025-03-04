@@ -16,6 +16,9 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { ReactQueryProvider } from "./request/ReactQueryProvider";
 import { HomePageProvider } from "./contexts/homepageContext";
+import { FacialServicesPageProvider } from "./contexts/facialService";
+import { AboutPageProvider } from "./contexts/aboutPageContext";
+import { EnergyDevicesPageProvider } from "./contexts/energyDevices";
 
 export const metadata: Metadata = {
   title: "Lamb Medical Aestheics",
@@ -63,15 +66,21 @@ export default function RootLayout({
       >
         <ReactQueryProvider>
           <HomePageProvider>
-            <Navbar />
-            <ToastContainer
-              autoClose={2000}
-              hideProgressBar={true}
-              theme="colored"
-            />
-            <AOSInitializer /> {/* Initialize AOS */}
-            {children}
-            <Footer />
+          <AboutPageProvider>
+            <FacialServicesPageProvider>
+              <EnergyDevicesPageProvider>
+              <Navbar />
+              <ToastContainer
+                autoClose={2000}
+                hideProgressBar={true}
+                theme="colored"
+              />
+              <AOSInitializer /> {/* Initialize AOS */}
+              {children}
+              <Footer />
+              </EnergyDevicesPageProvider>
+            </FacialServicesPageProvider>
+            </AboutPageProvider>
           </HomePageProvider>
         </ReactQueryProvider>
       </body>
