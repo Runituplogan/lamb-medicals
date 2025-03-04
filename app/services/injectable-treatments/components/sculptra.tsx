@@ -11,20 +11,9 @@ interface SculptraProps {
 }
 
 const Sculptra: React.FC<SculptraProps> = ({ data }) => {
-  const testImges = [
-    { image: "/images/37.png", type: "before" },
-    { image: "/images/37.png", type: "after" },
-    { image: "/images/37.png", type: "before" },
-    { image: "/images/37.png", type: "after" },
-  ];
   return (
     <Wrapper id="sculptra" className="grid gap-[4rem]">
-      <ServicesIntro
-        title={data?.headerText}
-        description={data?.bodyText}
-        btnText={data?.cta_button?.text}
-        btnLink="/book-online"
-      />
+      <ServicesIntro title={data?.headerText} description={data?.bodyText} />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[50rem]">
         <div className="relative h-full col-span-full" data-aos="fade-right">
           <Image
@@ -43,50 +32,57 @@ const Sculptra: React.FC<SculptraProps> = ({ data }) => {
       </ServicesAfterEffects>
       <ServicesAfterEffects
         title={data?.subsection?.headerText}
-        className="space-y-6 [&>figcaption]:text-left"
+        className="grid-cols-1 grid-rows-none [&>figcaption]:text-left"
       >
-        {testImges
-          ?.reduce(
-            (pairs, img, index, arr) => {
-              if (img.type === "Before") {
-                const afterImg = arr.find(
-                  (item) => item.type === "After" && item !== img
-                );
-                if (afterImg) {
-                  pairs.push([img, afterImg]);
-                }
-              }
-              return pairs;
-            },
-            [] as { image: string; type: string }[][]
-          )
-          .map(([before, after], index) => (
-            <div
-              key={index}
-              className="flex justify-center gap-4 border-2 border-red-500 p-2"
-            >
-              <div className="relative w-[45%] h-[60rem]">
-                <Image
-                  src={before.image}
-                  alt="Before"
-                  fill
-                  className="absolute object-cover"
-                  unoptimized
-                />
-              </div>
-              <div className="relative w-[45%] h-[60rem]">
-                <Image
-                  src={after.image}
-                  alt="After"
-                  fill
-                  className="absolute object-cover"
-                  unoptimized
-                />
-              </div>
-            </div>
-          ))}
+        <div
+          className="relative xs:h-[60rem] col-span-full"
+          data-aos="fade-right"
+        >
+          <Image
+            src="/images/injectable-treatments/sculptra-1.png"
+            alt="sculptra-1"
+            fill
+            className="absolute object-top"
+          />
+          <img
+            src="/images/injectable-treatments/sculptra-1.png"
+            alt="sculptra 1"
+            className=" object-top xs:hidden block"
+          />
+        </div>
+        <div
+          className="relative xs:h-[60rem] col-span-full"
+          data-aos="fade-right"
+        >
+          <Image
+            src="/images/injectable-treatments/sculptra-2.png"
+            alt=""
+            fill
+            className="absolute object-top xs:block hidden"
+          />
+          <img
+            src="/images/injectable-treatments/sculptra-2.png"
+            alt="sculptra"
+            className="object-top xs:hidden block"
+          />
+        </div>
+        <div
+          className="relative xs:h-[60rem] col-span-full"
+          data-aos="fade-right"
+        >
+          <Image
+            src="/images/injectable-treatments/sculptra-3.png"
+            alt=""
+            fill
+            className="absolute object-top xs:block hidden"
+          />
+          <img
+            src="/images/injectable-treatments/sculptra-3.png"
+            alt="sculptra"
+            className="object-top xs:hidden block"
+          />
+        </div>
       </ServicesAfterEffects>
-
       <ServicesFAQ
         title="Sculptra FAQs: Your questions answered"
         description="Curious about Sculptra? Get answers to common questions about how it works, what to expect, and how it can help you feel confident"
