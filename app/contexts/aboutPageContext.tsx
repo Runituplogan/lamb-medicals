@@ -26,7 +26,6 @@ export function AboutPageProvider({ children }: { children: React.ReactNode }) {
 
   // Handle errors
   if (errorPageData) {
-    console.error("Error fetching data:", errorPageData);
     return <div>Something went wrong</div>;
   }
 

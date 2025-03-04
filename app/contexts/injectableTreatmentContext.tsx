@@ -29,7 +29,6 @@ export function InjectableTreatmentPageProvider({
 
   // Handle errors
   if (errorPageData) {
-    console.error("Error fetching data:", errorPageData);
     return <div>Something went wrong</div>;
   }
 

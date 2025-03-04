@@ -26,7 +26,6 @@ export function EnergyDevicesPageProvider({ children }: { children: React.ReactN
 
   // Handle errors
   if (errorPageData) {
-    console.error("Error fetching data:", errorPageData);
     return <div>Something went wrong</div>;
   }
 
