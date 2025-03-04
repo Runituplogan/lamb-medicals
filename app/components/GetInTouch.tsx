@@ -5,7 +5,7 @@ import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 
 interface getInTouchProps {
-  data: HomepageSection7;
+  data?: HomepageSection7;
 }
 
 const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {

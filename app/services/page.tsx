@@ -26,7 +26,7 @@ export default function Page() {
             Treatments Provided
           </p>
         </div>
-      </div>
+      </div> 
       <OurServices />
       <Questions />
       <FAQ data={home_faq} />
