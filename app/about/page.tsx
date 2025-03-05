@@ -39,7 +39,7 @@ export default function Page() {
       <BuilidngTrust data={buildTrust ?? undefined} />
       {/* <OurServices /> */}
       <RedefineHealthCare data={redefinedHealthCare ?? undefined} />
-      <MeetTheTeam data={meetTheTeam ?? undefined} />
+      <MeetTheTeam/>
       <Questions data={faqSection ?? undefined} />
       <FAQ data={faqSection?.faqs} />
       {/* <GetInTouch /> */}

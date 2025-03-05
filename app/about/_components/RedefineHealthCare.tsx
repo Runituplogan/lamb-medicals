@@ -59,7 +59,7 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
               </button>
             </Link> */}
             {data?.buttons.map((item,i)=> (
-               <Link href={item.link} key={i}>
+               <Link href={''} key={i}>
                <button className={`bg-white h-20 px-12 md:px-14 rounded-md text-primary transition hover:opacity-70 sm:text-base text-sm ${item.style}`}>
                  {item.text}
                </button>
