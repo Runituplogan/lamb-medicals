@@ -15,7 +15,7 @@ const eslintConfig = [
     rules: {
       "react-hooks/exhaustive-deps": "off", // Disables dependency array warning
       "@next/next/no-img-element": "off", // Allows using <img> instead of <Image />
-      "no-console": "warn", // Changes console.log() from error to warning
+      "no-console": "off", // Changes console.log() from error to warning
       "react/no-unescaped-entities": "off",
       "react/no-unescaped-entities": "off",
       "@typescript-eslint/no-unused-vars": "off", // Disable unused variables rule

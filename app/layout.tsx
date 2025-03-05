@@ -19,6 +19,7 @@ import { HomePageProvider } from "./contexts/homepageContext";
 import { FacialServicesPageProvider } from "./contexts/facialService";
 import { AboutPageProvider } from "./contexts/aboutPageContext";
 import { EnergyDevicesPageProvider } from "./contexts/energyDevices";
+import { InjectableTreatmentPageProvider } from "./contexts/injectableTreatmentContext";
 import { SexualWellnessPageProvider } from "./contexts/sexualWellness";
 
 export const metadata: Metadata = {
@@ -68,6 +69,7 @@ export default function RootLayout({
         <ReactQueryProvider>
           <HomePageProvider>
           <AboutPageProvider>
+            <InjectableTreatmentPageProvider>
             <FacialServicesPageProvider>
               <EnergyDevicesPageProvider>
                 <SexualWellnessPageProvider>
@@ -83,6 +85,7 @@ export default function RootLayout({
                 </SexualWellnessPageProvider>
               </EnergyDevicesPageProvider>
             </FacialServicesPageProvider>
+            </InjectableTreatmentPageProvider>
             </AboutPageProvider>
           </HomePageProvider>
         </ReactQueryProvider>

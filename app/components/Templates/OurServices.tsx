@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import ServiceCard from "../ServiceCard";
 
 interface Section3Props {
-  data: HomepageSection3;
+  data?: HomepageSection3;
 }
 const OurServices: React.FC<Section3Props> = ({data}) => {
   const [isExpanded, setIsExpanded] = useState(false);

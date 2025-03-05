@@ -22,13 +22,11 @@ const HeroCard = () => {
       )
       .then(
         (response) => {
-          console.log("SUCCESS!", response.status, response.text);
           setLoading(false);
           setPhone("");
           toast.success("Request sent successfully!");
         },
         (error) => {
-          console.log("FAILED...", error);
           setLoading(false);
         }
       );
