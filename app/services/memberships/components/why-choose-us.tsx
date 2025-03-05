@@ -34,10 +34,10 @@ export default function WhyChooseUs() {
             </i>
             <div className="flex flex-col gap-[0.8rem]">
               <h6 className="font-rubik text-lg font-medium text-grey-200">
-                {card.title}
+                {card.question}
               </h6>
               <p className="font-work_sans text-base font-normal text-grey-200">
-                {card.content}
+                {card.answer}
               </p>
             </div>
           </article>

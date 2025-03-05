@@ -19,7 +19,7 @@ export default function AethesticsMembership() {
               Level {member.level}
             </h4>
             <p className="pb-[1.8rem] text-[16px] font-work_sans xs:text-lg font-medium leading-[3rem] tracking-[0.02em] text-grey-750">
-              {member.title}
+              {member.question}
             </p>
             <ul className="flex flex-wrap items-center gap-x-[1rem] pb-[2.4rem] font-work_sans">
               {member.service.map((item, index) => (
