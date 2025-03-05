@@ -1,14 +1,11 @@
 import { sanityClient } from "@/sanity/sanity";
 import Image from "next/image";
-
-import { PortableText } from "@portabletext/react"; 
+import { PortableText } from "@portabletext/react";
 import { urlFor } from "@/app/utils/imageBuilder";
+import { notFound } from "next/navigation"; // Ensure proper error handling
 
-interface BlogPost {
-  title: string;
-  publishedAt: string;
-  body: any[];
-  mainImage: { asset: { _ref: string } };
+interface BlogPostProps {
+  params: { slug: string };
 }
 
 async function getPost(slug: string) {
@@ -19,25 +16,20 @@ async function getPost(slug: string) {
     body
   }`;
 
-  return await sanityClient.fetch(query, { slug });
+  return sanityClient.fetch(query, { slug });
 }
 
-export default async function BlogPost({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const { slug } = params;
-  const post = await getPost(slug);
+export default async function BlogPost({ params }: BlogPostProps) {
+  const post = await getPost(params.slug);
 
-  if (!post) {
-    return <p className="text-center text-red-500">Post not found.</p>;
-  }
+  if (!post) return notFound(); // Uses Next.js's built-in 404 handling
 
   return (
     <div className="w-full py-[100px] px-8 lg:px-16">
       <div className="mx-auto max-w-[1300px]">
-        <p className="text-[gray] text-center font-semibold">{new Date(post.publishedAt).toDateString()}</p>
+        <p className="text-gray-500 text-center font-semibold">
+          {new Date(post.publishedAt).toDateString()}
+        </p>
         <h1 className="text-3xl font-bold mt-2 text-center pb-6">{post.title}</h1>
 
         {post.mainImage && (
@@ -68,7 +60,7 @@ export default async function BlogPost({
                     href={value?.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 hover:underline"
+                    className="text-purple-600 hover:underline"
                   >
                     {children}
                   </a>
@@ -93,13 +85,4 @@ export default async function BlogPost({
       </div>
     </div>
   );
-}
-
-export async function generateStaticParams() {
-  const query = `*[_type == "post"]{ slug }`;
-  const posts = await sanityClient.fetch(query);
-
-  return posts.map((post: { slug: { current: string } }) => ({
-    slug: post.slug.current,
-  }));
 }
