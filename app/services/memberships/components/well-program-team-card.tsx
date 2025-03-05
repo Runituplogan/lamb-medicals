@@ -3,7 +3,7 @@ import Image from "next/image";
 interface WellProgramTeamCardProps {
   card: {
     name: string;
-    photo: string;
+    image: string;
   };
 }
 
@@ -17,7 +17,7 @@ export default function WellProgramTeamCard({
     >
       <div className="relative h-[24.5rem]">
         <Image
-          src={card.photo}
+          src={`/${card.image}`}
           alt={card.name}
           fill
           className="object-cover object-top"

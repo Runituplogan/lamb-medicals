@@ -1,24 +1,26 @@
 import Link from "next/link";
 import BookNowButton from "../../components/book-now-button";
 import ServiceImageContentLayout from "../../components/service-image-content-layout";
+import { ElectronicCommunicationType } from "../../memberships/types/membershipCustomType";
 
-export default function ElectronicCommunication() {
+interface ElectronicCommunicationProps{
+  data?:ElectronicCommunicationType
+}
+const ElectronicCommunication:React.FC<ElectronicCommunicationProps>=({data}) =>{
   return (
     <ServiceImageContentLayout
-      image="weight-loss/visual-consultaion-3.png"
+      image={`${data?.image}`}
       imageMobile="weight-loss/visual-consultaion-3-mobile.png"
-      title="Electronic Communication"
+      title={`${data?.headerText}`}
     >
       <p className="grid gap-8 font-work_sans text-[14px] xs:text-md font-medium leading-[3.2rem] tracking-[0.02rem] text-grey-750 opacity-80">
-        Lamb Medical uses Elation Passport and state-of-the-art electronic
-        medical record that provides a patient portal and provides email
-        communication for test results, routine questions, medication refills,
-        and scheduling. For more information about these communication tools,
-        please click the button below
+        {data?.bodyText}
       </p>
       <Link href="/schedule-online">
-      <BookNowButton className="self-start">Learn more</BookNowButton>
+      <BookNowButton className="self-start">{data?.cta_button.text}</BookNowButton>
       </Link>
     </ServiceImageContentLayout>
   );
 }
+
+export default ElectronicCommunication
