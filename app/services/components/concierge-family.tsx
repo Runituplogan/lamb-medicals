@@ -38,7 +38,7 @@ export default function ConciergeFamily() {
                 <CheckIcon />
               </i>
               <span className="font-rubik text-left xl:text-center text-[14px] xs:text-lg font-medium leading-[2rem] text-white">
-                {item.title}
+                {item.question}
               </span>
             </li>
           ))}
