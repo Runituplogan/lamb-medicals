@@ -44,7 +44,7 @@ async function getRecentPosts(slug: string) {
       );
 }
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
+export default async function BlogPost({ params }: any) {
   const post = await getPost(params.slug);
   const recentPosts = await getRecentPosts(params.slug);
 
