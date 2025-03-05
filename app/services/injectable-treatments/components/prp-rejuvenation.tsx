@@ -4,13 +4,21 @@ import ServicesIntro from "../../components/services-intro";
 import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
 import { prpRejuvenationFAQs, prrRejuvenationFAQs } from "@/app/utils/data";
+import { Section2, Section7 } from "../types/InjectableTreatmentType";
 
-export default function PRPRejuvenation() {
+interface PRPRejuvenationProp {
+  data: Section7;
+}
+
+const PRPRejuvenation: React.FC<PRPRejuvenationProp> = ({ data }) => {
   return (
     <Wrapper id="prp-rejuvenation" className="grid gap-[4rem]">
       <ServicesIntro
-        title="PRP Rejuvenation"
-        description="At Lamb Medical, we offer the innovative Vampire Facelift, a non-surgical treatment that uses your body’s natural healing powers to rejuvenate your skin, restore lost volume, and enhance your overall facial appearance. This cutting-edge procedure combines the benefits of dermal fillers with Platelet-Rich Plasma (PRP) to create a youthful, radiant complexion."
+        title={data?.headerText}
+        description={data?.bodyText}
+        btnText={data?.cta_button?.text}
+        btnStyle={data?.cta_button?.style}
+        btnLink="/scedule-online"
       />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[56rem_48rem]">
         <div className="relative h-full col-span-full" data-aos="fade-left">
@@ -53,4 +61,6 @@ export default function PRPRejuvenation() {
       />
     </Wrapper>
   );
-}
+};
+
+export default PRPRejuvenation;

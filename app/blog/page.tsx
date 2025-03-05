@@ -6,7 +6,7 @@ const Page = () => {
     <main className="w-full h-full">
       <Hero />
       <Blog />
-    </main>
+    </main> 
   );
 };
 

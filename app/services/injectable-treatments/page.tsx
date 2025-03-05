@@ -8,7 +8,15 @@ import Sculptra from "./components/sculptra";
 import PRPRejuvenation from "./components/prp-rejuvenation";
 import Kybella from "./components/kybella";
 import { useInjectableTreatmentPage } from "@/app/contexts/injectableTreatmentContext";
-import { Section1, Section3, Section4, Section5 } from "./types/InjectableTreatmentType";
+import {
+  Section1,
+  Section2,
+  Section3,
+  Section4,
+  Section5,
+  Section7,
+  Section9,
+} from "./types/InjectableTreatmentType";
 import Preloader from "@/app/components/Preloader";
 
 const injectableTreatmentsTabItems = [
@@ -23,13 +31,12 @@ export default function InjectableTreatments() {
   const { InjectableTreatmentPageData } = useInjectableTreatmentPage();
 
   if (
-      !InjectableTreatmentPageData ||
-      !InjectableTreatmentPageData.content ||
-      InjectableTreatmentPageData.content.length === 0
-    ) {
-      return <Preloader />;
-    }
-  
+    !InjectableTreatmentPageData ||
+    !InjectableTreatmentPageData.content ||
+    InjectableTreatmentPageData.content.length === 0
+  ) {
+    return <Preloader />;
+  }
 
   //console.log({ InjectableTreatmentPageData });
 
@@ -38,18 +45,25 @@ export default function InjectableTreatments() {
       (item: any) => item.type === "hero"
     );
 
-    const botoxData:Section1 =  InjectableTreatmentPageData.content.find(
-      (item: any) => item.type === "section1"
-    );
+  const botoxData: Section1 = InjectableTreatmentPageData.content.find(
+    (item: any) => item.type === "section1"
+  );
 
-    const dermalFillers:Section3 = InjectableTreatmentPageData.content.find(
-      (item: any) => item.type === "section3"
-    );
+  const dermalFillers: Section3 = InjectableTreatmentPageData.content.find(
+    (item: any) => item.type === "section3"
+  );
 
-    const sculptra:Section5 = InjectableTreatmentPageData.content.find(
-      (item: any) => item.type === "section5"
-    );
+  const sculptra: Section5 = InjectableTreatmentPageData.content.find(
+    (item: any) => item.type === "section5"
+  );
 
+  const PRPRejuvenationData: Section7 = InjectableTreatmentPageData.content.find(
+    (item: any) => item.type === "section7"
+  );
+
+  const KybellaData: Section9 = InjectableTreatmentPageData.content.find(
+    (item: any) => item.type === "section9"
+  );
 
   return (
     <Fragment>
@@ -87,11 +101,11 @@ export default function InjectableTreatments() {
         </div>
       </div>
       <ServicesTab tabItems={injectableTreatmentsTabItems} />
-      <Botox data={botoxData}/>
-      <DermalFillers data={dermalFillers}/>
-      <Sculptra data={sculptra}/>
-      <PRPRejuvenation />
-      <Kybella />
+      <Botox data={botoxData} />
+      <DermalFillers data={dermalFillers} />
+      <Sculptra data={sculptra} />
+      <PRPRejuvenation data={PRPRejuvenationData}/>
+      <Kybella data={KybellaData}/>
     </Fragment>
   );
 }
