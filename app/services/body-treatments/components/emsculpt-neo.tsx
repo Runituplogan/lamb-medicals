@@ -10,36 +10,50 @@ import {
 import ServicesBenefits from "../../components/services-benefits";
 import ServicesAfterEffects from "../../components/services-after-effects";
 import Image from "next/image";
+import { EmsculptNeoFAQ, EmsculptNeoType } from "../types/bodyTreatmentCustomTypes";
 
-export default function EmsculptNeo() {
+interface EmsculptNeoProps{
+  data?:EmsculptNeoType,
+  faqs?:EmsculptNeoFAQ
+}
+const EmsculptNeo:React.FC<EmsculptNeoProps>=({data,faqs})=> {
   return (
     <Wrapper id="emsculpt-neo" className="grid gap-[4rem]">
       <ServicesIntro
-        title="Emsculpt Neo"
-        description="Emsculpt Neo is the only non-invasive body contouring treatment that simultaneously builds muscle and reduces fat. Using a combination of high-intensity focused electromagnetic (HIFEM) technology and radiofrequency (RF) energy, this revolutionary treatment stimulates powerful muscle contractions while heating fat cells for optimal toning and fat loss. In just 30-minute sessions, you can achieve the equivalent of 20,000 crunches, squats, or curls—without breaking a sweat!"
+        title={`${data?.headerText}`}
+        description={`${data?.bodyText}`}
       />
-      <ServicesBenefits title="Key Benefits" benefits={emsculptNeoBenefits} />
+      <ServicesBenefits title="Key Benefits" benefits={data?.keyBenefits??[]} />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[48rem]">
         <div className="relative h-full col-span-full" data-aos="fade-left">
-          <Image
+          {/* <Image
             src="/images/body-treatments/body-treatments-1.png"
             alt="body-treatments-1"
             fill
             className="absolute object-top xs:block hidden"
+          /> */}
+          <Image
+            src={`/${data?.image}`}
+            alt="body-treatments-1"
+            fill
+            className="absolute object-top xs:block hidden"
           />
-          <img
+          {/* <img
             src="/images/body-treatments/body-treatments-1-mobile.png"
             alt="body-treatments-1"
             className="xs:hidden block object-cover"
-          />
+          /> */}
         </div>
       </ServicesAfterEffects>
       <ServicesFAQ
         className="py-10"
-        title="Emsculpt Neo FAQs: Your questions answered"
-        description="Curious about Emsculpt Neo? Get answers to common questions about how it works, what to expect, and how it can help you feel confident"
-        faqs={emsculptNeoFAQs}
+        title={`${faqs?.headerText}`}
+        description={`${faqs?.bodyText}`}
+        faqs={faqs?.faqs}
       />
     </Wrapper>
   );
 }
+
+
+export default EmsculptNeo

@@ -21,6 +21,7 @@ import { AboutPageProvider } from "./contexts/aboutPageContext";
 import { EnergyDevicesPageProvider } from "./contexts/energyDevices";
 import { InjectableTreatmentPageProvider } from "./contexts/injectableTreatmentContext";
 import { SexualWellnessPageProvider } from "./contexts/sexualWellness";
+import { BodyTreatmentProvider } from "./contexts/bodyTreatment";
 
 export const metadata: Metadata = {
   title: "Lamb Medical Aestheics",
@@ -73,15 +74,19 @@ export default function RootLayout({
             <FacialServicesPageProvider>
               <EnergyDevicesPageProvider>
                 <SexualWellnessPageProvider>
-                  <Navbar />
-                  <ToastContainer
-                    autoClose={2000}
-                    hideProgressBar={true}
-                    theme="colored"
-                  />
-                  <AOSInitializer /> {/* Initialize AOS */}
-                  {children}
-                  <Footer />
+                  <BodyTreatmentProvider>
+                    <SexualWellnessPageProvider>
+                    <Navbar />
+                    <ToastContainer
+                      autoClose={2000}
+                      hideProgressBar={true}
+                      theme="colored"
+                    />
+                    <AOSInitializer /> {/* Initialize AOS */}
+                    {children}
+                    <Footer />
+                    </SexualWellnessPageProvider>
+                  </BodyTreatmentProvider>
                 </SexualWellnessPageProvider>
               </EnergyDevicesPageProvider>
             </FacialServicesPageProvider>
