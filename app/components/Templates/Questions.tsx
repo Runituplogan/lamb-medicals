@@ -2,6 +2,7 @@
 
 import { FaqSection } from "@/app/about/types/aboutCustomTypes";
 import Image from "next/image";
+import Link from "next/link";
 
 interface QuestionsProps {
   data?: FaqSection;
@@ -27,10 +28,12 @@ const Questions:React.FC<QuestionsProps> = ({data}) => {
               so here are a few, answered. */}
               {data?.bodyText}
             </p>
-
-            {/* <button className="h-20 xs:h-16 rounded-xl bg-primary text-white font-poppins mt-8 px-7 w-full xs:w-max font-semibold">
+            
+            <Link href="#more-faqs">
+            <button className="h-20 xs:h-16 rounded-xl bg-primary text-white font-poppins mt-8 px-7 w-full xs:w-max font-semibold">
               Find More FAQs
-            </button> */}
+            </button>
+            </Link>
           </div>
         </div>
       </div>
