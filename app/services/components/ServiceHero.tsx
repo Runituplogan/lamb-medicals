@@ -4,8 +4,12 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import Link from "next/link";
+import { heroSection } from "../types/servicePageCustomTypes";
 
-const ServiceHeroSection = () => {
+interface ServiceHeroSectionProps{
+  data?:heroSection,
+}
+const ServiceHeroSection:React.FC<ServiceHeroSectionProps> = ({data}) => {
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -43,37 +47,33 @@ const ServiceHeroSection = () => {
           data-aos="fade-up"
           className="text-center text-[32px] font-rubik font-semibold text-white sm:text-5xl md:text-left md:text-6xl xl:text-[70px] leading-none mb-8 md:mb-0"
         >
-          Professional Services
+         {data?.headerText}
         </h1>
         <p
           data-aos="fade-up"
           className="hidden w-[80%] text-center leading-relaxed text-white md:text-left lg:block xl:text-lg font-work_sans font-medium"
         >
-          Lamb Medical offers a range of aesthetic services tailored to your
-          individual needs. Plus, you don’t have to be a member of our concierge
-          practice to enjoy them!
+        {data?.bodyText}
         </p>
         <p
           data-aos="fade-up"
           className="block leading-loose text-white lg:hidden font-work_sans font-medium"
         >
-          Lamb Medical, we know your time is valuable. That’s why we offer
-          personalized, concierge-style care, giving you direct access to your
-          doctor and the attention you deserve.
+         {data?.bodyText}
         </p>
 
         <div
           data-aos="fade-up"
           className="mt-8 flex h-max items-center justify-center gap-6 font-poppins font-semibold md:justify-start md:gap-10 xs:w-max w-full px-3 xs:px-0"
         >
-          <Link href="#" className="xs:w-max w-full">
+          <Link href="#service-section" className="xs:w-max w-full">
             <button className="xs:w-max w-full h-20 rounded-md bg-primary text-white transition hover:opacity-70 text-sm lg:text-base xs:px-14">
-              Explore Services
+              {data?.cta_buttons[0].text}
             </button>
           </Link>
-          <Link href="#" className="xs:w-max w-full">
+          <Link href="/schedule-online" className="xs:w-max w-full">
             <button className="xs:w-max w-full h-20 rounded-md bg-white text-sm lg:text-base text-primary transition hover:opacity-70 xs:px-14">
-              Book Now
+            {data?.cta_buttons[1].text}
             </button>
           </Link>
         </div>

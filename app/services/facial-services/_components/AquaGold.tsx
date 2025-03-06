@@ -20,7 +20,7 @@ const AquaGold:React.FC<FacialServiceProps>=({data,aquaGoldFaq})=> {
       <ServicesIntro
         title={`${data?.headerText}`}
         description={`${data?.bodyText}`}
-        btnLink={`${data?.cta_button.link}`}
+        btnLink={`/schedule-online`}
         btnText={`${data?.cta_button.text}`}
       />
       <figure

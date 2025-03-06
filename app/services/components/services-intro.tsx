@@ -13,7 +13,7 @@ export default function ServicesIntro({
   title,
   description,
   btnText='Book Now',
-  btnLink = "/",
+  btnLink = `/schedule-online`,
 }: ServicesIntroProps) {
   return (
     <section className="space-y-[2rem] pt-[2rem]" data-aos="fade-left">
