@@ -34,47 +34,47 @@ const BuilidngTrust: React.FC<BuildTrustSectionProps>  = ({data}) => {
           className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-7 md:gap-10 mt-16 mx-auto"
         >
           <div className="col-span-1 md:col-span-2 lg:col-span-3 object-cover h-[90%]">
-            {
-              data?.images.map((item,index)=> (
-                <Image
-                key={index}
-                src={item}
+          <Image
+                src={data?.images[0]??'/'}
                 width={600}
                 height={400}
                 className="w-full md:h-[529px]"
-                alt={`${item}png`}
+                alt={`member ship`}
               />
+            {/* {
+              data?.images.map((item,index)=> (
+             
               ))
             }
-          
+           */}
           </div>
-          {/* <div className="col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-4 h-[90%]">
-            <Image
-              src="/34.png"
-              width={600}
-              height={400}
-              className="w-full md:h-[529px]"
-              alt="empowering"
-            />
-          </div> */}
-          {/* <div className="col-span-1 md:col-span-2 lg:col-span-4 object-cover h-[90%]">
-            <Image
-              src="/35.png"
-              width={600}
-              height={400}
-              className="w-full md:h-[529px]"
-              alt="empowering"
-            />
-          </div> */}
-          {/* <div className="col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-3 h-[90%]">
-            <Image
-              src="/36.png"
-              width={600}
-              height={400}
-              className="w-full md:h-[529px]"
-              alt="empowering"
-            />
-          </div> */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-4 h-[90%]">
+          <Image
+                src={data?.images[1]??'/'}
+                width={600}
+                height={400}
+                className="w-full md:h-[529px]"
+                alt={`member ship`}
+              />
+          </div>
+          <div className="col-span-1 md:col-span-2 lg:col-span-4 object-cover h-[90%]">
+          <Image
+                src={data?.images[2]??'/'}
+                width={600}
+                height={400}
+                className="w-full md:h-[529px]"
+                alt={`member ship`}
+              />
+          </div>
+          <div className="col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-3 h-[90%]">
+          <Image
+                src={data?.images[3]??'/'}
+                width={600}
+                height={400}
+                className="w-full md:h-[529px]"
+                alt={`member ship`}
+              />
+          </div>
         </div>
       </div>
     </section>
