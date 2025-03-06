@@ -12,7 +12,7 @@ const Dermaplanning:React.FC<DermaplaningProps>=({data})=> {
       <ServicesIntro
         title={`${data?.headerText}`}
         description={`${data?.bodyText}`}
-        btnLink={`${data?.cta_button.link}`}
+        btnLink={`/schedule-online`}
         btnStyle={`${data?.cta_button.text}`}
       />
       <figure

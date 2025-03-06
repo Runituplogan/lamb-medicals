@@ -17,7 +17,7 @@ const EllebanaLashList:React.FC<EllebanaLashListProps>=({data})=> {
          <ServicesIntro
         title={`${data?.headerText}`}
         description={`${data?.bodyText}`}
-        btnLink={`${data?.cta_button.link}`}
+        btnLink={`/schedule-online`}
         btnText={`${data?.cta_button.text}`}
       />
          <figure

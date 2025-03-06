@@ -17,7 +17,7 @@ const DiamondGlow:React.FC<DiamondGlowProps>=({data}) =>{
       <ServicesIntro
         title={`${data?.headerText}`}
         description={`${data?.bodyText}`}
-        btnLink={`${data?.cta_button.link}`}
+        btnLink={`/schedule-online`}
         btnText={`${data?.cta_button.text}`}
       />
       <div className="grid md:grid-cols-2 gap-7" data-aos="zoom-in">
