@@ -10,6 +10,7 @@ import BuilidngTrust from "./_components/BuilidngTrust";
 import { BuildTrustType, FaqSection, MeetTeamType, RefineHealthCareType } from "./types/aboutCustomTypes";
 import { useAboutPage } from "../contexts/aboutPageContext";
 import Preloader from "../components/Preloader";
+import OurServices from "../components/Templates/OurServices";
 
 export default function Page() {
   const { aboutPageData } = useAboutPage()
@@ -37,9 +38,9 @@ export default function Page() {
     <section className="overflow-hidden pt-5 sm:pt-16">
       <AboutSection data={heroData ?? { type: "hero" }} />
       <BuilidngTrust data={buildTrust ?? undefined} />
-      {/* <OurServices /> */}
+      <OurServices />
       <RedefineHealthCare data={redefinedHealthCare ?? undefined} />
-      <MeetTheTeam data={meetTheTeam ?? undefined} />
+      <MeetTheTeam/>
       <Questions data={faqSection ?? undefined} />
       <FAQ data={faqSection?.faqs} />
       {/* <GetInTouch /> */}

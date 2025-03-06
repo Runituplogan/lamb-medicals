@@ -1,12 +1,26 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import ServiceCard from "../ServiceCard";
-
+import { useOurServices } from "@/app/contexts/ourServices";
+import Preloader from "../Preloader";
 interface Section3Props {
-  data?: HomepageSection3;
+  data?: OurServicesType;
 }
-const OurServices: React.FC<Section3Props> = ({data}) => {
+const OurServices: React.FC<Section3Props> = () => {
+  const {ourServiceData} = useOurServices()
+
+   if (
+      !ourServiceData ||
+      !ourServiceData.content ||
+      ourServiceData.content.length === 0
+    ) {
+      return <Preloader />;
+    }
+
+  const data: OurServicesType | undefined = ourServiceData.content.find(
+    (item: any) => item.type === "section1"
+  );
+
   const [isExpanded, setIsExpanded] = useState(false);
   const first_three_Services = data?.features?.slice(0, 3);
   const [services, setServices] = useState(first_three_Services);

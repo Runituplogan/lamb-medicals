@@ -30,7 +30,7 @@ export default function Page() {
       <OurServices />
       <Questions />
       <FAQ data={home_faq} />
-      <GetInTouch />
+      {/* <GetInTouch /> */}
     </section>
   );
 }

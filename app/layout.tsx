@@ -20,7 +20,14 @@ import { FacialServicesPageProvider } from "./contexts/facialService";
 import { AboutPageProvider } from "./contexts/aboutPageContext";
 import { EnergyDevicesPageProvider } from "./contexts/energyDevices";
 import { InjectableTreatmentPageProvider } from "./contexts/injectableTreatmentContext";
-import { WeightLossProvider } from "./contexts/WeightLoss";
+import { SexualWellnessPageProvider } from "./contexts/sexualWellness";
+import { BodyTreatmentProvider } from "./contexts/bodyTreatment";
+import { SkinCareProductProvider } from "./contexts/skinCareProduct";
+import { MembershipPageProvider } from "./contexts/membership";
+import { MeetTheTeamPageProvider } from "./contexts/meetTheTeam";
+import { FooterPageProvider } from "./contexts/footer";
+import { OurServicesProvider } from "./contexts/ourServices";
+  import { WeightLossProvider } from "./contexts/WeightLoss";
 import { MedicalServicesProvider } from "./contexts/MedicalServices";
 
 export const metadata: Metadata = {
@@ -69,26 +76,42 @@ export default function RootLayout({
       >
         <ReactQueryProvider>
           <HomePageProvider>
-            <AboutPageProvider>
-              <InjectableTreatmentPageProvider>
-                <FacialServicesPageProvider>
-                  <EnergyDevicesPageProvider>
-                    <WeightLossProvider>
+          <AboutPageProvider>
+            <InjectableTreatmentPageProvider>
+            <FacialServicesPageProvider>
+              <EnergyDevicesPageProvider>
+                <SexualWellnessPageProvider>
+                  <BodyTreatmentProvider>
+                    <SexualWellnessPageProvider>
+                      <SkinCareProductProvider>
+                        <MembershipPageProvider>
+                          <MeetTheTeamPageProvider>
+                            <FooterPageProvider>
+                              <OurServicesProvider>
+                                 <WeightLossProvider>
                       <MedicalServicesProvider>
-                      <Navbar />
-                      <ToastContainer
-                        autoClose={2000}
-                        hideProgressBar={true}
-                        theme="colored"
-                      />
-                      <AOSInitializer /> {/* Initialize AOS */}
-                      {children}
-                      <Footer />
-                      </MedicalServicesProvider>
+                                  <Navbar />
+                                  <ToastContainer
+                                    autoClose={2000}
+                                    hideProgressBar={true}
+                                    theme="colored"
+                                  />
+                                  <AOSInitializer /> {/* Initialize AOS */}
+                                  {children}
+                                  <Footer />
+                         </MedicalServicesProvider>
                     </WeightLossProvider>
-                  </EnergyDevicesPageProvider>
-                </FacialServicesPageProvider>
-              </InjectableTreatmentPageProvider>
+                              </OurServicesProvider>
+                            </FooterPageProvider>
+                          </MeetTheTeamPageProvider>
+                        </MembershipPageProvider>
+                      </SkinCareProductProvider>
+                    </SexualWellnessPageProvider>
+                  </BodyTreatmentProvider>
+                </SexualWellnessPageProvider>
+              </EnergyDevicesPageProvider>
+            </FacialServicesPageProvider>
+            </InjectableTreatmentPageProvider>
             </AboutPageProvider>
           </HomePageProvider>
         </ReactQueryProvider>

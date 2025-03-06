@@ -82,7 +82,7 @@ const EllebanaLashList:React.FC<EllebanaLashListProps>=({data})=> {
 
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
           {
-            data?.before_and_after[0].images.map((item, index)=>
+            data?.before_and_after[0].images.map((item,index)=>
               <div className="relative" key={index}>
             <h2 className="font-semibold text-white absolute top-10 right-[50%] xs:text-[47.54px] text-[32px] z-10">
               {item.type}

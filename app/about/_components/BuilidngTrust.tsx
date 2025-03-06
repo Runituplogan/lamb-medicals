@@ -38,11 +38,11 @@ const BuilidngTrust: React.FC<BuildTrustSectionProps>  = ({data}) => {
               data?.images.map((item,index)=> (
                 <Image
                 key={index}
-                src={`/${item}`}
+                src={item}
                 width={600}
                 height={400}
                 className="w-full md:h-[529px]"
-                alt="empowering"
+                alt={`${item}png`}
               />
               ))
             }

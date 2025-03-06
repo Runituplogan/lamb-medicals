@@ -3,9 +3,10 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
+import { FooterSection1Type } from "./Templates/Footer";
 
 interface getInTouchProps {
-  data?: HomepageSection7;
+  data?: FooterSection1Type;
 }
 
 const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
@@ -86,7 +87,7 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
             onSubmit={sendEmail}
             className="w-full h-full flex flex-col justify-between space-y-5 xs:space-y-10 font-work_sans"
           >
-            {data?.form?.fields.map((field: ContactFormField) => (
+            {data?.form?.fields.map((field) => (
               <div key={field.name} className="w-full">
                 {field.type === "textarea" ? (
                   <textarea

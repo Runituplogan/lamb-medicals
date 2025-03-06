@@ -103,7 +103,7 @@ interface HomepageSection2 {
   buttonPrimaryLink?: string;
 }
 
-interface HomepageSection3 {
+interface OurServicesType {
   type: string;
   headerText?: string;
   bodyText?: string;

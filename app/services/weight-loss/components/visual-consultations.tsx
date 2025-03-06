@@ -1,22 +1,21 @@
 import ServiceImageContentLayout from "../../components/service-image-content-layout";
-import { SectionWithImage } from "../types/weightLoss";
+import { VirtualconsultationsType } from "../../memberships/types/membershipCustomType";
 
-interface virtualConsultationProp {
-  data: SectionWithImage;
+interface VisualConsultationsProps{
+  data?:VirtualconsultationsType
 }
-
-const VisualConsultations: React.FC<virtualConsultationProp> = ({ data }) => {
+const VisualConsultations:React.FC<VisualConsultationsProps>=({data})=> {
   return (
     <ServiceImageContentLayout
-      image={data?.image || ""}
-      title={data?.headerText || ""}
-      imageMobile={data?.image}
+      image={`${data?.image}`}
+      title={`${data?.headerText}`}
+      imageMobile="weight-loss/visual-consultation-mobile.png"
     >
       <p className="grid gap-8 font-work_sans text-[14px] xs:text-md font-medium leading-[3.2rem] tracking-[0.02rem] text-grey-750 opacity-80">
-          {data?.bodyText}
+      {`${data?.bodyText}`}
       </p>
     </ServiceImageContentLayout>
   );
-};
+}
 
-export default VisualConsultations;
+export default VisualConsultations
