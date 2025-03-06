@@ -34,9 +34,9 @@ const Questions:React.FC<QuestionsProps> = ({data}) => {
           </div>
         </div>
       </div>
-      <img src={`/${data?.image}`}alt="3" className="mt-24 w-full xs:block hidden" />
+      <img src={data?.image} alt="3" className="mt-24 w-full xs:block hidden" />
       <img
-        src={`/${data?.image}`}
+        src={data?.image}
         alt="3"
         className="mt-24 w-full xs:hidden block"
       />

@@ -97,7 +97,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </Wrapper>
+      </Wrapper> 
 
       {/* Experience the lamb look */}
       <ExperienceLamb data={section2 ?? {type: 'section2'}}/>

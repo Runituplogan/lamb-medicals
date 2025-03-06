@@ -76,15 +76,15 @@ const WallOfLove: React.FC<Section5Props> = ({ data }) => {
       </div>
     </section>
   );
-};
+}; 
 
 // Card Component
-const Card: React.FC<any> = ({ avatar, testimonial, name, occupation, social, username }) => {
+const Card: React.FC<any> = ({ image, testimonial, name, occupation, social, username }) => {
   return (
     <div className="h-full w-[500px] rounded-md bg-white px-5 py-7 font-work_sans shadow-md shadow-[#00000012] lg:px-8">
       <div className="gap3 flex w-full items-center justify-between">
         <div className="flex items-center justify-start gap-3">
-          <img src={avatar} alt={name} className="h-10 w-10 rounded-full" />
+          <img src={image} alt={name} className="h-10 w-10 rounded-full" />
           <div>
             <p className="text-sm font-medium text-[#121212] sm:text-base lg:text-lg">{name}</p>
             <p className="text-xs text-grey-500 sm:text-sm lg:text-base">{occupation}</p>
@@ -93,8 +93,8 @@ const Card: React.FC<any> = ({ avatar, testimonial, name, occupation, social, us
 
         {social && (
           <img
-            alt={name}
-            src={social === "twitter" ? "/twitter.png" : social === "linkedin" ? "/linkedin.png" : ""}
+            alt='icon'
+            src={social === "twitter" ? "/twitter.png" : social === "linkedin" ? "/linkedin.png" : "/linkedin.png"}
           />
         )}
       </div>

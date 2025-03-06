@@ -6,7 +6,10 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
   return (
-    <section className="relative xs:bg-home_hero h-screen bg-no-repeat xs:bg-top md:bg-cover flex flex-col xs:justify-center items-center mt-32 xs:mt-0">
+    <section
+      className="relative h-screen bg-no-repeat xs:bg-top md:bg-cover flex flex-col xs:justify-center items-center mt-32 xs:mt-0"
+      style={{ backgroundImage: `url(${data?.backgroundImage})` }}
+    >
       {/* Background image for mobile view */}
       <img
         data-aos="fade-right"
