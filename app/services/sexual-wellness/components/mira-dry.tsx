@@ -41,10 +41,11 @@ const MiraDry:React.FC<MiraDryProps>=({data,faqs})=> {
             className="absolute object-cover hidden xs:block"
           /> */}
           <Image
-            src={`/${data?.image}`}
+            src={`${data?.image}`}
             alt="mira dry"
             fill
             className="absolute object-cover hidden xs:block"
+            unoptimized
           />
           {/* <img
             src="/images/sexual-wellness/mira-dry-mobile.png"

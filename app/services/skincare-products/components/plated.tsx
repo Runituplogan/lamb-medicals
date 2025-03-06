@@ -21,36 +21,14 @@ const Plated:React.FC<PlatedProps>=({data,faqs}) =>{
         {data?.images.map((item,index)=>
         <div className="relative h-full col-span-full" data-aos="fade-left" key={index}>
           <Image
-            src={`/${item}`}
-            alt=""
+            src={`${item}`}
+            alt="service image"
             fill
-            className="absolute object-top xs:block hidden"
+            className="absolute object-top"
+            unoptimized
           />
-          {/* <img
-            src="/images/skincare-products/skincare-products-1-mobile.png"
-            alt=""
-            className="xs:hidden block object-cover"
-          /> */}
         </div>
         )}
-        {/* <div className="relative h-full col-span-full" data-aos="fade-right">
-          <Image
-            src="/images/skincare-products/skincare-products-2.png"
-            alt=""
-            fill
-            className="absolute object-top xs:block hidden"
-          />
-          <img
-            src="/images/skincare-products/skincare-products-2-mobile.png"
-            alt=""
-            className="xs:hidden block"
-          />
-        </div> */}
-        {/* <img
-          src="/images/skincare-products/skincare-products-3-mobile.png"
-          alt=""
-          className="xs:hidden block"
-        /> */}
       </ServicesAfterEffects>
       <ServicesFAQ
         title={`${faqs?.headerText}`}

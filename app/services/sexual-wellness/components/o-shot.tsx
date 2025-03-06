@@ -35,7 +35,7 @@ const OShot:React.FC<OShotProps>=({data,faqs}) =>{
             className="object-cover object-top xs:block hidden"
           /> */}
           <Image
-            src={`/${data?.image}`}
+            src={`${data?.image}`}
             alt=""
             role="presentation"
             fill

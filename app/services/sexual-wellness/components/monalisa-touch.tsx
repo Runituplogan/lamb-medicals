@@ -26,10 +26,11 @@ const MonalisaTouch:React.FC<MonalisaTouchProps>=({data,faqs})=> {
             className="absolute object-top xs:block hidden"
           /> */}
           <Image
-            src={`/${data?.image}`}
+            src={`${data?.image}`}
             alt="monalisa-touch"
             fill
             className="absolute object-top xs:block hidden"
+            unoptimized
           />
           {/* <img
             src="/images/sexual-wellness/monalisa-touch-mbile.png"

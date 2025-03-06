@@ -5,6 +5,7 @@ import Image from "next/image";
 import ServicesFAQ from "../../components/services-faq";
 import { laserWartRemovalFAQs } from "@/app/utils/data";
 import { FAQsSection, LaserTreatmentSection } from "../types/medical-services";
+import BeforeAfter from "@/app/components/BeforeandAfter";
 
 interface leserTwartsProps {
   data: LaserTreatmentSection,
@@ -23,25 +24,7 @@ export default function LaserWartRemoval({data, questions}:leserTwartsProps) {
         }
         btnText={data?.cta_button?.text}
       />
-
-      {/* <ServicesAfterEffects className="grid-cols-1 grid-rows-[78rem] gap-[2rem]"> */}
-        {/* {data?.images?.map((image) =>(
-        <div className="relative col-span-full h-full" data-aos="fade-left">
-          <Image
-            src={image }
-            alt=""
-            fill
-            role="presentation"
-            className="absolute object-top xs:block hidden"
-          />
-          <img
-            src={image }
-            alt=""
-            className="xs:hidden block"
-          />
-        </div>
-        ))} */}
-      {/* </ServicesAfterEffects> */}
+          <BeforeAfter items={data?.images}/>
       <ServicesFAQ
         title={questions?.headerText}
         description={questions?.bodyText}
