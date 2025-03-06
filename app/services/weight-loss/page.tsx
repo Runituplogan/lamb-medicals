@@ -21,6 +21,7 @@ import {
   ServicesSection,
   TeamSection,
 } from "./types/weightLoss";
+import { BeWellProgramServices, BeWellProgramTeamType, BeWellProgramType, ConciergeFamilyType, ElectronicCommunicationType, TransformationType, VirtualconsultationsType, WhyChooseUsType } from "../memberships/types/membershipCustomType";
 
 const weightLossTabItems = [
   { href: "#well-program", label: "Be Well Program" },
@@ -40,35 +41,35 @@ export default function WeightLoss() {
     (item: any) => item.type === "hero"
   );
 
-  const beWellData: SectionWithCTA = WeightLossData.content.find(
+  const beWellData: BeWellProgramType = WeightLossData.content.find(
     (item: any) => item.type === "section1"
   );
 
-  const beWellTeam: TeamSection = WeightLossData.content.find(
+  const beWellTeam: BeWellProgramTeamType = WeightLossData.content.find(
     (item: any) => item.type === "section2"
   );
 
-  const services: ServicesSection = WeightLossData.content.find(
+  const services: BeWellProgramServices = WeightLossData.content.find(
     (item: any) => item.type === "section3"
   );
 
-  const virtualConsultations: SectionWithImage = WeightLossData.content.find(
+  const virtualConsultations: VirtualconsultationsType = WeightLossData.content.find(
     (item: any) => item.type === "section4"
   );
 
-  const WhyUs: SectionWithFeatures = WeightLossData.content.find(
+  const WhyUs:  WhyChooseUsType = WeightLossData.content.find(
     (item: any) => item.type === "section5"
   );
 
-  const nextStep: SectionWithImage = WeightLossData.content.find(
+  const nextStep: TransformationType = WeightLossData.content.find(
     (item: any) => item.type === "section6"
   );
 
-  const consierge: SectionWithList = WeightLossData.content.find(
+  const consierge: ConciergeFamilyType = WeightLossData.content.find(
     (item: any) => item.type === "section7"
   );
 
-  const ElectronicComm: SectionWithImage = WeightLossData.content.find(
+  const ElectronicComm: ElectronicCommunicationType = WeightLossData.content.find(
     (item: any) => item.type === "section8"
   );
 
@@ -83,7 +84,7 @@ export default function WeightLoss() {
       </div>
       <div className="xs:hidden w-full py-10 mt-20 relative h-screen flex flex-col justify-start items-start">
         <img
-          src="/images/sexual-wellness/weight-loss-cover-mobile.png"
+          src={`${heroData?.image}`}
           alt="facial-service-image-mobile"
           className="absolute object-cover object-center h-screen inset-0"
         />

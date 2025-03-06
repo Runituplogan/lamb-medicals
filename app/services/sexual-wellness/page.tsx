@@ -6,8 +6,6 @@ import PRPBreastRejuvenation from "./components/prp-breast-rejuvenation";
 import OShot from "./components/o-shot";
 import MonalisaTouch from "./components/monalisa-touch";
 import MiraDry from "./components/mira-dry";
-import ServicesFAQ from "../components/services-faq";
-import { vampireWingLiftFAQs } from "@/app/utils/data";
 import { useSexualWellnessPage } from "@/app/contexts/sexualWellness";
 import Preloader from "@/app/components/Preloader";
 import { MiraDryFAQ, MiraDryType, MonalisaTouchFAQ, MonalisaTouchType, OShotFAQ, OShotType, PRPFAQ, PRPType } from "./types/sexualWellnessCustomTypes";

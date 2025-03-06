@@ -69,6 +69,7 @@ export default function MedicalServices() {
       (item: any) => item.type === "section7"
     );
 
+
   return (
     <Fragment>
       <div className="w-full xs:block hidden">
@@ -82,7 +83,7 @@ export default function MedicalServices() {
       <div className="w-full xs:hidden py-10 mt-20 relative h-screen flex flex-col justify-start items-center">
         {/* <div className="relative size-full" data-aos="fade-right"> */}
         <img
-          src="/images/body-treatments/body-treatments-cover-mobile.png"
+          src={`${heroData?.image}`}
           alt="facial-service-image-mobile"
           className="absolute inset-0 h-[90vh] object-cover object-center"
         />

@@ -19,34 +19,16 @@ const Exosomes:React.FC<ExosomesProps>=({data,faqs})=> {
         description={`${data?.bodyText}`}
       />
       <ServicesAfterEffects className="grid-cols-2 grid-rows-[60rem] gap-[4rem]">
-        {/* <div className="relative h-full" data-aos="fade-left">
-          <Image
-            src="/images/skincare-products/skincare-products-3.png"
-            alt=""
-            fill
-            className="absolute object-top xs:block hidden"
-          />
-          <img
-            src="/images/skincare-products/skincare-products-3.png"
-            alt=""
-            className="xs:hidden"
-          />
-        </div> */}
         {
           data?.images.map((item,index)=>
             <div className="relative h-full" data-aos="fade-left" key={index}>
               <Image
                 key={index}
-                src={`/${item}`}
+                src={`${item}`}
                 alt=""
                 fill
                 className="absolute object-top xs:block hidden"
               />
-              {/* <img
-                src="/images/skincare-products/skincare-products-4.png"
-                alt=""
-                className="xs:hidden block"
-              /> */}
         </div>
           )
         }

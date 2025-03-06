@@ -26,16 +26,11 @@ const Latisse:React.FC<LatisseProps>=({data,faqs})=> {
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[56rem] gap-[4rem]">
         <div className="relative h-full col-span-full" data-aos="fade-left">
           <Image
-            src={`/${data?.image}`}
+            src={`${data?.image}`}
             alt=""
             fill
             className="absolute object-top xs:block hidden"
           />
-          {/* <img
-            src="/images/skincare-products/skincare-products-5.png"
-            alt=""
-            className="xs:hidden"
-          /> */}
         </div>
       </ServicesAfterEffects>
       <ServicesBenefits
@@ -45,16 +40,11 @@ const Latisse:React.FC<LatisseProps>=({data,faqs})=> {
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[56rem] gap-[4rem]">
         <div className="relative h-full col-span-full" data-aos="fade-left">
           <Image
-            src={`/${data?.subsection?.image}`}
+            src={`${data?.subsection?.image}`}
             alt=""
             fill
             className="absolute object-top xs:block hidden"
           />
-          {/* <img
-            src="/images/skincare-products/skincare-products-6.png"
-            alt=""
-            className="xs:hidden block"
-          /> */}
         </div>
       </ServicesAfterEffects>
       <ServicesFAQ

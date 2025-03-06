@@ -51,14 +51,14 @@ export default function SkinCareProducts() {
     <Fragment>
       <div className="xs:block hidden w-full">
         <ServicesHero
-          image={`/${heroData?.image}`}
+          image={`${heroData?.image}`}
           title={`${heroData?.headerText}`}
           description={`${heroData?.bodyText}`}
         />
       </div>
       <div className="w-full xs:hidden py-10 mt-20 relative h-screen flex flex-col justify-start items-start">
         <img
-          src={`/${heroData?.image}`}
+          src={`${heroData?.image}`}
           alt="facial-service-image-mobile"
           className="absolute inset-0 h-screen object-cover object-center"
         />
