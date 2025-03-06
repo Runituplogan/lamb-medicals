@@ -47,6 +47,8 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
       );
   };
 
+  console.log({GITdata: data})
+
   return (
     <section className="w-full px-5 xs:py-10 py-14 md:py-36">
       <div className="w-full mx-auto max-w-[1200px] flex flex-col md:flex-row gap-7 md:gap-8 lg:gap-20 xl:gap-28">
@@ -74,7 +76,6 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
             Your care. Your time. Your way. Schedule online and experience the
             personalized, concierge-style medical care you deserve.
           </p> */}
-
           <img
             src="/location.png"
             alt="location map" 
@@ -93,14 +94,14 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
                   <textarea
                     rows={4}
                     className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
-                    placeholder={field.placeholder}
+                    placeholder={field.name}
                     name={field.name}
                     required={field.required}
                   />
                 ) : (
                   <input
                     className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
-                    placeholder={field.placeholder}
+                    placeholder={field.name}
                     name={field.name}
                     type={field.type}
                     required={field.required}

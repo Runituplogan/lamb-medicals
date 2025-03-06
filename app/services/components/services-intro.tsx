@@ -24,7 +24,7 @@ export default function ServicesIntro({
       <div className="grid gap-8  font-work_sans text-[14px] xs:text-lg font-medium leading-[3.6rem] tracking-[0.02rem] text-grey-750 opacity-80">
         {description}
       </div>
-      <Link href={`${btnLink}`}>
+      <Link href={`${btnLink}`} className="pt-2">
       <BookNowButton>{btnText}</BookNowButton>
       </Link>
     </section>

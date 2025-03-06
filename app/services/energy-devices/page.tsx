@@ -23,44 +23,36 @@ export default function EnergyDevices() {
     if (!energyDevicesPageData || !energyDevicesPageData.content || energyDevicesPageData.content.length === 0) {
       return <Preloader />;
     }
-    const heroData: ContentItem | undefined = energyDevicesPageData.content.find(
+    const heroData: ContentItem | undefined = energyDevicesPageData.content?.find(
       (item: any) => item.type === "hero"
     );
-    const ageject: AgejectType | undefined = energyDevicesPageData.content.find(
+    const ageject: AgejectType | undefined = energyDevicesPageData.content?.find(
       (item: any) => item.type === "section1"
     );
-    const agejectFaqs: AgeJectFaqs | undefined = energyDevicesPageData.content.find(
+    const agejectFaqs: AgeJectFaqs | undefined = energyDevicesPageData.content?.find(
       (item: any) => item.type === "section2"
     );
-    const sofwave: SofwaveType | undefined = energyDevicesPageData.content.find(
+    const sofwave: SofwaveType | undefined = energyDevicesPageData.content?.find(
       (item: any) => item.type === "section3"
     );
-    const sofwaveFaqs: SofwaveFaqs | undefined = energyDevicesPageData.content.find(
+    const sofwaveFaqs: SofwaveFaqs | undefined = energyDevicesPageData.content?.find(
       (item: any) => item.type === "section4"
     );
-    const ipl: IPLType | undefined = energyDevicesPageData.content.find(
+    const ipl: IPLType | undefined = energyDevicesPageData.content?.find(
       (item: any) => item.type === "section5"
     );
-    const iplFaq: IPLFAQs | undefined = energyDevicesPageData.content.find(
+    const iplFaq: IPLFAQs | undefined = energyDevicesPageData.content?.find(
       (item: any) => item.type === "section6"
     );
-    const microneedling: MicroneedlingType | undefined = energyDevicesPageData.content.find(
+    const microneedling: MicroneedlingType | undefined = energyDevicesPageData.content?.find(
       (item: any) => item.type === "section7"
     );
-    const microneedlingFaq: MicroneedlingFaq | undefined = energyDevicesPageData.content.find(
+    const microneedlingFaq: MicroneedlingFaq | undefined = energyDevicesPageData.content?.find(
       (item: any) => item.type === "section8"
     );
   return (
     <Fragment>
       <div className="xs:block hidden w-full">
-        {/* <ServicesHero
-          image="energy-devices/energy-devices-image.png"
-          title="Energy devices"
-          description="Laser resurfacing rejuvenates the skin by using advanced laser
-        technology to reduce wrinkles, scars, and uneven texture while
-        stimulating collagen production. This treatment offers a non-invasive
-        solution for achieving smoother, firmer skin with minimal downtime."
-        /> */}
         <ServicesHero
           image={`${heroData?.image}`}
           title={`${heroData?.headerText}`}

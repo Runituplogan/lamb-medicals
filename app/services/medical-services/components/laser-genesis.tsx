@@ -5,6 +5,7 @@ import Image from "next/image";
 import ServicesFAQ from "../../components/services-faq";
 import { laserGenesisFAQs } from "@/app/utils/data";
 import { FAQsSection, LaserGenesisSection } from "../types/medical-services";
+import BeforeAfter from "@/app/components/BeforeandAfter";
 
 interface propsType {
   data: LaserGenesisSection;
@@ -28,20 +29,7 @@ export default function LaserGenesis({ data, questions }: propsType) {
       >
         {data?.bodyText}
       </p>
-      {data?.images?.map((image) => (
-        <ServicesAfterEffects className="grid-cols-1 grid-rows-[50rem_52rem] gap-2 xs:gap-[2rem]">
-          <div className="relative h-full col-span-full" data-aos="fade-left">
-            <Image
-              src={image?.image}
-              alt="images"
-              fill
-              role="presentation"
-              className="absolute object-top hidden xs:block"
-              unoptimized
-            />
-          </div>
-        </ServicesAfterEffects>
-      ))}
+       <BeforeAfter items={data?.images}/>
       <ServicesFAQ
         title={questions?.headerText}
         description={questions?.bodyText}

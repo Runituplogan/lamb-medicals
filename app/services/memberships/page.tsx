@@ -24,40 +24,40 @@ export default function Memberships() {
   if (!membershipPageData || !membershipPageData.content || membershipPageData.content.length === 0) {
       return <Preloader />;
     }
-  const heroData: ContentItem | undefined = membershipPageData.content.find(
+  const heroData: ContentItem | undefined = membershipPageData.content?.find(
     (item: any) => item.type === "hero"
   ); 
-  const beWellProgram: BeWellProgramType | undefined = membershipPageData.content.find(
+  const beWellProgram: BeWellProgramType | undefined = membershipPageData.content?.find(
     (item: any) => item.type === "section1"
   ); 
-  const beWellProgramTeam: BeWellProgramTeamType | undefined = membershipPageData.content.find(
+  const beWellProgramTeam: BeWellProgramTeamType | undefined = membershipPageData.content?.find(
     (item: any) => item.type === "section2"
   ); 
-  const beWellProgramSevices: BeWellProgramServices | undefined = membershipPageData.content.find(
+  const beWellProgramSevices: BeWellProgramServices | undefined = membershipPageData.content?.find(
     (item: any) => item.type === "section3"
   ); 
-  const virtualConsultations: VirtualconsultationsType | undefined = membershipPageData.content.find(
+  const virtualConsultations: VirtualconsultationsType | undefined = membershipPageData.content?.find(
     (item: any) => item.type === "section4"
   ); 
-  const whyChooseUs: WhyChooseUsType = membershipPageData.content.find(
+  const whyChooseUs: WhyChooseUsType = membershipPageData.content?.find(
     (item: any) => item.type === "section5"
   ); 
-  const transformation: TransformationType | undefined = membershipPageData.content.find(
+  const transformation: TransformationType | undefined = membershipPageData.content?.find(
     (item: any) => item.type === "section6"
   ); 
-  const conciergeFamily: ConciergeFamilyType | undefined = membershipPageData.content.find(
+  const conciergeFamily: ConciergeFamilyType | undefined = membershipPageData.content?.find(
     (item: any) => item.type === "section7"
   ); 
-  const electronicCommunication: ElectronicCommunicationType | undefined = membershipPageData.content.find(
+  const electronicCommunication: ElectronicCommunicationType | undefined = membershipPageData.content?.find(
     (item: any) => item.type === "section8"
   ); 
-  const reImagingType: ReImagingType | undefined = membershipPageData.content.find(
+  const reImagingType: ReImagingType | undefined = membershipPageData.content?.find(
     (item: any) => item.type === "section9"
   ); 
-  const reImagingFaq: ReImagingFAQ | undefined = membershipPageData.content.find(
+  const reImagingFaq: ReImagingFAQ | undefined = membershipPageData.content?.find(
     (item: any) => item.type === "section10"
   ); 
-  const aethesticsMembership: AethesticsMembershipType | undefined = membershipPageData.content.find(
+  const aethesticsMembership: AethesticsMembershipType | undefined = membershipPageData.content?.find(
     (item: any) => item.type === "section11"
   ); 
   console.log({membershipPageData})

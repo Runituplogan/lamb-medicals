@@ -6,12 +6,13 @@ import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
 import { agejectBenefits, agejectFAQs } from "@/app/utils/data";
 import { AgeJectFaqs, AgejectType } from "../types/energyDevicesCustomType";
+import BeforeAfter from "@/app/components/BeforeandAfter";
 
 interface AgeJectProps {
-  data?:AgejectType,
-  agejectFaqs?:AgeJectFaqs
+  data?: any;
+  agejectFaqs?: AgeJectFaqs;
 }
-const AgeJect:React.FC<AgeJectProps>=({data,agejectFaqs})=> {
+const AgeJect: React.FC<AgeJectProps> = ({ data, agejectFaqs }) => {
   // console.log(data?.sections[0].content)
   return (
     <Wrapper id="ageject" className="grid gap-[4rem] pt-14">
@@ -47,54 +48,20 @@ const AgeJect:React.FC<AgeJectProps>=({data,agejectFaqs})=> {
       <ServicesBenefits
         title={`${data?.sections[0].headerText}`}
         description={`${data?.sections[0].bodyText}`}
-        benefits={data?.sections[0].content??[]}
+        benefits={data?.sections[0].content ?? []}
       />
-      <ServicesAfterEffects>
-        {
-          data?.sections[0].images.map((item,index)=> 
-        <div className="relative xs:h-full" data-aos="fade-left" key={index}>
-          <Image
-            src={`${item.image}`}
-            alt=""
-            fill
-            className="absolute object-cover"
-          />
-          {/* <img
-            src="/images/energy-devices/ageJect-before-and-after-1.png"
-            alt="ageJect before and after"
-            className="xs:hidden block object-cover"
-          /> */}
-        </div>
-          )
-        }
 
-        {/* <div className="relative h-full" data-aos="fade-right">
-          <Image
-            src="/images/energy-devices/ageJect-before-and-after-2.png"
-            alt=""
-            fill
-            className="absolute object-cover hidden xs:block"
-          />
-          <img
-            src="/images/energy-devices/ageJect-before-and-after-2.png"
-            alt="ageJect-before-and-after-2"
-            className="object-cover xs:hidden block"
-          />
-        </div> */}
-        {/* <div className="relative col-span-full h-full" data-aos="fade-up">
-          <Image
-            src="/images/energy-devices/ageJect-before-and-after-3.png"
-            alt="ageJect-before-and-after"
-            fill
-            className="absolute object-cover"
-          />
-          <img
-            src="/images/energy-devices/ageJect-before-and-after-3.png"
-            alt="ageJect-before-and-after-3"
-            className="xs:hidden block object-cover"
-          />
-        </div> */}
-      </ServicesAfterEffects>
+      <div
+        style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}
+      >
+        <BeforeAfter items={data?.sections[0].images?.slice(0, 2)} />
+        <BeforeAfter items={data?.sections[0].images?.slice(2, 4)} />
+      </div>
+
+
+        <BeforeAfter items={data?.sections[0].images?.slice(4, 6)} />
+   
+
       <ServicesFAQ
         title={`${agejectFaqs?.headerText}`}
         description={`${agejectFaqs?.textBody}`}
@@ -102,7 +69,6 @@ const AgeJect:React.FC<AgeJectProps>=({data,agejectFaqs})=> {
       />
     </Wrapper>
   );
-}
+};
 
-
-export default AgeJect
+export default AgeJect;

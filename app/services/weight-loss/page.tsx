@@ -37,39 +37,39 @@ export default function WeightLoss() {
     return <Preloader />;
   }
 
-  const heroData: ContentItem | undefined = WeightLossData.content.find(
+  const heroData: ContentItem | undefined = WeightLossData.content?.find(
     (item: any) => item.type === "hero"
   );
 
-  const beWellData: BeWellProgramType = WeightLossData.content.find(
+  const beWellData: BeWellProgramType = WeightLossData.content?.find(
     (item: any) => item.type === "section1"
   );
 
-  const beWellTeam: BeWellProgramTeamType = WeightLossData.content.find(
+  const beWellTeam: BeWellProgramTeamType = WeightLossData.content?.find(
     (item: any) => item.type === "section2"
   );
 
-  const services: BeWellProgramServices = WeightLossData.content.find(
+  const services: BeWellProgramServices = WeightLossData.content?.find(
     (item: any) => item.type === "section3"
   );
 
-  const virtualConsultations: VirtualconsultationsType = WeightLossData.content.find(
+  const virtualConsultations: VirtualconsultationsType = WeightLossData.content?.find(
     (item: any) => item.type === "section4"
   );
 
-  const WhyUs:  WhyChooseUsType = WeightLossData.content.find(
+  const WhyUs:  WhyChooseUsType = WeightLossData.content?.find(
     (item: any) => item.type === "section5"
   );
 
-  const nextStep: TransformationType = WeightLossData.content.find(
+  const nextStep: TransformationType = WeightLossData.content?.find(
     (item: any) => item.type === "section6"
   );
 
-  const consierge: ConciergeFamilyType = WeightLossData.content.find(
+  const consierge: ConciergeFamilyType = WeightLossData.content?.find(
     (item: any) => item.type === "section7"
   );
 
-  const ElectronicComm: ElectronicCommunicationType = WeightLossData.content.find(
+  const ElectronicComm: ElectronicCommunicationType = WeightLossData.content?.find(
     (item: any) => item.type === "section8"
   );
 

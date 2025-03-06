@@ -9,15 +9,7 @@ interface Section3Props {
 const OurServices: React.FC<Section3Props> = () => {
   const {ourServiceData} = useOurServices()
 
-   if (
-      !ourServiceData ||
-      !ourServiceData.content ||
-      ourServiceData.content.length === 0
-    ) {
-      return <Preloader />;
-    }
-
-  const data: OurServicesType | undefined = ourServiceData.content.find(
+  const data: OurServicesType | undefined = ourServiceData?.content?.find(
     (item: any) => item.type === "section1"
   );
 
@@ -33,6 +25,14 @@ const OurServices: React.FC<Section3Props> = () => {
     }
   }, [isExpanded]);
 
+  if (
+      !ourServiceData ||
+      !ourServiceData.content ||
+      ourServiceData.content.length === 0
+    ) {
+      return <Preloader />;
+    }
+  
   return (
     <section className="w-full bg-[#F1F1F1] px-5 py-10 md:py-20 lg:py-32">
       <div className="mx-auto w-full max-w-[1400px] p-5 sm:p-10 md:p-14">

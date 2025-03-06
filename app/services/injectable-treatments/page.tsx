@@ -41,27 +41,27 @@ export default function InjectableTreatments() {
   //console.log({ InjectableTreatmentPageData });
 
   const heroData: ContentItem | undefined =
-    InjectableTreatmentPageData.content.find(
+    InjectableTreatmentPageData.content?.find(
       (item: any) => item.type === "hero"
     );
 
-  const botoxData: Section1 = InjectableTreatmentPageData.content.find(
+  const botoxData: Section1 = InjectableTreatmentPageData.content?.find(
     (item: any) => item.type === "section1"
   );
 
-  const dermalFillers: Section3 = InjectableTreatmentPageData.content.find(
+  const dermalFillers: Section3 = InjectableTreatmentPageData.content?.find(
     (item: any) => item.type === "section3"
   );
 
-  const sculptra: Section5 = InjectableTreatmentPageData.content.find(
+  const sculptra: Section5 = InjectableTreatmentPageData.content?.find(
     (item: any) => item.type === "section5"
   );
 
-  const PRPRejuvenationData: Section7 = InjectableTreatmentPageData.content.find(
+  const PRPRejuvenationData: Section7 = InjectableTreatmentPageData.content?.find(
     (item: any) => item.type === "section7"
   );
 
-  const KybellaData: Section9 = InjectableTreatmentPageData.content.find(
+  const KybellaData: Section9 = InjectableTreatmentPageData.content?.find(
     (item: any) => item.type === "section9"
   );
 

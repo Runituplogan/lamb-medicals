@@ -4,15 +4,15 @@ interface sectionsType {
     bodyText:string,
     headerText:string,
     content:string[],
-    images:{image:string,type:string}[]
-}
+   images?: ImageData[];
+} 
 
 export interface AgejectType{
     bodyText:string,
     headerText:string,
     cta_button:ButtonType,
     image:string,
-    sections:sectionsType[],
+    sections?: sectionsType[],
     type:string,
 }
 
