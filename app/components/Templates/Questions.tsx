@@ -39,7 +39,7 @@ const Questions:React.FC<QuestionsProps> = ({data}) => {
         src={data?.image}
         alt="3"
         className="mt-24 w-full xs:hidden block"
-      /> */}
+      /> 
     </section>
   );
 };
