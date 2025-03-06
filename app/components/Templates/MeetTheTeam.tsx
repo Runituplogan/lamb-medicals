@@ -16,9 +16,7 @@ interface MeetTheTeamSectionProps {
 
 const MeetTheTeam =() => {
   const {meetTheTeamPageData} = useMeetTheTeamPage()
-    if (!meetTheTeamPageData || !meetTheTeamPageData.content || meetTheTeamPageData.content.length === 0) {
-      return <Preloader />;
-    }
+   
     const data: MeetTeamType | undefined = meetTheTeamPageData.content.find(
       (item: any) => item.type === "section1"
     );
@@ -38,6 +36,10 @@ const MeetTheTeam =() => {
     window.addEventListener("resize", updateWidth);
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
+
+   if (!meetTheTeamPageData || !meetTheTeamPageData.content || meetTheTeamPageData.content.length === 0) {
+      return <Preloader />;
+    }
 
   const handleClick = (index: number, direction?: "left" | "right") => {
     if (direction === "left" && index > 0) {
