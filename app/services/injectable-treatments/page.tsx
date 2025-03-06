@@ -76,7 +76,7 @@ export default function InjectableTreatments() {
       </div>
       <div className="xs:hidden w-full py-10 mt-20 relative h-screen flex flex-col justify-start items-start">
         <img
-          src="/images/injectable-treatments/injectable-treatments-image-mobile.png"
+          src={`${heroData?.image}`}
           alt="facial-service-image-mobile"
           className="absolute object-cover object-center h-screen inset-0"
         />
@@ -86,17 +86,13 @@ export default function InjectableTreatments() {
             className="font-rubik text-[32px] font-semibold leading-[3rem] w-full text-center"
             data-aos="fade-up"
           >
-            Injectable Treatments
+           {heroData?.headerText}
           </h2>
           <p
             className="font-work_sans font-medium leading-[3.5rem] tracking-[0.02em] opacity-80 text-sm text-center"
             data-aos="fade-left"
           >
-            Lamb Medical offers a range of injectable treatments, including
-            Botox, Dysport, Daxxify, Sculptra, and PRP, to smooth wrinkles,
-            restore volume, and rejuvenate skin. Our expert team provides
-            personalized, non-surgical solutions for a refreshed and youthful
-            appearance..
+       {heroData?.bodyText}
           </p>
         </div>
       </div>

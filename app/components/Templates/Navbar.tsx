@@ -14,7 +14,8 @@ const Navbar = () => {
   const pathname = usePathname();
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);  
+  const [showShopLink, setShowShopLink] = useState(false);  
   const navRef = useRef<HTMLDivElement | null>(null);
 
   // Add scroll padding dynamically
@@ -34,6 +35,9 @@ const Navbar = () => {
     setIsExpanded((prev) => !prev); // Toggle the dropdown state
   };
 
+  const toggleShopLinkVisiblity= ()=>{
+    setShowShopLink((prev)=>!prev)
+  }
   const handleCloseMobileNav = () => {
     setMenuOpen(false);
     setIsMobileNavOpen(false);
@@ -74,7 +78,7 @@ const Navbar = () => {
               <NavLink item={item} />
             </span>
           ))}
-              {/* <div className="relative group inline-block">
+              <div className="relative group  hidden lg:inline-block">
               <button className="flex items-center gap-2 text-[#8E9BAE] px-4 py-2 rounded-md">
                 Shop
                 <FaChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
@@ -84,7 +88,7 @@ const Navbar = () => {
                 <Link href="https://lambmedical.brilliantconnections.com/" className="block px-4 py-2 hover:bg-gray-200">SkinMedica</Link>
                 <Link href="https://platedskinscience.com/?sca_ref=7318344.Bc0qwtup7w" className="block px-4 py-2 hover:bg-gray-200">Exosomes - (plated)</Link>
               </div>
-            </div> */}
+            </div>
 
            {/* Mobile Hamburger Menu */}
         <div
@@ -176,17 +180,21 @@ const Navbar = () => {
               </div>
               
             ))}
-              {/* <div className="relative group flex flex-col items-center">
-                <button className="flex items-center gap-2 text-[#8E9BAE] px-4 py-2 rounded-md">
+              <div className=" flex flex-col items-center">
+                <button className={`flex items-center gap-2 ${showShopLink ?'text-primary':'text-[#8E9BAE]'} px-4 py-2 rounded-md`} onClick={toggleShopLinkVisiblity}>
                   Shop
-                  <FaChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                  <FaChevronDown className={`w-4 h-4 transition-transform ${showShopLink?'rotate-180':''}` }/>
                 </button>
-                <div className="absolute flex flex-col items-center bottom-0 mt-2 w-48 bg-white max-h-max h-[85vh] min-w-max rounded-md p-8 shadow-lg overflow-y-auto opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+               {
+                showShopLink?
+                  <div className=" flex flex-col items-center  mt-2 w-48 bg-white max-h-max h-[85vh] min-w-max rounded-md p-8 shadow-lg overflow-y-auto">
                   <Link href="https://zoskinhealth.com/?practice-ref=1716715&practice-name=Lamb+Medical+Aesthetics" className="block px-4 py-2 hover:bg-blue-500">ZO Skin</Link>
                   <Link href="https://lambmedical.brilliantconnections.com/" className="block px-4 py-2 hover:bg-gray-200">SkinMedica</Link>
                   <Link href="https://platedskinscience.com/?sca_ref=7318344.Bc0qwtup7w" className="block px-4 py-2 hover:bg-gray-200">Exosomes - (plated)</Link>
                 </div>
-            </div> */}
+                :<div></div>
+               } 
+            </div>
             </div>
           </div>
         )}

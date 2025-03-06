@@ -7,6 +7,7 @@ interface PeelsProps{
   data?:PeelsType
 }
 const Peels:React.FC<PeelsProps>=({data})=> {
+  console.log("stress",data?.subsections[0].image)
   return (
     <Wrapper id="peels" className="grid gap-[4rem]">
       {/* <ServicesIntro
@@ -73,19 +74,12 @@ const Peels:React.FC<PeelsProps>=({data})=> {
           className="object-cover hidden md:block"
         /> */}
         <Image
-          src={`${data?.subsections[0].image}`}
-          alt=""
+          src={data?.subsections[0].image??'https://api.ourtestingdomain.site/storage/uploads/ijXalrZ4LI89Q9XW836gDs5kBz5gSYEyeVDil3gO.png'}
+          alt="Vi peel image"
           role="presentation"
           fill
-          className="object-cover hidden md:block"
+          className="object-cover"
         />
-
-        {/* <img
-          data-aos="zoom-in"
-          src="/images/facial-services/vi-peels-mobile.png"
-          alt="vi-peels-mobile"
-          className="xs:hidden block h-fi"
-        /> */}
       </figure>
 
       <ul className="w-full list-disc pl-14 md:px-10">
@@ -105,13 +99,6 @@ const Peels:React.FC<PeelsProps>=({data})=> {
         className="relative xs:h-[62.3rem] overflow-hidden rounded"
         data-aos="zoom-in"
       >
-        {/* <Image
-          src="/images/facial-services/bio-reel-peel.png"
-          alt=""
-          role="presentation"
-          fill
-          className="object-cover hidden md:block"
-        /> */}
         <Image
           src={`${data?.subsections[1].image}`}
           alt=""
@@ -119,12 +106,6 @@ const Peels:React.FC<PeelsProps>=({data})=> {
           fill
           className="object-cover hidden md:block"
         />
-        {/* <img
-          src="/images/facial-services/bio-reel-peel-mobile.png"
-          alt="vi-peels-mobile"
-          role="presentation"
-          className="md:hidden block"
-        /> */}
       </figure>
     </Wrapper>
   );

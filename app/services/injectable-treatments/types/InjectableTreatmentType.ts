@@ -39,7 +39,7 @@ export interface Section3 {
   section: {
     headerText: string;
     bodyText: string[];
-    images: string[];
+    images: {image:string,type:string}[];
   };
 }
 
