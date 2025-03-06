@@ -12,7 +12,7 @@ import {
   StarIcon,
 } from "../icons";
 
-export const aquaGoldFAQs: IFaq[] = [
+export const aquaGoldFAQs: any = [
   {
     question: "What are the advantages of AQUAGOLD® fine touch™?",
     answer:
