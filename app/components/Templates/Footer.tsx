@@ -56,11 +56,11 @@ const Footer = () => {
       return <Preloader />;
     }
 
-  const footerSection1: FooterSection1Type | undefined = footerPageData.content.find(
+  const footerSection1: FooterSection1Type | undefined = footerPageData.content?.find(
     (item: any) => item.type === "section1"
   );
    
-  const data1: FooterSection2Type | undefined = footerPageData.content.find(
+  const data1: FooterSection2Type | undefined = footerPageData.content?.find(
     (item: any) => item.type === "section2"
   );
    

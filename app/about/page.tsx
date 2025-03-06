@@ -18,20 +18,20 @@ export default function Page() {
     return <Preloader />;
   }
 
-  const heroData: ContentItem | undefined = aboutPageData.content.find(
+  const heroData: ContentItem | undefined = aboutPageData.content?.find(
     (item: any) => item.type === "hero"
   ); 
 
-  const buildTrust: BuildTrustType | undefined = aboutPageData.content.find(
+  const buildTrust: BuildTrustType | undefined = aboutPageData.content?.find(
     (item: any) => item.type === "section1"
   )
-  const redefinedHealthCare: RefineHealthCareType | undefined = aboutPageData.content.find(
+  const redefinedHealthCare: RefineHealthCareType | undefined = aboutPageData.content?.find(
     (item: any) => item.type === "section2"
   )
-  const meetTheTeam: MeetTeamType | undefined = aboutPageData.content.find(
+  const meetTheTeam: MeetTeamType | undefined = aboutPageData.content?.find(
     (item: any) => item.type === "section3"
   )
-  const faqSection: FaqSection | undefined = aboutPageData.content.find(
+  const faqSection: FaqSection | undefined = aboutPageData.content?.find(
     (item: any) => item.type === "section4"
   )
   return (

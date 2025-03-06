@@ -29,25 +29,25 @@ export default function FacialServices() {
       return <Preloader />;
     }
   
-  const heroData: ContentItem | undefined = facialServicesPageData.content.find(
+  const heroData: ContentItem | undefined = facialServicesPageData.content?.find(
     (item: any) => item.type === "hero"
   );
-  const aquaGold: AquaGoldType | undefined = facialServicesPageData.content.find(
+  const aquaGold: AquaGoldType | undefined = facialServicesPageData.content?.find(
     (item: any) => item.type === "section1"
   );
-  const aquaGoldFaq: AquaGoldFaq | undefined = facialServicesPageData.content.find(
+  const aquaGoldFaq: AquaGoldFaq | undefined = facialServicesPageData.content?.find(
     (item: any) => item.type === "section2"
   );
-  const diamondGlow: DiamondGlowType | undefined = facialServicesPageData.content.find(
+  const diamondGlow: DiamondGlowType | undefined = facialServicesPageData.content?.find(
     (item: any) => item.type === "section3"
   );
-  const dermaplanning: DermaplaningType | undefined = facialServicesPageData.content.find(
+  const dermaplanning: DermaplaningType | undefined = facialServicesPageData.content?.find(
     (item: any) => item.type === "section4"
   );
-  const peels: PeelsType | undefined = facialServicesPageData.content.find(
+  const peels: PeelsType | undefined = facialServicesPageData.content?.find(
     (item: any) => item.type === "section5"
   );
-  const ellebanaLashLift: EllebanaLashLiftType | undefined = facialServicesPageData.content.find(
+  const ellebanaLashLift: EllebanaLashLiftType | undefined = facialServicesPageData.content?.find(
     (item: any) => item.type === "section6"
   );
   return (

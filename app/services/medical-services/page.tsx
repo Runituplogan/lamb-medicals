@@ -29,43 +29,43 @@ export default function MedicalServices() {
     return <Preloader />;
   }
 
-  const heroData: ContentItem | undefined = MedicalServicesData.content.find(
+  const heroData: ContentItem | undefined = MedicalServicesData.content?.find(
     (item: any) => item.type === "hero"
   );
 
-    const consierge: any = MedicalServicesData.content.find(
+    const consierge: any = MedicalServicesData.content?.find(
       (item: any) => item.type === "section7"
     );
   
-    const  laserGenesis:LaserGenesisSection = MedicalServicesData.content.find(
+    const  laserGenesis:LaserGenesisSection = MedicalServicesData.content?.find(
       (item: any) => item.type === "section2"
     );
   
-    const QandALaserGen:FAQsSection = MedicalServicesData.content.find(
+    const QandALaserGen:FAQsSection = MedicalServicesData.content?.find(
       (item: any) => item.type === "section1"
     );
    
-    const laserWarts:LaserTreatmentSection = MedicalServicesData.content.find(
+    const laserWarts:LaserTreatmentSection = MedicalServicesData.content?.find(
       (item: any) => item.type === "section4"
     );
 
-    const QandALaserWart:FAQsSection = MedicalServicesData.content.find(
+    const QandALaserWart:FAQsSection = MedicalServicesData.content?.find(
       (item: any) => item.type === "section5"
     );
 
-    const LaserVein:LaserTreatmentSection = MedicalServicesData.content.find(
+    const LaserVein:LaserTreatmentSection = MedicalServicesData.content?.find(
       (item: any) => item.type === "section6"
     );
 
-    const QandALaserVein:FAQsSection = MedicalServicesData.content.find(
+    const QandALaserVein:FAQsSection = MedicalServicesData.content?.find(
       (item: any) => item.type === "section7"
     );
 
-    const LaserNail:LaserTreatmentSection = MedicalServicesData.content.find(
+    const LaserNail:LaserTreatmentSection = MedicalServicesData.content?.find(
       (item: any) => item.type === "section6"
     );
 
-    const QandALaserNail:FAQsSection = MedicalServicesData.content.find(
+    const QandALaserNail:FAQsSection = MedicalServicesData.content?.find(
       (item: any) => item.type === "section7"
     );
 

@@ -19,19 +19,19 @@ export default function BodyTreatments() {
     return <Preloader />;
   }
   console.log(bodyTreatmentPageData)
-  const heroData: ContentItem | undefined = bodyTreatmentPageData.content.find(
+  const heroData: ContentItem | undefined = bodyTreatmentPageData.content?.find(
     (item: any) => item.type === "hero"
   );
-  const emsculptNeo: EmsculptNeoType | undefined = bodyTreatmentPageData.content.find(
+  const emsculptNeo: EmsculptNeoType | undefined = bodyTreatmentPageData.content?.find(
     (item: any) => item.type === "section1"
   );
-  const emsculptNeoFaq: EmsculptNeoFAQ | undefined = bodyTreatmentPageData.content.find(
+  const emsculptNeoFaq: EmsculptNeoFAQ | undefined = bodyTreatmentPageData.content?.find(
     (item: any) => item.type === "section2"
   );
-  const sofwaveBody: SofwaveBodyType | undefined = bodyTreatmentPageData.content.find(
+  const sofwaveBody: SofwaveBodyType | undefined = bodyTreatmentPageData.content?.find(
     (item: any) => item.type === "section3"
   );
-  const sofwaveBodyFaqs: SofwaveBodyFAQ | undefined = bodyTreatmentPageData.content.find(
+  const sofwaveBodyFaqs: SofwaveBodyFAQ | undefined = bodyTreatmentPageData.content?.find(
     (item: any) => item.type === "section4"
   );
   return (

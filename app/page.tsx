@@ -26,35 +26,35 @@ export default function Home() {
     return <Preloader />;
   }
 
-  const heroData: ContentItem | undefined = homePageData.content.find(
+  const heroData: ContentItem | undefined = homePageData.content?.find(
     (item: any) => item.type === "hero"
   );
 
-  const section1: homepageSection1 | undefined = homePageData.content.find(
+  const section1: homepageSection1 | undefined = homePageData.content?.find(
     (item: any) => item.type === "section1"
   );
 
-  const section2: HomepageSection2 | undefined = homePageData.content.find(
+  const section2: HomepageSection2 | undefined = homePageData.content?.find(
     (item: any) => item.type === "section2"
   );
 
-  const section3: OurServicesType | undefined = homePageData.content.find(
+  const section3: OurServicesType | undefined = homePageData.content?.find(
     (item: any) => item.type === "section3"
   );
 
-  const section4: MeetTeamType | undefined = homePageData.content.find(
+  const section4: MeetTeamType | undefined = homePageData.content?.find(
     (item: any) => item.type === "Section4"
   );
 
-  const section5: HomepageSection5 | undefined = homePageData.content.find(
+  const section5: HomepageSection5 | undefined = homePageData.content?.find(
     (item: any) => item.type === "section5"
   );
 
-  const section6: FaqSection  | undefined = homePageData.content.find(
+  const section6: FaqSection  | undefined = homePageData.content?.find(
     (item: any) => item.type === "section6"
   );
 
-  const section7: HomepageSection7 | undefined = homePageData.content.find(
+  const section7: HomepageSection7 | undefined = homePageData.content?.find(
     (item: any) => item.type === "section7"
   );
 

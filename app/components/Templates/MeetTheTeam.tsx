@@ -16,10 +16,10 @@ interface MeetTheTeamSectionProps {
 
 const MeetTheTeam =() => {
   const {meetTheTeamPageData} = useMeetTheTeamPage()
-    if (!meetTheTeamPageData || !meetTheTeamPageData.content || meetTheTeamPageData.content.length === 0) {
+    if (!meetTheTeamPageData || !meetTheTeamPageData.content || meetTheTeamPageData?.content.length === 0) {
       return <Preloader />;
     }
-    const data: MeetTeamType | undefined = meetTheTeamPageData.content.find(
+    const data: MeetTeamType | undefined = meetTheTeamPageData.content??.find(
       (item: any) => item.type === "section1"
     );
   

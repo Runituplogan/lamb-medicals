@@ -24,26 +24,26 @@ export default function SkinCareProducts() {
       return <Preloader />;
     }
     console.log(skinCareProductPageData)
-    const heroData: ContentItem | undefined = skinCareProductPageData.content.find(
+    const heroData: ContentItem | undefined = skinCareProductPageData.content?.find(
       (item: any) => item.type === "hero"
     );
-    const plated: PlatedType | undefined = skinCareProductPageData.content.find(
+    const plated: PlatedType | undefined = skinCareProductPageData.content?.find(
       (item: any) => item.type === "section1"
     );
-    const platedFaqs: PlatedFAQ | undefined = skinCareProductPageData.content.find(
+    const platedFaqs: PlatedFAQ | undefined = skinCareProductPageData.content?.find(
       (item: any) => item.type === "section2"
     );
-    const exosomes: ExosomesType | undefined = skinCareProductPageData.content.find(
+    const exosomes: ExosomesType | undefined = skinCareProductPageData.content?.find(
       (item: any) => item.type === "section3"
     );
-    const exosomesFaq: ExosomesFAQ | undefined = skinCareProductPageData.content.find(
+    const exosomesFaq: ExosomesFAQ | undefined = skinCareProductPageData.content?.find(
       (item: any) => item.type === "section4"
     );
-    const latisse: LatisseType | undefined = skinCareProductPageData.content.find(
+    const latisse: LatisseType | undefined = skinCareProductPageData.content?.find(
       (item: any) => item.type === "section5"
     );
   
-    const latisseFaq: latisseFAQ | undefined = skinCareProductPageData.content.find(
+    const latisseFaq: latisseFAQ | undefined = skinCareProductPageData.content?.find(
       (item: any) => item.type === "section6"
     );
   

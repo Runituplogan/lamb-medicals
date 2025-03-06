@@ -22,31 +22,31 @@ export default function SexualWellness() {
   if (!sexualWellnessPageData || !sexualWellnessPageData.content || sexualWellnessPageData.content.length === 0) {
       return <Preloader />;
     }
-    const heroData: ContentItem | undefined = sexualWellnessPageData.content.find(
+    const heroData: ContentItem | undefined = sexualWellnessPageData.content?.find(
       (item: any) => item.type === "hero"
     );  
-    const prp: PRPType | undefined = sexualWellnessPageData.content.find(
+    const prp: PRPType | undefined = sexualWellnessPageData.content?.find(
       (item: any) => item.type === "section1"
     );  
-    const prpFaq: PRPFAQ | undefined = sexualWellnessPageData.content.find(
+    const prpFaq: PRPFAQ | undefined = sexualWellnessPageData.content?.find(
       (item: any) => item.type === "section2"
     );  
-    const oShot: OShotType | undefined = sexualWellnessPageData.content.find(
+    const oShot: OShotType | undefined = sexualWellnessPageData.content?.find(
       (item: any) => item.type === "section3"
     );  
-    const oShotFaq: OShotFAQ | undefined = sexualWellnessPageData.content.find(
+    const oShotFaq: OShotFAQ | undefined = sexualWellnessPageData.content?.find(
       (item: any) => item.type === "section4"
     );  
-    const monalisaTouch: MonalisaTouchType | undefined = sexualWellnessPageData.content.find(
+    const monalisaTouch: MonalisaTouchType | undefined = sexualWellnessPageData.content?.find(
       (item: any) => item.type === "section5"
     );  
-    const monalisaTouchFaq: MonalisaTouchFAQ | undefined = sexualWellnessPageData.content.find(
+    const monalisaTouchFaq: MonalisaTouchFAQ | undefined = sexualWellnessPageData.content?.find(
       (item: any) => item.type === "section6"
     );  
-    const miraDry: MiraDryType | undefined = sexualWellnessPageData.content.find(
+    const miraDry: MiraDryType | undefined = sexualWellnessPageData.content?.find(
       (item: any) => item.type === "section7"
     );  
-    const miraDryFaq: MiraDryFAQ | undefined = sexualWellnessPageData.content.find(
+    const miraDryFaq: MiraDryFAQ | undefined = sexualWellnessPageData.content?.find(
       (item: any) => item.type === "section8"
     );  
   return (
