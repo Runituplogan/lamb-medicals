@@ -20,6 +20,8 @@ import { FacialServicesPageProvider } from "./contexts/facialService";
 import { AboutPageProvider } from "./contexts/aboutPageContext";
 import { EnergyDevicesPageProvider } from "./contexts/energyDevices";
 import { InjectableTreatmentPageProvider } from "./contexts/injectableTreatmentContext";
+import { WeightLossProvider } from "./contexts/WeightLoss";
+import { MedicalServicesProvider } from "./contexts/MedicalServices";
 
 export const metadata: Metadata = {
   title: "Lamb Medical Aestheics",
@@ -67,22 +69,26 @@ export default function RootLayout({
       >
         <ReactQueryProvider>
           <HomePageProvider>
-          <AboutPageProvider>
-            <InjectableTreatmentPageProvider>
-            <FacialServicesPageProvider>
-              <EnergyDevicesPageProvider>
-              <Navbar />
-              <ToastContainer
-                autoClose={2000}
-                hideProgressBar={true}
-                theme="colored"
-              />
-              <AOSInitializer /> {/* Initialize AOS */}
-              {children}
-              <Footer />
-              </EnergyDevicesPageProvider>
-            </FacialServicesPageProvider>
-            </InjectableTreatmentPageProvider>
+            <AboutPageProvider>
+              <InjectableTreatmentPageProvider>
+                <FacialServicesPageProvider>
+                  <EnergyDevicesPageProvider>
+                    <WeightLossProvider>
+                      <MedicalServicesProvider>
+                      <Navbar />
+                      <ToastContainer
+                        autoClose={2000}
+                        hideProgressBar={true}
+                        theme="colored"
+                      />
+                      <AOSInitializer /> {/* Initialize AOS */}
+                      {children}
+                      <Footer />
+                      </MedicalServicesProvider>
+                    </WeightLossProvider>
+                  </EnergyDevicesPageProvider>
+                </FacialServicesPageProvider>
+              </InjectableTreatmentPageProvider>
             </AboutPageProvider>
           </HomePageProvider>
         </ReactQueryProvider>
