@@ -4,8 +4,13 @@ import ServicesIntro from "../../components/services-intro";
 import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
 import { kybellaFAQs } from "@/app/utils/data";
+import { Section9 } from "../types/InjectableTreatmentType";
 
-export default function Kybella() {
+interface KybellaProps {
+  data: Section9
+}
+
+const Kybella:React.FC <KybellaProps> =({data}) => {
   return (
     <Wrapper id="kybella" className="grid gap-[4rem]">
       <ServicesIntro
@@ -38,3 +43,5 @@ export default function Kybella() {
     </Wrapper>
   );
 }
+
+export default Kybella

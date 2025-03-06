@@ -14,11 +14,11 @@ const BeWellProgramTeam:React.FC<BeWellProgramTeamProps>=({data}) =>{
         {data?.headerText}
       </h3>
       <p className="grid gap-8 font-work_sans text-[14px] xs:text-lg font-medium leading-[3.6rem] tracking-[0.02rem] text-grey-750 opacity-80">
-       {data?.bodyText}
+        {data?.bodyText}
       </p>
 
       <ul className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-10 xs:gap-4 md:gap-1 gap-y-10">
-        {data?.team_members.map((card,index) => (
+        {data?.team_members?.map((card: any, index) => (
           <WellProgramTeamCard key={index} card={card} />
         ))}
       </ul>

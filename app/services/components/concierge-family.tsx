@@ -8,6 +8,7 @@ interface ConciergeFamilyProps{
   data?:ConciergeFamilyType
 }
 const ConciergeFamily:React.FC<ConciergeFamilyProps>=({data})=> {
+
   return (
     <section id="concierge-medicine" className="bg-primary">
       <Wrapper className="grid place-content-center gap-[2rem] py-[4rem] md:py-[7rem] text-center">
@@ -35,7 +36,7 @@ const ConciergeFamily:React.FC<ConciergeFamilyProps>=({data})=> {
           className="grid md:grid-cols-2 gap-x-[10rem] gap-y-[4rem] py-[2rem] mt-11 mx-auto w-full"
           data-aos="fade-left"
         >
-          {data?.features.map((item,index) => (
+          {data?.features?.map((item, index) => (
             <li className="flex items-center gap-[1rem]" key={index}>
               <i className="flex xs:size-[3.2rem] size-[2.2rem] shrink-0 items-center justify-center rounded-full bg-white text-grey-300">
                 <CheckIcon />

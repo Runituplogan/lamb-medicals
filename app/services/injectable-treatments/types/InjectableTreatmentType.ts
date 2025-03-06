@@ -68,3 +68,33 @@ export interface Section6 {
   textBody: string;
   questions: IFaq[];
 }
+
+export interface Section7 {
+  type: "section7";
+  headerText: string;
+  bodyText: string;
+  cta_button: CTAButton;
+  images: Image[];
+}
+
+export interface Section8 {
+  type: "section8";
+  headerText: string;
+  textBody: string;
+  questions: IFaq[];
+}
+
+export interface Section9 {
+  type: "section9";
+  headerText: string;
+  bodyText: string;
+  image: string;
+}
+
+export interface Section10 {
+  type: "section10";
+  headerText: string;
+  textBody: string;
+  questions: IFaq[];
+}
+

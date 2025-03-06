@@ -4,42 +4,48 @@ import ServicesAfterEffects from "../../components/services-after-effects";
 import Image from "next/image";
 import ServicesFAQ from "../../components/services-faq";
 import { laserWartRemovalFAQs } from "@/app/utils/data";
+import { FAQsSection, LaserTreatmentSection } from "../types/medical-services";
 
-export default function LaserWartRemoval() {
+interface leserTwartsProps {
+  data: LaserTreatmentSection,
+  questions: FAQsSection
+}
+
+export default function LaserWartRemoval({data, questions}:leserTwartsProps) {
   return (
     <Wrapper id="laser-wart-removal" className="grid gap-[4rem] py-[2rem]">
       <ServicesIntro
-        title="Laser Wart Removal"
+        title={data?.headerText}
         description={
           <p>
-            Warts are caused by a virus that effects the upper layers of the
-            skin. They often occur on the hands and feet but can occur in other
-            places as well. Warts can affect people of all ages and are
-            especially common in children and teenagers. 
+           {data?.bodyText}
           </p>
         }
+        btnText={data?.cta_button?.text}
       />
 
-      <ServicesAfterEffects className="grid-cols-1 grid-rows-[78rem] gap-[2rem]">
+      {/* <ServicesAfterEffects className="grid-cols-1 grid-rows-[78rem] gap-[2rem]"> */}
+        {/* {data?.images?.map((image) =>(
         <div className="relative col-span-full h-full" data-aos="fade-left">
           <Image
-            src="/images/medical-services/medical-services-before-and-after-3.png"
+            src={image }
             alt=""
             fill
             role="presentation"
             className="absolute object-top xs:block hidden"
           />
           <img
-            src="/images/medical-services/medical-services-before-and-after-3.png"
+            src={image }
             alt=""
             className="xs:hidden block"
           />
         </div>
-      </ServicesAfterEffects>
+        ))} */}
+      {/* </ServicesAfterEffects> */}
       <ServicesFAQ
-        title="Laser Wart Removal FAQs: Your questions answered"
-        description="Curious about Laser Wart Removal? Get answers to common questions about how it works, what to expect, and how it can help you feel confident and sweat-free."
-        faqs={laserWartRemovalFAQs}
+        title={questions?.headerText}
+        description={questions?.bodyText}
+        faqs={questions?.faqs}
       />
     </Wrapper>
   );

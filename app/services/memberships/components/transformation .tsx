@@ -7,6 +7,7 @@ interface TransformationProps{
   data?:TransformationType
 }
 const Transformation:React.FC<TransformationProps>=({data})=> {
+
   return (
     <Wrapper className="grid w-full lg:grid-cols-[58rem_1fr] xs:gap-[8rem] pb-[10rem]">
       <div className="flex w-full flex-col gap-[2.4rem]">
@@ -39,18 +40,18 @@ const Transformation:React.FC<TransformationProps>=({data})=> {
           data-aos="fade-left"
         >
           <Image
-            src={`/${data?.image}`}
+            src={data?.image || ''}
             alt="visual consultation"
             fill
             className="xs:block hidden"
+            unoptimized
           />
-          {/* <img
-            src="/images/weight-loss/visual-consultation-2-mobile.png"
+          <img
+            src={data?.image || ''}
             alt="visual-consultation-2-mobile"
             className="block xs:hidden mt-16"
           /> */}
         </div>
-       
       </figure>
     </Wrapper>
   );

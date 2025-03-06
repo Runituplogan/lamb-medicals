@@ -4,21 +4,19 @@ import ServicesAfterEffects from "../../components/services-after-effects";
 import Image from "next/image";
 import ServicesFAQ from "../../components/services-faq";
 import { laserNailFungusFAQs } from "@/app/utils/data";
+import { FAQsSection, LaserTreatmentSection } from "../types/medical-services";
 
-export default function LaserNailFungus() {
+interface laserNailProps {
+  data: LaserTreatmentSection;
+  questions: FAQsSection;
+}
+
+export default function LaserNailFungus({ data, questions }: laserNailProps) {
   return (
     <Wrapper id="laser-wart-removal" className="grid gap-[4rem] py-[2rem]">
       <ServicesIntro
-        title="Laser Nail Fungus Treatment"
-        description={
-          <p>
-            Toenail fungus, known as onychomycosis, is an extremely common
-            condition. It is estimated that 1 in 5 people have toenail fungus
-            but often, due to embarrassment, people don’t like to talk about it.
-            At Lamb Medical & Aesthetics we understand how frustrating
-            onychomycosis can be and how tricky can be to treat. 
-          </p>
-        }
+        title={data?.headerText}
+        description={<p>{data?.bodyText}</p>}
       />
       <ServicesAfterEffects className="grid-cols-2 grid-rows-[48rem_50rem] gap-[2rem]">
         <div className="relative col-span-full h-full" data-aos="fade-left">
@@ -65,9 +63,9 @@ export default function LaserNailFungus() {
         </div>
       </ServicesAfterEffects>
       <ServicesFAQ
-        title="Laser Nail Fungus Treatment FAQs: Your questions answered"
-        description="Curious about Laser Nail Fungus Treatment? Get answers to common questions about how it works, what to expect, and how it can help you feel confident and sweat-free."
-        faqs={laserNailFungusFAQs}
+        title={questions?.headerText}
+        description={questions?.bodyText}
+        faqs={questions?.faqs}
       />
     </Wrapper>
   );

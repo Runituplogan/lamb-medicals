@@ -1,3 +1,4 @@
+"use client";
 import { Fragment } from "react";
 import ServicesHero from "../components/services-hero";
 import ServicesTab from "../components/services-tab";
@@ -9,19 +10,75 @@ import WhyChooseUs from "../memberships/components/why-choose-us";
 import Transformation from "../memberships/components/transformation ";
 import VisualConsultations from "./components/visual-consultations";
 import ElectronicCommunication from "./components/electronic-communication";
+import { useWeightLoss } from "@/app/contexts/WeightLoss";
+import Preloader from "@/app/components/Preloader";
+import {
+  BaseSection,
+  SectionWithCTA,
+  SectionWithFeatures,
+  SectionWithImage,
+  SectionWithList,
+  ServicesSection,
+  TeamSection,
+} from "./types/weightLoss";
 
 const weightLossTabItems = [
   { href: "#well-program", label: "Be Well Program" },
 ];
 
 export default function WeightLoss() {
+  const { WeightLossData } = useWeightLoss();
+  if (
+    !WeightLossData ||
+    !WeightLossData.content ||
+    WeightLossData.content.length === 0
+  ) {
+    return <Preloader />;
+  }
+
+  const heroData: ContentItem | undefined = WeightLossData.content.find(
+    (item: any) => item.type === "hero"
+  );
+
+  const beWellData: SectionWithCTA = WeightLossData.content.find(
+    (item: any) => item.type === "section1"
+  );
+
+  const beWellTeam: TeamSection = WeightLossData.content.find(
+    (item: any) => item.type === "section2"
+  );
+
+  const services: ServicesSection = WeightLossData.content.find(
+    (item: any) => item.type === "section3"
+  );
+
+  const virtualConsultations: SectionWithImage = WeightLossData.content.find(
+    (item: any) => item.type === "section4"
+  );
+
+  const WhyUs: SectionWithFeatures = WeightLossData.content.find(
+    (item: any) => item.type === "section5"
+  );
+
+  const nextStep: SectionWithImage = WeightLossData.content.find(
+    (item: any) => item.type === "section6"
+  );
+
+  const consierge: SectionWithList = WeightLossData.content.find(
+    (item: any) => item.type === "section7"
+  );
+
+  const ElectronicComm: SectionWithImage = WeightLossData.content.find(
+    (item: any) => item.type === "section8"
+  );
+
   return (
     <Fragment>
       <div className="xs:block hidden">
         <ServicesHero
-          image="weight-loss/weight-loss-cover.png"
-          title="Wellness & Weight Loss"
-          description="The Wellness & Weight Loss programs at Lamb Medical focus on personalized plans to help patients achieve sustainable health and fitness goals. Through expert guidance, advanced treatments, and lifestyle support, these programs promote overall well-being, increased energy, and long-term health."
+          image={`${heroData?.image}`}
+          title={`${heroData?.headerText}`}
+          description={`${heroData?.bodyText}`}
         />
       </div>
       <div className="xs:hidden w-full py-10 mt-20 relative h-screen flex flex-col justify-start items-start">
@@ -36,29 +93,25 @@ export default function WeightLoss() {
             className="font-rubik text-[32px] font-semibold leading-[3rem] w-full text-center"
             data-aos="fade-up"
           >
-            Wellness & Weight Loss
+            {`${heroData?.headerText}`}
           </h2>
           <p
             className="font-work_sans font-medium leading-[3.5rem] tracking-[0.02em] opacity-80 text-sm text-center"
             data-aos="fade-left"
           >
-            The Wellness & Weight Loss programs at Lamb Medical focus on
-            personalized plans to help patients achieve sustainable health and
-            fitness goals. Through expert guidance, advanced treatments, and
-            lifestyle support, these programs promote overall well-being,
-            increased energy, and long-term health.
+            {`${heroData?.bodyText}`}
           </p>
         </div>
       </div>
       <ServicesTab tabItems={weightLossTabItems} />
-      <BeWellProgram />
-      <BeWellProgramTeam />
-      <OurServices />
-      <VisualConsultations />
-      <WhyChooseUs />
-      <Transformation />
-      <ConciergeFamily />
-      <ElectronicCommunication />
+      <BeWellProgram data={beWellData} />
+      <BeWellProgramTeam data={beWellTeam} />
+      <OurServices data={services} />
+      <VisualConsultations data={virtualConsultations} />
+      <WhyChooseUs data={WhyUs} />
+      <Transformation data={nextStep} />
+      <ConciergeFamily data={consierge} />
+      <ElectronicCommunication data={ElectronicComm}/>
     </Fragment>
   );
 }

@@ -4,20 +4,20 @@ import ServicesAfterEffects from "../../components/services-after-effects";
 import Image from "next/image";
 import ServicesFAQ from "../../components/services-faq";
 import { laserVeinTherapyFAQs } from "@/app/utils/data";
+import { FAQsSection, LaserTreatmentSection } from "../types/medical-services";
 
-export default function LaserVeinTherapy() {
+interface laserVainProps {
+  data: LaserTreatmentSection;
+  questions: FAQsSection;
+}
+
+export default function LaserVeinTherapy({ data, questions }: laserVainProps) {
   return (
     <Wrapper id="laser-wart-removal" className="grid gap-[4rem] py-[2rem]">
       <ServicesIntro
-        title="Laser Vein Therapy"
-        description={
-          <p>
-            The Cutera Laser combines the ideal laser wavelength with the most
-            flexible parameters to deliver a superior vascular laser system. It
-            treats a broad range of vessels quickly, safely, and effectively.
-            Patients of all skin types can experience outstanding results.
-          </p>
-        }
+        title={data?.headerText}
+        description={<p>{data?.bodyText}</p>}
+        btnText={data?.cta_button?.text}
       />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[52rem_52rem] gap-[2rem]">
         <div className="relative col-span-full h-full" data-aos="fade-left">
@@ -50,9 +50,9 @@ export default function LaserVeinTherapy() {
         </div>
       </ServicesAfterEffects>
       <ServicesFAQ
-        title="Laser Vein Therapy FAQs: Your questions answered"
-        description="Curious about Laser Vein Therapy? Get answers to common questions about how it works, what to expect, and how it can help you feel confident and sweat-free."
-        faqs={laserVeinTherapyFAQs}
+        title={questions?.headerText}
+        description={questions?.bodyText}
+        faqs={questions?.faqs}
       />
     </Wrapper>
   );

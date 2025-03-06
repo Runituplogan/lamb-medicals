@@ -1,5 +1,5 @@
 import axios from "axios";
-
+ 
 export const baseURL = "https://api.ourtestingdomain.site/api/v1";
 
 const axiosInstance = axios.create({
@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
     "Content-Type": "application/json",
     Accept: "application/json",
   },
-});
+}); 
 
 axiosInstance.interceptors.response.use(
   (response) => {

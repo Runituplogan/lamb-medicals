@@ -5,6 +5,7 @@ import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
 import { sculptraFAQs } from "@/app/utils/data";
 import { Section5 } from "../types/InjectableTreatmentType";
+import { AnyARecord } from "dns";
 
 interface SculptraProps {
   data: Section5;
@@ -34,54 +35,26 @@ const Sculptra: React.FC<SculptraProps> = ({ data }) => {
         title={data?.subsection?.headerText}
         className="grid-cols-1 grid-rows-none [&>figcaption]:text-left"
       >
-        <div
-          className="relative xs:h-[60rem] col-span-full"
-          data-aos="fade-right"
-        >
-          <Image
-            src="/images/injectable-treatments/sculptra-1.png"
-            alt="sculptra-1"
-            fill
-            className="absolute object-top"
-          />
-          <img
-            src="/images/injectable-treatments/sculptra-1.png"
-            alt="sculptra 1"
-            className=" object-top xs:hidden block"
-          />
-        </div>
-        <div
-          className="relative xs:h-[60rem] col-span-full"
-          data-aos="fade-right"
-        >
-          <Image
-            src="/images/injectable-treatments/sculptra-2.png"
-            alt=""
-            fill
-            className="absolute object-top xs:block hidden"
-          />
-          <img
-            src="/images/injectable-treatments/sculptra-2.png"
-            alt="sculptra"
-            className="object-top xs:hidden block"
-          />
-        </div>
-        <div
-          className="relative xs:h-[60rem] col-span-full"
-          data-aos="fade-right"
-        >
-          <Image
-            src="/images/injectable-treatments/sculptra-3.png"
-            alt=""
-            fill
-            className="absolute object-top xs:block hidden"
-          />
-          <img
-            src="/images/injectable-treatments/sculptra-3.png"
-            alt="sculptra"
-            className="object-top xs:hidden block"
-          />
-        </div>
+        {data?.subsection?.images?.map((image: any, index) => (
+          <div
+            key={index}
+            className="relative xs:h-[60rem] col-span-full"
+            data-aos="fade-right"
+          >
+            <Image
+              src={image?.image}
+              alt=""
+              fill
+              className="absolute object-top xs:block hidden"
+              unoptimized
+            />
+            <img
+              src={image?.image}
+              alt="sculptra"
+              className="object-top xs:hidden block"
+            />
+          </div>
+        ))}
       </ServicesAfterEffects>
       <ServicesFAQ
         title="Sculptra FAQs: Your questions answered"

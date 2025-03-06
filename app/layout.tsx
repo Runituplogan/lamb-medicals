@@ -27,6 +27,8 @@ import { MembershipPageProvider } from "./contexts/membership";
 import { MeetTheTeamPageProvider } from "./contexts/meetTheTeam";
 import { FooterPageProvider } from "./contexts/footer";
 import { OurServicesProvider } from "./contexts/ourServices";
+  import { WeightLossProvider } from "./contexts/WeightLoss";
+import { MedicalServicesProvider } from "./contexts/MedicalServices";
 
 export const metadata: Metadata = {
   title: "Lamb Medical Aestheics",
@@ -86,6 +88,8 @@ export default function RootLayout({
                           <MeetTheTeamPageProvider>
                             <FooterPageProvider>
                               <OurServicesProvider>
+                                 <WeightLossProvider>
+                      <MedicalServicesProvider>
                                   <Navbar />
                                   <ToastContainer
                                     autoClose={2000}
@@ -95,6 +99,8 @@ export default function RootLayout({
                                   <AOSInitializer /> {/* Initialize AOS */}
                                   {children}
                                   <Footer />
+                         </MedicalServicesProvider>
+                    </WeightLossProvider>
                               </OurServicesProvider>
                             </FooterPageProvider>
                           </MeetTheTeamPageProvider>

@@ -14,34 +14,34 @@ import {
 
 export const aquaGoldFAQs: IFaq[] = [
   {
-    title: "What are the advantages of AQUAGOLD® fine touch™?",
-    content:
+    question: "What are the advantages of AQUAGOLD® fine touch™?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "What is the size of the microchannels?",
-    content: "",
+    question: "What is the size of the microchannels?",
+    answer: "",
   },
   {
-    title: "How many microchannels are there? ",
-    content: "",
+    question: "How many microchannels are there? ",
+    answer: "",
   },
   {
-    title: "How is AQUAGOLD® fine touch™ different from microneedle devices?",
-    content: "",
+    question: "How is AQUAGOLD® fine touch™ different from microneedle devices?",
+    answer: "",
   },
   {
-    title: "Can AQUAGOLD® fine touch™ be used multiple times?",
-    content: "",
+    question: "Can AQUAGOLD® fine touch™ be used multiple times?",
+    answer: "",
   },
   {
-    title:
+    question:
       "Why are the AQUAGOLD® fine touch™ microchannels made of gold-plated stainless steel?",
-    content: "",
+    answer: "",
   },
   {
-    title: "Is Aquavit Life Sciences Inc. an FDA registered establishment?",
-    content: "",
+    question: "Is Aquavit Life Sciences Inc. an FDA registered establishment?",
+    answer: "",
   },
 ];
 
@@ -120,667 +120,667 @@ export const sofwaveSatisfactions = [
 
 export const agejectFAQs: IFaq[] = [
   {
-    title: "How does it work?",
-    content:
+    question: "How does it work?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "Is this treatment right for me?",
-    content: "",
+    question: "Is this treatment right for me?",
+    answer: "",
   },
   {
-    title: "Post-treatment care or downtime?",
-    content: "",
+    question: "Post-treatment care or downtime?",
+    answer: "",
   },
   {
-    title: "How long until I see results?",
-    content: "",
+    question: "How long until I see results?",
+    answer: "",
   },
   {
-    title: "How long will results last?",
-    content: "",
+    question: "How long will results last?",
+    answer: "",
   },
   {
-    title: "How many treatments will I need?",
-    content: "",
+    question: "How many treatments will I need?",
+    answer: "",
   },
   {
-    title: "How should I prepare for treatment?",
-    content: "",
+    question: "How should I prepare for treatment?",
+    answer: "",
   },
   {
-    title: "What can I expect the day of treatment?",
-    content: "",
+    question: "What can I expect the day of treatment?",
+    answer: "",
   },
   {
-    title: "What can I expect after my treatment?",
-    content: "",
+    question: "What can I expect after my treatment?",
+    answer: "",
   },
 ];
 export const sofwaveFAQs: IFaq[] = [
   {
-    title: "How does Sofwave™ work?",
-    content:
+    question: "How does Sofwave™ work?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How is Sofwave™ better than other existing technologies?",
-    content: "",
+    question: "How is Sofwave™ better than other existing technologies?",
+    answer: "",
   },
   {
-    title: "HOW MANY TREATMENTS ARE NEEDED?",
-    content: "",
+    question: "HOW MANY TREATMENTS ARE NEEDED?",
+    answer: "",
   },
   {
-    title: "WHAT DOES THE SOFWAVE™ TREATMENT FEEL LIKE?",
-    content: "",
+    question: "WHAT DOES THE SOFWAVE™ TREATMENT FEEL LIKE?",
+    answer: "",
   },
   {
-    title: "WHEN CAN I EXPECT TO SEE RESULTS?",
-    content: "",
+    question: "WHEN CAN I EXPECT TO SEE RESULTS?",
+    answer: "",
   },
   {
-    title: "ARE THERE ANY SIDE EFFECTS WITH SOFWAVE?",
-    content: "",
+    question: "ARE THERE ANY SIDE EFFECTS WITH SOFWAVE?",
+    answer: "",
   },
 ];
 export const iplFAQs: IFaq[] = [
   {
-    title: "What it does?",
-    content:
+    question: "What it does?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "Areas of the body?",
-    content: "",
+    question: "Areas of the body?",
+    answer: "",
   },
   {
-    title: "Length of time for treatment?",
-    content: "",
+    question: "Length of time for treatment?",
+    answer: "",
   },
   {
-    title: "After care?",
-    content: "",
+    question: "After care?",
+    answer: "",
   },
   {
-    title: "Length of time to kick in?",
-    content: "",
+    question: "Length of time to kick in?",
+    answer: "",
   },
   {
-    title: "Length of time treatment lasts?",
-    content: "",
+    question: "Length of time treatment lasts?",
+    answer: "",
   },
 ];
 export const miconeedlingFAQs: IFaq[] = [
   {
-    title: "Is Microneedling only for the face?",
-    content:
+    question: "Is Microneedling only for the face?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "Does Microneedling hurt?",
-    content: "",
+    question: "Does Microneedling hurt?",
+    answer: "",
   },
   {
-    title: "How long until I see results?",
-    content: "",
+    question: "How long until I see results?",
+    answer: "",
   },
   {
-    title: "Will I need more than one session?",
-    content: "",
+    question: "Will I need more than one session?",
+    answer: "",
   },
   {
-    title: "Is there any downtime?",
-    content: "",
+    question: "Is there any downtime?",
+    answer: "",
   },
   {
-    title: "Things to know before your appointment?",
-    content: "",
+    question: "Things to know before your appointment?",
+    answer: "",
   },
 ];
 export const botoxFAQs: IFaq[] = [
   {
-    title: "What are Botox & Dysport?",
-    content:
+    question: "What are Botox & Dysport?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How long until I see results?",
-    content: "",
+    question: "How long until I see results?",
+    answer: "",
   },
   {
-    title: "How long will the results last? ",
-    content: "",
+    question: "How long will the results last? ",
+    answer: "",
   },
   {
-    title: "Are there any common side effects? ",
-    content: "",
+    question: "Are there any common side effects? ",
+    answer: "",
   },
 ];
 export const dermalFillersFAQs: IFaq[] = [
   {
-    title: "How do dermal fillers work?",
-    content:
+    question: "How do dermal fillers work?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How long do dermal fillers last?",
-    content: "",
+    question: "How long do dermal fillers last?",
+    answer: "",
   },
   {
-    title: "Is the treatment painful?",
-    content: "",
+    question: "Is the treatment painful?",
+    answer: "",
   },
   {
-    title: "What areas can be treated with dermal fillers?",
-    content: "",
+    question: "What areas can be treated with dermal fillers?",
+    answer: "",
   },
   {
-    title: "Is there any downtime after the procedure?",
-    content: "",
+    question: "Is there any downtime after the procedure?",
+    answer: "",
   },
   {
-    title: " Are dermal fillers safe?",
-    content: "",
+    question: " Are dermal fillers safe?",
+    answer: "",
   },
 ];
 export const sculptraFAQs: IFaq[] = [
   {
-    title: "What is collagen?",
-    content:
+    question: "What is collagen?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "Why is collagen important?",
-    content: "",
+    question: "Why is collagen important?",
+    answer: "",
   },
   {
-    title: "What can I do to restore my collagen?",
-    content: "",
+    question: "What can I do to restore my collagen?",
+    answer: "",
   },
   {
-    title: "What is the treatment like?",
-    content: "",
+    question: "What is the treatment like?",
+    answer: "",
   },
   {
-    title: "Are there any common side effects?",
-    content: "",
+    question: "Are there any common side effects?",
+    answer: "",
   },
 ];
 export const prrRejuvenationFAQs: IFaq[] = [
   {
-    title: "What is a Vampire Facelift?",
-    content:
+    question: "What is a Vampire Facelift?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How Does the Vampire Facelift Work?",
-    content: "",
+    question: "How Does the Vampire Facelift Work?",
+    answer: "",
   },
   {
-    title: "Benefits of the Vampire Facelift?",
-    content: "",
+    question: "Benefits of the Vampire Facelift?",
+    answer: "",
   },
   {
-    title: "Who is a Good Candidate for the Vampire Facelift?",
-    content: "",
+    question: "Who is a Good Candidate for the Vampire Facelift?",
+    answer: "",
   },
   {
-    title: "What to Expect During and After the Procedure?",
-    content: "",
+    question: "What to Expect During and After the Procedure?",
+    answer: "",
   },
 ];
 export const prpRejuvenationFAQs: IFaq[] = [
   {
-    title: "How Many Treatments will I Need?",
-    content:
+    question: "How Many Treatments will I Need?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "When Will I see Results?",
-    content: "",
+    question: "When Will I see Results?",
+    answer: "",
   },
   {
-    title: "How long do results last?",
-    content: "",
+    question: "How long do results last?",
+    answer: "",
   },
   {
-    title: "What is the recovery time?",
-    content: "",
+    question: "What is the recovery time?",
+    answer: "",
   },
   {
-    title: "How much does PRP Treatment Cost?",
-    content: "",
+    question: "How much does PRP Treatment Cost?",
+    answer: "",
   },
 ];
 export const kybellaFAQs: IFaq[] = [
   {
-    title: "How long until I see results?",
-    content:
+    question: "How long until I see results?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How long will the results last?",
-    content: "",
+    question: "How long will the results last?",
+    answer: "",
   },
   {
-    title: "Are there common side effects? ",
-    content: "",
+    question: "Are there common side effects? ",
+    answer: "",
   },
 ];
 export const prpBreastRejuvenationFAQs: IFaq[] = [
   {
-    title: "What is the Vampire Wing Lift?",
-    content:
+    question: "What is the Vampire Wing Lift?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How Does the Vampire Wing Lift Work?",
-    content: "",
+    question: "How Does the Vampire Wing Lift Work?",
+    answer: "",
   },
   {
-    title: "Benefits of the Vampire Wing Lift?",
-    content: "",
+    question: "Benefits of the Vampire Wing Lift?",
+    answer: "",
   },
   {
-    title: "Who is a Good Candidate for the Vampire Wing Lift?",
-    content: "",
+    question: "Who is a Good Candidate for the Vampire Wing Lift?",
+    answer: "",
   },
   {
-    title: "What to Expect During and After the Procedure?",
-    content: "",
+    question: "What to Expect During and After the Procedure?",
+    answer: "",
   },
 ];
 export const oShotFAQs: IFaq[] = [
   {
-    title: "What are the benefits?",
-    content:
+    question: "What are the benefits?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How does it work?",
-    content: "",
+    question: "How does it work?",
+    answer: "",
   },
   {
-    title: "What can I expect?",
-    content: "",
+    question: "What can I expect?",
+    answer: "",
   },
   {
-    title: "What conditions can it help?",
-    content: "",
+    question: "What conditions can it help?",
+    answer: "",
   },
 ];
 export const monalisaTouchFAQs: IFaq[] = [
   {
-    title: "What is menopause?",
-    content:
+    question: "What is menopause?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "What are the symptoms of menopause?",
-    content: "",
+    question: "What are the symptoms of menopause?",
+    answer: "",
   },
   {
-    title: "What is vulvovaginal atrophy?",
-    content: "",
+    question: "What is vulvovaginal atrophy?",
+    answer: "",
   },
   {
-    title: "What causes decreases in estrogen?",
-    content: "",
+    question: "What causes decreases in estrogen?",
+    answer: "",
   },
   {
-    title: "What treatments are available for dryness and pain?",
-    content: "",
+    question: "What treatments are available for dryness and pain?",
+    answer: "",
   },
   {
-    title: "How does the MonaLisa Touch work?",
-    content: "",
+    question: "How does the MonaLisa Touch work?",
+    answer: "",
   },
   {
-    title: "Good for Women Who Experience?",
-    content: "",
+    question: "Good for Women Who Experience?",
+    answer: "",
   },
   {
-    title: "Not Recommended for the Following?",
-    content: "",
+    question: "Not Recommended for the Following?",
+    answer: "",
   },
 ];
 export const laserGenesisFAQs: IFaq[] = [
   {
-    title: "Who can get laser genesis?",
-    content:
+    question: "Who can get laser genesis?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "Does it hurt?",
-    content: "",
+    question: "Does it hurt?",
+    answer: "",
   },
   {
-    title: "How long will this take?",
-    content: "",
+    question: "How long will this take?",
+    answer: "",
   },
   {
-    title: "When will I notice results?",
-    content: "",
+    question: "When will I notice results?",
+    answer: "",
   },
   {
-    title: "How long will my results last?",
-    content: "",
+    question: "How long will my results last?",
+    answer: "",
   },
   {
-    title: "Are there any side effects?",
-    content: "",
+    question: "Are there any side effects?",
+    answer: "",
   },
 ];
 export const laserWartRemovalFAQs: IFaq[] = [
   {
-    title: "WHAT ARE WARTS?",
-    content:
+    question: "WHAT ARE WARTS?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "ARE WARTS CONTAGIOUS?",
-    content: "",
+    question: "ARE WARTS CONTAGIOUS?",
+    answer: "",
   },
   {
-    title: "HOW LONG WILL THIS TAKE?",
-    content: "",
+    question: "HOW LONG WILL THIS TAKE?",
+    answer: "",
   },
   {
-    title: "WILL I NEED MORE THAN 1 TREATMENT? ",
-    content: "",
+    question: "WILL I NEED MORE THAN 1 TREATMENT? ",
+    answer: "",
   },
   {
-    title: "WHAT SHOULD I EXPECT? ",
-    content: "",
+    question: "WHAT SHOULD I EXPECT? ",
+    answer: "",
   },
   {
-    title: "WHY DOES THIS WORK?",
-    content: "",
+    question: "WHY DOES THIS WORK?",
+    answer: "",
   },
   {
-    title: "WHAT TYPE OF LASER WILL BE USED?",
-    content: "",
+    question: "WHAT TYPE OF LASER WILL BE USED?",
+    answer: "",
   },
 ];
 export const laserVeinTherapyFAQs: IFaq[] = [
   {
-    title: "How does Cutera Laser Vein Therapy work?",
-    content:
+    question: "How does Cutera Laser Vein Therapy work?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "Who can be treated with the Cutera Laser?",
-    content: "",
+    question: "Who can be treated with the Cutera Laser?",
+    answer: "",
   },
   {
-    title: "What types of veins can be treated?",
-    content: "",
+    question: "What types of veins can be treated?",
+    answer: "",
   },
   {
-    title: "How does this compare to Sclerotherapy?",
-    content: "",
+    question: "How does this compare to Sclerotherapy?",
+    answer: "",
   },
   {
-    title: "What about blood blisters?",
-    content: "",
+    question: "What about blood blisters?",
+    answer: "",
   },
   {
-    title: "How many treatments will I need?",
-    content: "",
+    question: "How many treatments will I need?",
+    answer: "",
   },
   {
-    title: "Do the treatments hurt?",
-    content: "",
+    question: "Do the treatments hurt?",
+    answer: "",
   },
   {
-    title: "What happens after the treatment?",
-    content: "",
+    question: "What happens after the treatment?",
+    answer: "",
   },
   {
-    title: "What are the possible side effects?",
-    content: "",
+    question: "What are the possible side effects?",
+    answer: "",
   },
   {
-    title: "Are there any restrictions on my activity after treatment?",
-    content: "",
+    question: "Are there any restrictions on my activity after treatment?",
+    answer: "",
   },
   {
-    title: "When will I see results?",
-    content: "",
+    question: "When will I see results?",
+    answer: "",
   },
 ];
 export const laserNailFungusFAQs: IFaq[] = [
   {
-    title: "What are the symptoms of nail fungus?",
-    content:
+    question: "What are the symptoms of nail fungus?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "Will laser help me treat onychomycosis?",
-    content: "",
+    question: "Will laser help me treat onychomycosis?",
+    answer: "",
   },
   {
-    title: "How long will this take? ",
-    content: "",
+    question: "How long will this take? ",
+    answer: "",
   },
   {
-    title: "When will I notice results? ",
-    content: "",
+    question: "When will I notice results? ",
+    answer: "",
   },
   {
-    title: "How long will my results last?",
-    content: "",
+    question: "How long will my results last?",
+    answer: "",
   },
   {
-    title: "Are there any side effects?",
-    content: "",
+    question: "Are there any side effects?",
+    answer: "",
   },
 ];
 export const sofwaveBodyFAQs: IFaq[] = [
   {
-    title: "How does Sofwave™ work?",
-    content:
+    question: "How does Sofwave™ work?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How is Sofwave™ better than other existing technologies?",
-    content: "",
+    question: "How is Sofwave™ better than other existing technologies?",
+    answer: "",
   },
   {
-    title: "HOW MANY TREATMENTS ARE NEEDED?",
-    content: "",
+    question: "HOW MANY TREATMENTS ARE NEEDED?",
+    answer: "",
   },
   {
-    title: "WHAT DOES THE SOFWAVE™ TREATMENT FEEL LIKE?",
-    content: "",
-  },
+    question: "WHAT DOES THE SOFWAVE™ TREATMENT FEEL LIKE?",
+    answer: "",
+  }, 
   {
-    title: "WHEN CAN I EXPECT TO SEE RESULTS?",
-    content: "",
+    question: "WHEN CAN I EXPECT TO SEE RESULTS?",
+    answer: "",
   },
-  {
-    title: "ARE THERE ANY SIDE EFFECTS WITH SOFWAVE?",
-    content: "",
+  { 
+    question: "ARE THERE ANY SIDE EFFECTS WITH SOFWAVE?",
+    answer: "",
   },
 ];
 export const emsculptNeoFAQs: IFaq[] = [
   {
-    title: "How does Emsculpt Neo work?",
-    content:
+    question: "How does Emsculpt Neo work?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "Who is a good candidate for Emsculpt Neo?",
-    content: "",
+    question: "Who is a good candidate for Emsculpt Neo?",
+    answer: "",
   },
   {
-    title: "How many sessions will I need?",
-    content: "",
+    question: "How many sessions will I need?",
+    answer: "",
   },
   {
-    title: "Is there any downtime after the treatment?",
-    content: "",
+    question: "Is there any downtime after the treatment?",
+    answer: "",
   },
   {
-    title: "When will I see results, and how long do they last?",
-    content: "",
+    question: "When will I see results, and how long do they last?",
+    answer: "",
   },
   {
-    title: "Can Emsculpt Neo replace exercise?",
-    content: "",
+    question: "Can Emsculpt Neo replace exercise?",
+    answer: "",
   },
 ];
 export const exosomsFAQs: IFaq[] = [
   {
-    title: "What are exosomes, and how do they work in skin care?",
-    content:
+    question: "What are exosomes, and how do they work in skin care?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How do exosomes differ from traditional serums and creams?",
-    content: "",
+    question: "How do exosomes differ from traditional serums and creams?",
+    answer: "",
   },
   {
-    title: "Can exosomes be used after cosmetic procedures?",
-    content: "",
+    question: "Can exosomes be used after cosmetic procedures?",
+    answer: "",
   },
   {
-    title: "Are exosome treatments safe for all skin types?",
-    content: "",
+    question: "Are exosome treatments safe for all skin types?",
+    answer: "",
   },
   {
-    title: "Are exosome treatments safe for all skin types?",
-    content: "",
+    question: "Are exosome treatments safe for all skin types?",
+    answer: "",
   },
 ];
 
 export const latisseFAQs: IFaq[] = [
   {
-    title: "What can I expect from Latisse?",
-    content:
+    question: "What can I expect from Latisse?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How long does it take to see results?",
-    content: "",
+    question: "How long does it take to see results?",
+    answer: "",
   },
   {
-    title: "How often do you use Latisse?",
-    content: "",
+    question: "How often do you use Latisse?",
+    answer: "",
   },
   {
-    title: "Are the results of Latisse permanent?",
-    content: "",
+    question: "Are the results of Latisse permanent?",
+    answer: "",
   },
   {
-    title: "How long does one box last?",
-    content: "",
+    question: "How long does one box last?",
+    answer: "",
   },
 ];
 export const platedFAQs: IFaq[] = [
   {
-    title: "What makes Plated™ different from other skin care products?",
-    content:
+    question: "What makes Plated™ different from other skin care products?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How do I incorporate Plated™ into my routine?",
-    content: "",
+    question: "How do I incorporate Plated™ into my routine?",
+    answer: "",
   },
   {
-    title: "Can Plated™ be used after cosmetic procedures?",
-    content: "",
+    question: "Can Plated™ be used after cosmetic procedures?",
+    answer: "",
   },
   {
-    title: "Is Plated™ suitable for all skin types?",
-    content: "",
+    question: "Is Plated™ suitable for all skin types?",
+    answer: "",
   },
   {
-    title: " When will I start seeing results with Plated™?",
-    content: "",
+    question: " When will I start seeing results with Plated™?",
+    answer: "",
   },
 ];
 export const aviClearFAQs: IFaq[] = [
   {
-    title: "What is AviClear?",
-    content:
+    question: "What is AviClear?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How does AviClear work?",
-    content: "",
+    question: "How does AviClear work?",
+    answer: "",
   },
   {
-    title: "How many treatments are needed?",
-    content: "",
+    question: "How many treatments are needed?",
+    answer: "",
   },
   {
-    title: "Is AviClear safe?",
-    content: "",
+    question: "Is AviClear safe?",
+    answer: "",
   },
   {
-    title: "Who can receive an AviClear treatment?",
-    content: "",
+    question: "Who can receive an AviClear treatment?",
+    answer: "",
   },
   {
-    title: "Is the treatment comfortable?",
-    content: "",
+    question: "Is the treatment comfortable?",
+    answer: "",
   },
   {
-    title: "How many treatments are needed?",
-    content: "",
+    question: "How many treatments are needed?",
+    answer: "",
   },
   {
-    title: "Are there side effects or down time?",
-    content: "",
+    question: "Are there side effects or down time?",
+    answer: "",
   },
   {
-    title: "Is miraDry safe?",
-    content: "",
+    question: "Is miraDry safe?",
+    answer: "",
   },
   {
-    title: "Do i need to come in for a consultation?",
-    content: "",
+    question: "Do i need to come in for a consultation?",
+    answer: "",
   },
   {
-    title: "Where are you located?",
-    content: "",
+    question: "Where are you located?",
+    answer: "",
   },
 ];
 export const miraDryFAQs: IFaq[] = [
   {
-    title: "How does miraDry work?",
-    content:
+    question: "How does miraDry work?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "Don’t i need sweat glands?",
-    content: "",
+    question: "Don’t i need sweat glands?",
+    answer: "",
   },
   {
-    title: "What are the results i can expect?",
-    content: "",
+    question: "What are the results i can expect?",
+    answer: "",
   },
   {
-    title: "How many treatments are needed?",
-    content: "",
+    question: "How many treatments are needed?",
+    answer: "",
   },
   {
-    title: "Are there side effects or down time?",
-    content: "",
+    question: "Are there side effects or down time?",
+    answer: "",
   },
   {
-    title: "Is miraDry safe?",
-    content: "",
+    question: "Is miraDry safe?",
+    answer: "",
   },
   {
-    title: "Do i need to come in for a consultation?",
-    content: "",
+    question: "Do i need to come in for a consultation?",
+    answer: "",
   },
   {
-    title: "Where are you located?",
-    content: "",
+    question: "Where are you located?",
+    answer: "",
   },
 ];
 
@@ -880,26 +880,26 @@ export const ourServices = [
 export const whyChooseUsCard = [
   {
     id: 1,
-    title: "Expert-Led Care",
-    content:
+    question: "Expert-Led Care",
+    answer:
       "Your journey begins with a consultation led by our experienced advanced practitioners. We’ll provide a medical assessment and tailor your treatment to meet your unique needs and goals",
   },
   {
     id: 2,
-    title: "Modern, Science-Backed Solutions",
-    content:
+    question: "Modern, Science-Backed Solutions",
+    answer:
       "Semaglutide and Tirzepatide are scientifically proven to support effective weight management, helping you achieve results that last.",
   },
   {
     id: 3,
-    title: "Continuous Support, Anytime, Anywhere",
-    content:
+    question: "Continuous Support, Anytime, Anywhere",
+    answer:
       "Stay connected with our team through constant communication and follow-up care. From answering questions to tracking progress, we’re with you every step of the way.",
   },
   {
     id: 4,
-    title: "Convenience Meets Care",
-    content:
+    question: "Convenience Meets Care",
+    answer:
       "Access expert guidance and personalized treatment from the comfort of your home – no need to sacrifice your busy schedule to prioritize your health.",
   },
 ];
@@ -907,42 +907,42 @@ export const whyChooseUsCard = [
 export const conciergeItems = [
   {
     id: 1,
-    title: "24/7 Access to your Physician via cell, text, or email",
+    question: "24/7 Access to your Physician via cell, text, or email",
   },
   {
     id: 2,
-    title: "Executive Style Annual Physicals",
+    question: "Executive Style Annual Physicals",
   },
   {
     id: 3,
-    title: "Well child care at age-appropriate intervals for children",
+    question: "Well child care at age-appropriate intervals for children",
   },
   {
     id: 4,
-    title: "Same or next Business Day Appointments",
+    question: "Same or next Business Day Appointments",
   },
   {
     id: 5,
-    title: "Coordination of Health Care Services",
+    question: "Coordination of Health Care Services",
   },
   {
     id: 6,
-    title: "Online Medical Records",
+    question: "Online Medical Records",
   },
   {
     id: 7,
-    title: "Personalized Wellness Plan",
+    question: "Personalized Wellness Plan",
   },
   {
     id: 8,
-    title: "In Office Testing",
+    question: "In Office Testing",
   },
 ];
 
 export const membershipsCard = [
   {
     level: 1,
-    title: "Choose one service each month.",
+    question: "Choose one service each month.",
     service: [
       "Diamond Glow",
       "Signature Peel",
@@ -957,7 +957,7 @@ export const membershipsCard = [
   },
   {
     level: 2,
-    title: "Choose one service each month.",
+    question: "Choose one service each month.",
     service: [
       "Diamond Glow",
       "VI Peel",
@@ -975,24 +975,24 @@ export const membershipsCard = [
 
 export const vampireWingLiftFAQs: IFaq[] = [
   {
-    title: "What is the Vampire Wing Lift?",
-    content:
+    question: "What is the Vampire Wing Lift?",
+    answer:
       "A concierge practice (also called concierge medicine or membership-based healthcare) is a healthcare model where patients pay a monthly or annual retainer fee to a doctor or medical practice in exchange for enhanced, personalized care. This model typically allows for longer appointment times, direct access to physicians, same-day or next-day appointments, and more comprehensive",
   },
   {
-    title: "How Does the Vampire Wing Lift Work?",
-    content: "",
+    question: "How Does the Vampire Wing Lift Work?",
+    answer: "",
   },
   {
-    title: "Benefits of the Vampire Wing Lift?",
-    content: "",
+    question: "Benefits of the Vampire Wing Lift?",
+    answer: "",
   },
   {
-    title: "Who is a Good Candidate for the Vampire Wing Lift?",
-    content: "",
+    question: "Who is a Good Candidate for the Vampire Wing Lift?",
+    answer: "",
   },
   {
-    title: "What to Expect During and After the Procedure?",
-    content: "",
+    question: "What to Expect During and After the Procedure?",
+    answer: "",
   },
 ];

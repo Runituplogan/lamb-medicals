@@ -1,12 +1,14 @@
 import Wrapper from "@/app/components/Wrapper";
 import { whyChooseUsCard } from "@/app/utils/data";
 import { CheckIcon } from "@/app/icons";
-import { WhyChooseUsType } from "../types/membershipCustomType";
+import { SectionWithFeatures } from "../../weight-loss/types/weightLoss";
 
-interface WhyChooseUsProps{
-  data?:WhyChooseUsType
+interface whyusProps {
+  data: SectionWithFeatures;
 }
-const WhyChooseUs:React.FC<WhyChooseUsProps>=({data})=> {
+
+export default function WhyChooseUs({ data }: whyusProps) {
+  console.log({ data });
   return (
     <Wrapper className="grid xl:grid-cols-[58rem_1fr] md:grid-rows-[38rem] items-start gap-20 xs:gap-[8rem] pb-[8rem] xs:pt-0 pt-10">
       <div className="flex w-full flex-col gap-[2.4rem] px-2">
@@ -24,25 +26,27 @@ const WhyChooseUs:React.FC<WhyChooseUsProps>=({data})=> {
         </p>
       </div>
       <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[2rem] w-full">
-        {Object.entries(data?.features||{}).map(([title, description],index) => (
-          <article
-            className="flex items-start gap-[0.8rem]"
-            key={index}
-            data-aos="fade-left"
-          >
-            <i className="block md:shrink-0 text-grey-300">
-              <CheckIcon />
-            </i>
-            <div className="flex flex-col gap-[0.8rem]">
-              <h6 className="font-rubik text-lg font-medium text-grey-200">
-                {title}
-              </h6>
-              <p className="font-work_sans text-base font-normal text-grey-200">
-                {description}
-              </p>
-            </div>
-          </article>
-        ))}
+        {Object.entries(data?.features || {}).map(
+          ([title, description], index) => (
+            <article
+              className="flex items-start gap-[0.8rem]"
+              key={index}
+              data-aos="fade-left"
+            >
+              <i className="block md:shrink-0 text-grey-300">
+                <CheckIcon />
+              </i>
+              <div className="flex flex-col gap-[0.8rem]">
+                <h6 className="font-rubik text-lg font-medium text-grey-200">
+                  {title}
+                </h6>
+                <p className="font-work_sans text-base font-normal text-grey-200">
+                  {description}
+                </p>
+              </div>
+            </article>
+          )
+        )}
       </ul>
     </Wrapper>
   );
