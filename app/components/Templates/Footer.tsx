@@ -1,32 +1,94 @@
+"use client"
 import Link from "next/link";
 import Wrapper from "../Wrapper";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
+import { useFooterPage } from "@/app/contexts/footer";
+import Preloader from "../Preloader";
+import { ButtonType } from "@/app/about/types/aboutCustomTypes";
+import GetInTouch from "../GetInTouch";
+interface Form{
+  name:string,
+  placeholder:string,
+  type:string,
+  required:boolean
+}
+export interface FooterSection1Type{
+  type:string,
+  headerText:string,
+  map:string,
+  BodyText:string,
+  form:{
+    fields:Form[],
+    primaryButton:ButtonType
+  }
+}
 
+interface FooterSection2Type{
+  type:string,
+  image:string,
+  header:string,
+  bodyText:string,
+  companyLinks:{
+    headerText:string,
+    links:string[],
+    Contact:{
+      headerText:string,
+      details:{
+        label:string,
+        text:string,
+      }[],
+    },
+    socials:{
+      headerText:string,
+      links: {
+        icon:string,
+        link:string
+      }[]
+    },
+    copyright:string
+  }
+}
 const Footer = () => {
+  const {footerPageData} = useFooterPage()
+  if (!footerPageData || !footerPageData.content || footerPageData.content.length === 0) {
+      return <Preloader />;
+    }
+
+  const footerSection1: FooterSection1Type | undefined = footerPageData.content.find(
+    (item: any) => item.type === "section1"
+  );
+   
+  const data1: FooterSection2Type | undefined = footerPageData.content.find(
+    (item: any) => item.type === "section2"
+  );
+   
+
+  //console.log(footerPageData)
   return (
-    <footer className="w-full bg-primary px-5 pb-10 pt-14 font-work_sans text-white md:p-10 lg:p-14 ">
+    <div>
+      <GetInTouch data={footerSection1}/>
+     <footer className="w-full bg-primary px-5 pb-10 pt-14 font-work_sans text-white md:p-10 lg:p-14 ">
       <Wrapper>
         <div className="grid w-full gap-5 gap-y-10 sm:grid-cols-2 sm:gap-7 md:grid-cols-3 lg:gap-10 xl:gap-20">
           <div className="w-full">
             <img
-              src="/lamb-medical-footer-logo.svg"
+              src={`/${data1?.image}`}
               className="w-72 md:w-auto"
               alt="lamb medical logo"
             />
             <p className="mt-7 text-[14px] font-medium text-white lg:text-base xl:text-lg">
-              Your health is your most valuable asset. At Lamb Medicals, we
-              treat it as such.
+             {data1?.bodyText}
             </p>
 
             <p className="mt-8 text-[16px] font-semibold md:text-base lg:text-lg">
-              Socials
+              {data1?.companyLinks.socials.headerText}
             </p>
 
             <div className="mt-3 flex items-center justify-start gap-4">
               <Link
-                href=" https://www.instagram.com/lambmedical/"
+                href={`${data1?.companyLinks.socials.links[0].link??'https://www.instagram.com/lambmedical/'}`}
                 target="_blank"
                 className="ease transition-all hover:opacity-55"
               >
@@ -45,7 +107,7 @@ const Footer = () => {
               </Link>
 
               <Link
-                href=" https://www.facebook.com/lambmedical/"
+                href={`${data1?.companyLinks.socials.links[1].link??'https://www.facebook.com/lambmedical/'}`}
                 target="_blank"
                 className="ease transition-all hover:opacity-55"
               >
@@ -67,23 +129,30 @@ const Footer = () => {
 
           {/* Company */}
           <div className="w-full pl-0 text-[16px] md:text-base lg:pl-10 lg:text-lg xl:pl-20 2xl:pl-28">
-            <h2 className="font-semibold">Company</h2>
+            <h2 className="font-semibold">{data1?.companyLinks.headerText}</h2>
 
             <div className="mt-6 flex w-full flex-col space-y-4">
-              <Link href="/about" className="hover:underline">
-                About Us
-              </Link>
+              {/* {
+                data1?.companyLinks.links.map((item,index)=>
+                <Link href="/about" className="hover:underline"key={index}>
+                  {item}
+                </Link>
+                )
+              } */}
+               <Link href="/about" className="hover:underline">
+                  {data1?.companyLinks.links[0]}
+                </Link>
               <Link href="/contact-us" className="hover:underline">
-                Contact Us
+              {data1?.companyLinks.links[1]}
               </Link>
               <Link href="/blog" className="hover:underline">
-                Blog
+              {data1?.companyLinks.links[2]}
               </Link>
               <Link href="/schedule-online" className="hover:underline">
-                Schedule online
+              {data1?.companyLinks.links[3]}
               </Link>
               <Link href="/faq" className="hover:underline">
-                FAQs
+              {data1?.companyLinks.links[4]}
               </Link>
             </div>
           </div>
@@ -93,25 +162,26 @@ const Footer = () => {
             <h2 className="font-semibold">Contact</h2>
 
             <div className="mt-6 flex w-full flex-col space-y-4">
+           
               <p className="flex items-center justify-start">
                 <FaPhoneAlt className="mr-4" />
-                Phone: 724-969-LAMB (5262)
+                {data1?.companyLinks.Contact.details[2].label}:  {data1?.companyLinks.Contact.details[2].text}
+              </p> 
+              <p className="flex items-center justify-start">
+                <FaPhoneAlt className="mr-4" />
+                {data1?.companyLinks.Contact.details[3].label}:  {data1?.companyLinks.Contact.details[3].text}
               </p>
               <p className="flex items-center justify-start">
                 <FaPhoneAlt className="mr-4" />
-                PHI Fax: 724-821-9700
-              </p>
-              <p className="flex items-center justify-start">
-                <FaPhoneAlt className="mr-4" />
-                Text: 724-969-5262
+                {data1?.companyLinks.Contact.details[4].label}:  {data1?.companyLinks.Contact.details[4].text}
               </p>
               <p className="flex items-center justify-start">
                 <MdEmail className="mr-4 text-xl" />
-                info@lambmedical.com
+                {data1?.companyLinks.Contact.details[1].label}:  {data1?.companyLinks.Contact.details[1].text}
               </p>
               <p className="flex items-start justify-start">
                 <FaLocationDot className="mr-4 text-xl ml-1 mt-2" />
-                3323 Washington Road, Suite 100 McMurray, PA 15317
+                {data1?.companyLinks.Contact.details[0].label}:  {data1?.companyLinks.Contact.details[0].text}
               </p>
             </div>
           </div>
@@ -119,11 +189,13 @@ const Footer = () => {
 
         <div className="mt-10 w-full border-t border-white pb-10 pt-16 text-center">
           <p className="text-[16px] text-white sm:text-sm lg:text-base">
-            © 2025 Lamb Medical. All rights reserved.
+            {data1?.companyLinks.copyright}
           </p>
         </div>
       </Wrapper>
-    </footer>
+    </footer>  
+    </div>
+   
   );
 };
 export default Footer;

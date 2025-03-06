@@ -1,17 +1,19 @@
 import Wrapper from "@/app/components/Wrapper";
 import ServicesIntro from "../../components/services-intro";
-import { BaseSection, SectionWithCTA } from "../../weight-loss/types/weightLoss";
+import { BeWellProgramType } from "../types/membershipCustomType";
 
-interface beWellProps {
-  data: SectionWithCTA;
+interface BeWellProgramProps{
+  data?:BeWellProgramType
 }
-
-const BeWellProgram: React.FC<beWellProps> = ({ data }) => {
+const BeWellProgram:React.FC<BeWellProgramProps>=({data})=> {
   return (
     <Wrapper id="well-program" className="grid gap-[4rem]">
-      <ServicesIntro title={data?.headerText || ''} description={data?.bodyText} btnLink="/schedule-online"/>
+      <ServicesIntro
+        title={`${data?.headerText}`}
+        description={`${data?.bodyText}`}
+      />
     </Wrapper>
   );
-};
+}
 
-export default BeWellProgram;
+export default BeWellProgram

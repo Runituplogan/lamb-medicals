@@ -1,13 +1,13 @@
 import Wrapper from "@/app/components/Wrapper";
 import { wellProgramTeamCard } from "@/app/utils/data";
 import WellProgramTeamCard from "./well-program-team-card";
-import { TeamSection } from "../../weight-loss/types/weightLoss";
+import { BeWellProgramTeamType } from "../types/membershipCustomType";
 
-interface beWellTeamProps {
-  data: TeamSection;
+
+interface BeWellProgramTeamProps{
+  data?:BeWellProgramTeamType
 }
-
-const BeWellProgramTeam: React.FC<beWellTeamProps> = ({ data }) => {
+const BeWellProgramTeam:React.FC<BeWellProgramTeamProps>=({data}) =>{
   return (
     <Wrapper className="grid gap-[2rem] py-[6rem]">
       <h3 className="font-rubik text-[32px] xs:text-[6.4rem] font-semibold leading-[6rem] text-grey-200">
@@ -24,6 +24,5 @@ const BeWellProgramTeam: React.FC<beWellTeamProps> = ({ data }) => {
       </ul>
     </Wrapper>
   );
-};
-
-export default BeWellProgramTeam;
+}
+export default BeWellProgramTeam

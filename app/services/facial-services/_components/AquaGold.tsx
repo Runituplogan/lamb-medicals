@@ -1,14 +1,16 @@
 import Wrapper from "@/app/components/Wrapper";
 import Image from "next/image";
 import ServicesIntro from "../../components/services-intro";
-import { AquaGoldType } from "../types/facialServicesCustomType";
+import { AquaGoldFaq, AquaGoldType } from "../types/facialServicesCustomType";
+import ServicesFAQ from "../../components/services-faq";
 
 interface FacialServiceProps {
-  data?: AquaGoldType;
+  data?: AquaGoldType,
+  aquaGoldFaq?:AquaGoldFaq
 }
 
 
-const AquaGold:React.FC<FacialServiceProps>=({data})=> {
+const AquaGold:React.FC<FacialServiceProps>=({data,aquaGoldFaq})=> {
   return (
     <Wrapper id="aqua-gold" className="grid gap-[4rem] pb-16">
       {/* <ServicesIntro
@@ -32,19 +34,20 @@ const AquaGold:React.FC<FacialServiceProps>=({data})=> {
           fill
           className="object-cover"
         /> */}
+        
         <Image
-          src={`/${data?.sections[0].image}`}
+          src={`${data?.sections[0].image}`}
           alt=""
           role="presentation"
           fill
           className="object-cover"
         />
       </figure>
-      <img
-         src={`/${data?.sections[0].image}`}
+      {/* <img
+         src={`${data?.sections[0].image}`}
         alt="aquagold-mobile"
         className="object-cover xs:hidden block"
-      />
+      /> */}
       {/* <img
         src="/images/facial-services/aquagold-mobile.png"
         alt="aquagold-mobile"
@@ -63,32 +66,31 @@ const AquaGold:React.FC<FacialServiceProps>=({data})=> {
         production. */}
       </p>
 
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         <Image
           alt="aquagold-2"
           className="object-cover"
           role="presentation"
           height={645}
           width={657}
-          src="/images/facial-services/aquagold-2.png"
+          src={`${data?.sections[1].images[0]}`}
         />
         <Image
           alt="aquagold-3"
           className="object-cover"
           role="presentation"
-          src="/images/facial-services/aquagold-3.png"
+          src={`${data?.sections[1].images[1]}`}
           height={645}
           width={657}
         />
-      </div> */}
-
-        <Image
-          src={`/${data?.sections[2].image}`}
+      </div>
+        {/* <Image
+          src={`${data?.sections[1].image}`}
           alt="section2 image"
           role="presentation"
           fill
           className="object-cover"
-        />
+        /> */}
 
       <p className="text-grey-750 font-work_sans text-[14px] xs:text-lg font-medium leading-[3.6rem] tracking-[0.02rem] opacity-80 pb-28 pt-10">
         {/* Specially selected therapeutics for a treatment customized just for you.
@@ -102,8 +104,14 @@ const AquaGold:React.FC<FacialServiceProps>=({data})=> {
         the periorbital (around the eye) and perioral (around the mouth)
         regions. High quality gold tends to be hypoallergenic and utilize free
         radical scavenging to help prevent additional inflammation. */}
-        {data?.sections[2].bodyText}
+        {data?.sections[1].bodyText}
       </p>
+      <ServicesFAQ
+        className="px-2 md:px-0"
+        title={`${aquaGoldFaq?.headerText}`}
+        description="Curious about AquaGold? Get answers to common questions about how it works, what to expect, and how it can help you feel confident and sweat-free."
+        faqs={aquaGoldFaq?.questions}
+      />
     </Wrapper>
   );
 }

@@ -4,10 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { MdChevronRight } from "react-icons/md";
 import { MeetTeamType } from "@/app/about/types/aboutCustomTypes";
-
-interface Section4Props {
-  data: HomepageSection4;
-}
+import { useMeetTheTeamPage } from "@/app/contexts/meetTheTeam";
+import Preloader from "../Preloader";
 
 const MAX_ACTIVE_WIDTH = 300;
 const MAX_INACTIVE_WIDTH = 150;
@@ -16,7 +14,15 @@ interface MeetTheTeamSectionProps {
   data?: MeetTeamType;
 }
 
-const MeetTheTeam: React.FC<MeetTheTeamSectionProps> = ({data}) => {
+const MeetTheTeam =() => {
+  const {meetTheTeamPageData} = useMeetTheTeamPage()
+    if (!meetTheTeamPageData || !meetTheTeamPageData.content || meetTheTeamPageData.content.length === 0) {
+      return <Preloader />;
+    }
+    const data: MeetTeamType | undefined = meetTheTeamPageData.content.find(
+      (item: any) => item.type === "section1"
+    );
+  
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [containerWidth, setContainerWidth] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -78,7 +84,7 @@ const MeetTheTeam: React.FC<MeetTheTeamSectionProps> = ({data}) => {
               onClick={() => handleClick(index)}
             >
               <Image
-                src={`/${member.image}`}
+                src={`${member.image}`}
                 width={1000}
                 height={100}
                 className="h-[400px] w-full object-cover transition-all duration-300"

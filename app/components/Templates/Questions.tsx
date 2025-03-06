@@ -1,7 +1,7 @@
 "use client";
 
 import { FaqSection } from "@/app/about/types/aboutCustomTypes";
-
+import Image from "next/image";
 
 interface QuestionsProps {
   data?: FaqSection;
@@ -39,7 +39,7 @@ const Questions:React.FC<QuestionsProps> = ({data}) => {
         src={data?.image}
         alt="3"
         className="mt-24 w-full xs:hidden block"
-      />
+      /> */}
     </section>
   );
 };

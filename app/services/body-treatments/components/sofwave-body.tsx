@@ -9,71 +9,55 @@ import {
 } from "@/app/utils/data";
 import ServicesBenefits from "../../components/services-benefits";
 import ServicesAfterEffects from "../../components/services-after-effects";
+import { SofwaveBodyFAQ, SofwaveBodyType } from "../types/bodyTreatmentCustomTypes";
 
-export default function SofwaveBody() {
+
+interface SofwaveBodyProps{
+  data?:SofwaveBodyType,
+  faqs?:SofwaveBodyFAQ
+}
+const SofwaveBody:React.FC<SofwaveBodyProps>=({data,faqs}) =>{
   return (
     <Wrapper id="sofwave-body" className="grid gap-[4rem]">
       <ServicesIntro
-        title="Sofwave Body"
+        title={`${data?.headerText}`}
         description={
-          <>
-            <span>
-              From the founders of the aesthetic industry, Sofwave™ Medical
-              brings a novel approach to skin tightening using SUPERB™
-              Synchronous Ultrasound Parallel Beam Technology.
-            </span>
-            <span>
-              Sofwave™’s breakthrough technology delivers a new standard of
-              care to aesthetic treatments, providing safe aesthetic treatments
-              for patients."
-            </span>
-          </>
+         `${data?.bodyText}`
         }
       />
       <ServicesBenefits
-        title="SMART Yet SIMPLE Skin Treatment"
-        benefits={sofwaveBodyBenefits}
+        title={`${data?.subsections[0].headerText}`}
+        benefits={data?.subsections[0].bodyText??[]}
       />
       <ServicesAfterEffects className="xs:grid-cols-2 grid-rows-[55rem]">
-        <div
-          className="relative h-full xs:col-span-1 col-span-full"
-          data-aos="fade-left"
-        >
-          <Image
-            src="/images/body-treatments/body-treatments-2.png"
-            alt=""
-            fill
-            className="absolute object-top hidden xs:block"
-          />
-          <img
-            src="/images/body-treatments/body-treatments-2.png"
-            alt="body-treatments-2"
-            className="xs:hidden block object-top"
-          />
-        </div>
-        <div
-          className="relative h-full col-span-full xs:col-span-1"
-          data-aos="fade-right"
-        >
-          <Image
-            src="/images/body-treatments/body-treatments-3.png"
-            alt=""
-            fill
-            className="absolute object-top"
-          />
-          <img
-            src="/images/body-treatments/body-treatments-3.png"
-            alt=""
-            className="xs:hidden block"
-          />
-        </div>
+        {
+          data?.subsections[0].images.map((item,index)=>
+          <div
+            className="relative h-full xs:col-span-1 col-span-full"
+            data-aos="fade-left"
+            key={index}
+          >
+            <Image
+              src={`${item.image}`}
+              alt=""
+              fill
+              className="absolute object-top hidden xs:block"
+            />
+            {/* <img
+              src="/images/body-treatments/body-treatments-2.png"
+              alt="body-treatments-2"
+              className="xs:hidden block object-top"
+            /> */}
+          </div>
+          )
+        }
       </ServicesAfterEffects>
       <ServicesBenefits
-        title="HIGH Patient Satisfaction"
-        benefits={sofwaveBodySatisfaction}
+        title={`${data?.subsections[1].headerText}`}
+        benefits={data?.subsections[1].bodyText??[]}
       />
-      <ServicesAfterEffects className="grid-cols-1 xs:grid-rows-[50rem_50rem]">
-        <div className="relative h-full col-span-full" data-aos="fade-left">
+      <ServicesAfterEffects className="xs:grid-cols-2 ">
+        {/* <div className="relative h-full col-span-full" data-aos="fade-left">
           <Image
             src="/images/body-treatments/body-treatments-4.png"
             alt=""
@@ -96,34 +80,36 @@ export default function SofwaveBody() {
             fill
             className="absolute object-top"
           />
-        </div>
-        <div className="w-full col-span-full relative xs:hidden block">
-          <img
-            src="/images/body-treatments/body-treatments-5-before.png"
-            alt=""
-            className="object-cover"
-          />
-          <h2 className="font-semibold text-white absolute top-[13%] right-[40%] text-[24px] xs:text-[47.54px] font-rubik">
-            Before
-          </h2>
-        </div>
-        <div className="w-full col-span-full relative xs:hidden block">
-          <img
-            src="/images/body-treatments/body-treatments-5-after.png"
-            alt="body-treatments-5-after"
-            className="object-cover"
-          />
+        </div> */}
 
-          <h2 className="font-semibold text-white absolute top-[13%] right-[40%] text-[24px] xs:text-[47.54px] font-rubik">
-            After
-          </h2>
+        {
+          data?.subsections[1].images.map((item,index)=>     
+        <div className="" key={index}>
+          <div
+          className="relative h-full col-span-full w-full hidden xs:block"
+          data-aos="fade-right"
+        >
+          <Image
+            src={`${item.image}`}
+            alt=""
+            fill
+            //className="absolute object-top"
+          />
         </div>
+          {/* <h2 className="font-semibold text-white absolute top-[13%] right-[40%] text-[24px] xs:text-[47.54px] font-rubik">
+           {item.type}
+          </h2> */}
+        </div>
+          )
+        }
       </ServicesAfterEffects>
       <ServicesFAQ
-        title="Sofwave FAQs: Your questions answered"
-        description="Curious about Sofwave? Get answers to common questions about how it works, what to expect, and how it can help you feel confident"
-        faqs={sofwaveBodyFAQs}
+        title={`${faqs?.headerText}`}
+        description={`${faqs?.bodyText}`}
+        faqs={faqs?.faqs??[]}
       />
     </Wrapper>
   );
 }
+
+export default SofwaveBody

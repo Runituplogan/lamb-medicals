@@ -51,3 +51,4 @@ export default function WhyChooseUs({ data }: whyusProps) {
     </Wrapper>
   );
 }
+export default WhyChooseUs

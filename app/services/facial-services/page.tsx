@@ -69,12 +69,12 @@ export default function FacialServices() {
           alt="facial-service-image-mobile"
           className="absolute object-cover object-center h-screen inset-0"
         /> */}
-        <img
+        {/* <img
           data-aos="fade-right"
           src={`${heroData?.image}`}
           alt="facial-service-image-mobile"
           className="absolute object-cover object-center h-screen inset-0"
-        />
+        /> */}
         {/* </div> */}
 
         <div className="grid space-y-[2.4rem] pr-[4rem] text-white md:w-[65rem] px-8 py-36">
@@ -93,13 +93,7 @@ export default function FacialServices() {
         </div>
       </div>
       <ServicesTab tabItems={facialServicesTabItems} />
-      <AquaGold  data={aquaGold}/>
-      <ServicesFAQ
-        className="px-2 md:px-0"
-        title={`${aquaGoldFaq?.headerText}`}
-        description="Curious about AquaGold? Get answers to common questions about how it works, what to expect, and how it can help you feel confident and sweat-free."
-        faqs={aquaGoldFaq?.questions}
-      />
+      <AquaGold  data={aquaGold} aquaGoldFaq={aquaGoldFaq}/>
       <DiamondGlow data={diamondGlow} />
       <Dermaplanning data={dermaplanning}/>
       <Peels data={peels}/>

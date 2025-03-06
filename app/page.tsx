@@ -38,7 +38,7 @@ export default function Home() {
     (item: any) => item.type === "section2"
   );
 
-  const section3: HomepageSection3 | undefined = homePageData.content.find(
+  const section3: OurServicesType | undefined = homePageData.content.find(
     (item: any) => item.type === "section3"
   );
 
@@ -101,12 +101,12 @@ export default function Home() {
 
       {/* Experience the lamb look */}
       <ExperienceLamb data={section2 ?? {type: 'section2'}}/>
-      <OurServices data={section3 ?? {type: 'section3'}}/>
-      <MeetTheTeam data={section4 }/>
+      <OurServices/>
+      <MeetTheTeam/>
       <WallOfLove data={section5 }/>
       <Questions data={section6}/>
       <FAQ data={section6?.faqs} />
-      <GetInTouch data={section7 ?? {type: 'section7'}}/>
+      {/* <GetInTouch data={section7 ?? {type: 'section7'}}/> */}
     </section>
   );
 }

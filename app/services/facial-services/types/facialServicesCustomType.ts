@@ -3,6 +3,7 @@ import { IFaq } from "@/app/data/faq";
 export interface Section{
     bodyText:string,
     image:string,
+    images:string[]
 }
 
 export interface AquaGoldType{
@@ -38,7 +39,7 @@ export interface PeelsType{
     bodyText:string,
     cta_button:ButtonType,
     headerText:string,
-    images:string,
+    image:string,
     type:string,
     subsections:{bodyText:string,title:string,image:string}[]
 }

@@ -15,7 +15,7 @@ export default function ServicesHero({
     <section className="grid grid-rows-[77.1rem] items-center gap-[8.2rem] bg-primary pt-[8rem] md:grid-cols-2">
       <div className="relative size-full" data-aos="fade-right">
         <Image
-          src={`/images/${image}`}
+          src={`${image}`}
           alt={title}
           className="absolute object-cover object-center"
           fill
