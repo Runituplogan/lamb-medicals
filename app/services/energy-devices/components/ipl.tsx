@@ -4,12 +4,13 @@ import ServicesIntro from "../../components/services-intro";
 import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
 import { iplFAQs } from "@/app/utils/data";
-import { IPLType } from "../types/energyDevicesCustomType";
+import { IPLFAQs, IPLType } from "../types/energyDevicesCustomType";
 
 interface IPLProps{
-  data?:IPLType
+  data?:IPLType,
+  iplFaq?:IPLFAQs
 }
-const IPL:React.FC<IPLProps>=({data})=> {
+const IPL:React.FC<IPLProps>=({data,iplFaq})=> {
   return (
     <Wrapper id="ipl" className="grid gap-[4rem]">
       <ServicesIntro
@@ -40,8 +41,9 @@ const IPL:React.FC<IPLProps>=({data})=> {
         {
           data?.subsection.images.map((item,i)=>
         <div className="relative h-full" data-aos="fade-left" key={i}>
+      
           <Image
-            src={`/${item}`}
+            src={`${item.image}`}
             alt=""
             fill
             className="absolute object-cover"
@@ -68,6 +70,11 @@ const IPL:React.FC<IPLProps>=({data})=> {
           />
         </div> */}
       </ServicesAfterEffects>
+      <ServicesFAQ
+        title={`${iplFaq?.headerText}`}
+        description={`${iplFaq?.textBody}`}
+        faqs={iplFaq?.questions}
+      />
     </Wrapper>
   );
 }

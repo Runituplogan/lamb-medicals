@@ -38,7 +38,7 @@ const SofwaveBody:React.FC<SofwaveBodyProps>=({data,faqs}) =>{
             key={index}
           >
             <Image
-              src={`/${item.image}`}
+              src={`${item.image}`}
               alt=""
               fill
               className="absolute object-top hidden xs:block"
@@ -56,7 +56,7 @@ const SofwaveBody:React.FC<SofwaveBodyProps>=({data,faqs}) =>{
         title={`${data?.subsections[1].headerText}`}
         benefits={data?.subsections[1].bodyText??[]}
       />
-      <ServicesAfterEffects className="grid-cols-1 xs:grid-rows-[50rem_50rem]">
+      <ServicesAfterEffects className="xs:grid-cols-2 ">
         {/* <div className="relative h-full col-span-full" data-aos="fade-left">
           <Image
             src="/images/body-treatments/body-treatments-4.png"
@@ -81,17 +81,24 @@ const SofwaveBody:React.FC<SofwaveBodyProps>=({data,faqs}) =>{
             className="absolute object-top"
           />
         </div> */}
+
         {
           data?.subsections[1].images.map((item,index)=>     
-        <div className="w-full col-span-full relative xs:hidden block" key={index}>
-          <img
+        <div className="" key={index}>
+          <div
+          className="relative h-full col-span-full w-full hidden xs:block"
+          data-aos="fade-right"
+        >
+          <Image
             src={`${item.image}`}
             alt=""
-            className="object-cover"
+            fill
+            //className="absolute object-top"
           />
-          <h2 className="font-semibold text-white absolute top-[13%] right-[40%] text-[24px] xs:text-[47.54px] font-rubik">
-           ${item.type}
-          </h2>
+        </div>
+          {/* <h2 className="font-semibold text-white absolute top-[13%] right-[40%] text-[24px] xs:text-[47.54px] font-rubik">
+           {item.type}
+          </h2> */}
         </div>
           )
         }

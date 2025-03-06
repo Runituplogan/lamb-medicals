@@ -28,8 +28,8 @@ export interface SofwaveType{
     cta_button:ButtonType,
     headerText:string,
     type:string,
-    "0":{headerText:string,bodyText:string[],images:string[]},
-    "1":{headerText:string,bodyText:string[],images:string[]},
+    "0":{headerText:string,bodyText:string[],images:{image:string,type:string}[]},
+    "1":{headerText:string,bodyText:string[],images:{image:string,type:string}[]},
 }
 
 export interface SofwaveFaqs{
@@ -43,7 +43,7 @@ export interface IPLType{
     bodyText:string,
     cta_button:ButtonType,
     headerText:string,
-    subsection:{bodyText:string,headerText:string,images:string[]},
+    subsection:{bodyText:string,headerText:string,images:{image:string,type:string}[]},
     type:string,
 }
 
@@ -61,7 +61,7 @@ export interface MicroneedlingType{
     headerText:string,
     subsection:{bodyText:string,headerText:string,images:{image:string,type:string}[]},
     type:string,
-    video:string,
+    videos:string,
 }
 
 export interface MicroneedlingFaq{

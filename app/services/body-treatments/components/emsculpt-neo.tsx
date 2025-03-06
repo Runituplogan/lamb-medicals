@@ -33,7 +33,7 @@ const EmsculptNeo:React.FC<EmsculptNeoProps>=({data,faqs})=> {
             className="absolute object-top xs:block hidden"
           /> */}
           <Image
-            src={`/${data?.image}`}
+            src={`${data?.image}`}
             alt="body-treatments-1"
             fill
             className="absolute object-top xs:block hidden"

@@ -31,12 +31,13 @@ const Peels:React.FC<PeelsProps>=({data})=> {
           className="object-cover"
         /> */}
         <Image
-          src={`/${data?.images}`}
+          src={`${data?.image}`}
           alt=""
           role="presentation"
           fill
           className="object-cover"
         />
+
       </figure>
       {/* <img
         data-aos="zoom-in"
@@ -117,7 +118,6 @@ const Peels:React.FC<PeelsProps>=({data})=> {
           role="presentation"
           fill
           className="object-cover hidden md:block"
-
         />
         {/* <img
           src="/images/facial-services/bio-reel-peel-mobile.png"

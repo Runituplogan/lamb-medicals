@@ -96,24 +96,9 @@ export default function EnergyDevices() {
         </div>
       </div>
       <ServicesTab tabItems={energyDevicesTabItems} />
-      <AgeJect data={ageject} />
-      <ServicesFAQ
-        title={`${agejectFaqs?.headerText}`}
-        description={`${agejectFaqs?.textBody}`}
-        faqs={agejectFaqs?.questions}
-      />
-      <Sofwave data={sofwave} />
-      <ServicesFAQ
-        title={`${sofwaveFaqs?.headerText}`}
-        description={`${sofwaveFaqs?.textBody}`}
-        faqs={sofwaveFaqs?.questions}
-      />
-      <IPL data={ipl}/>
-      <ServicesFAQ
-        title={`${iplFaq?.headerText}`}
-        description={`${iplFaq?.textBody}`}
-        faqs={iplFaq?.questions}
-      />
+      <AgeJect data={ageject} agejectFaqs={agejectFaqs}/>
+      <Sofwave data={sofwave} sofwaveFaqs={sofwaveFaqs}/>
+      <IPL data={ipl} iplFaq={iplFaq}/>
       <Miconeedling data={microneedling} />
       <ServicesFAQ
         title={`${microneedlingFaq?.headerText}`}

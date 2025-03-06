@@ -19,14 +19,19 @@ const Miconeedling:React.FC<MiconeedlingProps>=({data})=> {
         description={`${data?.bodyText}`}
       />
       <figure
-        className="relative h-[62.3rem] overflow-hidden rounded"
+        className="relative h-auto overflow-hidden rounded"
         data-aos="zoom-in"
       >
-        <ReactPlayer 
-        url={data?.video}
-        controls 
-      />
+             <div className="w-full h-screen flex justify-center items-center">
+              <ReactPlayer 
+                url="https://youtu.be/_K4VB3QtZxk"
+                controls
+                width="100%"
+                height="100%"
+              />
+            </div>
       </figure>
+ 
       <p
         className="text-grey-750 font-work_sans text-[14px] xs:text-lg font-medium leading-[4rem] tracking-[0.02em] text-opacity-80"
         data-aos="fade-right"
@@ -42,7 +47,7 @@ const Miconeedling:React.FC<MiconeedlingProps>=({data})=> {
           key={index}
         >
           <Image
-            src={`/${item.image}`}
+            src={`${item.image}`}
             alt=""
             fill
             className="absolute object-cover inset-0 xs:block hidden"

@@ -5,12 +5,13 @@ import ServicesBenefits from "../../components/services-benefits";
 import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
 import { agejectBenefits, agejectFAQs } from "@/app/utils/data";
-import { AgejectType } from "../types/energyDevicesCustomType";
+import { AgeJectFaqs, AgejectType } from "../types/energyDevicesCustomType";
 
 interface AgeJectProps {
-  data?:AgejectType
+  data?:AgejectType,
+  agejectFaqs?:AgeJectFaqs
 }
-const AgeJect:React.FC<AgeJectProps>=({data})=> {
+const AgeJect:React.FC<AgeJectProps>=({data,agejectFaqs})=> {
   // console.log(data?.sections[0].content)
   return (
     <Wrapper id="ageject" className="grid gap-[4rem] pt-14">
@@ -30,7 +31,7 @@ const AgeJect:React.FC<AgeJectProps>=({data})=> {
           className="object-cover"
         /> */}
         <Image
-          src={`/${data?.image}`}
+          src={`${data?.image}`}
           alt="ageJet-before-after"
           role="presentation"
           fill
@@ -53,7 +54,7 @@ const AgeJect:React.FC<AgeJectProps>=({data})=> {
           data?.sections[0].images.map((item,index)=> 
         <div className="relative xs:h-full" data-aos="fade-left" key={index}>
           <Image
-            src={`/${item.image}`}
+            src={`${item.image}`}
             alt=""
             fill
             className="absolute object-cover"
@@ -94,6 +95,11 @@ const AgeJect:React.FC<AgeJectProps>=({data})=> {
           />
         </div> */}
       </ServicesAfterEffects>
+      <ServicesFAQ
+        title={`${agejectFaqs?.headerText}`}
+        description={`${agejectFaqs?.textBody}`}
+        faqs={agejectFaqs?.questions}
+      />
     </Wrapper>
   );
 }

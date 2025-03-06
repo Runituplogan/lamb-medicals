@@ -84,7 +84,7 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
         </div>
         <div data-aos="fade-up" className="xs:block hidden">
           <Image
-            src={`/${data?.image}}`}
+            src={`${data?.image}`}
             width={1000}
             height={1000}
             className="w-full h-full"

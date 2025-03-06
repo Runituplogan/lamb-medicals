@@ -38,7 +38,7 @@ export default function BodyTreatments() {
     <Fragment>
       <div className="xs:block hidden">
         <ServicesHero
-          image={`/${heroData?.image}`}
+          image={`${heroData?.image}`}
           title={`${heroData?.headerText}`}
           description={`${heroData?.bodyText}`}
         />
@@ -51,7 +51,7 @@ export default function BodyTreatments() {
           className="absolute inset-0 h-[85vh] object-cover object-center"
         /> */}
         <img
-          src={`/${heroData?.image}`}
+          src={`${heroData?.image}`}
           alt="facial-service-image-mobile"
           className="absolute inset-0 h-[85vh] object-cover object-center"
         />
