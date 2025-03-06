@@ -26,7 +26,7 @@ export default function ServiceImageContentLayout({
     >
       <div className="relative xs:h-full" data-aos="fade-right">
         <Image
-          src={`/images/${image}`}
+          src={`${image}`}
           alt={title}
           fill
           className="xs:block hidden"

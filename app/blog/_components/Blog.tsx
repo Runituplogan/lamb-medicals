@@ -41,7 +41,7 @@ const Blog = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-5 lg:gap-10 gap-y-16 md:gap-y-10 lg:gap-y-14 w-full">
         {blogs.map((item: any, index: number) => (
           <div key={index} className="w-full flex flex-col items-start justify-between">
-            <div>
+            <div className="w-full">
               <div className="w-full h-[185px] rounded-sm">
                 {item.mainImage?.asset?.url && (
                   <Image

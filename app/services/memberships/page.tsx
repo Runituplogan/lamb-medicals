@@ -60,12 +60,12 @@ export default function Memberships() {
   const aethesticsMembership: AethesticsMembershipType | undefined = membershipPageData.content.find(
     (item: any) => item.type === "section11"
   ); 
-  console.log(membershipPageData)
+  console.log({membershipPageData})
   return (
     <Fragment>
       <div className="xs:block hidden w-full">
         <ServicesHero
-          image={`/${heroData?.image}`}
+          image={`${heroData?.image}`}
           title={`${heroData?.headerText}`}
           description={`${heroData?.bodyText}`}
         />

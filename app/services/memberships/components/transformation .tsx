@@ -3,11 +3,10 @@ import BookNowButton from "../../components/book-now-button";
 import Image from "next/image";
 import { TransformationType } from "../types/membershipCustomType";
 
-interface TransformationProps{
-  data?:TransformationType
+interface TransformationProps {
+  data?: TransformationType;
 }
-const Transformation:React.FC<TransformationProps>=({data})=> {
-
+const Transformation: React.FC<TransformationProps> = ({ data }) => {
   return (
     <Wrapper className="grid w-full lg:grid-cols-[58rem_1fr] xs:gap-[8rem] pb-[10rem]">
       <div className="flex w-full flex-col gap-[2.4rem]">
@@ -21,13 +20,13 @@ const Transformation:React.FC<TransformationProps>=({data})=> {
           className="grid gap-8 font-work_sans text-[14px] xs:text-md font-medium leading-[3.2rem] tracking-[0.02rem] text-grey-750 opacity-80"
           data-aos="fade-up"
         >
-         {data?.bodyText}
+          {data?.bodyText}
         </p>
         <BookNowButton
           className="self-start hidden xs:block"
           data-aos="fade-up"
         >
-         {data?.cta_button.text}
+          {data?.cta_button.text}
         </BookNowButton>
       </div>
 
@@ -40,20 +39,20 @@ const Transformation:React.FC<TransformationProps>=({data})=> {
           data-aos="fade-left"
         >
           <Image
-            src={data?.image || ''}
+            src={data?.image || ""}
             alt="visual consultation"
             fill
             className="xs:block hidden"
             unoptimized
           />
           <img
-            src={data?.image || ''}
+            src={data?.image || ""}
             alt="visual-consultation-2-mobile"
             className="block xs:hidden mt-16"
-          /> */}
+          />{" "}
         </div>
       </figure>
     </Wrapper>
   );
-}
-export default Transformation
+};
+export default Transformation;

@@ -27,8 +27,7 @@ export default function WhyChooseUs({ data }: whyusProps) {
         </p>
       </div>
       <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[2rem] w-full">
-        {Object.entries(data?.features || {}).map(
-          ([title, description], index) => (
+        {data?.features?.map((feature, index) => (
             <article
               className="flex items-start gap-[0.8rem]"
               key={index}
@@ -39,10 +38,10 @@ export default function WhyChooseUs({ data }: whyusProps) {
               </i>
               <div className="flex flex-col gap-[0.8rem]">
                 <h6 className="font-rubik text-lg font-medium text-grey-200">
-                  {title}
+                  {feature?.title}
                 </h6>
                 <p className="font-work_sans text-base font-normal text-grey-200">
-                  {description}
+                  {feature?.bodyText}
                 </p>
               </div>
             </article>

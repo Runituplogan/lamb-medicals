@@ -30,16 +30,17 @@ export interface VirtualconsultationsType{
 }
 
 interface Feature {
-    [key: string]: string;
+    title: string;
+    bodyText: string;
   }
-
-export interface WhyChooseUsType{
-    type:string,
-    bodyText:string,
-    headerText:string,
-    features:Feature,
-}
-
+  
+  export interface WhyChooseUsType {
+    type: string;
+    bodyText: string;
+    headerText: string;
+    features: Feature[];
+  }
+  
 export interface TransformationType{
     type:string,
     bodyText:string,

@@ -23,7 +23,7 @@ const AethesticsMembership:React.FC<AethesticsMembershipProps>=({data}) =>{
               {member?.title}
             </h4>
             <p className="pb-[1.8rem] text-[16px] font-work_sans xs:text-lg font-medium leading-[3rem] tracking-[0.02em] text-grey-750">
-              {member.question}
+              {member?.description}
             </p>
             <ul className="flex flex-wrap items-center gap-x-[1rem] pb-[2.4rem] font-work_sans">
               {member.services.map((item, index) => (
