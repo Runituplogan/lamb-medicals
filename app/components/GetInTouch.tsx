@@ -76,8 +76,8 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
           </p> */}
 
           <img
-            src={data?.map || "/location.png"}
-            alt="location map"
+            src="/location.png"
+            alt="location map" 
             className="mt-7 w-full md:w-auto md:h-auto"
             data-aos="fade-up"
           />

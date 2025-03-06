@@ -39,7 +39,7 @@ export default function Memberships() {
   const virtualConsultations: VirtualconsultationsType | undefined = membershipPageData.content.find(
     (item: any) => item.type === "section4"
   ); 
-  const whyChooseUs: WhyChooseUsType | undefined = membershipPageData.content.find(
+  const whyChooseUs: WhyChooseUsType = membershipPageData.content.find(
     (item: any) => item.type === "section5"
   ); 
   const transformation: TransformationType | undefined = membershipPageData.content.find(
@@ -108,3 +108,4 @@ export default function Memberships() {
     </Fragment>
   );
 }
+ 

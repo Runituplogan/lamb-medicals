@@ -2,9 +2,10 @@ import Wrapper from "@/app/components/Wrapper";
 import { whyChooseUsCard } from "@/app/utils/data";
 import { CheckIcon } from "@/app/icons";
 import { SectionWithFeatures } from "../../weight-loss/types/weightLoss";
+import { WhyChooseUsType } from "../types/membershipCustomType";
 
 interface whyusProps {
-  data: SectionWithFeatures;
+  data: WhyChooseUsType;
 }
 
 export default function WhyChooseUs({ data }: whyusProps) {
@@ -51,4 +52,3 @@ export default function WhyChooseUs({ data }: whyusProps) {
     </Wrapper>
   );
 }
-export default WhyChooseUs

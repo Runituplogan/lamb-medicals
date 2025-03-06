@@ -74,7 +74,7 @@ const Footer = () => {
         <div className="grid w-full gap-5 gap-y-10 sm:grid-cols-2 sm:gap-7 md:grid-cols-3 lg:gap-10 xl:gap-20">
           <div className="w-full">
             <img
-              src={`/${data1?.image}`}
+              src={data1?.image}
               className="w-72 md:w-auto"
               alt="lamb medical logo"
             />

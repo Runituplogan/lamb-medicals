@@ -101,7 +101,7 @@ export default function Home() {
 
       {/* Experience the lamb look */}
       <ExperienceLamb data={section2 ?? {type: 'section2'}}/>
-      <OurServices/>
+      <OurServices/> 
       <MeetTheTeam/>
       <WallOfLove data={section5 }/>
       <Questions data={section6}/>

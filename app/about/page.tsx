@@ -20,7 +20,7 @@ export default function Page() {
 
   const heroData: ContentItem | undefined = aboutPageData.content.find(
     (item: any) => item.type === "hero"
-  );
+  ); 
 
   const buildTrust: BuildTrustType | undefined = aboutPageData.content.find(
     (item: any) => item.type === "section1"
