@@ -4,13 +4,27 @@ import ServicesAfterEffects from "../../components/services-after-effects";
 import Image from "next/image";
 import ServicesFAQ from "../../components/services-faq";
 import { aviClearFAQs } from "@/app/utils/data";
-import { ReImagingFAQ, ReImagingType } from "../../memberships/types/membershipCustomType";
+import {
+  ReImagingFAQ,
+  ReImagingType,
+} from "../../memberships/types/membershipCustomType";
+import BeforeAfter from "@/app/components/BeforeandAfter";
 
-interface ReImagingProps{
-  data?:ReImagingType,
-  faqs?:ReImagingFAQ,
+interface ReImagingProps {
+  data?: ReImagingType;
+  faqs?: ReImagingFAQ;
 }
-const ReImaging:React.FC<ReImagingProps>=({data,faqs})=> {
+
+const ReImaging: React.FC<ReImagingProps> = ({ data, faqs }) => {
+  console.log({ data });
+
+  const imagesArr = [
+    "/images/memberships/1.png",
+    "/images/memberships/2.png",
+    "/images/memberships/3.png",
+    "/images/memberships/4.png",
+  ];
+
   return (
     <Wrapper className="grid gap-[4rem]">
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[56rem] gap-[4rem]">
@@ -24,7 +38,7 @@ const ReImaging:React.FC<ReImagingProps>=({data,faqs})=> {
             unoptimized
           />
           <img
-             src={`${data?.image}`}
+            src={`${data?.image}`}
             alt="reimaging"
             role="presentation"
             className="block xs:hidden object-top"
@@ -39,28 +53,18 @@ const ReImaging:React.FC<ReImagingProps>=({data,faqs})=> {
           {data?.bodyText}
         </p>
       </section>
-      <ServicesAfterEffects className="grid-cols-2 grid-rows-[40rem] gap-[2rem]">
-        {
-          data?.before_and_after.map((item,index)=>
-            <div className="relative xs:h-full w-1/" data-aos="fade-left" key={index}>
-                <Image
-                  src={`${item}`}
-                  alt=""
-                  fill
-                  className="absolute object-top object-cover xs:block hidden"
-                  unoptimized
-                />
-                <img
-                  src={`${item}`}
-                  alt="reimaging 1"
-                  className="object-top object-cover block xs:hidden"
 
-                />
-            </div>
-          )
-        }
-      
-      </ServicesAfterEffects>
+      <div className="flex flex-wrap justify-center gap-5">
+        {imagesArr?.map((item, index) => (
+          <img
+            key={index}
+            src={item}
+            alt={`Image ${index + 1}`}
+            className={`w-full sm:w-[48%] md:w-[30%] lg:w-[23%] object-cover rounded-lg`}
+          />
+        ))}
+      </div>
+
       <ServicesFAQ
         title={`${faqs?.headerText}`}
         description={`${faqs?.bodyText}`}
@@ -68,5 +72,5 @@ const ReImaging:React.FC<ReImagingProps>=({data,faqs})=> {
       />
     </Wrapper>
   );
-}
-export default ReImaging
+};
+export default ReImaging;

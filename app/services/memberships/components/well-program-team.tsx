@@ -8,11 +8,12 @@ interface BeWellProgramTeamProps{
   data?:BeWellProgramTeamType
 }
 const BeWellProgramTeam:React.FC<BeWellProgramTeamProps>=({data}) =>{
+  console.log({bewell: data})
   return (
     <Wrapper className="grid gap-[2rem] py-[6rem]">
       <h3 className="font-rubik text-[32px] xs:text-[6.4rem] font-semibold leading-[6rem] text-grey-200">
         {data?.headerText}
-      </h3>
+      </h3> 
       <p className="grid gap-8 font-work_sans text-[14px] xs:text-lg font-medium leading-[3.6rem] tracking-[0.02rem] text-grey-750 opacity-80">
         {data?.bodyText}
       </p>

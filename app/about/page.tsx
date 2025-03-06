@@ -34,6 +34,9 @@ export default function Page() {
   const faqSection: FaqSection | undefined = aboutPageData.content?.find(
     (item: any) => item.type === "section4"
   )
+
+  console.log({faqSection})
+
   return (
     <section className="overflow-hidden pt-5 sm:pt-16">
       <AboutSection data={heroData ?? { type: "hero" }} />

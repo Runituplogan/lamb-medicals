@@ -53,14 +53,6 @@ export default function EnergyDevices() {
   return (
     <Fragment>
       <div className="xs:block hidden w-full">
-        {/* <ServicesHero
-          image="energy-devices/energy-devices-image.png"
-          title="Energy devices"
-          description="Laser resurfacing rejuvenates the skin by using advanced laser
-        technology to reduce wrinkles, scars, and uneven texture while
-        stimulating collagen production. This treatment offers a non-invasive
-        solution for achieving smoother, firmer skin with minimal downtime."
-        /> */}
         <ServicesHero
           image={`${heroData?.image}`}
           title={`${heroData?.headerText}`}
