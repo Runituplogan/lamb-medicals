@@ -99,7 +99,7 @@ export default function MedicalServices() {
           <p
             className="font-work_sans font-medium leading-[3.5rem] tracking-[0.02em] opacity-80 text-sm text-center"
             data-aos="fade-left"
-          >
+          > 
             {`${heroData?.bodyText}`}
           </p>
         </div>

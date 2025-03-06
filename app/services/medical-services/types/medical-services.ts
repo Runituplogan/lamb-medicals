@@ -64,7 +64,7 @@ export interface MedicalServiceResponse {
     headerText: string;
     bodyText: string;
     cta_button: CTAButton;
-    images?: ImageData[] | string[];
+    images: ImageData[];
   }
   
   export interface ImageGallerySection {
