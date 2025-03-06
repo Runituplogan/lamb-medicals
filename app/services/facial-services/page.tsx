@@ -62,20 +62,20 @@ export default function FacialServices() {
       </div>
 
       <div className="xs:hidden w-full py-10 mt-20 relative h-screen flex flex-col justify-start items-start">
-        {/* <div className="relative size-full" data-aos="fade-right"> */}
-        {/* <img
+        <div className="relative size-full" data-aos="fade-right"> 
+        <img
           data-aos="fade-right"
-          src="/images/facial-services/facial-service-image-mobile.png"
+          src={`${heroData?.image}`}
           alt="facial-service-image-mobile"
           className="absolute object-cover object-center h-screen inset-0"
-        /> */}
+        />
         {/* <img
           data-aos="fade-right"
           src={`${heroData?.image}`}
           alt="facial-service-image-mobile"
           className="absolute object-cover object-center h-screen inset-0"
         /> */}
-        {/* </div> */}
+       </div> 
 
         <div className="grid space-y-[2.4rem] pr-[4rem] text-white md:w-[65rem] px-8 py-36">
           <h2

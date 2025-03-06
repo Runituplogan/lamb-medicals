@@ -41,12 +41,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
           data-aos="fade-up"
           className="xs:flex hidden mx-auto self-center h-max justify-center items-center gap-5 mt-8 font-poppins font-semibold"
         >
-          <Link href={data?.buttonPrimaryLink as string || ''}>
+          <Link href={'https://squareup.com/gift/7K57RX20Y6T10/order'}>
             <button className="text-white h-20 px-12 md:px-14 rounded-md bg-primary transition hover:opacity-70 xs:text-base text-sm">
               {data?.buttonPrimaryText}
             </button>
           </Link>
-          <Link href={data?.buttonSecondaryLink as string || ''}>
+          <Link href={'/services'}>
             <button className="bg-white h-20 px-12 md:px-14 rounded-md text-primary transition hover:opacity-70 xs:text-base text-sm">
               {data?.buttonSecondaryText}
             </button>

@@ -58,24 +58,28 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
                 Gift Cards
               </button>
             </Link> */}
-            {data?.buttons.map((item,i)=> (
-               <Link href={''} key={i}>
-               <button className={`bg-white h-20 px-12 md:px-14 rounded-md text-primary transition hover:opacity-70 sm:text-base text-sm ${item.style}`}>
-                 {item.text}
+         
+             <Link href={'/schedule-online'}>
+               <button className={`text-white h-20 px-12 md:px-14 rounded-md bg-[#656EE8] transition hover:opacity-70 sm:text-base text-sm`}>
+                 {data?.buttons[0].text}
                </button>
              </Link> 
-            ))}
+             <Link href={'https://squareup.com/gift/7K57RX20Y6T10/order'}>
+               <button className={`bg-white h-20 px-12 md:px-14 rounded-md text-primary transition hover:opacity-70 sm:text-base text-sm`}>
+                 {data?.buttons[1].text}
+               </button>
+             </Link> 
           </div>
           <div
             data-aos="fade-up"
             className="grid grid-cols-2 xs:hidden  items-center gap-5 mt-10 md:mt-16 font-poppins font-semibold"
           >
-            <Link href="#" className="w-full">
+            <Link href="/services" className="w-full">
               <button className="text-white h-20 rounded-md bg-primary transition hover:opacity-70 sm:text-base text-sm w-full">
                 Explore Services
               </button>
             </Link>
-            <Link href="#" className="w-full">
+            <Link href="/schedule-online" className="w-full">
               <button className="bg-white h-20 w-full rounded-md text-primary transition hover:opacity-70 sm:text-base text-sm">
                 Book Now
               </button>
