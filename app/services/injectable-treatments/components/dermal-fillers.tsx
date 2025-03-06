@@ -27,13 +27,16 @@ const DermalFillers: React.FC<DermaFillersProps> = ({ data }) => {
             data-aos={imgIndex % 2 === 0 ? "fade-left" : "fade-right"}
           >
             <Image
-              src={img}
+              src={img.image}
               alt={"service benefits image"}
               role="presentation"
               fill
               className="object-cover object-top"
               unoptimized
             />
+            <h2 className="font-semibold text-white absolute top-[50%] xs:top-[20%] left-[20%] text-[24px] xs:text-[47.54px] font-rubik">
+           {img.type}
+          </h2>
           </div>
         ))}
       </ServicesAfterEffects>

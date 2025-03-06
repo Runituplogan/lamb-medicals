@@ -7,6 +7,7 @@ interface PeelsProps{
   data?:PeelsType
 }
 const Peels:React.FC<PeelsProps>=({data})=> {
+  console.log("stress",data?.subsections[0].image)
   return (
     <Wrapper id="peels" className="grid gap-[4rem]">
       {/* <ServicesIntro
@@ -73,11 +74,11 @@ const Peels:React.FC<PeelsProps>=({data})=> {
           className="object-cover hidden md:block"
         /> */}
         <Image
-          src={`${data?.subsections[0].image}`}
-          alt=""
+          src={data?.subsections[0].image??'https://api.ourtestingdomain.site/storage/uploads/ijXalrZ4LI89Q9XW836gDs5kBz5gSYEyeVDil3gO.png'}
+          alt="Vi peel image"
           role="presentation"
           fill
-          className="object-cover hidden md:block"
+          className="object-cover"
         />
 
         {/* <img

@@ -7,6 +7,7 @@ interface  EllebanaLashListProps {
   data?:EllebanaLashLiftType
 }
 const EllebanaLashList:React.FC<EllebanaLashListProps>=({data})=> {
+  console.log(data?.image)
   return (
     <Wrapper id="ellebana-lash-lift" className="grid gap-[4rem] pb-16">
          {/* <ServicesIntro
