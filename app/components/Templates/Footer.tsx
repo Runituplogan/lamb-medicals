@@ -92,7 +92,7 @@ const Footer = () => {
 
             <div className="mt-3 flex items-center justify-start gap-4">
               <Link
-                href={`${data1?.companyLinks.socials.links[0].link??'https://www.instagram.com/lambmedical/'}`}
+                href={`${data1?.companyLinks.socials.links[1].link??'https://www.instagram.com/lambmedical/'}`}
                 target="_blank"
                 className="ease transition-all hover:opacity-55"
               >
@@ -111,7 +111,7 @@ const Footer = () => {
               </Link>
 
               <Link
-                href={`${data1?.companyLinks.socials.links[1].link??'https://www.facebook.com/lambmedical/'}`}
+                href={`${data1?.companyLinks.socials.links[0].link??'https://www.facebook.com/lambmedical/'}`}
                 target="_blank"
                 className="ease transition-all hover:opacity-55"
               >
