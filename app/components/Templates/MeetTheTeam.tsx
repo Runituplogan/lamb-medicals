@@ -17,7 +17,7 @@ interface MeetTheTeamSectionProps {
 const MeetTheTeam =() => {
   const {meetTheTeamPageData} = useMeetTheTeamPage()
    
-    const data: MeetTeamType | undefined = meetTheTeamPageData.content.find(
+    const data: MeetTeamType | undefined = meetTheTeamPageData?.content?.find(
       (item: any) => item.type === "section1"
     );
   

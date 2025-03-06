@@ -9,9 +9,7 @@ interface Section3Props {
 const OurServices: React.FC<Section3Props> = () => {
   const {ourServiceData} = useOurServices()
 
-   
-
-  const data: OurServicesType | undefined = ourServiceData.content.find(
+  const data: OurServicesType | undefined = ourServiceData?.content?.find(
     (item: any) => item.type === "section1"
   );
 
