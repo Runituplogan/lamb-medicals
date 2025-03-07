@@ -10,16 +10,16 @@ export default function ServicesBenefits({
   benefits,
 }: ServicesBenefitsProps) {
   return (
-    <section>
-      <h4
-        className="font-rubik text-[32px] xs:text-[4.6rem] font-semibold xs:leading-[8rem] text-grey-200"
+    <section className="grid gap-[2.4rem] pt-[2rem]">
+      <h3
+        className="font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-grey-200 xs:text-[4rem] lg:text-[5.8rem] xl:leading-[6rem]"
         data-aos="fade-up"
       >
         {title}
-      </h4>
-      <ul>
+      </h3>
+      <ul className="grid gap-[0.6ren] lg:gap-[1rem]">
         <h5
-          className="font-work_sans text-md font-medium leading-[4rem] tracking-[0.02em] text-grey-750 text-opacity-80 my-3 md:my-0"
+          className="w-full font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]"
           data-aos="fade-right"
         >
           {!!description && description}
@@ -28,7 +28,7 @@ export default function ServicesBenefits({
         {benefits.map((benefit, index) => (
           <li
             key={index}
-            className="list-inside list-disc px-[3.5rem] font-work_sans text-[14px] xs:text-md font-medium leading-[3.5rem] tracking-[0.02em] text-grey-750 text-opacity-80"
+            className="list-inside list-disc px-[1.2rem] font-work_sans text-[1.4rem] font-medium leading-[3.5rem] tracking-[0.02em] text-grey-750 text-opacity-80 xs:text-md xl:px-[3.5rem]"
             data-aos="fade-left"
           >
             {benefit}
