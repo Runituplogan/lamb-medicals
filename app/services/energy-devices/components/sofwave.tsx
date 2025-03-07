@@ -12,63 +12,65 @@ import {
 import { SofwaveFaqs, SofwaveType } from "../types/energyDevicesCustomType";
 import { SofwaveBodyFAQ } from "../../body-treatments/types/bodyTreatmentCustomTypes";
 
-
-interface SoftwaveProps{
-  data?:SofwaveType,
-  sofwaveFaqs?:SofwaveFaqs
+interface SoftwaveProps {
+  data?: SofwaveType;
+  sofwaveFaqs?: SofwaveFaqs;
 }
-const  Sofwave:React.FC<SoftwaveProps>=({data,sofwaveFaqs})=> {
+const Sofwave: React.FC<SoftwaveProps> = ({ data, sofwaveFaqs }) => {
   return (
-    <Wrapper id="sofwave" className="grid gap-[4rem]">
+    <Wrapper id="sofwave" className="grid gap-[3.2rem] lg:gap-[4rem]">
       <ServicesIntro
-        title={`${data?.headerText}`}
-        description={`${data?.bodyText}`}
+        title={data?.headerText as string}
+        description={data?.bodyText}
       />
       <ServicesBenefits
         title={`${data?.[0].headerText}`}
-        benefits={data?.[0].bodyText??[]}
+        benefits={data?.[0].bodyText ?? []}
       />
       <figure
-        className="relative h-[62.3rem] overflow-hidden rounded xs:block hidden"
+        className="grid h-[18rem] grid-cols-2 sm:h-[24rem] xl:h-[48rem] xxl:h-[62.3rem]"
         data-aos="zoom-in"
       >
-        {data?.[0].images.map((item,index)=>
-        <Image
-         key={index}
-         src={`${item.image}`}
-          alt=""
-          role="presentation"
-          fill
-          className="object-cover"
-        />
-        )}
+        {data?.[0].images.map((item, index) => (
+          <div
+            className="relative size-full overflow-hidden rounded"
+            key={index}
+          >
+            <Image
+              src={item.image}
+              alt=""
+              role="presentation"
+              fill
+              unoptimized
+              className="object-cover"
+            />
+          </div>
+        ))}
       </figure>
       <ServicesBenefits
         title={`${data?.[1].headerText}`}
-        benefits={data?.[1].bodyText??[]}
+        benefits={data?.[1].bodyText ?? []}
       />
-      <ServicesAfterEffects className="xs:grid-cols-2 grid-rows-[55rem]">
-        {
-          data?.[1].images.map((item,i)=>
-          <div className="relative h-full" data-aos="fade-left" key={i}>
+      <ServicesAfterEffects className="grid grid-cols-2 grid-rows-[20rem_20rem] gap-[0.8rem] xl:grid-rows-[40rem_40rem] xxl:grid-rows-[54rem_53rem]">
+        {data?.[1].images.map((item, i) => (
+          <div className="relative size-full" data-aos="fade-left" key={i}>
             <Image
-              
               src={`${item.image}`}
               alt="sofwave-before-and-after-1"
               fill
-              className="absolute object-cover xs:block hidden"
+              className="absolute object-cover"
             />
           </div>
-          )
-        }
+        ))}
       </ServicesAfterEffects>
+
       <ServicesFAQ
-        title={`${sofwaveFaqs?.headerText}`}
-        description={`${sofwaveFaqs?.textBody}`}
+        title={sofwaveFaqs?.headerText as string}
+        description={String(sofwaveFaqs?.textBody)}
         faqs={sofwaveFaqs?.questions}
       />
     </Wrapper>
   );
-}
+};
 
-export default Sofwave
+export default Sofwave;
