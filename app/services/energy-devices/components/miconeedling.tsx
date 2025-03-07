@@ -24,7 +24,7 @@ const Miconeedling:React.FC<MiconeedlingProps>=({data})=> {
       >
              <div className="w-full h-screen flex justify-center items-center">
               <ReactPlayer 
-                url="https://youtu.be/_K4VB3QtZxk"
+                url="https://youtube.com/shorts/au8LKlJfqxo?feature=share"
                 controls
                 width="100%"
                 height="100%"

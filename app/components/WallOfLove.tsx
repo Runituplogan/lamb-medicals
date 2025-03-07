@@ -81,7 +81,7 @@ const WallOfLove: React.FC<Section5Props> = ({ data }) => {
 
 const Card: React.FC<any> = ({ image, testimonial, name, occupation, social, username, rating=5 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const maxLength = 100; // Max testimonial length before truncation
+  const maxLength = 80; // Max testimonial length before truncation
 
   const toggleReadMore = () => setIsExpanded(!isExpanded);
 
