@@ -83,7 +83,7 @@ const Navbar = () => {
                 Shop
                 <FaChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </button>
-              <div className="absolute left-0 mt-2 w-48 bg-white max-h-max h-[85vh] min-w-max rounded-md p-8 shadow-lg overflow-y-auto opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <div className="absolute -left-1/2  mt-2 w-48 bg-white max-h-max h-[85vh] min-w-max rounded-md p-8 shadow-lg overflow-y-auto opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <Link href="https://zoskinhealth.com/?practice-ref=1716715&practice-name=Lamb+Medical+Aesthetics" className="block px-4 py-2 hover:bg-gray-200">ZO Skin</Link>
                 <Link href="https://lambmedical.brilliantconnections.com/" className="block px-4 py-2 hover:bg-gray-200">SkinMedica</Link>
                 <Link href="https://platedskinscience.com/?sca_ref=7318344.Bc0qwtup7w" className="block px-4 py-2 hover:bg-gray-200">Exosomes - (plated)</Link>
@@ -257,7 +257,7 @@ const NavLink = ({ item }: { item: INavItems }) => {
         )}
       </Link>
       {item.subItems && isExpanded && (
-        <div className="absolute -left-[120px] top-14 z-50 mt-2 max-h-max h-[85vh] min-w-max rounded-md bg-white p-8 shadow-lg overflow-y-auto">
+        <div className="absolute -left-1/2 top-14 z-50 mt-2 max-h-max h-[85vh] min-w-max rounded-md bg-white p-8 shadow-lg overflow-y-auto">
           <h2 className="mb-6 text-xs text-[#8E9BAE] md:text-base xl:text-[18px]">
             {item.label}
           </h2>

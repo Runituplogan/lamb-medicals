@@ -45,7 +45,9 @@ export default function Page() {
       <RedefineHealthCare data={redefinedHealthCare ?? undefined} />
       <MeetTheTeam/>
       <Questions data={faqSection ?? undefined} />
+      <div id="more-faqs">
       <FAQ data={faqSection?.faqs} />
+      </div>
       {/* <GetInTouch /> */}
     </section>
   );

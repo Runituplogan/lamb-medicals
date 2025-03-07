@@ -105,7 +105,9 @@ export default function Home() {
       <MeetTheTeam/>
       <WallOfLove data={section5 }/>
       <Questions data={section6}/>
+      <div id="more-faqs">
       <FAQ data={section6?.faqs} />
+      </div>
       {/* <GetInTouch data={section7 ?? {type: 'section7'}}/> */}
     </section>
   );
