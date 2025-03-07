@@ -24,12 +24,12 @@ const Botox: React.FC<botoxProps> = ({ data }) => {
         <ServicesAfterEffects
           key={index}
           title={section.headerText}
-          className="grid-cols-2 grid-rows-1"
+          className="grid grid-cols-2 grid-rows-1 gap-[1rem]"
         >
           {section.images.map((img, imgIndex) => (
             <div
               key={imgIndex}
-              className="relative h-[50.3rem] overflow-hidden rounded"
+              className="relative h-[18rem] overflow-hidden rounded lg:h-[22rem] xxl:h-[50.3rem]"
               data-aos={imgIndex % 2 === 0 ? "fade-left" : "fade-right"}
             >
               <Image
@@ -44,11 +44,11 @@ const Botox: React.FC<botoxProps> = ({ data }) => {
           ))}
         </ServicesAfterEffects>
       ))}
-      {/* <ServicesFAQ
+      <ServicesFAQ
         title="Botox & Dysport FAQs: Your questions answered"
         description="Curious about Injectables (Botox/Dysport)? Get answers to common questions about how it works, what to expect, and how it can help you feel confident"
         faqs={botoxFAQs}
-      /> */}
+      />
     </Wrapper>
   );
 };

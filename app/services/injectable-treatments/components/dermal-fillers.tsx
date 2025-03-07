@@ -19,11 +19,11 @@ const DermalFillers: React.FC<DermaFillersProps> = ({ data }) => {
         title={data?.section?.headerText}
         benefits={data?.section?.bodyText || []}
       />
-      <ServicesAfterEffects className="grid-cols-2 grid-rows-1">
+      <ServicesAfterEffects className="grid grid-cols-2 grid-rows-1 gap-[1rem]">
         {data?.section?.images.map((img, imgIndex) => (
           <div
             key={imgIndex}
-            className="relative h-[50.3rem] overflow-hidden rounded"
+            className="relative h-[18rem] overflow-hidden rounded lg:h-[22rem] xxl:h-[50.3rem]"
             data-aos={imgIndex % 2 === 0 ? "fade-left" : "fade-right"}
           >
             <Image
@@ -34,9 +34,9 @@ const DermalFillers: React.FC<DermaFillersProps> = ({ data }) => {
               className="object-cover object-top"
               unoptimized
             />
-            <h2 className="font-semibold text-white absolute top-[50%] xs:top-[20%] left-[20%] text-[24px] xs:text-[47.54px] font-rubik">
-           {img.type}
-          </h2>
+            <h2 className="absolute left-[20%] top-[50%] font-rubik text-[24px] font-semibold text-white xs:top-[20%] xs:text-[47.54px]">
+              {img.type}
+            </h2>
           </div>
         ))}
       </ServicesAfterEffects>
