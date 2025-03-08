@@ -19,7 +19,7 @@ const Miconeedling: React.FC<MiconeedlingProps> = ({ data }) => {
         className="relative h-auto overflow-hidden rounded"
         data-aos="zoom-in"
       >
-        <div className="flex h-screen w-full items-center justify-center">
+        <div className="flex md:h-screen h-auto w-full items-center justify-center">
           <ReactPlayer
             url="https://youtube.com/shorts/au8LKlJfqxo?feature=share"
             controls
