@@ -4,7 +4,6 @@ import { cn } from "@/app/utils";
 
 interface ServiceImageContentLayoutProps {
   image: string;
-  imageMobile?: string;
   title: string;
   children: React.ReactNode;
   className?: string;
@@ -15,7 +14,6 @@ export default function ServiceImageContentLayout({
   title,
   children,
   className,
-  imageMobile,
 }: ServiceImageContentLayoutProps) {
   return (
     <Wrapper
@@ -35,6 +33,7 @@ export default function ServiceImageContentLayout({
           src={image}
           alt={title}
           fill
+          unoptimized
           className="object-cover object-center"
         />
       </div>

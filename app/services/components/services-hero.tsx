@@ -20,8 +20,9 @@ export default function ServicesHero({
         <Image
           src={image}
           alt={title}
-          className="absolute object-cover object-center"
           fill
+          unoptimized
+          className="absolute object-cover object-center"
         />
       </div>
       <div className="absolute z-30 grid gap-[1.8rem] px-[1.6rem] text-center text-white md:static md:pl-0 md:text-left lg:pr-[2.4rem] xxl:w-[65rem] xxl:gap-[2.4rem] xxl:pr-[4rem]">
