@@ -3,10 +3,10 @@ import Image from "next/image";
 import ServicesIntro from "../../components/services-intro";
 import { DermaplaningType } from "../types/facialServicesCustomType";
 
-interface DermaplaningProps{
-  data?:DermaplaningType
+interface DermaplaningProps {
+  data?: DermaplaningType;
 }
-const Dermaplanning:React.FC<DermaplaningProps>=({data})=> {
+const Dermaplanning: React.FC<DermaplaningProps> = ({ data }) => {
   return (
     <Wrapper id="dermaplanning" className="grid gap-[4rem] pt-10">
       <ServicesIntro
@@ -16,7 +16,7 @@ const Dermaplanning:React.FC<DermaplaningProps>=({data})=> {
         btnStyle={`${data?.cta_button.text}`}
       />
       <figure
-        className="relative h-[62.3rem] overflow-hidden rounded xs:block hidden"
+        className="relative hidden h-[62.3rem] overflow-hidden rounded xs:block"
         data-aos="zoom-in"
       >
         {/* <Image
@@ -31,6 +31,7 @@ const Dermaplanning:React.FC<DermaplaningProps>=({data})=> {
           alt=""
           role="presentation"
           fill
+          unoptimized
           className="object-cover"
         />
       </figure>
@@ -41,13 +42,13 @@ const Dermaplanning:React.FC<DermaplaningProps>=({data})=> {
         className="object-cover xs:hidden block"
       /> */}
 
-      <p className="text-grey-750 font-work_sans text-[14px] xs:text-lg font-medium leading-[3.6rem] tracking-[0.02rem] opacity-80 py-16">
+      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
         {data?.additional_infos[0].bodyText}
       </p>
-      <p className="text-grey-750 font-work_sans text-[14px] xs:text-lg font-medium leading-[3.6rem] tracking-[0.02rem] opacity-80 pb-4">
-      {data?.additional_infos[1].bodyText}
+      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+        {data?.additional_infos[1].bodyText}
       </p>
     </Wrapper>
   );
-}
-export default Dermaplanning
+};
+export default Dermaplanning;

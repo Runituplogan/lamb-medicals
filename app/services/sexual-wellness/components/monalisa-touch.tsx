@@ -4,13 +4,16 @@ import ServicesIntro from "../../components/services-intro";
 import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
 import { monalisaTouchFAQs } from "@/app/utils/data";
-import { MonalisaTouchFAQ, MonalisaTouchType } from "../types/sexualWellnessCustomTypes";
+import {
+  MonalisaTouchFAQ,
+  MonalisaTouchType,
+} from "../types/sexualWellnessCustomTypes";
 
-interface MonalisaTouchProps{
-  data?:MonalisaTouchType,
-  faqs?:MonalisaTouchFAQ
+interface MonalisaTouchProps {
+  data?: MonalisaTouchType;
+  faqs?: MonalisaTouchFAQ;
 }
-const MonalisaTouch:React.FC<MonalisaTouchProps>=({data,faqs})=> {
+const MonalisaTouch: React.FC<MonalisaTouchProps> = ({ data, faqs }) => {
   return (
     <Wrapper id="monalisa-touch" className="grid gap-[4rem]">
       <ServicesIntro
@@ -18,7 +21,7 @@ const MonalisaTouch:React.FC<MonalisaTouchProps>=({data,faqs})=> {
         description={`${data?.bodyText}`}
       />
       <ServicesAfterEffects className="grid-cols-1 xs:grid-rows-[58rem]">
-        <div className="relative h-full col-span-full" data-aos="fade-left">
+        <div className="relative col-span-full h-full" data-aos="fade-left">
           {/* <Image
             src="/images/sexual-wellness/monalisa-touch.png"
             alt="monalisa-touch"
@@ -29,7 +32,7 @@ const MonalisaTouch:React.FC<MonalisaTouchProps>=({data,faqs})=> {
             src={`${data?.image}`}
             alt="monalisa-touch"
             fill
-            className="absolute object-top xs:block hidden"
+            className="absolute hidden object-top xs:block"
             unoptimized
           />
           {/* <img
@@ -40,10 +43,10 @@ const MonalisaTouch:React.FC<MonalisaTouchProps>=({data,faqs})=> {
         </div>
       </ServicesAfterEffects>
       <p
-        className="text-grey-750 font-work_sans text-[14px] xs:text-lg font-medium leading-[4rem] tracking-[0.02em] text-opacity-80"
+        className="grid w-full gap-8 font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]"
         data-aos="fade-right"
       >
-       {data?.subBodyText}
+        {data?.subBodyText}
       </p>
       <ServicesFAQ
         title={`${faqs?.headerText}`}
@@ -52,6 +55,6 @@ const MonalisaTouch:React.FC<MonalisaTouchProps>=({data,faqs})=> {
       />
     </Wrapper>
   );
-}
+};
 
-export default MonalisaTouch
+export default MonalisaTouch;

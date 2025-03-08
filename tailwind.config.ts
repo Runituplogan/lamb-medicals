@@ -28,6 +28,7 @@ export default {
       "2xl": "1536px",
     },
     colors: {
+      transparent: "transparent",
       background: "var(--background)",
       foreground: "var(--foreground)",
       white: "#ffffff",
@@ -74,6 +75,8 @@ export default {
         about_hero: "url('/30.png')",
         about_hero_mbile: "url('/30_mobile.png')",
         service_hero: "url('/24.png')",
+        "gradient-1":
+          "linear-gradient(0deg, rgba(101, 110, 232, 0.8), rgba(101, 110, 232, 0.8)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
       },
       maxWidth: {
         default: "144rem",

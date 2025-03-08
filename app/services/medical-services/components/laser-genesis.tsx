@@ -9,7 +9,7 @@ import BeforeAfter from "@/app/components/BeforeandAfter";
 
 interface propsType {
   data: LaserGenesisSection;
-  questions: FAQsSection
+  questions: FAQsSection;
 }
 
 export default function LaserGenesis({ data, questions }: propsType) {
@@ -24,12 +24,12 @@ export default function LaserGenesis({ data, questions }: propsType) {
         }
       />
       <p
-        className="font-work_sans xs:text-lg font-medium leading-[4rem] tracking-[0.02em] text-grey-750 text-opacity-80"
+        className="grid w-full gap-8 font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]"
         data-aos="fade-right"
       >
         {data?.bodyText}
       </p>
-       <BeforeAfter items={data?.images}/>
+      <BeforeAfter items={data?.images} />
       <ServicesFAQ
         title={questions?.headerText}
         description={questions?.bodyText}

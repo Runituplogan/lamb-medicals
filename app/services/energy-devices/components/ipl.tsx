@@ -6,69 +6,39 @@ import ServicesFAQ from "../../components/services-faq";
 import { iplFAQs } from "@/app/utils/data";
 import { IPLFAQs, IPLType } from "../types/energyDevicesCustomType";
 
-interface IPLProps{
-  data?:IPLType,
-  iplFaq?:IPLFAQs
+interface IPLProps {
+  data?: IPLType;
+  iplFaq?: IPLFAQs;
 }
-const IPL:React.FC<IPLProps>=({data,iplFaq})=> {
+const IPL: React.FC<IPLProps> = ({ data, iplFaq }) => {
   return (
     <Wrapper id="ipl" className="grid gap-[4rem]">
       <ServicesIntro
-        title={`${data?.headerText}`}
-        description={`${data?.bodyText}`}
+        title={data?.headerText as string}
+        description={data?.bodyText as string}
       />
       <p
-        className="text-grey-750 font-work_sans text-[14px] xs:text-lg font-medium leading-[4rem] tracking-[0.02em] text-opacity-80"
+        className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]"
         data-aos="fade-right"
       >
         {data?.subsection.bodyText}
       </p>
 
-      <ServicesAfterEffects className="grid-cols-1">
-        {/* <div className="relative h-full" data-aos="fade-left">
-          <Image
-            src="/images/energy-devices/ipl-before-and-after-1.png"
-            alt=""
-            fill
-            className="absolute object-cover"
-          />
-          <img
-            src="/images/energy-devices/ipl-before-and-after-1.png"
-            alt="ipl-before-and-after"
-            className="xs:hidden block object-cover"
-          />
-        </div> */}
-        {
-          data?.subsection.images.map((item,i)=>
-        <div className="relative h-full" data-aos="fade-left" key={i}>
-      
-          <Image
-            src={`${item.image}`}
-            alt=""
-            fill
-            className="absolute object-cover"
-          />
-          {/* <img
-            src="/images/energy-devices/ipl-before-and-after-1.png"
-            alt="ipl-before-and-after"
-            className="xs:hidden block object-cover"
-          /> */}
-        </div>
-          )
-        }
-        {/* <div className="relative h-full" data-aos="fade-right">
-          <Image
-            src="/images/energy-devices/ipl-before-and-after-2.png"
-            alt=""
-            fill
-            className="absolute object-cover"
-          />
-          <img
-            src="/images/energy-devices/ipl-before-and-after-2.png"
-            alt="ipl-before-and-after-2"
-            className="xs:hidden block object-cover"
-          />
-        </div> */}
+      <ServicesAfterEffects className="grid grid-cols-2 grid-rows-none gap-x-[0.2rem] gap-y-[1.6rem]">
+        {data?.subsection.images.map((item, i) => (
+          <div
+            className="relative h-[17rem] md:h-[24rem] xl:h-[32rem] xxl:h-[52rem]"
+            data-aos="fade-left"
+            key={i}
+          >
+            <Image
+              src={item.image}
+              alt=""
+              fill
+              className="absolute object-cover"
+            />
+          </div>
+        ))}
       </ServicesAfterEffects>
       <ServicesFAQ
         title={`${iplFaq?.headerText}`}
@@ -77,7 +47,6 @@ const IPL:React.FC<IPLProps>=({data,iplFaq})=> {
       />
     </Wrapper>
   );
-}
+};
 
-
-export default IPL
+export default IPL;

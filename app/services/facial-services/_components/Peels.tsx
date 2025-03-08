@@ -3,11 +3,11 @@ import Image from "next/image";
 import ServicesIntro from "../../components/services-intro";
 import { PeelsType } from "../types/facialServicesCustomType";
 
-interface PeelsProps{
-  data?:PeelsType
+interface PeelsProps {
+  data?: PeelsType;
 }
-const Peels:React.FC<PeelsProps>=({data})=> {
-  console.log("stress",data?.subsections[0].image)
+const Peels: React.FC<PeelsProps> = ({ data }) => {
+  console.log("stress", data?.subsections[0].image);
   return (
     <Wrapper id="peels" className="grid gap-[4rem]">
       {/* <ServicesIntro
@@ -21,7 +21,7 @@ const Peels:React.FC<PeelsProps>=({data})=> {
         btnText={`${data?.cta_button.text}`}
       />
       <figure
-        className="relative h-[62.3rem] overflow-hidden rounded xs:block hidden"
+        className="relative hidden h-[62.3rem] overflow-hidden rounded xs:block"
         data-aos="zoom-in"
       >
         {/* <Image
@@ -38,7 +38,6 @@ const Peels:React.FC<PeelsProps>=({data})=> {
           fill
           className="object-cover"
         />
-
       </figure>
       {/* <img
         data-aos="zoom-in"
@@ -51,19 +50,19 @@ const Peels:React.FC<PeelsProps>=({data})=> {
         <li className="text-[32px] text-[#12121299]">
           <h2
             data-aos="fade-top"
-            className="font-semibold text-[32px] md:text-[47.06px] font-rubik"
+            className="font-rubik text-[32px] font-semibold md:text-[47.06px]"
           >
-           {data?.subsections[0].title}
+            {data?.subsections[0].title}
           </h2>
         </li>
       </ul>
 
-      <p className="text-grey-750 font-work_sans text-[14px] xs:text-lg font-medium leading-[3.6rem] tracking-[0.02rem] opacity-80 pb-4">
-      {data?.subsections[0].bodyText}
+      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+        {data?.subsections[0].bodyText}
       </p>
 
       <figure
-        className="relative xs:h-[62.3rem] overflow-hidden rounded"
+        className="relative overflow-hidden rounded xs:h-[62.3rem]"
         data-aos="zoom-in"
       >
         {/* <Image
@@ -74,7 +73,10 @@ const Peels:React.FC<PeelsProps>=({data})=> {
           className="object-cover hidden md:block"
         /> */}
         <Image
-          src={data?.subsections[0].image??'https://api.ourtestingdomain.site/storage/uploads/ijXalrZ4LI89Q9XW836gDs5kBz5gSYEyeVDil3gO.png'}
+          src={
+            data?.subsections[0].image ??
+            "https://api.ourtestingdomain.site/storage/uploads/ijXalrZ4LI89Q9XW836gDs5kBz5gSYEyeVDil3gO.png"
+          }
           alt="Vi peel image"
           role="presentation"
           fill
@@ -86,17 +88,17 @@ const Peels:React.FC<PeelsProps>=({data})=> {
         <li className="text-[32px] text-[#12121299]">
           <h2
             data-aos="fade-top"
-            className="font-semibold text-[32px] md:text-[47.06px] font-rubik"
+            className="font-rubik text-[32px] font-semibold md:text-[47.06px]"
           >
             {data?.subsections[1].title}
           </h2>
         </li>
       </ul>
-      <p className="text-grey-750 font-work_sans text-[14px] xs:text-lg font-medium leading-[3.6rem] tracking-[0.02rem] opacity-80 pb-4">
-      {data?.subsections[1].bodyText}
+      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+        {data?.subsections[1].bodyText}
       </p>
       <figure
-        className="relative xs:h-[62.3rem] overflow-hidden rounded"
+        className="relative overflow-hidden rounded xs:h-[62.3rem]"
         data-aos="zoom-in"
       >
         <Image
@@ -104,11 +106,11 @@ const Peels:React.FC<PeelsProps>=({data})=> {
           alt=""
           role="presentation"
           fill
-          className="object-cover hidden md:block"
+          className="hidden object-cover md:block"
         />
       </figure>
     </Wrapper>
   );
-}
+};
 
-export default Peels
+export default Peels;

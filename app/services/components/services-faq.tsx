@@ -19,15 +19,15 @@ export default function ServicesFAQ({
   return (
     <section data-aos="fade-up" className={className}>
       <hgroup
-        className={`${align === "left" ? "" : "mx-auto"} flex md:w-[100rem] flex-col gap-[2rem] px-1 md:px-5 lg:px-0`}
+        className={`${align === "left" ? "" : "mx-auto"} flex w-full flex-col gap-[2rem] px-1 md:px-5 lg:px-0 xxl:w-[100rem]`}
       >
         <h4
-          className={`${align === "left" ? "text-left" : "text-center"} text-grey-750 font-rubik text-[32px] md:text-[5.5rem] font-bold xs:leading-[5.5rem] tracking-[0.02em]`}
+          className={`${align === "left" ? "text-left" : "text-center"} font-rubik text-[3.2rem] font-bold leading-[3.7rem] tracking-[0.02em] text-grey-750 md:text-[5.5rem] md:leading-[4.8rem] lg:leading-[5.5rem]`}
         >
           {title}
         </h4>
         <p
-          className={`${align === "left" ? "text-left" : "text-center"} text-grey-750 font-work_sans text-[14px] xs:text-lg font-normal leading-[3.5rem] tracking-[1.24px]`}
+          className={`${align === "left" ? "text-left" : "text-center"} font-work_sans text-[1.4rem] font-normal leading-[2.4rem] tracking-[1.24px] text-grey-750 lg:text-lg lg:leading-[3.5rem]`}
         >
           {description}
         </p>

@@ -1,32 +1,42 @@
 import Link from "next/link";
 import BookNowButton from "./book-now-button";
+import { useRouter } from "next/navigation";
 
 interface ServicesIntroProps {
   title: string;
   description: string | React.ReactNode;
-  btnText?:string,
-  btnLink?:string,
-  btnStyle?:string,
+  btnText?: string;
+  btnLink?: string;
+  btnStyle?: string;
 }
 
 export default function ServicesIntro({
   title,
   description,
-  btnText='Book Now',
+  btnText = "Book Now",
   btnLink = `/schedule-online`,
 }: ServicesIntroProps) {
+  const router = useRouter();
   return (
-    <section className="space-y-[2rem] pt-[2rem]" data-aos="fade-left">
-      <h3 className="font-rubik text-[32px] xs:text-[5.8rem] font-semibold leading-[6rem] text-grey-200">
+    <section
+      className="grid gap-[2rem] pt-[2rem] xl:gap-[2.4rem]"
+      data-aos="fade-left"
+    >
+      <h3 className="font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-grey-200 xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
         {title}
       </h3>
 
-      <div className="grid gap-8  font-work_sans text-[14px] xs:text-lg font-medium leading-[3.6rem] tracking-[0.02rem] text-grey-750 opacity-80">
+      <div className="grid w-full gap-8 font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
         {description}
       </div>
-      <Link href={`${btnLink}`} className="pt-2">
-      <BookNowButton>{btnText}</BookNowButton>
-      </Link>
+      <BookNowButton
+        className="w-fit place-self-start"
+        onClick={() => router.push(btnLink)}
+      >
+        {btnText}
+      </BookNowButton>
     </section>
   );
 }
+
+// className="font-work_sans text-base font-normal leading-[2.8rem] tracking-[0.02em] text-opacity-80 lg:text-md lg:leading-[3.5rem]"

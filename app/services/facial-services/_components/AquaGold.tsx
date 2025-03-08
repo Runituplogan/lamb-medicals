@@ -5,12 +5,11 @@ import { AquaGoldFaq, AquaGoldType } from "../types/facialServicesCustomType";
 import ServicesFAQ from "../../components/services-faq";
 
 interface FacialServiceProps {
-  data?: AquaGoldType,
-  aquaGoldFaq?:AquaGoldFaq
+  data?: AquaGoldType;
+  aquaGoldFaq?: AquaGoldFaq;
 }
 
-
-const AquaGold:React.FC<FacialServiceProps>=({data,aquaGoldFaq})=> {
+const AquaGold: React.FC<FacialServiceProps> = ({ data, aquaGoldFaq }) => {
   return (
     <Wrapper id="aqua-gold" className="grid gap-[4rem] pb-16">
       {/* <ServicesIntro
@@ -24,7 +23,7 @@ const AquaGold:React.FC<FacialServiceProps>=({data,aquaGoldFaq})=> {
         btnText={`${data?.cta_button.text}`}
       />
       <figure
-        className="relative h-[62.3rem] overflow-hidden rounded hidden xs:block"
+        className="relative hidden h-[62.3rem] overflow-hidden rounded xs:block"
         data-aos="zoom-in"
       >
         {/* <Image
@@ -34,7 +33,7 @@ const AquaGold:React.FC<FacialServiceProps>=({data,aquaGoldFaq})=> {
           fill
           className="object-cover"
         /> */}
-        
+
         <Image
           src={`${data?.sections[0].image}`}
           alt=""
@@ -54,8 +53,8 @@ const AquaGold:React.FC<FacialServiceProps>=({data,aquaGoldFaq})=> {
         className="object-cover xs:hidden block"
       /> */}
 
-      <p className="text-grey-750 font-work_sans text-[14px] xs:text-lg font-medium leading-[3.6rem] tracking-[0.02rem] opacity-80 pb-28 pt-10">
-       {data?.sections[0].bodyText}
+      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+        {data?.sections[0].bodyText}
         {/* The microchannel screw-like design safely and consistently delivers
         therapeutics at a consistent depth with minimal damage to the dermis,
         targeting all layers of the skin while stimulating collagen and elastin
@@ -66,7 +65,7 @@ const AquaGold:React.FC<FacialServiceProps>=({data,aquaGoldFaq})=> {
         production. */}
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
         <Image
           alt="aquagold-2"
           className="object-cover"
@@ -84,7 +83,7 @@ const AquaGold:React.FC<FacialServiceProps>=({data,aquaGoldFaq})=> {
           width={657}
         />
       </div>
-        {/* <Image
+      {/* <Image
           src={`${data?.sections[1].image}`}
           alt="section2 image"
           role="presentation"
@@ -92,7 +91,7 @@ const AquaGold:React.FC<FacialServiceProps>=({data,aquaGoldFaq})=> {
           className="object-cover"
         /> */}
 
-      <p className="text-grey-750 font-work_sans text-[14px] xs:text-lg font-medium leading-[3.6rem] tracking-[0.02rem] opacity-80 pb-28 pt-10">
+      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
         {/* Specially selected therapeutics for a treatment customized just for you.
         Address a wide range of skin concerns from acne scars and fine lines to
         hyperhydrosis and alopecia. Delicate microchannels thinner than a human
@@ -114,6 +113,6 @@ const AquaGold:React.FC<FacialServiceProps>=({data,aquaGoldFaq})=> {
       />
     </Wrapper>
   );
-}
+};
 
-export default AquaGold
+export default AquaGold;

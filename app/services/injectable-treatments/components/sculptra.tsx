@@ -15,43 +15,38 @@ const Sculptra: React.FC<SculptraProps> = ({ data }) => {
   return (
     <Wrapper id="sculptra" className="grid gap-[4rem]">
       <ServicesIntro title={data?.headerText} description={data?.bodyText} />
-      <ServicesAfterEffects className="grid-cols-1 grid-rows-[50rem]">
-        <div className="relative h-full col-span-full" data-aos="fade-right">
+      <ServicesAfterEffects className="grid grid-cols-1 grid-rows-[22rem] xl:grid-rows-[50rem]">
+        <div className="relative col-span-full h-full" data-aos="fade-right">
           <Image
             src={data?.image}
             alt=""
             fill
-            className="absolute object-cover xs:block hidden"
+            className="absolute object-cover"
             unoptimized
-          />
-          <img
-            src={data?.image}
-            alt="sculptra"
-            className="xs:hidden block object-cover "
           />
         </div>
       </ServicesAfterEffects>
       <ServicesAfterEffects
         title={data?.subsection?.headerText}
-        className="grid-cols-1 grid-rows-none [&>figcaption]:text-left"
+        className="grid grid-cols-2 grid-rows-none gap-[1rem] [&>figcaption]:text-left"
       >
         {data?.subsection?.images?.map((image: any, index) => (
           <div
             key={index}
-            className="relative xs:h-[60rem] col-span-full"
+            className="relative h-[18rem] overflow-hidden rounded lg:h-[22rem] xxl:h-[60rem]"
             data-aos="fade-right"
           >
             <Image
               src={image?.image}
               alt=""
               fill
-              className="absolute object-top xs:block hidden"
+              className="absolute hidden object-top xs:block"
               unoptimized
             />
             <img
               src={image?.image}
               alt="sculptra"
-              className="object-top xs:hidden block"
+              className="block object-top xs:hidden"
             />
           </div>
         ))}

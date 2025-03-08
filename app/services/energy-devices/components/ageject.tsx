@@ -13,58 +13,48 @@ interface AgeJectProps {
   agejectFaqs?: AgeJectFaqs;
 }
 const AgeJect: React.FC<AgeJectProps> = ({ data, agejectFaqs }) => {
-  // console.log(data?.sections[0].content)
   return (
-    <Wrapper id="ageject" className="grid gap-[4rem] pt-14">
-      <ServicesIntro
-        title={`${data?.headerText}`}
-        description={`${data?.bodyText}`}
-      />
+    <Wrapper id="ageject" className="grid gap-[4rem]">
+      <ServicesIntro title={data?.headerText} description={data?.bodyText} />
+
       <figure
-        className="relative xs:h-[62.3rem] overflow-hidden rounded xs:block hidden"
+        className="relative h-[18rem] overflow-hidden rounded-md xs:h-[24rem] sm:h-[42rem] xl:h-[61rem]"
         data-aos="zoom-in"
       >
-        {/* <Image
-          src="/images/energy-devices/ageJet-before-after.png"
-          alt="ageJet-before-after"
-          role="presentation"
-          fill
-          className="object-cover"
-        /> */}
         <Image
-          src={`${data?.image}`}
+          src={data?.image}
           alt="ageJet-before-after"
           role="presentation"
           fill
-          className="object-cover"
+          unoptimized
+          className="object-cover object-center"
         />
       </figure>
-      {/* <img
-        data-aos="zoom-in"
-        src="/images/energy-devices/ageJet-before-after-mobile.png"
-        alt="ageJet-before-after"
-        className="xs:hidden block object-cover"
-      /> */}
       <ServicesBenefits
         title={`${data?.sections[0].headerText}`}
         description={`${data?.sections[0].bodyText}`}
         benefits={data?.sections[0].content ?? []}
       />
-
-      <div
-        style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}
-      >
-        <BeforeAfter items={data?.sections[0].images?.slice(0, 2)} />
-        <BeforeAfter items={data?.sections[0].images?.slice(2, 4)} />
-      </div>
-
-
-        <BeforeAfter items={data?.sections[0].images?.slice(4, 6)} />
-   
+      <section className="grid gap-[1.6rem]">
+        <div className="grid gap-[1.6rem] xl:grid-cols-2 xl:gap-[2.4rem]">
+          <BeforeAfter
+            className="h-[32rem] md:h-[40rem]"
+            items={data?.sections[0].images?.slice(0, 2)}
+          />
+          <BeforeAfter
+            className="h-[32rem]"
+            items={data?.sections[0].images?.slice(2, 4)}
+          />
+        </div>
+        <BeforeAfter
+          className="h-[16rem] md:h-[24rem] lg:h-[40rem] xl:h-[59rem]"
+          items={data?.sections[0].images?.slice(4, 6)}
+        />
+      </section>
 
       <ServicesFAQ
-        title={`${agejectFaqs?.headerText}`}
-        description={`${agejectFaqs?.textBody}`}
+        title={agejectFaqs?.headerText as string}
+        description={agejectFaqs?.textBody as string}
         faqs={agejectFaqs?.questions}
       />
     </Wrapper>

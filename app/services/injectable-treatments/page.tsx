@@ -42,66 +42,44 @@ export default function InjectableTreatments() {
 
   const heroData: ContentItem | undefined =
     InjectableTreatmentPageData.content?.find(
-      (item: any) => item.type === "hero"
+      (item: any) => item.type === "hero",
     );
 
   const botoxData: Section1 = InjectableTreatmentPageData.content?.find(
-    (item: any) => item.type === "section1"
+    (item: any) => item.type === "section1",
   );
 
   const dermalFillers: Section3 = InjectableTreatmentPageData.content?.find(
-    (item: any) => item.type === "section3"
+    (item: any) => item.type === "section3",
   );
 
   const sculptra: Section5 = InjectableTreatmentPageData.content?.find(
-    (item: any) => item.type === "section5"
+    (item: any) => item.type === "section5",
   );
 
-  const PRPRejuvenationData: Section7 = InjectableTreatmentPageData.content?.find(
-    (item: any) => item.type === "section7"
-  );
+  const PRPRejuvenationData: Section7 =
+    InjectableTreatmentPageData.content?.find(
+      (item: any) => item.type === "section7",
+    );
 
   const KybellaData: Section9 = InjectableTreatmentPageData.content?.find(
-    (item: any) => item.type === "section9"
+    (item: any) => item.type === "section9",
   );
 
   return (
     <Fragment>
-      <div className="xs:block hidden">
-        <ServicesHero
-          image={`${heroData?.image}`}
-          title={`${heroData?.headerText}`}
-          description={`${heroData?.bodyText}`}
-        />
-      </div>
-      <div className="xs:hidden w-full py-10 mt-20 relative h-screen flex flex-col justify-start items-start">
-        <img
-          src={`${heroData?.image}`}
-          alt="facial-service-image-mobile"
-          className="absolute object-cover object-center h-screen inset-0"
-        />
+      <ServicesHero
+        image={`${heroData?.image}`}
+        title={`${heroData?.headerText}`}
+        description={`${heroData?.bodyText}`}
+      />
 
-        <div className="grid space-y-[2.4rem] pr-[4rem] text-white md:w-[65rem] px-8 py-36">
-          <h2
-            className="font-rubik text-[32px] font-semibold leading-[3rem] w-full text-center"
-            data-aos="fade-up"
-          >
-           {heroData?.headerText}
-          </h2>
-          <p
-            className="font-work_sans font-medium leading-[3.5rem] tracking-[0.02em] opacity-80 text-sm text-center"
-            data-aos="fade-left"
-          >
-       {heroData?.bodyText}
-          </p>
-        </div>
-      </div>
       <ServicesTab tabItems={injectableTreatmentsTabItems} />
       <Botox data={botoxData} />
       <DermalFillers data={dermalFillers} />
       <Sculptra data={sculptra} />
-      <PRPRejuvenation data={PRPRejuvenationData}/>
-      <Kybella data={KybellaData}/>
+      <PRPRejuvenation data={PRPRejuvenationData} />
+      <Kybella data={KybellaData} />
     </Fragment>
   );
 }
