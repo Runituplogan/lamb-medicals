@@ -53,7 +53,7 @@ interface FooterSection2Type{
 }
 const Footer = () => {
   const pathname = usePathname();
-  const hiddenPaths = ['/services/facial-services', '/services/energy-devices', '/services/injectable-treatments','/services/weight-loss','/services/body-treatments','/services/sexual-wellness','/services/medical-services','/services/skincare-products','/services/memberships'];
+  const hiddenPaths = ['/services/facial-services', '/services/energy-devices', '/services/injectable-treatments','/services/weight-loss','/services/body-treatments','/services/sexual-wellness','/services/medical-services','/services/skincare-products','/services/memberships','/schedule-online'];
   const {footerPageData} = useFooterPage()
   if (!footerPageData || !footerPageData.content || footerPageData.content.length === 0) {
       return <Preloader />;
