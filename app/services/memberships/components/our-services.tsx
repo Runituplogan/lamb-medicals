@@ -35,15 +35,15 @@ const OurServices: React.FC<OurServicesProps> = ({ data }) => {
     <section className="bg-primary-light py-[5rem]">
       <Wrapper className="grid gap-[2rem]">
         <hgroup className="grid gap-[2rem]" data-aos="fade-up">
-          <h3 className="font-rubik text-[4.8rem] font-semibold leading-[4rem] text-grey-200">
+          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-grey-200 xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
             {data?.headerText}
           </h3>
-          <p className="grid md:w-[40%] gap-8 font-work_sans text-[14px] xs:text-md font-medium leading-[3.2rem] tracking-[0.02rem] text-grey-750 opacity-80">
+          <p className="w-full font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 opacity-80 xs:text-md xs:leading-[3rem] md:w-[60%] md:leading-[3.6rem] lg:text-lg xxl:w-[40%] xxl:text-[2.3rem] xxl:leading-[4.5rem]">
             {data?.bodyText}
           </p>
         </hgroup>
 
-        <ul className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-[2rem]">
+        <ul className="grid grid-cols-1 gap-[2rem] xs:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4">
           {data?.services?.map((service, index) => {
             const Icon = icons[index % icons.length] || StarIcon; // Default to StarIcon if none available
 
@@ -55,11 +55,14 @@ const OurServices: React.FC<OurServicesProps> = ({ data }) => {
               >
                 <hgroup className="flex items-center gap-[1.2rem]">
                   <i className="inline-flex size-[4rem] items-center justify-center rounded-md bg-primary">
-                    <Icon  />
+                    <Icon />
                   </i>
+                  {service?.title.startsWith("(coming soon!)") && (
+                    <span className="font-semibold">(coming soon!)</span>
+                  )}
                 </hgroup>
                 <p className="font-work_sans text-base leading-[2.8rem] tracking-[0.02em] text-black">
-                  {service?.title}
+                  {service?.title.replace("(coming soon!)", "")}
                 </p>
               </article>
             );

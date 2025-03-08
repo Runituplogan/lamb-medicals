@@ -20,25 +20,26 @@ export default function ServiceImageContentLayout({
   return (
     <Wrapper
       className={cn(
-        "flex flex-col-reverse gap-10 xs:grid xl:grid-cols-[58rem_1fr] grid-rows-[38rem] items-center xs:gap-6 md:gap-[13rem] py-[3rem] xs:py-[8rem]",
-        className
+        "grid items-center gap-10 py-[3rem] xs:gap-6 xs:py-[8rem] md:gap-[3rem] xl:grid-cols-[58rem_1fr] xl:gap-[13rem]",
+        className,
       )}
     >
-      <div className="relative xs:h-full" data-aos="fade-right">
+      <h3 className="font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-grey-200 xs:text-[4rem] lg:hidden lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
+        {title}
+      </h3>
+      <div
+        className="relative h-[21rem] md:h-[28rem] xxl:h-[38rem]"
+        data-aos="fade-right"
+      >
         <Image
-          src={`${image}`}
+          src={image}
           alt={title}
           fill
-          className="xs:block hidden"
-        />
-        <img
-          src={`/images/${imageMobile}`}
-          alt={title}
-          className="xs:hidden block"
+          className="object-cover object-center"
         />
       </div>
       <figcaption className="flex flex-col gap-[2.4rem]" data-aos="fade-left">
-        <h3 className="font-rubik text-[32px] xs:text-[4.8rem] font-semibold leading-[4rem] text-grey-200">
+        <h3 className="hidden font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-grey-200 xs:text-[4rem] lg:block lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
           {title}
         </h3>
         {children}
