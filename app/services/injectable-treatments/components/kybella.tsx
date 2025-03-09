@@ -5,12 +5,14 @@ import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
 import { kybellaFAQs } from "@/app/utils/data";
 import { Section9 } from "../types/InjectableTreatmentType";
+import { FAQsSection } from "../../medical-services/types/medical-services";
 
 interface KybellaProps {
-  data: Section9
+  data: Section9,
+  question: FAQsSection
 }
 
-const Kybella:React.FC <KybellaProps> =({data}) => {
+const Kybella:React.FC <KybellaProps> =({data, question}) => {
   return (
     <Wrapper id="kybella" className="grid gap-[4rem]">
       <ServicesIntro
@@ -36,9 +38,10 @@ const Kybella:React.FC <KybellaProps> =({data}) => {
         </div>
       </ServicesAfterEffects>
       <ServicesFAQ
-        title="Kybella FAQs: Your questions answered"
-        description="Curious about Kybella? Get answers to common questions about how it works, what to expect, and how it can help you feel confident"
-        faqs={kybellaFAQs}
+        title={question?.headerText}
+        description={`${question?.textBody}`}
+        faqs={question?.questions
+        }
       />
     </Wrapper>
   );

@@ -64,7 +64,7 @@ const OurServices: React.FC<Section3Props> = () => {
               title={item.title}
               description={item.description}
               bgImgSrc={item.image}
-              link={item.title}
+              link={item?.linkText}
             />
           ))}
         </div>

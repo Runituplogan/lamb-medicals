@@ -4,14 +4,15 @@ import ServicesIntro from "../../components/services-intro";
 import ServicesBenefits from "../../components/services-benefits";
 import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
-import { dermalFillersBenefits, dermalFillersFAQs } from "@/app/utils/data";
 import { Section3 } from "../types/InjectableTreatmentType";
+import { FAQsSection } from "../../medical-services/types/medical-services";
 
 interface DermaFillersProps {
   data: Section3;
+  question: FAQsSection
 }
 
-const DermalFillers: React.FC<DermaFillersProps> = ({ data }) => {
+const DermalFillers: React.FC<DermaFillersProps> = ({ data, question }) => {
   return (
     <Wrapper id="dermal-fillers" className="grid gap-[4rem]">
       <ServicesIntro title={data?.headerText} description={data?.bodyText} />
@@ -41,9 +42,9 @@ const DermalFillers: React.FC<DermaFillersProps> = ({ data }) => {
         ))}
       </ServicesAfterEffects>
       <ServicesFAQ
-        title="Dermal Fillers FAQs: Your questions answered"
-        description="Curious about Dermal Fillers? Get answers to common questions about how it works, what to expect, and how it can help you feel confident"
-        faqs={dermalFillersFAQs}
+        title={question?.headerText}
+        description={`${question?.textBody}`}
+        faqs={question?.questions}
       />
     </Wrapper>
   );

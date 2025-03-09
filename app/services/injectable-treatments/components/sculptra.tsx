@@ -3,15 +3,15 @@ import Image from "next/image";
 import ServicesIntro from "../../components/services-intro";
 import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
-import { sculptraFAQs } from "@/app/utils/data";
 import { Section5 } from "../types/InjectableTreatmentType";
-import { AnyARecord } from "dns";
+import { FAQsSection } from "../../medical-services/types/medical-services";
 
 interface SculptraProps {
   data: Section5;
+  question: FAQsSection
 }
 
-const Sculptra: React.FC<SculptraProps> = ({ data }) => {
+const Sculptra: React.FC<SculptraProps> = ({ data, question }) => {
   return (
     <Wrapper id="sculptra" className="grid gap-[4rem]">
       <ServicesIntro title={data?.headerText} description={data?.bodyText} />
@@ -52,9 +52,9 @@ const Sculptra: React.FC<SculptraProps> = ({ data }) => {
         ))}
       </ServicesAfterEffects>
       <ServicesFAQ
-        title="Sculptra FAQs: Your questions answered"
-        description="Curious about Sculptra? Get answers to common questions about how it works, what to expect, and how it can help you feel confident"
-        faqs={sculptraFAQs}
+        title={question?.headerText}
+        description={`${question?.textBody}`}
+        faqs={question?.questions}
       />
     </Wrapper>
   );

@@ -18,6 +18,8 @@ import {
   Section9,
 } from "./types/InjectableTreatmentType";
 import Preloader from "@/app/components/Preloader";
+import { FaqSection } from "@/app/about/types/aboutCustomTypes";
+import { FAQsSection } from "../medical-services/types/medical-services";
 
 const injectableTreatmentsTabItems = [
   { href: "#botox", label: "Injectables (Botox/Dysport)" },
@@ -66,6 +68,26 @@ export default function InjectableTreatments() {
     (item: any) => item.type === "section9",
   );
 
+  const botoxQuestion:FAQsSection =  InjectableTreatmentPageData.content?.find(
+    (item: any) => item.type === "section2",
+  );
+
+  const dermaFillersFaqs :FAQsSection =  InjectableTreatmentPageData.content?.find(
+    (item: any) => item.type === "section4",
+  );
+
+  const sculptraFillersFaqs :FAQsSection =  InjectableTreatmentPageData.content?.find(
+    (item: any) => item.type === "section6",
+  );
+ 
+  const PRPRejuvenationFaqs:FAQsSection =  InjectableTreatmentPageData.content?.find(
+    (item: any) => item.type === "section8",
+  );
+
+ const kybellaFAQs:FAQsSection =  InjectableTreatmentPageData.content?.find(
+  (item: any) => item.type === "section11",
+);
+
   return (
     <Fragment>
       <ServicesHero
@@ -75,11 +97,11 @@ export default function InjectableTreatments() {
       />
 
       <ServicesTab tabItems={injectableTreatmentsTabItems} />
-      <Botox data={botoxData} />
-      <DermalFillers data={dermalFillers} />
-      <Sculptra data={sculptra} />
-      <PRPRejuvenation data={PRPRejuvenationData} />
-      <Kybella data={KybellaData} />
+      <Botox data={botoxData} question={botoxQuestion} />
+      <DermalFillers data={dermalFillers}  question={dermaFillersFaqs}/>
+      <Sculptra data={sculptra} question={sculptraFillersFaqs}/>
+      <PRPRejuvenation data={PRPRejuvenationData} question={PRPRejuvenationFaqs} />
+      <Kybella data={KybellaData} question ={kybellaFAQs}/>
     </Fragment>
   );
 }

@@ -5,12 +5,14 @@ import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
 import { prpRejuvenationFAQs, prrRejuvenationFAQs } from "@/app/utils/data";
 import { Section2, Section7 } from "../types/InjectableTreatmentType";
+import { FAQsSection } from "../../medical-services/types/medical-services";
 
 interface PRPRejuvenationProp {
   data: Section7;
+  question: FAQsSection
 }
 
-const PRPRejuvenation: React.FC<PRPRejuvenationProp> = ({ data }) => {
+const PRPRejuvenation: React.FC<PRPRejuvenationProp> = ({ data, question }) => {
   return (
     <Wrapper id="prp-rejuvenation" className="grid gap-[4rem]">
       <ServicesIntro
@@ -49,15 +51,9 @@ const PRPRejuvenation: React.FC<PRPRejuvenationProp> = ({ data }) => {
         </div>
       </ServicesAfterEffects>
       <ServicesFAQ
-        align="left"
-        title="PRR Facial Rejuvenation FAQs: Your questions answered"
-        description="Curious about Vampire Facelift? Get answers to common questions about how it works, what to expect, and how it can help you feel confident"
-        faqs={prrRejuvenationFAQs}
-      />
-      <ServicesFAQ
-        title="PRP FAQs: Your questions answered"
-        description="Curious about PRP? Get answers to common questions about how it works, what to expect, and how it can help you feel confident"
-        faqs={prpRejuvenationFAQs}
+        title={question?.headerText}
+        description={`${question?.textBody}`}
+        faqs={question?.questions}
       />
     </Wrapper>
   );

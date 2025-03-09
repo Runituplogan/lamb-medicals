@@ -17,11 +17,11 @@ import {
 } from "./types/medical-services";
 
 const weightLossTabItems = [
-  { href: "#concierge-medicine", label: "Concierge Medicine" },
   {
     href: "#laser-genesis",
     label: "Laser Genesis (warts, veins & nail fungas)",
   },
+  { href: "#concierge-medicine", label: "Concierge Medicine" },
 ];
 
 export default function MedicalServices() {

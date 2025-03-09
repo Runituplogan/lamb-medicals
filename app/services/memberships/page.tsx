@@ -28,7 +28,9 @@ import {
   WhyChooseUsType,
 } from "./types/membershipCustomType";
 const weightLossTabItems = [
-  { href: "#well-program", label: "Be Well Program" },
+  { href: "#well-program", label: "Be Well-Both Virtal & Clinic Offered" },
+  // { href: "#aviclear", label: "Aviclear (Plated)" },
+  { href: "#aesthetic-membership", label: "Aesthetic Membership" },
 ];
 
 export default function Memberships() {
@@ -84,7 +86,7 @@ export default function Memberships() {
       <Transformation data={transformation} />
       <ConciergeFamily data={conciergeFamily} />
       <ElectronicCommunication data={electronicCommunication} />
-      <ReImaging data={reImagingType} faqs={reImagingFaq} />
+      {/* <ReImaging data={reImagingType} faqs={reImagingFaq} /> */}
       <AethesticsMembership data={aethesticsMembership} />
     </Fragment>
   );

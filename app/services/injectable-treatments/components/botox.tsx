@@ -3,13 +3,16 @@ import Image from "next/image";
 import ServicesIntro from "../../components/services-intro";
 import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
-import { botoxFAQs } from "@/app/utils/data";
 import { Section1 } from "../types/InjectableTreatmentType";
+import { FAQsSection } from "../../medical-services/types/medical-services";
 
 interface botoxProps {
   data: Section1;
+  question: FAQsSection
 }
-const Botox: React.FC<botoxProps> = ({ data }) => {
+const Botox: React.FC<botoxProps> = ({ data, question }) => {
+ console.log({tstt: data})
+
   return (
     <Wrapper id="botox" className="grid gap-[2rem] xs:gap-[4rem]">
       <ServicesIntro
@@ -45,9 +48,9 @@ const Botox: React.FC<botoxProps> = ({ data }) => {
         </ServicesAfterEffects>
       ))}
       <ServicesFAQ
-        title="Botox & Dysport FAQs: Your questions answered"
-        description="Curious about Injectables (Botox/Dysport)? Get answers to common questions about how it works, what to expect, and how it can help you feel confident"
-        faqs={botoxFAQs}
+        title={question?.headerText}
+        description={`${question?.textBody}`}
+        faqs={question?.questions}
       />
     </Wrapper>
   );

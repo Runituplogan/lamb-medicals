@@ -57,6 +57,9 @@ export interface MedicalServiceResponse {
     headerText: string;
     bodyText: string;
     faqs: FAQ[];
+    questions?: FAQ[]
+    textBody?: string,
+    description?: string
   }
   
   export interface LaserTreatmentSection {

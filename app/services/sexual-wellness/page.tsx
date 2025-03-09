@@ -24,7 +24,7 @@ const sexualWellnessTabItems = [
   { href: "#vampire-wing-lift", label: "Vampire Wing Lift" },
   { href: "#o-shot", label: "O-Shot" },
   { href: "#monalisa-touch", label: "MonaLisa Touch" },
-  { href: "#mira-dry", label: "Mira Dry" },
+  { href: "#mira-dry", label: "miraDry" },
 ];
 
 export default function SexualWellness() {

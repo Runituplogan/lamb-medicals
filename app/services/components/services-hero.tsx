@@ -12,7 +12,7 @@ export default function ServicesHero({
   image,
 }: ServicesHeroProps) {
   return (
-    <section className="grid grid-rows-[43rem] items-center gap-[4rem] pt-[8rem] md:grid-cols-2 md:bg-primary xl:gap-[8.2rem] xxl:grid-rows-[77.1rem]">
+<section className="h-[100vh] flex flex-col justify-center items-center gap-[4rem] pt-[8rem] md:grid md:grid-cols-2 md:bg-primary xl:gap-[8.2rem] xxl:h-[100vh]">
       <div
         className="relative z-10 size-full before:absolute before:z-20 before:size-full before:bg-gradient-1 md:before:static md:before:bg-transparent"
         data-aos="fade-right"

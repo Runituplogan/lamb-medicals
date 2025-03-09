@@ -26,7 +26,7 @@ export default function ServicesTab({ tabItems }: ServicesTabProps) {
           className={cn(
             "text-xl font-medium leading-[5rem] tracking-[0.02rem] text-grey-400",
             { "text-black": pathname === tab.href }
-          )}
+          )} 
         >
           <Link href={tab.href}>{tab.label}</Link>
         </li>

@@ -21,7 +21,7 @@ export default function Home() {
   if (
     !homePageData ||
     !homePageData.content ||
-    homePageData.content.length === 0
+    homePageData.content.length === 0 
   ) {
     return <Preloader />;
   }
