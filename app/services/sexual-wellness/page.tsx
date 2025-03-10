@@ -21,10 +21,10 @@ import {
 
 const sexualWellnessTabItems = [
   { href: "#prp-breast-rejuvenation", label: "PRP Breast Rejuvenation" },
-  { href: "#vampire-wing-lift", label: "Vampire Wing Lift" },
+  // { href: "#vampire-wing-lift", label: "Vampire Wing Lift" },
   { href: "#o-shot", label: "O-Shot" },
   { href: "#monalisa-touch", label: "MonaLisa Touch" },
-  { href: "#mira-dry", label: "miraDry" },
+  { href: "#mira-dry", label: "Mira Dry" },
 ];
 
 export default function SexualWellness() {
