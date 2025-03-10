@@ -2,6 +2,7 @@ import Link from "next/link";
 import BookNowButton from "../../components/book-now-button";
 import ServiceImageContentLayout from "../../components/service-image-content-layout";
 import { ElectronicCommunicationType } from "../../memberships/types/membershipCustomType";
+import { useRouter } from "next/navigation";
 
 interface ElectronicCommunicationProps {
   data?: ElectronicCommunicationType;
@@ -9,6 +10,7 @@ interface ElectronicCommunicationProps {
 const ElectronicCommunication: React.FC<ElectronicCommunicationProps> = ({
   data,
 }) => {
+  const router = useRouter();
   return (
     <ServiceImageContentLayout
       image={`${data?.image}`}
@@ -17,11 +19,13 @@ const ElectronicCommunication: React.FC<ElectronicCommunicationProps> = ({
       <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
         {data?.bodyText}
       </p>
-      <Link href="/schedule-online">
-        <BookNowButton className="self-start">
-          {data?.cta_button.text}
-        </BookNowButton>
-      </Link>
+
+      <BookNowButton
+        onClick={() => router.push("/schedule-online")}
+        className="self-start"
+      >
+        {data?.cta_button.text}
+      </BookNowButton>
     </ServiceImageContentLayout>
   );
 };

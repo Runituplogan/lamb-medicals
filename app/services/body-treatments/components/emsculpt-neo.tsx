@@ -30,13 +30,19 @@ const EmsculptNeo: React.FC<EmsculptNeoProps> = ({ data, faqs }) => {
         title="Key Benefits"
         benefits={data?.keyBenefits ?? []}
       />
-      <>
+      <ServicesAfterEffects className="grid-cols-1 grid-rows-[48rem]">
         <div className="relative col-span-full h-full" data-aos="fade-left">
+          {/* <Image
+            src="/images/body-treatments/body-treatments-1.png"
+            alt="body-treatments-1"
+            fill
+            className="absolute object-top xs:block hidden"
+          /> */}
           <Image
             src={`${data?.image}`}
             alt="body-treatments-1"
             fill
-            className="absolute object-top"
+            className="absolute hidden object-top xs:block"
           />
         </div>
       </>

@@ -9,31 +9,30 @@ import {
 } from "@/app/utils/data";
 import ServicesBenefits from "../../components/services-benefits";
 import ServicesAfterEffects from "../../components/services-after-effects";
-import { SofwaveBodyFAQ, SofwaveBodyType } from "../types/bodyTreatmentCustomTypes";
+import {
+  SofwaveBodyFAQ,
+  SofwaveBodyType,
+} from "../types/bodyTreatmentCustomTypes";
 
-
-interface SofwaveBodyProps{
-  data?:SofwaveBodyType,
-  faqs?:SofwaveBodyFAQ
+interface SofwaveBodyProps {
+  data?: SofwaveBodyType;
+  faqs?: SofwaveBodyFAQ;
 }
-const SofwaveBody:React.FC<SofwaveBodyProps>=({data,faqs}) =>{
+const SofwaveBody: React.FC<SofwaveBodyProps> = ({ data, faqs }) => {
   return (
     <Wrapper id="sofwave-body" className="grid gap-[4rem]">
       <ServicesIntro
         title={`${data?.headerText}`}
-        description={
-         `${data?.bodyText}`
-        }
+        description={`${data?.bodyText}`}
       />
       <ServicesBenefits
         title={`${data?.subsections[0].headerText}`}
-        benefits={data?.subsections[0].bodyText??[]}
+        benefits={data?.subsections[0].bodyText ?? []}
       />
-      <ServicesAfterEffects className="xs:grid-cols-2 grid-rows-[55rem]">
-        {
-          data?.subsections[0].images.map((item,index)=>
+      <ServicesAfterEffects className="grid-rows-[55rem] xs:grid-cols-2">
+        {data?.subsections[0].images.map((item, index) => (
           <div
-            className="relative h-full xs:col-span-1 col-span-full"
+            className="relative col-span-full h-full xs:col-span-1"
             data-aos="fade-left"
             key={index}
           >
@@ -41,7 +40,7 @@ const SofwaveBody:React.FC<SofwaveBodyProps>=({data,faqs}) =>{
               src={`${item.image}`}
               alt=""
               fill
-              className="absolute object-top"
+              className="absolute hidden object-top xs:block"
             />
             {/* <img
               src="/images/body-treatments/body-treatments-2.png"
@@ -49,15 +48,14 @@ const SofwaveBody:React.FC<SofwaveBodyProps>=({data,faqs}) =>{
               className="xs:hidden block object-top"
             /> */}
           </div>
-          )
-        }
+        ))}
       </ServicesAfterEffects>
       
       <ServicesBenefits
         title={`${data?.subsections[1].headerText}`}
-        benefits={data?.subsections[1].bodyText??[]}
+        benefits={data?.subsections[1].bodyText ?? []}
       />
-      <ServicesAfterEffects className="xs:grid-cols-2 ">
+      <ServicesAfterEffects className="xs:grid-cols-2">
         {/* <div className="relative h-full col-span-full" data-aos="fade-left">
           <Image
             src="/images/body-treatments/body-treatments-4.png"
@@ -83,34 +81,32 @@ const SofwaveBody:React.FC<SofwaveBodyProps>=({data,faqs}) =>{
           />
         </div> */}
 
-        {
-          data?.subsections[1].images.map((item,index)=>     
-        <div className="" key={index}>
-          <div
-          className="relative h-full col-span-full w-full"
-          data-aos="fade-right"
-        >
-          <Image
-            src={`${item.image}`}
-            alt=""
-            fill
-            //className="absolute object-top"
-          />
-        </div>
-          {/* <h2 className="font-semibold text-white absolute top-[13%] right-[40%] text-[24px] xs:text-[47.54px] font-rubik">
+        {data?.subsections[1].images.map((item, index) => (
+          <div className="" key={index}>
+            <div
+              className="relative col-span-full hidden h-full w-full xs:block"
+              data-aos="fade-right"
+            >
+              <Image
+                src={`${item.image}`}
+                alt=""
+                fill
+                //className="absolute object-top"
+              />
+            </div>
+            {/* <h2 className="font-semibold text-white absolute top-[13%] right-[40%] text-[24px] xs:text-[47.54px] font-rubik">
            {item.type}
           </h2> */}
-        </div>
-          )
-        }
+          </div>
+        ))}
       </ServicesAfterEffects>
       <ServicesFAQ
         title={`${faqs?.headerText}`}
         description={`${faqs?.bodyText}`}
-        faqs={faqs?.faqs??[]}
+        faqs={faqs?.faqs ?? []}
       />
     </Wrapper>
   );
-}
+};
 
-export default SofwaveBody
+export default SofwaveBody;

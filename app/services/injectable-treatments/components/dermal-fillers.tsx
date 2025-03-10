@@ -9,7 +9,7 @@ import { FAQsSection } from "../../medical-services/types/medical-services";
 
 interface DermaFillersProps {
   data: Section3;
-  question: FAQsSection
+  question: FAQsSection;
 }
 
 const DermalFillers: React.FC<DermaFillersProps> = ({ data, question }) => {
