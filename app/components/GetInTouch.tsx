@@ -50,7 +50,7 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
   console.log({GITdata: data})
 
   return (
-    <section className="w-full px-5 xs:py-10 py-14 md:py-36">
+    <section className="w-full px-5 xs:py-10 py-10 md:py-36">
       <div className="w-full mx-auto max-w-[1200px] flex flex-col md:flex-row gap-7 md:gap-8 lg:gap-20 xl:gap-28">
         <div className="md:w-[50%]">
           <h1

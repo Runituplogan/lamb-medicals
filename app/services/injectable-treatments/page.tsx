@@ -95,7 +95,6 @@ export default function InjectableTreatments() {
         title={`${heroData?.headerText}`}
         description={`${heroData?.bodyText}`}
       />
-
       <ServicesTab tabItems={injectableTreatmentsTabItems} />
       <Botox data={botoxData} question={botoxQuestion} />
       <DermalFillers data={dermalFillers}  question={dermaFillersFaqs}/>

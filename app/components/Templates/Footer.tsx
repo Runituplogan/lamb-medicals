@@ -49,8 +49,9 @@ interface FooterSection2Type{
       }[]
     },
     copyright:string
-  }
+  } 
 }
+
 const Footer = () => {
   const pathname = usePathname();
   const hiddenPaths = ['/services/facial-services', '/services/energy-devices', '/services/injectable-treatments','/services/weight-loss','/services/body-treatments','/services/sexual-wellness','/services/medical-services','/services/skincare-products','/services/memberships','/schedule-online'];
@@ -146,7 +147,7 @@ const Footer = () => {
                <Link href="/about" className="hover:underline">
                   {data1?.companyLinks.links[0]}
                 </Link>
-              <Link href="/contact-us" className="hover:underline">
+              <Link href="/schedule-online" className="hover:underline">
               {data1?.companyLinks.links[1]}
               </Link>
               <Link href="/blog" className="hover:underline">
@@ -155,7 +156,7 @@ const Footer = () => {
               <Link href="/schedule-online" className="hover:underline">
               {data1?.companyLinks.links[3]}
               </Link>
-              <Link href="/faq" className="hover:underline">
+              <Link href="#more-faqs" className="hover:underline">
               {data1?.companyLinks.links[4]}
               </Link>
             </div>

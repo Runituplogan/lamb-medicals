@@ -32,7 +32,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
         </p>
         <p
           data-aos="fade-up"
-          className="text-white md:text-center leading-loose block lg:hidden text-left font-work_sans text-[16px]"
+          className="text-white md:text-center leading-loose block  text-center lg:hidden font-work_sans text-[16px]"
         >
           {data?.bodyText}
         </p>

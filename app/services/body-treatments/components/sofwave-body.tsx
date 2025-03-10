@@ -41,7 +41,7 @@ const SofwaveBody:React.FC<SofwaveBodyProps>=({data,faqs}) =>{
               src={`${item.image}`}
               alt=""
               fill
-              className="absolute object-top hidden xs:block"
+              className="absolute object-top"
             />
             {/* <img
               src="/images/body-treatments/body-treatments-2.png"
@@ -52,6 +52,7 @@ const SofwaveBody:React.FC<SofwaveBodyProps>=({data,faqs}) =>{
           )
         }
       </ServicesAfterEffects>
+      
       <ServicesBenefits
         title={`${data?.subsections[1].headerText}`}
         benefits={data?.subsections[1].bodyText??[]}
@@ -86,7 +87,7 @@ const SofwaveBody:React.FC<SofwaveBodyProps>=({data,faqs}) =>{
           data?.subsections[1].images.map((item,index)=>     
         <div className="" key={index}>
           <div
-          className="relative h-full col-span-full w-full hidden xs:block"
+          className="relative h-full col-span-full w-full"
           data-aos="fade-right"
         >
           <Image

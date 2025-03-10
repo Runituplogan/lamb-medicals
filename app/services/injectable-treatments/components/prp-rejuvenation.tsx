@@ -20,7 +20,7 @@ const PRPRejuvenation: React.FC<PRPRejuvenationProp> = ({ data, question }) => {
         description={data?.bodyText}
         btnText={data?.cta_button?.text}
         btnStyle={data?.cta_button?.style}
-        btnLink="/scedule-online"
+        btnLink="/schedule-online"
       />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[56rem_48rem]">
         <div className="relative h-full col-span-full" data-aos="fade-left">

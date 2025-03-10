@@ -16,7 +16,7 @@ const Dermaplanning: React.FC<DermaplaningProps> = ({ data }) => {
         btnStyle={`${data?.cta_button.text}`}
       />
       <figure
-        className="relative hidden h-[62.3rem] overflow-hidden rounded xs:block"
+         className="relative h-[62.3rem] max-h-[400px] sm:max-h-[1200px] overflow-hidden rounded"
         data-aos="zoom-in"
       >
         {/* <Image

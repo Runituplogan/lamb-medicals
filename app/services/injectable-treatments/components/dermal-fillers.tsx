@@ -28,7 +28,7 @@ const DermalFillers: React.FC<DermaFillersProps> = ({ data, question }) => {
             data-aos={imgIndex % 2 === 0 ? "fade-left" : "fade-right"}
           >
             <Image
-              src={img.image}
+              src={img.image} 
               alt={"service benefits image"}
               role="presentation"
               fill

@@ -69,7 +69,7 @@ export default function FacialServices() {
     <Fragment>
       <ServicesHero
         image={`${heroData?.image}`}
-        title={`${heroData?.headerText}`}
+        title={`${heroData?.headerText}`} 
         description={`${heroData?.bodyText}`}
       />
 

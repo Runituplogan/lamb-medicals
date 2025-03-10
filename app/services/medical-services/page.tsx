@@ -39,7 +39,7 @@ export default function MedicalServices() {
   );
 
   const consierge: any = MedicalServicesData.content?.find(
-    (item: any) => item.type === "section7",
+    (item: any) => item.type === "section1",
   );
 
   const laserGenesis: LaserGenesisSection = MedicalServicesData.content?.find(
@@ -47,7 +47,7 @@ export default function MedicalServices() {
   );
 
   const QandALaserGen: FAQsSection = MedicalServicesData.content?.find(
-    (item: any) => item.type === "section1",
+    (item: any) => item.type === "section3",
   );
 
   const laserWarts: LaserTreatmentSection = MedicalServicesData.content?.find(
@@ -67,11 +67,11 @@ export default function MedicalServices() {
   );
 
   const LaserNail: LaserTreatmentSection = MedicalServicesData.content?.find(
-    (item: any) => item.type === "section6",
+    (item: any) => item.type === "section8",
   );
 
   const QandALaserNail: FAQsSection = MedicalServicesData.content?.find(
-    (item: any) => item.type === "section7",
+    (item: any) => item.type === "section9",
   );
 
   return (
@@ -87,6 +87,6 @@ export default function MedicalServices() {
       <LaserWartRemoval data={laserWarts} questions={QandALaserWart} />
       <LaserVeinTherapy data={LaserVein} questions={QandALaserVein} />
       <LaserNailFungus data={LaserNail} questions={QandALaserNail} />
-    </Fragment>
+    </Fragment> 
   );
 }

@@ -2,11 +2,14 @@ import Wrapper from "@/app/components/Wrapper";
 import BookNowButton from "../../components/book-now-button";
 import Image from "next/image";
 import { TransformationType } from "../types/membershipCustomType";
+import { useRouter } from "next/navigation";
 
 interface TransformationProps {
   data?: TransformationType;
 }
 const Transformation: React.FC<TransformationProps> = ({ data }) => {
+  const  btnLink = `/schedule-online`
+  const router = useRouter();
   return (
     <Wrapper className="grid w-full gap-[4rem] py-[2rem] md:gap-[8rem] lg:grid-cols-[58rem_1fr] lg:py-[4rem]">
       <div className="flex w-full flex-col gap-[2.4rem]">
@@ -25,6 +28,7 @@ const Transformation: React.FC<TransformationProps> = ({ data }) => {
         <BookNowButton
           className="hidden self-start xs:block"
           data-aos="fade-up"
+          onClick={() => router.push(btnLink)}
         >
           {data?.cta_button.text}
         </BookNowButton>
@@ -42,7 +46,7 @@ const Transformation: React.FC<TransformationProps> = ({ data }) => {
             src={data?.image || ""}
             alt="visual consultation"
             fill
-            unoptimized
+            unoptimized 
             className="object-cover object-center"
           />
         </div>

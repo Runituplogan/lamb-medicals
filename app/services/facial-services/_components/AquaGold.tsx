@@ -23,7 +23,7 @@ const AquaGold: React.FC<FacialServiceProps> = ({ data, aquaGoldFaq }) => {
         btnText={`${data?.cta_button.text}`}
       />
       <figure
-        className="relative hidden h-[62.3rem] overflow-hidden rounded xs:block"
+        className="relative h-[62.3rem] max-h-[400px] sm:max-h-[1200px] overflow-hidden rounded"
         data-aos="zoom-in"
       >
         {/* <Image
@@ -92,17 +92,6 @@ const AquaGold: React.FC<FacialServiceProps> = ({ data, aquaGoldFaq }) => {
         /> */}
 
       <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
-        {/* Specially selected therapeutics for a treatment customized just for you.
-        Address a wide range of skin concerns from acne scars and fine lines to
-        hyperhydrosis and alopecia. Delicate microchannels thinner than a human
-        hair provide a virtually painless procedure with zero downtime.
-        Screw-like micro channels deliver therapeutics into the skin to
-        significantly reduce residual drug waste, maximizing the saturation of
-        the active ingredients and amplifying results. Treat problem areas
-        anywhere on the body or focus on delicate, hard to treat areas such as
-        the periorbital (around the eye) and perioral (around the mouth)
-        regions. High quality gold tends to be hypoallergenic and utilize free
-        radical scavenging to help prevent additional inflammation. */}
         {data?.sections[1].bodyText}
       </p>
       <ServicesFAQ

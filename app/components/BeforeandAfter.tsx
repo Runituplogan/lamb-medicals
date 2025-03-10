@@ -18,15 +18,15 @@ export default function BeforeAfter({ items, className }: BeforeAfterProps) {
       {items.map((item, index) => (
         <div key={index} className="relative size-full">
           <Image
-            src={item.image}
-            alt={item.type}
+            src={item.image || item as unknown as string}
+            alt={item.type || 'image'}
             fill
             unoptimized
             className="h-full max-h-[550px] w-full object-cover object-center"
           />
-          <span className="absolute left-4 top-4 rounded bg-black px-3 py-1 text-3xl font-medium text-white">
+          {item.type && <span className="absolute left-4 top-4 rounded bg-black px-3 py-1 text-3xl font-medium text-white">
             {item.type}
-          </span>
+          </span>}
         </div>
       ))}
     </figure>

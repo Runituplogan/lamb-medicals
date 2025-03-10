@@ -11,7 +11,7 @@ import { home_faq } from "./data/faq";
 import ExperienceLamb from "./components/ExperienceLamb";
 import WallOfLove from "./components/WallOfLove";
 import { useHomePage } from "./contexts/homepageContext";
-import Preloader from "./components/Preloader"; // Ensure this component exists
+import Preloader from "./components/Preloader";
 import { FaqSection, MeetTeamType } from "./about/types/aboutCustomTypes";
 
 export default function Home() {

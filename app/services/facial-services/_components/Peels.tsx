@@ -17,11 +17,11 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
       <ServicesIntro
         title={`${data?.headerText}`}
         description={`${data?.bodyText}`}
-        btnLink={`${data?.cta_button.link}`}
+        btnLink={ '/schedule-online'}
         btnText={`${data?.cta_button.text}`}
       />
       <figure
-        className="relative hidden h-[62.3rem] overflow-hidden rounded xs:block"
+          className="relative h-[62.3rem] max-h-[400px] sm:max-h-[1200px] overflow-hidden rounded"
         data-aos="zoom-in"
       >
         {/* <Image
@@ -62,7 +62,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
       </p>
 
       <figure
-        className="relative overflow-hidden rounded xs:h-[62.3rem]"
+            className="relative h-[62.3rem] max-h-[400px] sm:max-h-[1200px] overflow-hidden rounded"
         data-aos="zoom-in"
       >
         {/* <Image
@@ -98,7 +98,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
         {data?.subsections[1].bodyText}
       </p>
       <figure
-        className="relative overflow-hidden rounded xs:h-[62.3rem]"
+           className="relative h-[62.3rem] max-h-[400px] sm:max-h-[1200px] overflow-hidden rounded"
         data-aos="zoom-in"
       >
         <Image
@@ -106,7 +106,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
           alt=""
           role="presentation"
           fill
-          className="hidden object-cover md:block"
+          className=" object-cover"
         />
       </figure>
     </Wrapper>

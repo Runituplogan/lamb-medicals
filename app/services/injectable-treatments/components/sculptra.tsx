@@ -40,7 +40,7 @@ const Sculptra: React.FC<SculptraProps> = ({ data, question }) => {
               src={image?.image}
               alt=""
               fill
-              className="absolute hidden object-top xs:block"
+              className="absolute object-top"
               unoptimized
             />
             <img

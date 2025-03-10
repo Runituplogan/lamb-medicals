@@ -39,7 +39,7 @@ const OShot:React.FC<OShotProps>=({data,faqs}) =>{
             alt=""
             role="presentation"
             fill
-            className="object-cover object-top xs:block hidden"
+            className="object-cover object-top"
           />
           {/* <img
             src="/images/sexual-wellness/o-short-mobile.png"

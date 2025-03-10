@@ -14,13 +14,13 @@ interface MeetTheTeamSectionProps {
   data?: MeetTeamType;
 }
 
-const MeetTheTeam =() => {
-  const {meetTheTeamPageData} = useMeetTheTeamPage()
-   
-    const data: MeetTeamType | undefined = meetTheTeamPageData?.content?.find(
-      (item: any) => item.type === "section1"
-    );
-  
+const MeetTheTeam = () => {
+  const { meetTheTeamPageData } = useMeetTheTeamPage();
+
+  const data: MeetTeamType | undefined = meetTheTeamPageData?.content?.find(
+    (item: any) => item.type === "section1",
+  );
+
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [containerWidth, setContainerWidth] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -37,9 +37,13 @@ const MeetTheTeam =() => {
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
-   if (!meetTheTeamPageData || !meetTheTeamPageData.content || meetTheTeamPageData.content.length === 0) {
-      return <Preloader />;
-    }
+  if (
+    !meetTheTeamPageData ||
+    !meetTheTeamPageData.content ||
+    meetTheTeamPageData.content.length === 0
+  ) {
+    return <Preloader />;
+  }
 
   const handleClick = (index: number, direction?: "left" | "right") => {
     if (direction === "left" && index > 0) {
@@ -60,28 +64,35 @@ const MeetTheTeam =() => {
   const inactiveCount = (totalMembers && totalMembers - 1) || 0;
   const inactiveWidth = Math.min(
     MAX_INACTIVE_WIDTH,
-    remainingWidth / inactiveCount
+    remainingWidth / inactiveCount,
   );
-
 
   return (
     <section className="w-full py-20 lg:py-28">
-      <div className="max-w-[1400px] mx-auto px-8">
-        <h1 className="text-[#12121299] font-rubik font-semibold text-5xl">{data?.headerText}</h1>
-        <h2 className="text-[#12121299] font-work_sans text-lg mt-5">
+      <div className="mx-auto max-w-[1400px] px-8">
+        <h1 className="font-rubik text-5xl font-semibold text-[#12121299]">
+          {data?.headerText}
+        </h1>
+        <h2 className="mt-5 font-work_sans text-lg text-[#12121299]">
           {/* Get to know the passionate professionals behind Lamb Medical. */}
           {data?.bodyText}
         </h2>
-        <div ref={containerRef} className="flex w-full mt-10">
+        <div ref={containerRef} className="mt-10 flex w-full">
           {data?.teamMembers.map((member, index) => (
             <div
               key={index}
-              className="relative overflow-hidden cursor-pointer transition-all duration-300 ease-in-out flex-shrink-0"
+              className={`${
+                activeIndex !== index && "sm:!w-0"
+              } relative flex-shrink-0 cursor-pointer overflow-hidden transition-all duration-300 ease-in-out`}
               style={{
                 width:
                   activeIndex === index
-                    ? `${MAX_ACTIVE_WIDTH}px`
-                    : `${inactiveWidth}px`,
+                    ? window.innerWidth >= 640 // 640px (sm screen)
+                      ? `${MAX_ACTIVE_WIDTH}px`
+                      : "100%"
+                    : window.innerWidth >= 640
+                      ? `${inactiveWidth}px`
+                      : "0px",
               }}
               onClick={() => handleClick(index)}
             >
@@ -95,37 +106,39 @@ const MeetTheTeam =() => {
               />
 
               {activeIndex === index && (
-                <div className="absolute flex items-center justify-between bottom-0 left-0 right-0 min-w-[200px] bg-white p-4 m-4 shadow-md rounded">
+                <div className="absolute bottom-0 left-0 right-0 m-4 flex min-w-[200px] items-center justify-between rounded bg-white p-4 shadow-md">
                   {index > 0 && (
                     <div
                       onClick={() => handleClick(index, "left")}
-                      className="p-2 bg-[#F1F1F1] rounded-full absolute left-2 cursor-pointer"
+                      className="absolute left-2 cursor-pointer rounded-full bg-[#F1F1F1] p-2"
                     >
-                      <MdChevronRight className="text-[#8E9BAE] text-xl rotate-180" />
+                      <MdChevronRight className="rotate-180 text-xl text-[#8E9BAE]" />
                     </div>
                   )}
 
                   <div
-                    className={`w-full flex flex-col items-center ${index > 0 && data?.teamMembers && index < data?.teamMembers?.length - 1 ? "text-center" : "text-left"}`}
+                    className={`flex w-full flex-col items-center ${index > 0 && data?.teamMembers && index < data?.teamMembers?.length - 1 ? "text-center" : "text-left"}`}
                   >
-                    <h3 className="font-bold text-lg">{member.name}</h3>
-                    <p className="text-sm font-medium text-gray-600">{member.role}</p>
+                    <h3 className="text-lg font-bold">{member.name}</h3>
+                    <p className="text-gray-600 text-sm font-medium">
+                      {member.role}
+                    </p>
                   </div>
 
                   {data?.teamMembers &&
                     index < data?.teamMembers.length - 1 && (
                       <div
                         onClick={() => handleClick(index, "right")}
-                        className="p-2 bg-[#F1F1F1] rounded-full absolute right-2 cursor-pointer"
+                        className="absolute right-2 cursor-pointer rounded-full bg-[#F1F1F1] p-2"
                       >
-                        <MdChevronRight className="text-[#8E9BAE] text-xl" />
+                        <MdChevronRight className="text-xl text-[#8E9BAE]" />
                       </div>
                     )}
                 </div>
               )}
 
               {activeIndex !== index && (
-                <div className="h-full w-full bg-[black] opacity-50 absolute left-0 top-0" />
+                <div className="absolute left-0 top-0 h-full w-full bg-[black] opacity-50" />
               )}
             </div>
           ))}
