@@ -7,43 +7,38 @@ import { exosomsFAQs, latisseBenefits, latisseFAQs } from "@/app/utils/data";
 import ServicesBenefits from "../../components/services-benefits";
 import { latisseFAQ, LatisseType } from "../types/skinCareProductCustomTypes";
 
-interface LatisseProps{
-  data?:LatisseType,
-  faqs?:latisseFAQ
-
+interface LatisseProps {
+  data?: LatisseType;
+  faqs?: latisseFAQ;
 }
-const Latisse:React.FC<LatisseProps>=({data,faqs})=> {
+const Latisse: React.FC<LatisseProps> = ({ data, faqs }) => {
   return (
     <Wrapper id="latisse" className="grid gap-[4rem]">
       <ServicesIntro
         title={`${data?.headerText}`}
-        description={
-          <p className="leading-relaxed">
-            {data?.bodyText}
-          </p>
-        }
+        description={<p className="leading-relaxed">{data?.bodyText}</p>}
       />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[56rem] gap-[4rem]">
-        <div className="relative h-full col-span-full" data-aos="fade-left">
+        <div className="relative col-span-full h-full" data-aos="fade-left">
           <Image
             src={`${data?.image}`}
             alt=""
             fill
-            className="absolute object-top xs:block hidden"
+            className="absolute hidden object-top xs:block"
           />
         </div>
       </ServicesAfterEffects>
       <ServicesBenefits
         title={`${data?.subsection.headerText}`}
-        benefits={data?.subsection.bodyText??[]}
+        benefits={data?.subsection.bodyText ?? []}
       />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[56rem] gap-[4rem]">
-        <div className="relative h-full col-span-full" data-aos="fade-left">
+        <div className="relative col-span-full h-full" data-aos="fade-left">
           <Image
             src={`${data?.subsection?.image}`}
             alt=""
             fill
-            className="absolute object-top xs:block hidden"
+            className="absolute hidden object-top xs:block"
           />
         </div>
       </ServicesAfterEffects>
@@ -54,6 +49,6 @@ const Latisse:React.FC<LatisseProps>=({data,faqs})=> {
       />
     </Wrapper>
   );
-}
+};
 
-export default Latisse
+export default Latisse;
