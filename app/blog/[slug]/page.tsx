@@ -131,11 +131,11 @@ export default async function BlogPost({ params }: any) {
 
         {/* Display the latest 3 articles */}
         {recentPosts.length > 0 && (
-          <div className="mt-8 w-full">
+          <div className="mt-12 w-full">
             <h2 className="text-2xl font-bold text-[grey] mb-4">Other Updates</h2>
-            <div className=" flex flex-col items-center justify-between flex-wrap sm:flex-row">
-              {recentPosts.slice(0, 2).map((item:any, index:any) => (
-               <div key={index} className="w-full my-2 flex flex-col items-start justify-between sm:my-0 sm:w-1/3">
+            <div className="flex items-center justify-between flex-wrap">
+              {recentPosts.slice(1, 4).map((item:any, index:any) => (
+               <div key={index} className="w-[33%] flex flex-col items-start justify-start">
                <div className="w-full">
                  <div className="w-full h-[185px] rounded-sm">
                    {item.mainImage?.asset?.url && (
@@ -149,7 +149,9 @@ export default async function BlogPost({ params }: any) {
                    )}
                  </div>
                  <p className="text-grey-750 font-medium text-[16px] md:text-lg lg:text-[20px] mt-5 font-rubik">
-                   {item.title}
+                   {item.title?.length > 39
+                     ? item.title.substring(0, 39) + "..."
+                     : item.title|| ""}
                  </p>
    
                  <p className="text-grey-750 font-medium text-sm lg:text-[14px] mt-5 font-work_sans">
