@@ -31,7 +31,7 @@ const EmsculptNeo: React.FC<EmsculptNeoProps> = ({ data, faqs }) => {
         benefits={data?.keyBenefits ?? []}
       />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[48rem]">
-        <div className="relative col-span-full h-full min-h-[400px] sm:min-h-auto" data-aos="fade-left">
+        <div className="relative col-span-full w-full h-full min-h-[400px] sm:min-h-auto" data-aos="fade-left">
           {/* <Image
             src="/images/body-treatments/body-treatments-1.png"
             alt="body-treatments-1"
@@ -43,7 +43,7 @@ const EmsculptNeo: React.FC<EmsculptNeoProps> = ({ data, faqs }) => {
             width={1000}
             height={1000}
             alt=""
-         className="h-full object-cover"
+         className="h-full object-cover w-full"
             //className="absolute object-top"
           />
         </div>
