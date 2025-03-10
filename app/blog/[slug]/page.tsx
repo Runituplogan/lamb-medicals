@@ -134,7 +134,7 @@ export default async function BlogPost({ params }: any) {
           <div className="mt-8 w-full">
             <h2 className="text-2xl font-bold text-[grey] mb-4">Other Updates</h2>
             <div className=" flex flex-col items-center justify-between flex-wrap sm:flex-row">
-              {recentPosts.map((item:any, index:any) => (
+              {recentPosts.slice(0, 2).map((item:any, index:any) => (
                <div key={index} className="w-full my-2 flex flex-col items-start justify-between sm:my-0 sm:w-1/3">
                <div className="w-full">
                  <div className="w-full h-[185px] rounded-sm">
