@@ -8,10 +8,10 @@ import { FAQsSection } from "../../medical-services/types/medical-services";
 
 interface botoxProps {
   data: Section1;
-  question: FAQsSection
+  question: FAQsSection;
 }
 const Botox: React.FC<botoxProps> = ({ data, question }) => {
- console.log({tstt: data})
+  console.log({ tstt: data });
 
   return (
     <Wrapper id="botox" className="grid gap-[2rem] xs:gap-[4rem]">
