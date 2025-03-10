@@ -135,7 +135,7 @@ export default async function BlogPost({ params }: any) {
             <h2 className="text-2xl font-bold text-[grey] mb-4">Other Updates</h2>
             <div className="flex items-center justify-between flex-wrap">
               {recentPosts.slice(1, 4).map((item:any, index:any) => (
-               <div key={index} className="w-[33%] flex flex-col items-start justify-start">
+               <div key={index} className="sm:w-[33%] sm:flex-row w-full flex flex-col items-start justify-start">
                <div className="w-full">
                  <div className="w-full h-[185px] rounded-sm">
                    {item.mainImage?.asset?.url && (

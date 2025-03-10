@@ -15,7 +15,7 @@ import {
   EmsculptNeoType,
 } from "../types/bodyTreatmentCustomTypes";
 
-interface EmsculptNeoProps { 
+interface EmsculptNeoProps {
   data?: EmsculptNeoType;
   faqs?: EmsculptNeoFAQ;
 }
@@ -31,7 +31,7 @@ const EmsculptNeo: React.FC<EmsculptNeoProps> = ({ data, faqs }) => {
         benefits={data?.keyBenefits ?? []}
       />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[48rem]">
-        <div className="relative col-span-full h-full" data-aos="fade-left">
+        <div className="relative col-span-full h-full min-h-[400px] sm:min-h-auto" data-aos="fade-left">
           {/* <Image
             src="/images/body-treatments/body-treatments-1.png"
             alt="body-treatments-1"
@@ -40,9 +40,11 @@ const EmsculptNeo: React.FC<EmsculptNeoProps> = ({ data, faqs }) => {
           /> */}
           <Image
             src={`${data?.image}`}
-            alt="body-treatments-1"
-            fill
-            className="absolute hidden object-top xs:block"
+            width={1000}
+            height={1000}
+            alt=""
+         className="h-full object-cover"
+            //className="absolute object-top"
           />
         </div>
       </ServicesAfterEffects>

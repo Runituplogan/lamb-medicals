@@ -31,66 +31,41 @@ const SofwaveBody: React.FC<SofwaveBodyProps> = ({ data, faqs }) => {
       />
       <ServicesAfterEffects className="grid-rows-[55rem] xs:grid-cols-2">
         {data?.subsections[0].images.map((item, index) => (
-          <div
-            className="relative col-span-full h-full xs:col-span-1"
-            data-aos="fade-left"
-            key={index}
-          >
-            <Image
-              src={`${item.image}`}
-              alt=""
-              fill
-              className="absolute hidden object-top xs:block"
-            />
-            {/* <img
-              src="/images/body-treatments/body-treatments-2.png"
-              alt="body-treatments-2"
-              className="xs:hidden block object-top"
-            /> */}
+          <div className="" key={index}>
+            <div
+              className="relative col-span-full block h-full w-full"
+              data-aos="fade-right"
+            >
+              <Image
+                src={`${item.image}`}
+                width={1000}
+                height={1000}
+                alt=""
+
+                //className="absolute object-top"
+              />
+            </div>
           </div>
         ))}
       </ServicesAfterEffects>
-      
+
       <ServicesBenefits
         title={`${data?.subsections[1].headerText}`}
         benefits={data?.subsections[1].bodyText ?? []}
       />
       <ServicesAfterEffects className="xs:grid-cols-2">
-        {/* <div className="relative h-full col-span-full" data-aos="fade-left">
-          <Image
-            src="/images/body-treatments/body-treatments-4.png"
-            alt=""
-            fill
-            className="absolute object-top"
-          />
-          <img
-            src="/images/body-treatments/body-treatments-4.png"
-            alt=""
-            className="xs:hidden"
-          />
-        </div>
-        <div
-          className="relative h-full col-span-full w-full hidden xs:block"
-          data-aos="fade-right"
-        >
-          <Image
-            src="/images/body-treatments/body-treatments-5.png"
-            alt=""
-            fill
-            className="absolute object-top"
-          />
-        </div> */}
-
         {data?.subsections[1].images.map((item, index) => (
           <div className="" key={index}>
             <div
-              className="relative col-span-full hidden h-full w-full xs:block"
+              className="relative col-span-full block h-full w-full"
               data-aos="fade-right"
             >
               <Image
                 src={`${item.image}`}
+                width={1000}
+                height={1000}
                 alt=""
-                fill
+
                 //className="absolute object-top"
               />
             </div>
