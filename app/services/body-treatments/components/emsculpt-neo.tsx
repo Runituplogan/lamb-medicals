@@ -15,7 +15,7 @@ import {
   EmsculptNeoType,
 } from "../types/bodyTreatmentCustomTypes";
 
-interface EmsculptNeoProps {
+interface EmsculptNeoProps { 
   data?: EmsculptNeoType;
   faqs?: EmsculptNeoFAQ;
 }
@@ -45,7 +45,7 @@ const EmsculptNeo: React.FC<EmsculptNeoProps> = ({ data, faqs }) => {
             className="absolute hidden object-top xs:block"
           />
         </div>
-      </>
+      </ServicesAfterEffects>
       <ServicesFAQ
         className="py-10"
         title={`${faqs?.headerText}`}
