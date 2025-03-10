@@ -24,8 +24,9 @@ const Exosomes: React.FC<ExosomesProps> = ({ data, faqs }) => {
               key={index}
               src={`${item}`}
               alt=""
-              fill
-              className="absolute hidden object-top xs:block"
+              width={500}
+              height={500}
+              className="w-full h-full object-cover object-top"
             />
           </div>
         ))}

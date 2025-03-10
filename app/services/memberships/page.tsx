@@ -76,14 +76,13 @@ export default function Memberships() {
         title={`${heroData?.headerText}`}
         description={`${heroData?.bodyText}`}
       />
-
       <ServicesTab tabItems={weightLossTabItems} />
       <BeWellProgram data={beWellProgram} />
       <BeWellProgramTeam data={beWellProgramTeam} />
       <OurServices data={beWellProgramSevices} />
       <VisualConsultations data={virtualConsultations} />
       <WhyChooseUs data={whyChooseUs} />
-      <Transformation data={transformation} />
+      <Transformation data={transformation} /> 
       <ConciergeFamily data={conciergeFamily} />
       <ElectronicCommunication data={electronicCommunication} />
       {/* <ReImaging data={reImagingType} faqs={reImagingFaq} /> */}

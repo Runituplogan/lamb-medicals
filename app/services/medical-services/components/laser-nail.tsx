@@ -19,9 +19,9 @@ export default function LaserNailFungus({ data, questions }: laserNailProps) {
         title={data?.headerText}
         description={<p>{data?.bodyText}</p>}
       />
-        <div className="relative col-span-full h-full" data-aos="fade-left">
-            <BeforeAfter items={data?.images}/>
-        </div>
+      <div className="relative col-span-full h-full" data-aos="fade-left">
+        <BeforeAfter items={data?.images} />
+      </div>
       <ServicesFAQ
         title={questions?.headerText}
         description={questions?.bodyText}

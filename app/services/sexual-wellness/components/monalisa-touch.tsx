@@ -31,9 +31,9 @@ const MonalisaTouch: React.FC<MonalisaTouchProps> = ({ data, faqs }) => {
           <Image
             src={`${data?.image}`}
             alt="monalisa-touch"
-            fill
-            className="absolute hidden object-top xs:block"
-            unoptimized
+            width={1000}
+            height={1000}
+            className="w-full object-cover"
           />
           {/* <img
             src="/images/sexual-wellness/monalisa-touch-mbile.png"

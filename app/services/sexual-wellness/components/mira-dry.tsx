@@ -5,11 +5,11 @@ import ServicesAfterEffects from "../../components/services-after-effects";
 import ServicesFAQ from "../../components/services-faq";
 import { MiraDryFAQ, MiraDryType } from "../types/sexualWellnessCustomTypes";
 
-interface MiraDryProps{
-  data?:MiraDryType,
-  faqs?:MiraDryFAQ
+interface MiraDryProps {
+  data?: MiraDryType;
+  faqs?: MiraDryFAQ;
 }
-const MiraDry:React.FC<MiraDryProps>=({data,faqs})=> {
+const MiraDry: React.FC<MiraDryProps> = ({ data, faqs }) => {
   return (
     <Wrapper id="mira-dry" className="grid gap-[4rem]">
       <ServicesIntro
@@ -33,25 +33,14 @@ const MiraDry:React.FC<MiraDryProps>=({data,faqs})=> {
       />
 
       <ServicesAfterEffects className="grid-cols-1 xs:grid-rows-[52rem]">
-        <div className="relative h-full col-span-full" data-aos="fade-right">
-          {/* <Image
-            src="/images/sexual-wellness/mira-dry.png"
-            alt="mira dry"
-            fill
-            className="absolute object-cover hidden xs:block"
-          /> */}
+        <div className="relative col-span-full h-full" data-aos="fade-right">
           <Image
             src={`${data?.image}`}
+            width={1000}
+            height={1000}
             alt="mira dry"
-            fill
-            className="absolute object-cover hidden xs:block"
-            unoptimized
+            className="w-full object-cover object-top"
           />
-          {/* <img
-            src="/images/sexual-wellness/mira-dry-mobile.png"
-            alt="mira dry"
-            className="xs:hidden block object-cover"
-          /> */}
         </div>
       </ServicesAfterEffects>
       <ServicesFAQ
@@ -61,6 +50,6 @@ const MiraDry:React.FC<MiraDryProps>=({data,faqs})=> {
       />
     </Wrapper>
   );
-}
+};
 
-export default MiraDry
+export default MiraDry;

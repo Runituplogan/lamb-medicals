@@ -23,8 +23,9 @@ const Latisse: React.FC<LatisseProps> = ({ data, faqs }) => {
           <Image
             src={`${data?.image}`}
             alt=""
-            fill
-            className="absolute hidden object-top xs:block"
+            width={500}
+            height={500}
+            className="h-full w-full object-cover object-top"
           />
         </div>
       </ServicesAfterEffects>
@@ -37,8 +38,9 @@ const Latisse: React.FC<LatisseProps> = ({ data, faqs }) => {
           <Image
             src={`${data?.subsection?.image}`}
             alt=""
-            fill
-            className="absolute hidden object-top xs:block"
+            width={500}
+            height={500}
+            className="h-full w-full object-cover object-top"
           />
         </div>
       </ServicesAfterEffects>

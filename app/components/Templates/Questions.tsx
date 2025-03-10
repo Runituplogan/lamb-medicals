@@ -38,7 +38,7 @@ const Questions:React.FC<QuestionsProps> = ({data}) => {
           </div>
         </div>
       </div>
-      <img src={data?.image} alt="3jj" className="mt-24 w-full max-h-[400px] object-cover object-top" />
+      <img src={data?.image} alt="3jj" className="mt-24 w-full max-h-[400px] object-cover" />
     </section>
   );
 };

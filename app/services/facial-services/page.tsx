@@ -72,7 +72,6 @@ export default function FacialServices() {
         title={`${heroData?.headerText}`} 
         description={`${heroData?.bodyText}`}
       />
-
       <ServicesTab tabItems={facialServicesTabItems} />
       <AquaGold data={aquaGold} aquaGoldFaq={aquaGoldFaq} />
       <DiamondGlow data={diamondGlow} />

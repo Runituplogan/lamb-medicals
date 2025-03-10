@@ -51,7 +51,6 @@ export const navItems: INavItems[] = [
       { href: "/services/memberships", label: "Memberships" },
     ],
   },
-  { href: "/services/memberships", label: "Membership" },
   { href: "/blog", label: "Blog" },
   { href: "/schedule-online", label: "Book Now" },
   // {

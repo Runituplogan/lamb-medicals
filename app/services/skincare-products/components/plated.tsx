@@ -23,8 +23,9 @@ const Plated:React.FC<PlatedProps>=({data,faqs}) =>{
           <Image
             src={`${item}`}
             alt="service image"
-            fill
-            className="absolute object-top"
+            className="w-full h-full object-cover object-top"
+            height={500}
+            width={500}
             unoptimized
           />
         </div>

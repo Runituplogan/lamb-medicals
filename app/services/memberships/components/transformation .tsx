@@ -11,7 +11,7 @@ const Transformation: React.FC<TransformationProps> = ({ data }) => {
   const  btnLink = `/schedule-online`
   const router = useRouter();
   return (
-    <Wrapper className="grid w-full gap-[4rem] py-[2rem] md:gap-[8rem] lg:grid-cols-[58rem_1fr] lg:py-[4rem]">
+    <Wrapper className="grid w-full gap-[4rem] py-[1rem] md:gap-[8rem] lg:grid-cols-[58rem_1fr] lg:py-[10em]">
       <div className="flex w-full flex-col gap-[2.4rem]">
         <h3
           className="font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-grey-200 xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]"
