@@ -1,5 +1,5 @@
 "use client";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import ServicesHero from "../components/services-hero";
 import ServicesTab from "../components/services-tab";
 import Plated from "./components/plated";
@@ -24,6 +24,25 @@ const weightLossTabItems = [
 
 export default function SkinCareProducts() {
   const { skinCareProductPageData } = useSkinCareProductPage();
+
+  const meta = skinCareProductPageData?.meta ? JSON.parse(skinCareProductPageData.meta) : {};
+
+  useEffect(() => {
+    if (meta.og_title) {
+      document.title = meta.og_title;
+    } else if (skinCareProductPageData?.title) {
+      document.title = skinCareProductPageData.title;
+    }
+
+    if (meta.og_description) {
+      document.querySelector('meta[name="description"]')?.setAttribute("content", meta.og_description);
+    }
+
+    if (meta.keywords) {
+      document.querySelector('meta[name="keywords"]')?.setAttribute("content", meta.keywords.join(", "));
+    }
+  }, [meta, skinCareProductPageData]);
+
   if (
     !skinCareProductPageData ||
     !skinCareProductPageData.content ||
@@ -31,6 +50,7 @@ export default function SkinCareProducts() {
   ) {
     return <Preloader />;
   }
+
   console.log(skinCareProductPageData);
   const heroData: ContentItem | undefined =
     skinCareProductPageData.content?.find((item: any) => item.type === "hero");

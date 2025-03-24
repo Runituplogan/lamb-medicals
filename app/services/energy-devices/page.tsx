@@ -1,5 +1,5 @@
 "use client";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import ServicesHero from "../components/services-hero";
 import ServicesTab from "../components/services-tab";
 import IPL from "./components/ipl";
@@ -29,13 +29,28 @@ const energyDevicesTabItems = [
 
 export default function EnergyDevices() {
   const { energyDevicesPageData } = useEnergyDevicesPage();
-  if (
-    !energyDevicesPageData ||
-    !energyDevicesPageData.content ||
-    energyDevicesPageData.content.length === 0
-  ) {
-    return <Preloader />;
-  }
+
+  const meta = energyDevicesPageData?.meta ? JSON.parse(energyDevicesPageData.meta) : {};
+
+  useEffect(() => {
+    if (meta) {
+      if (meta.og_title) {
+        document.title = meta.og_title;
+      }
+      if (meta.og_description) {
+        document
+          .querySelector('meta[name="description"]')
+          ?.setAttribute("content", meta.og_description);
+      }
+      if (meta.keywords?.length) {
+        document
+          .querySelector('meta[name="keywords"]')
+          ?.setAttribute("content", meta.keywords.join(", "));
+      }
+    }
+  }, [meta]);
+
+  // Extract section data
   const heroData: ContentItem | undefined = energyDevicesPageData.content?.find(
     (item: any) => item.type === "hero",
   );
@@ -43,16 +58,12 @@ export default function EnergyDevices() {
     (item: any) => item.type === "section1",
   );
   const agejectFaqs: AgeJectFaqs | undefined =
-    energyDevicesPageData.content?.find(
-      (item: any) => item.type === "section2",
-    );
+    energyDevicesPageData.content?.find((item: any) => item.type === "section2");
   const sofwave: SofwaveType | undefined = energyDevicesPageData.content?.find(
     (item: any) => item.type === "section3",
   );
   const sofwaveFaqs: SofwaveFaqs | undefined =
-    energyDevicesPageData.content?.find(
-      (item: any) => item.type === "section4",
-    );
+    energyDevicesPageData.content?.find((item: any) => item.type === "section4");
   const ipl: IPLType | undefined = energyDevicesPageData.content?.find(
     (item: any) => item.type === "section5",
   );
@@ -60,13 +71,19 @@ export default function EnergyDevices() {
     (item: any) => item.type === "section6",
   );
   const microneedling: MicroneedlingType | undefined =
-    energyDevicesPageData.content?.find(
-      (item: any) => item.type === "section7",
-    );
+    energyDevicesPageData.content?.find((item: any) => item.type === "section7");
   const microneedlingFaq: MicroneedlingFaq | undefined =
-    energyDevicesPageData.content?.find(
-      (item: any) => item.type === "section8",
-    );
+    energyDevicesPageData.content?.find((item: any) => item.type === "section8");
+
+    if (
+      !energyDevicesPageData ||
+      !energyDevicesPageData.content ||
+      energyDevicesPageData.content.length === 0
+    ) {
+      return <Preloader />;
+    }
+  
+
   return (
     <Fragment>
       <ServicesHero
@@ -81,8 +98,8 @@ export default function EnergyDevices() {
       <IPL data={ipl} iplFaq={iplFaq} />
       <Miconeedling data={microneedling} />
       <ServicesFAQ
-        title={`${microneedlingFaq?.headerText}`}
-        description={`${microneedlingFaq?.textBody}`}
+        title={microneedlingFaq?.headerText as string}
+        description={microneedlingFaq?.textBody as string}
         faqs={microneedlingFaq?.questions}
       />
     </Fragment>

@@ -13,12 +13,37 @@ import WallOfLove from "./components/WallOfLove";
 import { useHomePage } from "./contexts/homepageContext";
 import Preloader from "./components/Preloader";
 import { FaqSection, MeetTeamType } from "./about/types/aboutCustomTypes";
+import { useEffect } from "react";
 
 export default function Home() {
   const { homePageData } = useHomePage();
 
+   const meta = homePageData?.meta
+      ? JSON.parse(homePageData.meta)
+      : {};
+  
+    useEffect(() => {
+      if (meta.og_title) {
+        document.title = meta.og_title;
+      } else if (homePageData?.title) {
+        document.title = homePageData.title;
+      }
+  
+      if (meta.og_description) {
+        document
+          .querySelector('meta[name="description"]')
+          ?.setAttribute("content", meta.og_description);
+      }
+  
+      if (meta.keywords) {
+        document
+          .querySelector('meta[name="keywords"]')
+          ?.setAttribute("content", meta.keywords.join(", "));
+      }
+    }, [meta, homePageData]);
+
   // Ensure the main content exists before rendering
-  if (
+  if (  
     !homePageData ||
     !homePageData.content ||
     homePageData.content.length === 0 

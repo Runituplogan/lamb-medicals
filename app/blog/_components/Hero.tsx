@@ -1,4 +1,10 @@
-const Hero = () => {
+import { heroSection } from "@/app/services/types/servicePageCustomTypes";
+
+interface heroSectionProps{
+  data: heroSection
+}
+
+export default function Hero({data}: heroSectionProps) {
   return (
     <section className="bg-primary relative flex h-full min-h-screen">
       <img
@@ -11,25 +17,21 @@ const Hero = () => {
           data-aos="fade-up"
           className="md:w-[80%] text-left font-semibold text-white text-[32px] sm:text-[35px] md:text-[40px] lg:text-[48px] font-rubik"
         >
-          Stay updated with Lamb Medical
+         {data?.headerText}
         </h1>
         <p
           data-aos="fade-up"
           className="hidden text-left leading-relaxed text-white lg:block text-[14px] sm:text-lg lg:text-[18px] font-work_sans"
         >
-          Stay informed and empowered with the latest tips, trends, and expert
-          advice in health and wellness.
+         {data?.bodyText}
         </p>
         <p
           data-aos="fade-up"
           className="block leading-loose text-white lg:hidden sm:text-lg font-work_sans mt-4"
         >
-          Stay informed and empowered with the latest tips, trends, and expert
-          advice in health and wellness.
+          {data?.bodyText}
         </p>
       </div>
     </section>
   );
 };
-
-export default Hero;

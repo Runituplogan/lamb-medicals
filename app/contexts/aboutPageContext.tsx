@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext } from "react";
+import { createContext, useContext } from "react"; 
 import { useQuery } from "@tanstack/react-query";
 import Preloader from "../components/Preloader";
 import { getDynamicPageData } from "../request/homepage";

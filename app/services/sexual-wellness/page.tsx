@@ -1,5 +1,5 @@
 "use client";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import ServicesHero from "../components/services-hero";
 import ServicesTab from "../components/services-tab";
 import PRPBreastRejuvenation from "./components/prp-breast-rejuvenation";
@@ -24,11 +24,30 @@ const sexualWellnessTabItems = [
   // { href: "#vampire-wing-lift", label: "Vampire Wing Lift" },
   { href: "#o-shot", label: "O-Shot" },
   { href: "#monalisa-touch", label: "MonaLisa Touch" },
-  { href: "#mira-dry", label: "miraDry" },
+  { href: "#mira-dry", label: "miraDry" }, 
 ];
 
 export default function SexualWellness() {
   const { sexualWellnessPageData } = useSexualWellnessPage();
+
+  const meta = sexualWellnessPageData?.meta ? JSON.parse(sexualWellnessPageData.meta) : {};
+
+  useEffect(() => {
+    if (meta.og_title) {
+      document.title = meta.og_title;
+    } else if (sexualWellnessPageData?.title) {
+      document.title = sexualWellnessPageData.title;
+    }
+
+    if (meta.og_description) {
+      document.querySelector('meta[name="description"]')?.setAttribute("content", meta.og_description);
+    }
+
+    if (meta.keywords) {
+      document.querySelector('meta[name="keywords"]')?.setAttribute("content", meta.keywords.join(", "));
+    }
+  }, [meta, sexualWellnessPageData]);
+
   if (
     !sexualWellnessPageData ||
     !sexualWellnessPageData.content ||

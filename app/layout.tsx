@@ -27,9 +27,11 @@ import { MembershipPageProvider } from "./contexts/membership";
 import { MeetTheTeamPageProvider } from "./contexts/meetTheTeam";
 import { FooterPageProvider } from "./contexts/footer";
 import { OurServicesProvider } from "./contexts/ourServices";
-  import { WeightLossProvider } from "./contexts/WeightLoss";
+import { WeightLossProvider } from "./contexts/WeightLoss";
 import { MedicalServicesProvider } from "./contexts/MedicalServices";
 import { ServicePageProvider } from "./contexts/services";
+import { BlogProvider } from "./contexts/blogContext";
+import { ScheduleOnlineProvider } from "./contexts/scheduleOnline";
 
 export const metadata: Metadata = {
   title: "Lamb Medical Aestheics",
@@ -77,44 +79,49 @@ export default function RootLayout({
       >
         <ReactQueryProvider>
           <HomePageProvider>
-          <AboutPageProvider>
-            <InjectableTreatmentPageProvider>
-            <FacialServicesPageProvider>
-              <EnergyDevicesPageProvider>
-                <SexualWellnessPageProvider>
-                  <BodyTreatmentProvider>
+            <AboutPageProvider>
+              <InjectableTreatmentPageProvider>
+                <FacialServicesPageProvider>
+                  <EnergyDevicesPageProvider>
                     <SexualWellnessPageProvider>
-                      <SkinCareProductProvider>
-                        <MembershipPageProvider>
-                          <MeetTheTeamPageProvider>
-                            <FooterPageProvider>
-                              <OurServicesProvider>
-                                 <WeightLossProvider>
-                      <MedicalServicesProvider>
-                        <ServicePageProvider>
-                                  <Navbar />
-                                  <ToastContainer
-                                    autoClose={2000}
-                                    hideProgressBar={true}
-                                    theme="colored"
-                                  />
-                                  <AOSInitializer /> {/* Initialize AOS */}
-                                  {children}
-                                  <Footer />
-                        </ServicePageProvider>
-                         </MedicalServicesProvider>
-                    </WeightLossProvider>
-                              </OurServicesProvider>
-                            </FooterPageProvider>
-                          </MeetTheTeamPageProvider>
-                        </MembershipPageProvider>
-                      </SkinCareProductProvider>
+                      <BodyTreatmentProvider>
+                        <SexualWellnessPageProvider>
+                          <SkinCareProductProvider>
+                            <MembershipPageProvider>
+                              <MeetTheTeamPageProvider>
+                                <FooterPageProvider>
+                                  <OurServicesProvider>
+                                    <WeightLossProvider>
+                                      <MedicalServicesProvider>
+                                        <ServicePageProvider>
+                                          <BlogProvider>
+                                            <ScheduleOnlineProvider>
+                                            <Navbar />
+                                            <ToastContainer
+                                              autoClose={2000}
+                                              hideProgressBar={true}
+                                              theme="colored"
+                                            />
+                                            <AOSInitializer />{" "}
+                                            {/* Initialize AOS */}
+                                            {children}
+                                            <Footer />
+                                            </ScheduleOnlineProvider>
+                                          </BlogProvider>
+                                        </ServicePageProvider>
+                                      </MedicalServicesProvider>
+                                    </WeightLossProvider>
+                                  </OurServicesProvider>
+                                </FooterPageProvider>
+                              </MeetTheTeamPageProvider>
+                            </MembershipPageProvider>
+                          </SkinCareProductProvider>
+                        </SexualWellnessPageProvider>
+                      </BodyTreatmentProvider>
                     </SexualWellnessPageProvider>
-                  </BodyTreatmentProvider>
-                </SexualWellnessPageProvider>
-              </EnergyDevicesPageProvider>
-            </FacialServicesPageProvider>
-            </InjectableTreatmentPageProvider>
+                  </EnergyDevicesPageProvider>
+                </FacialServicesPageProvider>
+              </InjectableTreatmentPageProvider>
             </AboutPageProvider>
           </HomePageProvider>
         </ReactQueryProvider>

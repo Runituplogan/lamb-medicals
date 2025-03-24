@@ -1,5 +1,5 @@
 "use client";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import ServicesHero from "../components/services-hero";
 import ServicesTab from "../components/services-tab";
 import BeWellProgram from "./components/well-program";
@@ -35,6 +35,25 @@ const weightLossTabItems = [
 
 export default function Memberships() {
   const { membershipPageData } = useMembershipPage();
+
+  const meta = membershipPageData?.meta ? JSON.parse(membershipPageData.meta) : {};
+
+  useEffect(() => {
+    if (meta.og_title) {
+      document.title = meta.og_title;
+    } else if (membershipPageData?.title) {
+      document.title = membershipPageData.title;
+    }
+
+    if (meta.og_description) {
+      document.querySelector('meta[name="description"]')?.setAttribute("content", meta.og_description);
+    }
+
+    if (meta.keywords) {
+      document.querySelector('meta[name="keywords"]')?.setAttribute("content", meta.keywords.join(", "));
+    }
+  }, [meta, membershipPageData]);
+
   if (
     !membershipPageData ||
     !membershipPageData.content ||

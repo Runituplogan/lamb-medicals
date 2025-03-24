@@ -1,5 +1,5 @@
 "use client";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import ServicesHero from "../components/services-hero";
 import ServicesTab from "../components/services-tab";
 import ConciergeFamily from "../components/concierge-family";
@@ -26,6 +26,31 @@ const weightLossTabItems = [
 
 export default function MedicalServices() {
   const { MedicalServicesData } = useMedicalServices();
+
+  const meta = MedicalServicesData?.meta
+    ? JSON.parse(MedicalServicesData.meta)
+    : {};
+
+  useEffect(() => {
+    if (meta.og_title) {
+      document.title = meta.og_title;
+    } else if (MedicalServicesData?.title) {
+      document.title = MedicalServicesData.title;
+    }
+
+    if (meta.og_description) {
+      document
+        .querySelector('meta[name="description"]')
+        ?.setAttribute("content", meta.og_description);
+    }
+
+    if (meta.keywords) {
+      document
+        .querySelector('meta[name="keywords"]')
+        ?.setAttribute("content", meta.keywords.join(", "));
+    }
+  }, [meta, MedicalServicesData]);
+
   if (
     !MedicalServicesData ||
     !MedicalServicesData.content ||
@@ -87,6 +112,6 @@ export default function MedicalServices() {
       <LaserWartRemoval data={laserWarts} questions={QandALaserWart} />
       <LaserVeinTherapy data={LaserVein} questions={QandALaserVein} />
       <LaserNailFungus data={LaserNail} questions={QandALaserNail} />
-    </Fragment> 
+    </Fragment>
   );
 }
