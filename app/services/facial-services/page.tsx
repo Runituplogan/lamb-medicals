@@ -32,10 +32,6 @@ const facialServicesTabItems = [
 export default function FacialServices() {
   const { facialServicesPageData } = useFacialServicePage();
 
-  if (!facialServicesPageData || !facialServicesPageData.content?.length) {
-    return <Preloader />;
-  }
-
   // Extract metadata
   const meta = facialServicesPageData?.meta ? JSON.parse(facialServicesPageData.meta) : {};
 
@@ -48,6 +44,11 @@ export default function FacialServices() {
       .querySelector('meta[name="keywords"]')
       ?.setAttribute("content", meta.keywords?.join(", ") || "");
   }, [meta, facialServicesPageData]);
+
+  
+  if (!facialServicesPageData || !facialServicesPageData.content?.length) {
+    return <Preloader />;
+  }
 
   // Extract sections
   const heroData = facialServicesPageData.content.find((item: heroSection) => item.type === "hero");
