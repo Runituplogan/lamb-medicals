@@ -23,7 +23,7 @@ export default function LaserWartRemoval({data, questions}:leserTwartsProps) {
           </p>
         }
         btnText={data?.cta_button?.text}
-      />
+      /> 
           <BeforeAfter items={data?.images}/>
       <ServicesFAQ
         title={questions?.headerText}
