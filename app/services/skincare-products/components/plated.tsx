@@ -6,31 +6,28 @@ import ServicesFAQ from "../../components/services-faq";
 import { platedFAQs } from "@/app/utils/data";
 import { PlatedFAQ, PlatedType } from "../types/skinCareProductCustomTypes";
 
-interface PlatedProps{
-  data?:PlatedType
-  faqs?:PlatedFAQ
+interface PlatedProps {
+  data?: PlatedType;
+  faqs?: PlatedFAQ;
 }
-const Plated:React.FC<PlatedProps>=({data,faqs}) =>{
+const Plated: React.FC<PlatedProps> = ({ data, faqs }) => {
   return (
-    <Wrapper id="plated" className="grid gap-[4rem]">
+    <Wrapper id="plated" className="grid gap-[5rem]">
       <ServicesIntro
         title={`${data?.headerText}`}
         description={`${data?.bodyText}`}
       />
-      <ServicesAfterEffects className="grid-cols-1 grid-rows-[48rem_48rem]">
-        {data?.images.map((item,index)=>
-        <div className="relative h-full col-span-full" data-aos="fade-left" key={index}>
-          <Image
-            src={`${item}`}
-            alt="service image"
-            className="w-full h-full object-cover object-top"
-            height={500}
-            width={500}
-            unoptimized
-          />
-        </div>
-        )}
-      </ServicesAfterEffects>
+      <div className="relative col-span-full h-auto" data-aos="fade-left">
+        <Image
+          src={data?.images[0] || ""}
+          alt="service image"
+          className="h-full w-full object-cover object-top"
+          height={50}
+          width={50}
+          unoptimized
+        />
+      </div>
+
       <ServicesFAQ
         title={`${faqs?.headerText}`}
         description={`${faqs?.bodyText}`}
@@ -38,7 +35,6 @@ const Plated:React.FC<PlatedProps>=({data,faqs}) =>{
       />
     </Wrapper>
   );
-}
+};
 
-
-export default Plated
+export default Plated;

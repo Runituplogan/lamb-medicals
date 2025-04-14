@@ -28,8 +28,8 @@ const SofwaveBody: React.FC<SofwaveBodyProps> = ({ data, faqs }) => {
       <ServicesBenefits
         title={`${data?.subsections[0].headerText}`}
         benefits={data?.subsections[0].bodyText ?? []}
-      />
-      <ServicesAfterEffects className="grid-rows-[45rem] xs:grid-cols-2">
+      /> 
+      <ServicesAfterEffects className="grid-rows-[60rem] xs:grid-cols-2">
         {data?.subsections[0].images.map((item, index) => (
           <div className="" key={index}> 
             <div

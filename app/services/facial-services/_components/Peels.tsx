@@ -7,9 +7,9 @@ interface PeelsProps {
   data?: PeelsType;
 }
 const Peels: React.FC<PeelsProps> = ({ data }) => {
-  console.log("stress", data?.subsections[0].image);
+ 
   return (
-    <Wrapper id="peels" className="grid gap-[4rem] ">
+    <Wrapper id="peels" className="grid gap-[4rem] mt-[4rem]">
       {/* <ServicesIntro
         title="Peels - Chemical Peels"
         description="Chemical peels are a fast and effective way to exfoliate dry or damaged skin allowing new, smoother, healthier skin to surface. Your skin will gain a healthier and younger appearance. Peels help to minimize fine wrinkles, improve discoloration and age spots, and improve the overall texture of your skin. We understand that sometimes decision making is complicated, and we will help you choose the best option for your skin needs."

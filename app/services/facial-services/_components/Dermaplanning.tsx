@@ -8,7 +8,7 @@ interface DermaplaningProps {
 }
 const Dermaplanning: React.FC<DermaplaningProps> = ({ data }) => {
   return (
-    <Wrapper id="dermaplanning" className="grid gap-[4rem] pt-10 space-y-[40px]">
+    <Wrapper id="dermaplanning" className="grid pt-10 space-y-[20px]">
       <ServicesIntro
         title={`${data?.headerText}`}
         description={`${data?.bodyText}`}
@@ -32,7 +32,7 @@ const Dermaplanning: React.FC<DermaplaningProps> = ({ data }) => {
           role="presentation"
           fill
           unoptimized
-          className="object-cover"
+          className="object-cover my-[20px]"
         />
       </figure>
       {/* <img

@@ -83,6 +83,6 @@ export default function BodyTreatments() {
       <ServicesTab tabItems={bodyTreatmentsTabItems} />
       <EmsculptNeo data={emsculptNeo} faqs={emsculptNeoFaq} />
       <SofwaveBody data={sofwaveBody} faqs={sofwaveBodyFaqs} />
-    </Fragment>
+    </Fragment> 
   );
 }

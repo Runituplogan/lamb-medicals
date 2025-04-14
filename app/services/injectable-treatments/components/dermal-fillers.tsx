@@ -24,7 +24,7 @@ const DermalFillers: React.FC<DermaFillersProps> = ({ data, question }) => {
         {data?.section?.images.map((img, imgIndex) => (
           <div
             key={imgIndex}
-            className="relative h-[18rem] overflow-hidden rounded lg:h-[22rem] xxl:h-[50.3rem]"
+            className="relative h-[22rem] overflow-hidden rounded lg:h-[52rem] xxl:h-[60.3rem]"
             data-aos={imgIndex % 2 === 0 ? "fade-left" : "fade-right"}
           >
             <Image
@@ -32,7 +32,7 @@ const DermalFillers: React.FC<DermaFillersProps> = ({ data, question }) => {
               alt={"service benefits image"}
               role="presentation"
               fill
-              className="object-cover object-top"
+              className="object-cover object-center w-full h-full"
               unoptimized
             />
             <h2 className="absolute left-[20%] top-[50%] font-rubik text-[24px] font-semibold text-white xs:top-[20%] xs:text-[47.54px]">

@@ -17,20 +17,17 @@ const Exosomes: React.FC<ExosomesProps> = ({ data, faqs }) => {
         title={`${data?.headerText}`}
         description={`${data?.bodyText}`}
       />
-      <ServicesAfterEffects className="grid-cols-2 grid-rows-[60rem] gap-[4rem]">
-        {data?.images.map((item, index) => (
-          <div className="relative h-full" data-aos="fade-left" key={index}>
-            <Image
-              key={index}
-              src={`${item}`}
-              alt=""
-              width={500}
-              height={500}
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
-        ))}
-      </ServicesAfterEffects>
+     
+      <div className="relative col-span-full h-auto" data-aos="fade-left">
+        <Image
+          src={data?.images[0] || ""}
+          alt="service image"
+          className="h-full w-full object-cover object-top"
+          height={50}
+          width={50}
+          unoptimized
+        />
+      </div>
       <ServicesFAQ
         title={`${faqs?.headerText}`}
         description={`${faqs?.bodyText}`}
