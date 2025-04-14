@@ -111,7 +111,7 @@ const Card: React.FC<any> = ({ image, testimonial, name, occupation, social, use
         </div>
         <div className="flex items-start gap-3">
 
-          <p className="text-sm text-grey-500 sm:text-sm lg:text-base">
+          <p className="text-sm text-black sm:text-sm lg:text-base">
             {isExpanded ? testimonial : `${testimonial.slice(0, maxLength)}...`}
             {testimonial.length > maxLength && (
               <button onClick={toggleReadMore} className="ml-2 text-primary">

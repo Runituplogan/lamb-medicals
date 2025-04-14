@@ -55,7 +55,7 @@ export const all_services: IServices[] = [
     link: "/services/sexual-wellness",
   },
   {
-    title: "Skin care Products",
+    title: "Skin Care Products",
     bgImgSrc: "/22.png",
     description:
       "Retail skin care brands like ZO, Skin Medica, Latisse (eye lash growth serums), and Exosomes (Plated)",

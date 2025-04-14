@@ -9,7 +9,7 @@ interface DiamondGlowProps{
 }
 const DiamondGlow:React.FC<DiamondGlowProps>=({data}) =>{
   return (
-    <Wrapper id="diamond-glow" className="grid gap-[4rem]">
+    <Wrapper id="diamond-glow" className="grid gap-[4rem] space-y-[40px]">
       {/* <ServicesIntro
         title="DiamondGlow™ Facial Treatment"
         description="DiamondGlow® is a non-invasive dermabrasion treatment that combines three essential skin care steps into one powerful procedure: exfoliation, extraction, and infusion. This treatment utilizes a patented, diamond-tipped handpiece and a vacuum system to deliver immediate, noticeable results. This treatment is not only great for the face but can be targeted for the body for all over glowing skin. "

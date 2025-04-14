@@ -148,17 +148,17 @@ export default async function BlogPost({ params }: any) {
                      />
                    )}
                  </div>
-                 <p className="text-grey-750 font-medium text-[16px] md:text-lg lg:text-[20px] mt-5 font-rubik">
+                 <p className="text-black font-medium text-[16px] md:text-lg lg:text-[20px] mt-5 font-rubik">
                    {item.title?.length > 39
                      ? item.title.substring(0, 39) + "..."
                      : item.title|| ""}
                  </p>
    
-                 <p className="text-grey-750 font-medium text-sm lg:text-[14px] mt-5 font-work_sans">
+                 <p className="text-black font-medium text-sm lg:text-[14px] mt-5 font-work_sans">
                    {new Date(item.publishedAt).toDateString()}
                  </p>
    
-                 <p className="text-grey-750 font-[400] text-sm lg:text-[14px] mt-6 font-work_sans">
+                 <p className="text-black font-[400] text-sm lg:text-[14px] mt-6 font-work_sans">
                    {item.body?.[0]?.children?.[0]?.text?.length > 100
                      ? item.body[0].children[0].text.substring(0, 100) + "..."
                      : item.body?.[0]?.children?.[0]?.text || ""}

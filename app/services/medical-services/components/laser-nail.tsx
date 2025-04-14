@@ -20,11 +20,11 @@ export default function LaserNailFungus({ data, questions }: laserNailProps) {
         description={<p>{data?.bodyText}</p>}
       />
       <div className="relative col-span-full h-full" data-aos="fade-left">
-        <BeforeAfter items={data?.images} />
+        <Image src={data?.images[0]} className="h-[35rem] w-full object-cover" alt="nail image"height={400} width={400} />
       </div>
       <ServicesFAQ
         title={questions?.headerText}
-        description={questions?.bodyText}
+        description={questions?.bodyText} 
         faqs={questions?.faqs}
       />
     </Wrapper>

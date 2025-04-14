@@ -99,7 +99,7 @@ export default function Memberships() {
       <BeWellProgram data={beWellProgram} />
       <BeWellProgramTeam data={beWellProgramTeam} />
       <OurServices data={beWellProgramSevices} />
-      <VisualConsultations data={virtualConsultations} />
+      <VisualConsultations data={virtualConsultations} /> 
       <WhyChooseUs data={whyChooseUs} />
       <Transformation data={transformation} /> 
       <ConciergeFamily data={conciergeFamily} />

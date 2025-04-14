@@ -19,7 +19,7 @@ const Wrapper = ({
     as,
     {
       className: `max-w-default mx-auto ${
-        fluid ? "w-full" : "w-full px-[1.6rem] lg:px-[6.9rem]"
+        fluid ? "w-full" : "w-full px-[1.6rem] lg:px-[10.9rem]"
       } ${className}`,
       id,
     },

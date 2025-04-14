@@ -60,7 +60,7 @@ export default function FacialServices() {
   const ellebanaLashLift = facialServicesPageData.content.find((item: EllebanaLashLiftType) => item.type === "section6");
 
   return (
-    <Fragment>
+    <Fragment >
       <ServicesHero
         image={heroData?.image as string}
         title={heroData?.headerText as string}

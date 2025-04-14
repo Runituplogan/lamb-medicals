@@ -57,7 +57,7 @@ const BuilidngTrust: React.FC<BuildTrustSectionProps>  = ({data}) => {
                 alt={`member ship`}
               />
           </div>
-          <div className="col-span-1 md:col-span-2 lg:col-span-4 object-cover h-[90%]">
+          {/* <div className="col-span-1 md:col-span-2 lg:col-span-4 object-cover h-[90%]">
           <Image
                 src={data?.images[2]??'/'}
                 width={600}
@@ -74,7 +74,7 @@ const BuilidngTrust: React.FC<BuildTrustSectionProps>  = ({data}) => {
                 className="w-full md:h-[529px]"
                 alt={`member ship`}
               />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ export default {
       work_sans: "var(--font-work_sans), serif",
       nunito: "var(font-nunito)",
       poppins: "var(--font-poppins)",
-    },
+    }, 
     container: {
       padding: "1rem",
       center: true,
@@ -32,7 +32,7 @@ export default {
       background: "var(--background)",
       foreground: "var(--foreground)",
       white: "#ffffff",
-      black: "#000000",
+      black: "#333333",
       primary: "#656EE8",
       "primary-light": "#DFEEF8",
       "grey-50": "#00000080",

@@ -11,7 +11,7 @@ interface FacialServiceProps {
 
 const AquaGold: React.FC<FacialServiceProps> = ({ data, aquaGoldFaq }) => {
   return (
-    <Wrapper id="aqua-gold" className="grid gap-[4rem] pb-16">
+    <Wrapper id="aqua-gold" className="grid gap-[4rem] pb-16 space-y-[40px]">
       {/* <ServicesIntro
         title="AquaGold"
         description="AQUAGOLD® fine touch™ is the first-of-its kind patented microchannel microinjector that painlessly, effectively, and delicately delivers specials elected therapeutics into the dermis to address a wide range of skin concerns."
@@ -23,7 +23,7 @@ const AquaGold: React.FC<FacialServiceProps> = ({ data, aquaGoldFaq }) => {
         btnText={`${data?.cta_button.text}`}
       />
       <figure
-        className="relative h-[62.3rem] max-h-[400px] sm:max-h-[1200px] overflow-hidden rounded"
+        className="relative h-[62.3rem] max-h-[500px] sm:max-h-[1200px] overflow-hidden rounded"
         data-aos="zoom-in"
       >
         {/* <Image
@@ -53,7 +53,7 @@ const AquaGold: React.FC<FacialServiceProps> = ({ data, aquaGoldFaq }) => {
         className="object-cover xs:hidden block"
       /> */}
 
-      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+      <p className="font-work_sans text-[1.4rem] my-4 font-medium leading-[2.4rem] tracking-[0.02rem] text-[black] text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
         {data?.sections[0].bodyText}
         {/* The microchannel screw-like design safely and consistently delivers
         therapeutics at a consistent depth with minimal damage to the dermis,
@@ -91,7 +91,7 @@ const AquaGold: React.FC<FacialServiceProps> = ({ data, aquaGoldFaq }) => {
           className="object-cover"
         /> */}
 
-      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
         {data?.sections[1].bodyText}
       </p>
       <ServicesFAQ

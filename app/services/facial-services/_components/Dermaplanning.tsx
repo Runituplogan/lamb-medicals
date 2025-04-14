@@ -8,7 +8,7 @@ interface DermaplaningProps {
 }
 const Dermaplanning: React.FC<DermaplaningProps> = ({ data }) => {
   return (
-    <Wrapper id="dermaplanning" className="grid gap-[4rem] pt-10">
+    <Wrapper id="dermaplanning" className="grid gap-[4rem] pt-10 space-y-[40px]">
       <ServicesIntro
         title={`${data?.headerText}`}
         description={`${data?.bodyText}`}
@@ -42,10 +42,10 @@ const Dermaplanning: React.FC<DermaplaningProps> = ({ data }) => {
         className="object-cover xs:hidden block"
       /> */}
 
-      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
         {data?.additional_infos[0].bodyText}
       </p>
-      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
         {data?.additional_infos[1].bodyText}
       </p>
     </Wrapper>

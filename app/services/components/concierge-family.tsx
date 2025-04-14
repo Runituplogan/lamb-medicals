@@ -30,7 +30,7 @@ const ConciergeFamily: React.FC<ConciergeFamilyProps> = ({ data }) => {
         >
           {data?.features?.map((item, index) => (
             <li className="flex items-center gap-[1rem]" key={index}>
-              <i className="flex size-[2.2rem] shrink-0 items-center justify-center rounded-full bg-white text-grey-300 xs:size-[3.2rem]">
+              <i className="flex size-[2.2rem] shrink-0 items-center justify-center rounded-full bg-white text-black xs:size-[3.2rem]">
                 <CheckIcon />
               </i>
               <span className="text-left font-rubik text-[1.4rem] font-medium leading-[2rem] text-white xs:text-lg xl:text-center">

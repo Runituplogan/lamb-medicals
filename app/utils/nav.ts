@@ -47,7 +47,7 @@ export const navItems: INavItems[] = [
         label: "Sexual Wellness",
       },
       { href: "/services/medical-services", label: "Medical Services" },
-      { href: "/services/skincare-products", label: "Skin care Products" },
+      { href: "/services/skincare-products", label: "Skin Care Products" },
       { href: "/services/memberships", label: "Memberships" },
     ],
   },

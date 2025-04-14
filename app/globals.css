@@ -14,9 +14,12 @@
   --max-width: 1728px;
   --background: #ffffff;
   --foreground: #171717;
-  --font-rubik: "Rubik", serif;
+  --font-rubik: sans-serif;
+  --font-poppins: sans-serif;
+  --font-work_sans: sans-serif;
+  /* --font-rubik: "Rubik", serif;
   --font-poppins: "Poppins", serif;
-  --font-work_sans: "Work Sans", serif;
+  --font-work_sans: "Work Sans", serif; */
   scroll-behavior: smooth;
 }
 

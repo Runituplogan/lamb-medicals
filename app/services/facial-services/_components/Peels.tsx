@@ -9,7 +9,7 @@ interface PeelsProps {
 const Peels: React.FC<PeelsProps> = ({ data }) => {
   console.log("stress", data?.subsections[0].image);
   return (
-    <Wrapper id="peels" className="grid gap-[4rem]">
+    <Wrapper id="peels" className="grid gap-[4rem] ">
       {/* <ServicesIntro
         title="Peels - Chemical Peels"
         description="Chemical peels are a fast and effective way to exfoliate dry or damaged skin allowing new, smoother, healthier skin to surface. Your skin will gain a healthier and younger appearance. Peels help to minimize fine wrinkles, improve discoloration and age spots, and improve the overall texture of your skin. We understand that sometimes decision making is complicated, and we will help you choose the best option for your skin needs."
@@ -57,7 +57,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
         </li>
       </ul>
 
-      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
         {data?.subsections[0].bodyText}
       </p>
 
@@ -94,7 +94,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
           </h2>
         </li>
       </ul>
-      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
         {data?.subsections[1].bodyText}
       </p>
       <figure

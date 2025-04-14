@@ -22,11 +22,11 @@ export default function ServiceImageContentLayout({
         className,
       )}
     >
-      <h3 className="font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-grey-200 xs:text-[4rem] lg:hidden lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
+      <h3 className="font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-black xs:text-[4rem] lg:hidden lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
         {title}
       </h3>
       <div
-        className="relative h-[21rem] md:h-[28rem] xxl:h-[38rem]"
+        className="relative h-[21rem] md:h-[48rem] xxl:h-[58rem]"
         data-aos="fade-right"
       >
         <Image
@@ -34,11 +34,11 @@ export default function ServiceImageContentLayout({
           alt={title}
           fill
           unoptimized
-          className="object-cover object-center"
+          className="object-cover object-center h-full"
         />
       </div>
       <figcaption className="flex flex-col gap-[2.4rem]" data-aos="fade-left">
-        <h3 className="hidden font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-grey-200 xs:text-[4rem] lg:block lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
+        <h3 className="hidden font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-black xs:text-[4rem] lg:block lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
           {title}
         </h3>
         {children}

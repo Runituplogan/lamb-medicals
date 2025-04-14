@@ -47,37 +47,37 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
       /> */}
       <div className="w-full space-y-[2rem]">
         <div className="space-y-[2rem] pt-[2rem]" data-aos="fade-left">
-          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[2.4rem] text-grey-200 xs:text-[4rem] lg:text-[5.8rem] lg:leading-[3.2rem] xl:leading-[6rem]">
+          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[2.4rem] text-black xs:text-[4rem] lg:text-[5.8rem] lg:leading-[3.2rem] xl:leading-[6rem]">
             {data?.subsections[0].title}
           </h3>
 
-          <div className="grid w-full gap-8 font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+          <div className="grid w-full gap-8 font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
             {data?.subsections[0].bodyText}
           </div>
         </div>
 
         <div className="space-y-[2rem] pt-[2rem]" data-aos="fade-left">
-          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[2.4rem] text-grey-200 xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
+          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[2.4rem] text-black xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
             {data?.subsections[1].title}
           </h3>
 
-          <div className="grid w-full gap-8 font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+          <div className="grid w-full gap-8 font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
             {data?.subsections[1].bodyText}
           </div>
         </div>
 
         <div className="space-y-[2rem] pt-[2rem]" data-aos="fade-left">
-          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[6rem] text-grey-200 xs:text-[46.57px]">
+          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[6rem] text-black xs:text-[46.57px]">
             {data?.subsections[2].title}
           </h3>
 
-          <div className="grid w-full gap-8 font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-grey-750 opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+          <div className="grid w-full gap-8 font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
             {data?.subsections[2].bodyText}
           </div>
         </div>
       </div>
       <div className="py-16">
-        <h3 className="w-full font-rubik text-[3.2rem] font-semibold leading-[6rem] text-grey-200 xs:text-[4rem] md:text-center">
+        <h3 className="w-full font-rubik text-[3.2rem] font-semibold leading-[6rem] text-black xs:text-[4rem] md:text-center">
           {data?.before_and_after[0].title}
         </h3>
 

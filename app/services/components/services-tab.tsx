@@ -24,7 +24,7 @@ export default function ServicesTab({ tabItems }: ServicesTabProps) {
         <li
           key={tab.href}
           className={cn(
-            "text-xl font-medium leading-[5rem] tracking-[0.02rem] text-grey-400",
+            "text-xl font-medium leading-[5rem] tracking-[0.02rem] text-black",
             { "text-black": pathname === tab.href }
           )} 
         >

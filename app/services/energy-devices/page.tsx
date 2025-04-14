@@ -19,6 +19,7 @@ import {
   SofwaveType,
 } from "./types/energyDevicesCustomType";
 import ServicesFAQ from "../components/services-faq";
+import Wrapper from "@/app/components/Wrapper";
 
 const energyDevicesTabItems = [
   { href: "#ageject", label: "AgeJect" },
@@ -97,11 +98,13 @@ export default function EnergyDevices() {
       <Sofwave data={sofwave} sofwaveFaqs={sofwaveFaqs} />
       <IPL data={ipl} iplFaq={iplFaq} />
       <Miconeedling data={microneedling} />
+      <Wrapper>
       <ServicesFAQ
         title={microneedlingFaq?.headerText as string}
         description={microneedlingFaq?.textBody as string}
         faqs={microneedlingFaq?.questions}
       />
+      </Wrapper>
     </Fragment>
   );
 }
