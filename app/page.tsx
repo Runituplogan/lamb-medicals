@@ -94,19 +94,19 @@ export default function Home() {
           <div className="w-full my-auto">
             <h1
               data-aos="fade-up"
-              className="text-[#12121299] md:block hidden font-rubik font-semibold text-6xl leading-tight"
+              className="text-black md:block hidden font-rubik font-semibold text-6xl leading-tight"
             >
               {section1?.headerText}
             </h1>
             <h1
               data-aos="fade-up"
-              className="md:hidden block text-[#12121299] font-rubik font-semibold text-[32px] md:text-3xl lg:text-4xl leading-snug"
+              className="md:hidden block text-black font-rubik font-semibold text-[32px] md:text-3xl lg:text-4xl leading-snug"
             >
               {section1?.headerText}
             </h1>
             <p
               data-aos="fade-up"
-              className="text-[#12121299] mt-6 text-[14px] xs:text-lg lg:text-xl font-work_sans"
+              className="text-black mt-6 text-[14px] xs:text-lg lg:text-xl font-work_sans"
             >
               {section1?.bodyText}
             </p>

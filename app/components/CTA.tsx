@@ -20,7 +20,7 @@ const CTA = () => {
               <p className="text-[#056FC5] ]">Who we are </p>
             </div>
           </div>
-          <p className="lg:text-2xl md:text-xl text- text-[#323232] font-medium">
+          <p className="lg:text-2xl md:text-xl text- text-[#323232\] font-medium">
             At VY Construction, we understand that it&apos;s important for your
             home to look its best. That&apos;s why our team consists of
             experienced professionals who are committed to providing quality

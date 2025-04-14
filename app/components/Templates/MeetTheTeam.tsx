@@ -70,10 +70,10 @@ const MeetTheTeam = () => {
   return (
     <section className="w-full py-20 lg:py-28">
       <div className="mx-auto max-w-[1400px] px-8">
-        <h1 className="font-rubik text-5xl font-semibold text-[#12121299]">
+        <h1 className="font-rubik text-5xl font-semibold text-black">
           {data?.headerText}
         </h1>
-        <h2 className="mt-5 font-work_sans text-lg text-[#12121299]">
+        <h2 className="mt-5 font-work_sans text-lg text-black">
           {/* Get to know the passionate professionals behind Lamb Medical. */}
           {data?.bodyText}
         </h2>

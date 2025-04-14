@@ -37,7 +37,7 @@ export default function AethesticsMembership() {
             <ul className="grid gap-[3.2rem]">
               {member.benefits.map((item) => (
                 <li
-                  className="grid grid-cols-[3rem_1fr] items-center gap-[1.2rem] font-rubik text-md font-medium text-primary"
+                  className="grid grid-cols-[3rem_1fr] items-center gap-[1.2rem] font-rubik text-md font-medium text-black"
                   key={item}
                 >
                   <i className="flex size-[3rem] shrink-0 items-center justify-center rounded-full bg-primary text-[#fff]">

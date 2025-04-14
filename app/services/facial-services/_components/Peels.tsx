@@ -47,7 +47,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
       /> */}
 
       <ul className="w-full list-disc pl-14 md:px-10">
-        <li className="text-[32px] text-[#12121299]">
+        <li className="text-[32px] text-black">
           <h2
             data-aos="fade-top"
             className="font-rubik text-[32px] font-semibold md:text-[47.06px]"
@@ -85,7 +85,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
       </figure>
 
       <ul className="w-full list-disc pl-14 md:px-10">
-        <li className="text-[32px] text-[#12121299]">
+        <li className="text-[32px] text-black">
           <h2
             data-aos="fade-top"
             className="font-rubik text-[32px] font-semibold md:text-[47.06px]"

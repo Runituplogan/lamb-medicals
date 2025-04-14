@@ -38,14 +38,14 @@ const OurServices: React.FC<Section3Props> = () => {
       <div className="mx-auto w-full max-w-[1400px] p-5 sm:p-10 md:p-14">
         <h1
           data-aos="fade-up"
-          className="font-rubik text-[32px] font-semibold leading-tight text-[#12121299] sm:text-4xl md:text-5xl lg:text-6xl"
+          className="font-rubik text-[32px] font-semibold leading-tight text-black sm:text-4xl md:text-5xl lg:text-6xl"
         >
          {data?.headerText}
         </h1>
 
         <h2
           data-aos="fade-up"
-          className="mt-5 font-work_sans leading-loose text-[#12121299] md:text-lg lg:w-[70%] xl:w-[60%]"
+          className="mt-5 font-work_sans leading-loose text-black md:text-lg lg:w-[70%] xl:w-[60%]"
         >
           {data?.bodyText}
         </h2>

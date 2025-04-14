@@ -96,9 +96,9 @@ const Navbar = () => {
           onClick={() => setIsMobileNavOpen((prev) => !prev)}
         >
           {isMobileNavOpen ? (
-            <IoMdClose className="transition text-primary" />
+            <IoMdClose className="transition text-black" />
           ) : (
-            <IoMdMenu className="transition text-primary" />
+            <IoMdMenu className="transition text-black" />
           )}
         </div>
         </div>
@@ -137,9 +137,9 @@ const Navbar = () => {
                       className={`${
                         pathname === item.href ||
                         pathname.startsWith(item.href + "/")
-                          ? "font-semibold text-primary"
+                          ? "font-semibold text-black"
                           : "text-[#8E9BAE]"
-                      } transition hover:text-primary`}
+                      } transition hover:text-black`}
                     >
                       {item.label}
                     </Link>
@@ -149,7 +149,7 @@ const Navbar = () => {
                         className={clsx(
                           "text-sm transition-transform duration-200",
                           isExpanded
-                            ? "rotate-180 text-primary"
+                            ? "rotate-180 text-black"
                             : "rotate-0 text-[#8E9BAE]"
                         )}
                       />
@@ -163,9 +163,9 @@ const Navbar = () => {
                           href={subItem.href}
                           onClick={handleCloseMobileNav}
                           className={clsx(
-                            "block px-4 py-2 transition hover:text-primary",
+                            "block px-4 py-2 transition hover:text-black",
                             pathname === subItem.href
-                              ? "font-semibold text-primary"
+                              ? "font-semibold text-black"
                               : "text-[#8E9BAE]"
                           )}
                         >
@@ -181,7 +181,7 @@ const Navbar = () => {
               
             ))}
               <div className=" flex flex-col items-center">
-                <button className={`flex items-center gap-2 ${showShopLink ?'text-primary':'text-[#8E9BAE]'} px-4 py-2 rounded-md`} onClick={toggleShopLinkVisiblity}>
+                <button className={`flex items-center gap-2 ${showShopLink ?'text-black':'text-[#8E9BAE]'} px-4 py-2 rounded-md`} onClick={toggleShopLinkVisiblity}>
                   Shop
                   <FaChevronDown className={`w-4 h-4 transition-transform ${showShopLink?'rotate-180':''}` }/>
                 </button>
@@ -240,9 +240,9 @@ const NavLink = ({ item }: { item: INavItems }) => {
       <Link
         href={item.href}
         className={clsx(
-          "flex items-center gap-1 transition hover:text-primary",
+          "flex items-center gap-1 transition hover:text-black",
           pathname === item.href
-            ? "font-semibold text-primary"
+            ? "font-semibold text-black"
             : "text-[#8E9BAE]"
         )}
       >
@@ -273,9 +273,9 @@ const NavLink = ({ item }: { item: INavItems }) => {
                   href={subItem.href}
                   onClick={closeServices}
                   className={clsx(
-                    "block px-4 py-2 transition hover:text-primary",
+                    "block px-4 py-2 transition hover:text-black",
                     pathname === subItem.href
-                      ? "font-semibold text-primary"
+                      ? "font-semibold text-black"
                       : "text-[#161616]"
                   )}
                 >
@@ -309,9 +309,9 @@ export default Navbar;
 //             href={subItem.href}
 //             onClick={closeServices}
 //             className={clsx(
-//               "block py-2 transition hover:text-primary",
+//               "block py-2 transition hover:text-black",
 //               pathname === subItem.href
-//                 ? "font-semibold text-primary"
+//                 ? "font-semibold text-black"
 //                 : "text-[#161616]"
 //             )}
 //           >
@@ -326,9 +326,9 @@ export default Navbar;
 //             href={subItem.href}
 //             onClick={closeServices}
 //             className={clsx(
-//               "block px-4 py-2 transition hover:text-primary",
+//               "block px-4 py-2 transition hover:text-black",
 //               pathname === subItem.href
-//                 ? "font-semibold text-primary"
+//                 ? "font-semibold text-black"
 //                 : "text-[#161616]"
 //             )}
 //           >
@@ -343,9 +343,9 @@ export default Navbar;
 //             href={subItem.href}
 //             onClick={closeServices}
 //             className={clsx(
-//               "block px-4 py-2 transition hover:text-primary",
+//               "block px-4 py-2 transition hover:text-black",
 //               pathname === subItem.href
-//                 ? "font-semibold text-primary"
+//                 ? "font-semibold text-black"
 //                 : "text-[#161616]"
 //             )}
 //           >
@@ -360,9 +360,9 @@ export default Navbar;
 //             href={subItem.href}
 //             onClick={closeServices}
 //             className={clsx(
-//               "block px-4 py-2 transition hover:text-primary",
+//               "block px-4 py-2 transition hover:text-black",
 //               pathname === subItem.href
-//                 ? "font-semibold text-primary"
+//                 ? "font-semibold text-black"
 //                 : "text-[#161616]"
 //             )}
 //           >

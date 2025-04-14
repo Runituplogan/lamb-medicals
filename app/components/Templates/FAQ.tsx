@@ -71,7 +71,7 @@ const FaqItemButton: React.FC<FaqItemButtonProps> = ({ item, isExpanded, onToggl
       >
         <div
           ref={contentRef}
-          className="w-full py-4 text-sm font-medium text-[#55534E] sm:text-sm md:pr-7 md:text-base lg:pr-10 xl:pr-16"
+          className="w-full py-4 text-sm font-medium text-black sm:text-sm md:pr-7 md:text-base lg:pr-10 xl:pr-16"
         >
           <p>{item.answer}</p>
         </div>

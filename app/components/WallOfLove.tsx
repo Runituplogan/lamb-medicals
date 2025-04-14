@@ -61,7 +61,7 @@ const WallOfLove: React.FC<Section5Props> = ({ data }) => {
     <section className="h-full w-full bg-white py-28 md:pb-32 md:pt-56">
       <h1
         data-aos="fade-up"
-        className="w-full px-5 text-center font-rubik text-[32px] font-semibold leading-tight text-[#12121299] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[128px]"
+        className="w-full px-5 text-center font-rubik text-[32px] font-semibold leading-tight text-black sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[128px]"
       >
         {data?.headerText}
       </h1>
@@ -91,7 +91,7 @@ const Card: React.FC<any> = ({ image, testimonial, name, occupation, social, use
       <div className="gap3 flex w-full items-center justify-between">
         <div className="flex items-center justify-start gap-3">
           <div>
-            <p className="text-sm font-medium text-[#121212] sm:text-base lg:text-lg">{name}</p>
+            <p className="text-sm font-medium text-black sm:text-base lg:text-lg">{name}</p>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@ const Card: React.FC<any> = ({ image, testimonial, name, occupation, social, use
           <p className="text-sm text-black sm:text-sm lg:text-base">
             {isExpanded ? testimonial : `${testimonial.slice(0, maxLength)}...`}
             {testimonial.length > maxLength && (
-              <button onClick={toggleReadMore} className="ml-2 text-primary">
+              <button onClick={toggleReadMore} className="ml-2 text-black">
                 {isExpanded ? "Read less" : "Read more"}
               </button>
             )}

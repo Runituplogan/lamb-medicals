@@ -84,7 +84,7 @@ const Ourservice = () => {
           />
 
           {/* Overlay Text */}
-          <div className="absolute inset-0 flex flex-col md:p-8 p-4 items-start gap-4 justify-end rounded-2xl bg-black/50  bg-black/50 text-white text-lg">
+          <div className="absolute inset-0 flex flex-col md:p-8 p-4 items-start gap-4 justify-end rounded-2xl  bg-black/50 text-white text-lg">
             <p className="bg-white font-bold p-3 md:text-2xl text-sm rounded-md text-black">
               Siding
             </p>

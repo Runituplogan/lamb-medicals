@@ -58,7 +58,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
             </button>
           </Link>
           {/* <Link href={data?.buttonSecondaryLink as string || ''}>
-            <button className="bg-white h-20 w-full rounded-md text-primary transition hover:opacity-70">
+            <button className="bg-white h-20 w-full rounded-md text-black transition hover:opacity-70">
               {data?.buttonSecondaryText}
             </button>
           </Link> */}

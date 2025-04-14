@@ -79,7 +79,7 @@ useEffect(() => {
         <img src={section.image} alt="appointment banner" className="h-full w-screen lg:w-[50vw] lg:block hidden" />
       )}
       <div className="pt-20 xl:pt-40 pb-10 xs:px-4 md:py-20 md:pl-10 md:pr-36 lg:pr-40 xl:pr-56">
-        <h1 className="text-[#161616] font-rubik font-semibold text-2xl md:text-3xl lg:text-[35px] xl:text-[45px] 2xl:text-[48px] w-[90%] md:block hidden">
+        <h1 className="text-black font-rubik font-semibold text-2xl md:text-3xl lg:text-[35px] xl:text-[45px] 2xl:text-[48px] w-[90%] md:block hidden">
           {section.headerText}
         </h1>
         <p className="font-medium text-sm lg:text-[16px] text-black font-work_sans md:w-[90%] mt-5">
@@ -88,7 +88,7 @@ useEffect(() => {
         <form className="w-full space-y-8 xs:space-y-10 font-work_sans mt-10" onSubmit={handleSubmit}>
           {section.formFields?.map((field, index) => (
             <div className="w-full" key={index}>
-              {field.type !== "button" && <label className="text-[#121212]" htmlFor={field.label.toLowerCase().replace(/\s/g, "-")}>
+              {field.type !== "button" && <label className="text-black" htmlFor={field.label.toLowerCase().replace(/\s/g, "-")}>
                 {field.label}
               </label>}
               {field.type === "textarea" ? (

@@ -69,7 +69,7 @@ const HeroCard = () => {
           Restore Your Home's Strength & Beauty
         </h1>
 
-        <p className="lg:text-xl md:text-lg text-base text-[#323232] font-medium mt-4">
+        <p className="lg:text-xl md:text-lg text-base text-black font-medium mt-4">
           At VY Construction, we understand that it's important for your home to
           look its best. That's why our team consists of experienced
           professionals who are committed to providing quality services. We
@@ -83,7 +83,7 @@ const HeroCard = () => {
           Restore Your Home's Strength & Beauty
         </h1>
 
-        <p className="lg:text-xl md:text-lg text-base text-[#323232] font-medium mt-4">
+        <p className="lg:text-xl md:text-lg text-base text-black font-medium mt-4">
           At VY Construction, we understand that it's important for your home to
           look its best. That's why our team consists of experienced
           professionals who are committed to providing quality services. We

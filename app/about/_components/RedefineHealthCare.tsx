@@ -54,7 +54,7 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
               </button>
             </Link>
             <Link href="https://squareup.com/gift/7K57RX20Y6T10/order" >
-              <button className="bg-white h-20 px-12 md:px-14 rounded-md text-primary transition hover:opacity-70 sm:text-base text-sm">
+              <button className="bg-white h-20 px-12 md:px-14 rounded-md text-black transition hover:opacity-70 sm:text-base text-sm">
                 Gift Cards
               </button>
             </Link> */}
@@ -65,7 +65,7 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
                </button>
              </Link> 
              <Link href={'https://squareup.com/gift/7K57RX20Y6T10/order'}>
-               <button className={`bg-white h-20 px-12 md:px-14 rounded-md text-primary transition hover:opacity-70 sm:text-base text-sm`}>
+               <button className={`bg-white h-20 px-12 md:px-14 rounded-md text-black transition hover:opacity-70 sm:text-base text-sm`}>
                  {data?.buttons[1].text}
                </button>
              </Link> 
@@ -80,7 +80,7 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
               </button>
             </Link>
             <Link href="/schedule-online" className="w-full">
-              <button className="bg-white h-20 w-full rounded-md text-primary transition hover:opacity-70 sm:text-base text-sm">
+              <button className="bg-white h-20 w-full rounded-md text-black transition hover:opacity-70 sm:text-base text-sm">
                 Book Now
               </button>
             </Link>

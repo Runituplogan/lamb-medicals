@@ -101,7 +101,7 @@ export default async function BlogPost({ params }: any) {
                     }
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:underline"
+                    className="text-black hover:underline"
                   >
                     {children}
                   </a>

@@ -55,24 +55,24 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
         <div className="md:w-[50%]">
           <h1
             data-aos="fade-up"
-            className="font-bold text-[32px] sm:text-2xl md:text-3xl xl:text-5xl pb-7  lg:text-4xl text-[#282828] font-rubik"
+            className="font-bold text-[32px] sm:text-2xl md:text-3xl xl:text-5xl pb-7  lg:text-4xl text-black font-rubik"
           >
             {data?.headerText}
           </h1>
 
           <p
             data-aos="fade-up"
-            className="xl:block hidden text-lg leading-loose w-full text-[#8E9BAE]"
+            className="xl:block hidden text-lg leading-loose w-full text-black"
           >
             {data?.BodyText}
           </p>
           <p
             data-aos="fade-up"
-            className="lg:hidden block text-base leading-loose w-full text-[#8E9BAE] mt-3"
+            className="lg:hidden block text-base leading-loose w-full text-black mt-3"
           >
             {data?.BodyText}
           </p>
-          {/* <p className="sm:hidden block text-sm leading-normal w-full text-[#8E9BAE]">
+          {/* <p className="sm:hidden block text-sm leading-normal w-full text-black">
             Your care. Your time. Your way. Schedule online and experience the
             personalized, concierge-style medical care you deserve.
           </p> */}
@@ -93,14 +93,14 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
                 {field.type === "textarea" ? (
                   <textarea
                     rows={4}
-                    className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
+                    className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-black rounded-xl outline-none focus:outline-grey-100"
                     placeholder={field.name}
                     name={field.name}
                     required={field.required}
                   />
                 ) : (
                   <input
-                    className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-[#8E9BAE] rounded-xl outline-none focus:outline-grey-100"
+                    className="p-4 w-full bg-[#FAFAFA] border border-[#0000000A] text-black rounded-xl outline-none focus:outline-grey-100"
                     placeholder={field.name}
                     name={field.name}
                     type={field.type}
