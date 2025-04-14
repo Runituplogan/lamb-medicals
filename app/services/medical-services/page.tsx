@@ -12,6 +12,7 @@ import Preloader from "@/app/components/Preloader";
 import {
   FAQsSection,
   LaserGenesisSection,
+  LaserNailSection,
   LaserTreatmentSection,
   Section,
 } from "./types/medical-services";
@@ -91,7 +92,7 @@ export default function MedicalServices() {
     (item: any) => item.type === "section7",
   );
 
-  const LaserNail: LaserTreatmentSection = MedicalServicesData.content?.find(
+  const LaserNail: LaserNailSection = MedicalServicesData.content?.find(
     (item: any) => item.type === "section8",
   );
 

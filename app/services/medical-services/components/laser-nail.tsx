@@ -4,11 +4,11 @@ import ServicesAfterEffects from "../../components/services-after-effects";
 import Image from "next/image";
 import ServicesFAQ from "../../components/services-faq";
 import { laserNailFungusFAQs } from "@/app/utils/data";
-import { FAQsSection, LaserTreatmentSection } from "../types/medical-services";
+import { FAQsSection, LaserNailSection, LaserTreatmentSection } from "../types/medical-services";
 import BeforeAfter from "@/app/components/BeforeandAfter";
 
 interface laserNailProps {
-  data: LaserTreatmentSection;
+  data: LaserNailSection;
   questions: FAQsSection;
 }
 

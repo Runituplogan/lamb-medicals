@@ -69,6 +69,14 @@ export interface MedicalServiceResponse {
     cta_button: CTAButton;
     images: ImageData[];
   }
+
+   export interface LaserNailSection {
+    type: string; // This can be section4, section6, section8 (for laser treatments)
+    headerText: string;
+    bodyText: string;
+    cta_button: CTAButton;
+    images: string[];
+  }
   
   export interface ImageGallerySection {
     type: string;
