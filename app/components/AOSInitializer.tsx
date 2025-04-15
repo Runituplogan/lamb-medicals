@@ -14,7 +14,7 @@ export default function AOSInitializer() {
     import("aos").then((aos) => {
       AOS = aos.default;
       AOS.init({
-        duration: 300, // Animation duration
+        duration: 800, // Animation duration
         once: false, // Allow animations to trigger every time an element comes into view
       });
     });
