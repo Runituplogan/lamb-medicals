@@ -20,7 +20,7 @@ export default function ServicesIntro({
   return (
     <section
       className="grid gap-[2rem] pt-[2rem] xl:gap-[2.4rem]"
-      data-aos="fade-left"
+     
     >
       <h3 className="font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-black xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
         {title}

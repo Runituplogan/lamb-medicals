@@ -29,7 +29,7 @@ const ExperienceLamb: React.FC<Section2Props> = ({ data }) => {
   return (
     <Wrapper className="w-full px-5 xs:py-28 sm:p-10 md:px-14 md:py-48">
       <div className="grid w-full max-w-[1500px] gap-10 lg:grid-cols-2 lg:gap-20 xl:gap-32 2xl:gap-40">
-        <div data-aos="fade-up" className="xs:block hidden">
+        <div className="xs:block hidden">
           <Image
             src={data?.image as string}
             width={1000}
@@ -41,26 +41,26 @@ const ExperienceLamb: React.FC<Section2Props> = ({ data }) => {
         </div>
         <div className="w-full">
           <h1
-            data-aos="fade-up"
+           
             className="hidden font-rubik text-6xl font-semibold leading-tight text-black md:block 2xl:w-[70%]"
           >
             {data?.headerText}
           </h1>
           <h1
-            data-aos="fade-up"
+           
             className="block font-rubik text-[32px] font-semibold leading-loose text-black sm:text-2xl md:hidden md:text-3xl lg:text-4xl"
           >
             {data?.headerText}
           </h1>
           <p
-            data-aos="fade-up"
+           
             className="mt-6 font-work_sans text-base text-black md:text-lg lg:text-xl"
           >
             {data?.bodyText}
           </p>
 
           <div
-            data-aos="fade-up"
+           
             className="mt-10 grid w-full sm:grid-cols-1 gap-5 gap-y-8 font-rubik md:grid-cols-2"
           >
             {lambDifferences?.map((item, index) => (
@@ -84,7 +84,7 @@ const ExperienceLamb: React.FC<Section2Props> = ({ data }) => {
           </div>
           {data?.features && data?.features?.length > 4 && (
             <button
-              data-aos="fade-up"
+             
               onClick={() => setIsExpanded((prev) => !prev)}
               className="mt-10 h-20 w-full xs:w-max rounded-md bg-primary px-12 font-poppins text-sm font-semibold text-white transition hover:opacity-70 sm:text-base md:px-14"
             >

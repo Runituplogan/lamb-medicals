@@ -17,7 +17,7 @@ const Miconeedling: React.FC<MiconeedlingProps> = ({ data }) => {
       />
       <figure
         className="relative h-auto overflow-hidden rounded"
-        data-aos="zoom-in"
+       
       >
         <div className="flex md:h-screen h-auto w-full items-center justify-center">
           <ReactPlayer
@@ -31,7 +31,7 @@ const Miconeedling: React.FC<MiconeedlingProps> = ({ data }) => {
 
       <p
         className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]"
-        data-aos="fade-right"
+       
       >
         {data?.subsection.bodyText}
       </p>
@@ -39,7 +39,7 @@ const Miconeedling: React.FC<MiconeedlingProps> = ({ data }) => {
         {data?.subsection.images.map((item, index) => (
           <div
             className="relative h-[20rem] lg:h-[32rem] xxl:h-[52rem]"
-            data-aos="fade-up"
+           
             key={index}
           >
             <Image

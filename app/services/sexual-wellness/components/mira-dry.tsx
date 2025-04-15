@@ -33,7 +33,7 @@ const MiraDry: React.FC<MiraDryProps> = ({ data, faqs }) => {
       />
 
       <ServicesAfterEffects className="grid-cols-1 xs:grid-rows-[52rem]">
-        <div className="relative col-span-full h-full" data-aos="fade-right">
+        <div className="relative col-span-full h-full">
           <Image
             src={`${data?.image}`}
             width={1000}

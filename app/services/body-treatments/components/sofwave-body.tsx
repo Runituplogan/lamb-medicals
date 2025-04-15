@@ -34,7 +34,7 @@ const SofwaveBody: React.FC<SofwaveBodyProps> = ({ data, faqs }) => {
           <div className="" key={index}> 
             <div
               className="relative col-span-full block h-full w-full"
-              data-aos="fade-right"
+             
             >
               <Image
                 src={`${item.image}`}
@@ -58,7 +58,7 @@ const SofwaveBody: React.FC<SofwaveBodyProps> = ({ data, faqs }) => {
           <div className="" key={index}>
             <div
               className="relative col-span-full block h-full w-full"
-              data-aos="fade-right"
+             
             >
               <Image
                 src={`${item.image}`}

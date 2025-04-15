@@ -19,7 +19,7 @@ const AgeJect: React.FC<AgeJectProps> = ({ data, agejectFaqs }) => {
 
       <figure
         className="relative h-[18rem] overflow-hidden rounded-md xs:h-[24rem] sm:h-[42rem] xl:h-[61rem]"
-        data-aos="zoom-in"
+       
       >
         <Image
           src={data?.image}

@@ -60,13 +60,13 @@ const WallOfLove: React.FC<Section5Props> = ({ data }) => {
   return (
     <section className="h-full w-full bg-white py-28 md:pb-32 md:pt-56">
       <h1
-        data-aos="fade-up"
+       
         className="w-full px-5 text-center font-rubik text-[32px] font-semibold leading-tight text-black sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[128px]"
       >
         {data?.headerText}
       </h1>
 
-      <div className="mt-20 h-full w-full overflow-hidden" data-aos="fade-up" ref={containerRef}>
+      <div className="mt-20 h-full w-full overflow-hidden" ref={containerRef}>
         <motion.div className="flex space-x-8" animate={controls}>
           {slides.map((item, index) => (
             <div key={`${item.username}-${index}`} className="card-item h-full py-4 flex-shrink-0">

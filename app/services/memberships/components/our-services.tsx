@@ -34,7 +34,7 @@ const OurServices: React.FC<OurServicesProps> = ({ data }) => {
   return (
     <section className="bg-primary-light py-[5rem]">
       <Wrapper className="grid gap-[2rem]">
-        <hgroup className="grid gap-[2rem]" data-aos="fade-up">
+        <hgroup className="grid gap-[2rem]">
           <h3 className="font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-black xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
             {data?.headerText}
           </h3>
@@ -50,7 +50,7 @@ const OurServices: React.FC<OurServicesProps> = ({ data }) => {
             return (
               <article
                 className="grid gap-[2rem] rounded-md bg-white p-[2.4rem]"
-                data-aos="fade-up"
+               
                 key={index}
               >
                 <hgroup className="flex items-center gap-[1.2rem]">

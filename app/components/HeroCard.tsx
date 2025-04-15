@@ -33,7 +33,7 @@ const HeroCard = () => {
   };
   return (
     <div className="flex flex-col items-center gap-4 lg:gap-7 mt-8 md:mt-0 md:py-10 lg:px-20 xl:px-44 justify-center text-center container w-full mx-auto">
-      <div data-aos="fade-top" className="">
+      <div className="">
         <h1 className="lg:text-7xl md:text-5xl text-3xl text-[#032759] font-bricolage font-bold aos-init aos-animate">
           Wood Rot Repair Experts in the{" "}
           <span className="text-[#056FC5]">East Bay CA</span>
@@ -64,7 +64,7 @@ const HeroCard = () => {
 
       <img src={"/rot.png"} alt="city" className="rounded-xl" />
 
-      <div data-aos="fade-top" className="mt-14 md:block hidden">
+      <div className="mt-14 md:block hidden">
         <h1 className="md:text-3xl text-xl text-[#032759] font-bricolage font-bold">
           Restore Your Home's Strength & Beauty
         </h1>

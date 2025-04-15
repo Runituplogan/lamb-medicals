@@ -33,7 +33,6 @@ const Botox: React.FC<botoxProps> = ({ data, question }) => {
             <div
               key={imgIndex}
               className="relative h-[18rem] overflow-hidden rounded lg:h-[22rem] xxl:h-[50.3rem]"
-              data-aos={imgIndex % 2 === 0 ? "fade-left" : "fade-right"}
             >
               <Image
                 src={img.image}

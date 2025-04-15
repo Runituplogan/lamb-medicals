@@ -37,20 +37,20 @@ const OurServices: React.FC<Section3Props> = () => {
     <section className="w-full bg-[#F1F1F1] px-5 py-10 md:py-20 lg:py-32">
       <div className="mx-auto w-full max-w-[1400px] p-5 sm:p-10 md:p-14">
         <h1
-          data-aos="fade-up"
+         
           className="font-rubik text-[32px] font-semibold leading-tight text-black sm:text-4xl md:text-5xl lg:text-6xl"
         >
          {data?.headerText}
         </h1>
 
         <h2
-          data-aos="fade-up"
+         
           className="mt-5 font-work_sans leading-loose text-black md:text-lg lg:w-[70%] xl:w-[60%]"
         >
           {data?.bodyText}
         </h2>
        {data?.features && data?.features?.length > 3 && <button
-          data-aos="fade-up"
+         
           onClick={() => setIsExpanded((prev) => !prev)}
           className="xs:w-max w-full font-poppins mt-10 h-20 rounded-md bg-primary px-12 text-sm font-semibold text-white transition hover:opacity-70 sm:text-base md:px-14"
         >

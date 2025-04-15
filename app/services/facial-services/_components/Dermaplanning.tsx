@@ -17,7 +17,7 @@ const Dermaplanning: React.FC<DermaplaningProps> = ({ data }) => {
       />
       <figure
          className="relative h-[62.3rem] max-h-[450px] sm:max-h-[1200px] overflow-hidden rounded"
-        data-aos="zoom-in"
+       
       >
         {/* <Image
           src="/images/facial-services/dermaplanning.png"
@@ -36,7 +36,7 @@ const Dermaplanning: React.FC<DermaplaningProps> = ({ data }) => {
         />
       </figure>
       {/* <img
-        data-aos="zoom-in"
+       
         src="/images/facial-services/dermaplanning-mobile.png"
         alt="dermaplanning"
         className="object-cover xs:hidden block"

@@ -23,7 +23,7 @@ export default function LaserNailFungus({ data, questions }: laserNailProps) {
         title={data?.headerText}
         description={<p>{data?.bodyText}</p>}
       />
-      <div className="relative col-span-full h-auto" data-aos="fade-left">
+      <div className="relative col-span-full h-auto">
         <Image
           src={data?.images[0]}
           className="h-[55rem] w-full object-cover"

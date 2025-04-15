@@ -18,7 +18,7 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
       <div className="w-full max-w-[1500px] grid lg:grid-cols-2 gap-16 sm:gap-20 lg:gap-32 2xl:gap-48">
         <div className="w-full my-auto">
           <h1
-            data-aos="fade-up"
+           
             className="text-white lg:block hidden font-rubik font-semibold text-6xl xl:text-[70px] leading-tight"
           >
             {/* Let's Redefine
@@ -27,14 +27,14 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
             {data?.headerText}
           </h1>
           <h1
-            data-aos="fade-up"
+           
             className="lg:hidden block text-white font-rubik font-semibold text-[32px] sm:text-5xl md:text-6xl lg:text-7xl leading-loose"
           >
             {data?.headerText}
             {/* Let's Redefine Healthcare Together */}
           </h1>
           <p
-            data-aos="fade-up"
+           
             className="text-white mt-6 text-base md:text-lg lg:text-xl font-work_sans"
           >
             {data?.bodyText}
@@ -45,7 +45,7 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
           </p>
 
           <div
-            data-aos="fade-up"
+           
             className="xs:flex hidden justify-start items-center gap-5 mt-10 md:mt-16 font-poppins font-semibold"
           >
             {/* <Link href="/schedule-online">
@@ -71,7 +71,7 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
              </Link> 
           </div>
           <div
-            data-aos="fade-up"
+           
             className="grid grid-cols-2 xs:hidden  items-center gap-5 mt-10 md:mt-16 font-poppins font-semibold"
           >
             <Link href="/services" className="w-full">
@@ -86,7 +86,7 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
             </Link>
           </div>
         </div>
-        <div data-aos="fade-up" className="xs:block hidden">
+        <div className="xs:block hidden">
           <Image
             src={`${data?.image}`}
             width={1000}

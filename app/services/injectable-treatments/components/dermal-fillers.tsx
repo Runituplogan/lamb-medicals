@@ -25,7 +25,7 @@ const DermalFillers: React.FC<DermaFillersProps> = ({ data, question }) => {
           <div
             key={imgIndex}
             className="relative h-[22rem] overflow-hidden rounded lg:h-[52rem] xxl:h-[60.3rem]"
-            data-aos={imgIndex % 2 === 0 ? "fade-left" : "fade-right"}
+        
           >
             <Image
               src={img.image} 

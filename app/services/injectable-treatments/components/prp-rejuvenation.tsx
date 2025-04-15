@@ -23,7 +23,7 @@ const PRPRejuvenation: React.FC<PRPRejuvenationProp> = ({ data, question }) => {
         btnLink="/schedule-online"
       />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[56rem_48rem]">
-        <div className="relative h-full col-span-full" data-aos="fade-left">
+        <div className="relative h-full col-span-full">
           <Image
             src="/images/injectable-treatments/prp-rejuvenation-1.png"
             alt=""
@@ -36,7 +36,7 @@ const PRPRejuvenation: React.FC<PRPRejuvenationProp> = ({ data, question }) => {
             className="xs:hidden block object-cover"
           />
         </div>
-        <div className="col-span-full relative h-full" data-aos="fade-right">
+        <div className="col-span-full relative h-full">
           <Image
             src="/images/injectable-treatments/prp-rejuvenation-2.png"
             alt=""

@@ -12,14 +12,14 @@ const BuilidngTrust: React.FC<BuildTrustSectionProps>  = ({data}) => {
       <div className="w-full">
         <div className="mx-auto w-full max-w-[1000px] p-8 py-14 sm:p-10 md:px-14">
           <h1
-            data-aos="fade-up"
+           
             className="font-rubik text-center text-[32px] font-semibold leading-tight text-black sm:text-3xl md:text-5xl lg:text-6xl"
           >
             {/* Building trust through transparency and communication */}
             {data?.headerText}
           </h1>
           <h2
-            data-aos="fade-up"
+           
             className="mt-5 font-work_sans text-center leading-loose text-black md:text-lg w-full"
           >
             {/* From preventive care and wellness programs to advanced treatments
@@ -30,7 +30,7 @@ const BuilidngTrust: React.FC<BuildTrustSectionProps>  = ({data}) => {
         </div>
 
         <div
-          data-aos="fade-up"
+         
           className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-7 md:gap-10 mt-16 mx-auto"
         >
           <div className="col-span-1 md:col-span-2 lg:col-span-3 object-cover h-[90%]">

@@ -24,7 +24,7 @@ const AquaGold: React.FC<FacialServiceProps> = ({ data, aquaGoldFaq }) => {
       />
       <figure
         className="relative h-[62.3rem] max-h-[500px] overflow-hidden rounded sm:max-h-[1200px]"
-        data-aos="zoom-in"
+       
       >
         {/* <Image
           src="/images/facial-services/aquagold.png"
@@ -65,7 +65,7 @@ const AquaGold: React.FC<FacialServiceProps> = ({ data, aquaGoldFaq }) => {
         production. */}
       </p>
 
-      <div className="relative col-span-full h-auto" data-aos="fade-left">
+      <div className="relative col-span-full h-auto">
         <Image
           src={`${data?.sections[1].images[0]}`}
           alt="service image"

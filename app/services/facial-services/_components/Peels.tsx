@@ -22,7 +22,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
       />
       <figure
           className="relative h-[62.3rem] max-h-[400px] sm:max-h-[1200px] overflow-hidden rounded"
-        data-aos="zoom-in"
+       
       >
         {/* <Image
           src="/images/facial-services/chemical-peel.png"
@@ -40,7 +40,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
         />
       </figure>
       {/* <img
-        data-aos="zoom-in"
+       
         src="/images/facial-services/chemical-peel-mobile.png"
         alt="chemical-peel"
         className="object-cover xs:hidden block"
@@ -49,7 +49,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
       <ul className="w-full list-disc pl-14 md:px-10">
         <li className="text-[32px] text-black">
           <h2
-            data-aos="fade-top"
+           
             className="font-rubik text-[32px] font-semibold md:text-[47.06px]"
           >
             {data?.subsections[0].title}
@@ -63,7 +63,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
 
       <figure
             className="relative h-[62.3rem] max-h-[400px] sm:max-h-[1200px] overflow-hidden rounded"
-        data-aos="zoom-in"
+       
       >
         {/* <Image
           src="/images/facial-services/vi-peels.png"
@@ -87,7 +87,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
       <ul className="w-full list-disc pl-14 md:px-10">
         <li className="text-[32px] text-black">
           <h2
-            data-aos="fade-top"
+           
             className="font-rubik text-[32px] font-semibold md:text-[47.06px]"
           >
             {data?.subsections[1].title}
@@ -99,7 +99,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
       </p>
       <figure
            className="relative h-[62.3rem] max-h-[400px] sm:max-h-[1200px] overflow-hidden rounded"
-        data-aos="zoom-in"
+       
       >
         <Image
           src={`${data?.subsections[1].image}`}

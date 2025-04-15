@@ -13,7 +13,7 @@ export default function WellProgramTeamCard({
   return (
     <figure
       className="w-full overflow-hidden rounded-sm xxl:w-[32rem]"
-      data-aos="fade-right"
+     
     >
       <div className="relative h-[28rem] lg:h-[24.5rem]">
         <Image

@@ -18,7 +18,7 @@ const Exosomes: React.FC<ExosomesProps> = ({ data, faqs }) => {
         description={`${data?.bodyText}`}
       />
      
-      <div className="relative col-span-full h-auto" data-aos="fade-left">
+      <div className="relative col-span-full h-auto">
         <Image
           src={data?.images[0] || ""}
           alt="service image"

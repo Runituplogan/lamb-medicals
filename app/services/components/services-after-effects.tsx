@@ -23,7 +23,7 @@ export default function ServicesAfterEffects({
       {!!title && (
         <figcaption
           className={`${hideTitleOnMobile ? "hidden xs:block" : ""} text-black col-span-full text-center font-rubik text-[24px] xs:text-[3.8rem] font-semibold leading-[4rem]`}
-          data-aos="fade-left"
+         
         >
           {title}
         </figcaption>

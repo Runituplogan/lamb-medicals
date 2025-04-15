@@ -19,7 +19,7 @@ const IPL: React.FC<IPLProps> = ({ data, iplFaq }) => {
       />
       <p
         className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]"
-        data-aos="fade-right"
+       
       >
         {data?.subsection.bodyText}
       </p>
@@ -28,7 +28,7 @@ const IPL: React.FC<IPLProps> = ({ data, iplFaq }) => {
         {data?.subsection.images.map((item, i) => (
           <div
             className="relative h-[17rem] md:h-[24rem] xl:h-[32rem] xxl:h-[52rem]"
-            data-aos="fade-left"
+           
             key={i}
           >
             <Image

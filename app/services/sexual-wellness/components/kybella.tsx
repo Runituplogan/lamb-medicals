@@ -15,7 +15,7 @@ export default function Kybella() {
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[80rem]">
         <div
           className="relative h-full overflow-hidden rounded-md"
-          data-aos="fade-right"
+         
         >
           <Image
             src="/images/injectable-treatments/Kybella.png"

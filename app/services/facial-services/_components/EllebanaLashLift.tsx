@@ -22,7 +22,7 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
       />
       <figure
           className="relative h-[62.3rem] max-h-[400px] sm:max-h-[1200px] overflow-hidden rounded"
-        data-aos="zoom-in"
+       
       >
         {/* <Image
           src="/images/facial-services/ellana.png"
@@ -40,13 +40,13 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
         />
       </figure>
       {/* <img
-        data-aos="zoom-in"
+       
         src="/images/facial-services/ellana-mobile.png"
         alt="ellana lash lift"
         className="object-cover md:hidden block"
       /> */}
       <div className="w-full space-y-[2rem]">
-        <div className="space-y-[2rem] pt-[2rem]" data-aos="fade-left">
+        <div className="space-y-[2rem] pt-[2rem]">
           <h3 className="font-rubik text-[3.2rem] font-semibold leading-[2.4rem] text-black xs:text-[4rem] lg:text-[5.8rem] lg:leading-[3.2rem] xl:leading-[6rem]">
             {data?.subsections[0].title}
           </h3>
@@ -56,7 +56,7 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
           </div>
         </div>
 
-        <div className="space-y-[2rem] pt-[2rem]" data-aos="fade-left">
+        <div className="space-y-[2rem] pt-[2rem]">
           <h3 className="font-rubik text-[3.2rem] font-semibold leading-[2.4rem] text-black xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
             {data?.subsections[1].title}
           </h3>
@@ -66,7 +66,7 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
           </div>
         </div>
 
-        <div className="space-y-[2rem] pt-[2rem]" data-aos="fade-left">
+        <div className="space-y-[2rem] pt-[2rem]">
           <h3 className="font-rubik text-[3.2rem] font-semibold leading-[6rem] text-black xs:text-[46.57px]">
             {data?.subsections[2].title}
           </h3>
@@ -92,7 +92,7 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
                 src={`${item?.image}`}
                 alt="eye-before"
                 className="object-cover"
-                data-aos="zoom-in"
+               
               />
             </div>
           ))}
@@ -105,7 +105,7 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
               src="/images/facial-services/eye-after-1.png"
               alt="eye-before"
               className="object-cover"
-              data-aos="zoom-in"
+             
             />
           </div> */}
 
@@ -117,7 +117,7 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
               src="/images/facial-services/eye-before-2.png"
               alt="eye-before"
               className="object-cover"
-              data-aos="zoom-in"
+             
             />
           </div> */}
 
@@ -126,7 +126,7 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
               After
             </h2>
             <img
-              data-aos="zoom-in"
+             
               src="/images/facial-services/eye-after-2.png"
               alt="eye-before"
               className="object-cover"

@@ -29,7 +29,7 @@ const Sofwave: React.FC<SoftwaveProps> = ({ data, sofwaveFaqs }) => {
       />
       <figure
         className="grid h-[18rem] grid-cols-2 sm:h-[24rem] xl:h-[48rem] xxl:h-[62.3rem]"
-        data-aos="zoom-in"
+       
       >
         {data?.[0].images.map((item, index) => (
           <div
@@ -53,7 +53,7 @@ const Sofwave: React.FC<SoftwaveProps> = ({ data, sofwaveFaqs }) => {
       />
       <ServicesAfterEffects className="grid grid-cols-2 grid-rows-[20rem_20rem] gap-[0.8rem] xl:grid-rows-[40rem_40rem] xxl:grid-rows-[54rem_53rem]">
         {data?.[1].images.map((item, i) => (
-          <div className="relative size-full" data-aos="fade-left" key={i}>
+          <div className="relative size-full" key={i}>
             <Image
               src={`${item.image}`}
               alt="sofwave-before-and-after-1"

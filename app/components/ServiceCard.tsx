@@ -4,7 +4,7 @@ import { IServices } from "../data/services";
 const ServiceCard = ({ title, description, link, bgImgSrc }: IServices) => {
   return (
     <div
-      data-aos="fade-up"
+     
       style={{
         backgroundImage: `url(${bgImgSrc})`,
       }}

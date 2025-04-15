@@ -5,7 +5,7 @@ const Ourservice = () => {
   return (
     <section className="p-5 md:mt-24 flex flex-col items-center w-full ">
       <h1
-        data-aos="fade-up"
+       
         className="md:text-4xl text-2xl text-[#032759] font-bold"
       >
         Our Service Include
@@ -15,7 +15,7 @@ const Ourservice = () => {
       <main className="grid grid-cols-1 lg:grid-cols-7 gap-4 md:mt-10  w-full lg:px-7 ">
         {/* Left Section (4 columns) */}
         <div
-          data-aos="fade-right"
+         
           className="col-span-1 lg:col-span-4 flex flex-col items-center gap-4 relative rounded-2xl overflow-hidden md:h-[500px] h-[400px]"
         >
           {/* Image */}
@@ -41,7 +41,7 @@ const Ourservice = () => {
 
         {/* Right Section (3 columns) */}
         <div
-          data-aos="fade-left"
+         
           className="col-span-1 lg:col-span-3 flex flex-col items-center gap-4 relative rounded-2xl overflow-hidden md:h-[500px] h-[400px]"
         >
           {/* Image */}
@@ -69,7 +69,7 @@ const Ourservice = () => {
 
       {/* Second Section */}
       <main
-        data-aos="fade-right"
+       
         className="grid grid-cols-1 lg:grid-cols-7 gap-4 mt-5 w-full lg:px-7 "
       >
         {/* Right Section (3 columns) */}
@@ -98,7 +98,7 @@ const Ourservice = () => {
 
         {/* Left Section (4 columns) */}
         <div
-          data-aos="fade-left"
+         
           className="col-span-1 lg:col-span-4 flex flex-col items-center gap-4 relative rounded-2xl overflow-hidden md:h-[500px] h-[400px]"
         >
           {/* Image */}
@@ -126,7 +126,7 @@ const Ourservice = () => {
 
       {/* Third Section */}
       <main
-        data-aos="fade-right"
+       
         className="grid grid-cols-1 lg:grid-cols-7 gap-4 mt-5 w-full lg:px-7 "
       >
         {/* Left Section (4 columns) */}
@@ -154,7 +154,7 @@ const Ourservice = () => {
 
         {/* Right Section (3 columns) */}
         <div
-          data-aos="fade-left"
+         
           className="col-span-1 lg:col-span-3 flex flex-col items-center gap-4 relative rounded-2xl overflow-hidden md:h-[500px] h-[400px]"
         >
           {/* Image */}

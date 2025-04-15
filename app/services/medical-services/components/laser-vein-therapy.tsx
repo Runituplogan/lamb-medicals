@@ -20,7 +20,7 @@ export default function LaserVeinTherapy({ data, questions }: laserVainProps) {
         btnText={data?.cta_button?.text}
       />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[52rem_52rem] gap-[2rem]">
-        <div className="relative col-span-full h-full" data-aos="fade-left">
+        <div className="relative col-span-full h-full">
           <Image
             src="/images/medical-services/medical-services-before-and-after-4.png"
             alt=""
@@ -34,7 +34,7 @@ export default function LaserVeinTherapy({ data, questions }: laserVainProps) {
             className="xs:hidden block"
           />
         </div>
-        <div className="relative col-span-full h-full" data-aos="fade-right">
+        <div className="relative col-span-full h-full">
           <Image
             src="/images/medical-services/medical-services-before-and-after-5.png"
             alt="" 

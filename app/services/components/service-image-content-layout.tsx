@@ -27,7 +27,7 @@ export default function ServiceImageContentLayout({
       </h3>
       <div
         className="relative h-[21rem] md:h-[48rem] xxl:h-[58rem]"
-        data-aos="fade-right"
+       
       >
         <Image
           src={image}
@@ -37,7 +37,7 @@ export default function ServiceImageContentLayout({
           className="object-cover object-center h-full"
         />
       </div>
-      <figcaption className="flex flex-col gap-[2.4rem]" data-aos="fade-left">
+      <figcaption className="flex flex-col gap-[2.4rem]">
         <h3 className="hidden font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-black xs:text-[4rem] lg:block lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
           {title}
         </h3>

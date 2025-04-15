@@ -102,7 +102,7 @@ export default function RootLayout({
                                               hideProgressBar={true}
                                               theme="colored"
                                             />
-                                            <AOSInitializer />{" "}
+                                           {/* <AOSInitializer /> */}
                                             {/* Initialize AOS */}
                                             {children}
                                             <Footer />

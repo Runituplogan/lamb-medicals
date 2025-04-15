@@ -19,7 +19,7 @@ const Latisse: React.FC<LatisseProps> = ({ data, faqs }) => {
         description={<p className="leading-relaxed">{data?.bodyText}</p>}
       />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[56rem] gap-[4rem]">
-        <div className="relative col-span-full h-full" data-aos="fade-left">
+        <div className="relative col-span-full h-full">
           <Image
             src={`${data?.image}`}
             alt=""
@@ -34,7 +34,7 @@ const Latisse: React.FC<LatisseProps> = ({ data, faqs }) => {
         benefits={data?.subsection.bodyText ?? []}
       />
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[56rem] gap-[4rem]">
-        <div className="relative col-span-full h-full" data-aos="fade-left">
+        <div className="relative col-span-full h-full">
           <Image
             src={`${data?.subsection?.image}`}
             alt=""

@@ -16,7 +16,7 @@ const Sculptra: React.FC<SculptraProps> = ({ data, question }) => {
     <Wrapper id="sculptra" className="grid gap-[4rem]">
       <ServicesIntro title={data?.headerText} description={data?.bodyText} />
       <ServicesAfterEffects className="grid grid-cols-1 grid-rows-[22rem] xl:grid-rows-[50rem]">
-        <div className="relative col-span-full h-full" data-aos="fade-right">
+        <div className="relative col-span-full h-full">
           <Image
             src={data?.image}
             alt=""
@@ -34,7 +34,7 @@ const Sculptra: React.FC<SculptraProps> = ({ data, question }) => {
           <div
             key={index}
             className="relative h-[18rem] overflow-hidden rounded lg:h-[22rem] xxl:h-[60rem]"
-            data-aos="fade-right"
+           
           >
             <Image
               src={image?.image}

@@ -21,7 +21,7 @@ const MonalisaTouch: React.FC<MonalisaTouchProps> = ({ data, faqs }) => {
         description={`${data?.bodyText}`}
       />
       <ServicesAfterEffects className="grid-cols-1 xs:grid-rows-[58rem]">
-        <div className="relative col-span-full h-full" data-aos="fade-left">
+        <div className="relative col-span-full h-full">
           {/* <Image
             src="/images/sexual-wellness/monalisa-touch.png"
             alt="monalisa-touch"
@@ -44,7 +44,7 @@ const MonalisaTouch: React.FC<MonalisaTouchProps> = ({ data, faqs }) => {
       </ServicesAfterEffects>
       <p
         className="grid w-full gap-8 font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]"
-        data-aos="fade-right"
+       
       >
         {data?.subBodyText}
       </p>

@@ -17,7 +17,7 @@ export default function ServicesFAQ({
   align = "center",
 }: ServicesFAQProps) {
   return (
-    <section data-aos="fade-up" className={className}>
+    <section className={className}>
       <hgroup
         className={`${align === "left" ? "" : "mx-auto"} flex w-full flex-col gap-[2rem] px-1 md:px-5 lg:px-0 xxl:w-[100rem]`}
       >

@@ -22,7 +22,7 @@ const Kybella:React.FC <KybellaProps> =({data, question}) => {
       <ServicesAfterEffects className="xs:grid-cols-1 xs:grid-rows-[80rem]">
         <div
           className="relative h-full overflow-hidden rounded-md col-span-full"
-          data-aos="fade-right"
+         
         >
           <Image
             src="/images/injectable-treatments/Kybella.png"

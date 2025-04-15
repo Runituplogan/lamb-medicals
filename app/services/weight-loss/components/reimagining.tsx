@@ -28,7 +28,7 @@ const ReImaging: React.FC<ReImagingProps> = ({ data, faqs }) => {
   return (
     <Wrapper className="grid gap-[4rem]">
       <ServicesAfterEffects className="grid-cols-1 grid-rows-[56rem] gap-[4rem]">
-        <div className="relative xs:h-full col-span-full" data-aos="fade-left">
+        <div className="relative xs:h-full col-span-full">
           <Image
             src={`${data?.image}`}
             alt="reimaging"
@@ -45,7 +45,7 @@ const ReImaging: React.FC<ReImagingProps> = ({ data, faqs }) => {
           />
         </div>
       </ServicesAfterEffects>
-      <section className="grid gap-6 py-[2rem] text-center" data-aos="fade-up">
+      <section className="grid gap-6 py-[2rem] text-center">
         <h3 className="font-rubik text-[32px] xs:text-[4.8rem] font-semibold leading-[4rem] text-black">
           {data?.headerText}
         </h3>

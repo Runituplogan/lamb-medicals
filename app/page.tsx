@@ -93,25 +93,25 @@ export default function Home() {
         <div className="w-full max-w-[1500px] grid lg:grid-cols-2 gap-10 lg:gap-20 xl:gap-32 2xl:gap-48">
           <div className="w-full my-auto">
             <h1
-              data-aos="fade-up"
+             
               className="text-black md:block hidden font-rubik font-semibold text-6xl leading-tight"
             >
               {section1?.headerText}
             </h1>
             <h1
-              data-aos="fade-up"
+             
               className="md:hidden block text-black font-rubik font-semibold text-[32px] md:text-3xl lg:text-4xl leading-snug"
             >
               {section1?.headerText}
             </h1>
             <p
-              data-aos="fade-up"
+             
               className="text-black mt-6 text-[14px] xs:text-lg lg:text-xl font-work_sans"
             >
               {section1?.bodyText}
             </p>
           </div>
-          <div data-aos="fade-up">
+          <div>
             <Image
               src={section1?.image as string ?? "/test.png"}
               width={1000}

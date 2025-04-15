@@ -17,7 +17,7 @@ const Plated: React.FC<PlatedProps> = ({ data, faqs }) => {
         title={`${data?.headerText}`}
         description={`${data?.bodyText}`}
       />
-      <div className="relative col-span-full h-auto" data-aos="fade-left">
+      <div className="relative col-span-full h-auto">
         <Image
           src={data?.images[0] || ""}
           alt="service image"

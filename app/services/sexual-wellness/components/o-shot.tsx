@@ -21,7 +21,7 @@ const OShot: React.FC<OShotProps> = ({ data, faqs }) => {
       <ServicesAfterEffects className="grid-cols-1 grid-rows-1">
         <div
           className="relative col-span-2 overflow-hidden rounded xs:h-[50.3rem]"
-          data-aos="fade-left"
+         
         >
           {/* <Image
             src="/images/sexual-wellness/o-short.png"

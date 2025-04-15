@@ -11,7 +11,7 @@ const CTA = () => {
       {/* first section */}
       <div className="lg:grid grid-cols-5 mt- md:mt-24 flex-col p-5 lg:p-0  lg:w-11/12 gap-16 justify-center ">
         <main
-          data-aos="fade-right"
+         
           className=" col-span-3 flex flex-col items-center lg:items-start  lg:justify-between  "
         >
           <div className=" flex items-start py-2 lg:py-0  ">
@@ -30,7 +30,7 @@ const CTA = () => {
           </p>
 
           <div
-            data-aos="fade-left"
+           
             className="col-span-1 flex justify-end lg:hidden py-10"
           >
             <Image
@@ -63,7 +63,7 @@ const CTA = () => {
         </main>
 
         <div
-          data-aos="fade-left"
+         
           className="col-span-2 lg:flex justify-end hidden  "
         >
           <Image
@@ -81,7 +81,7 @@ const CTA = () => {
 
       <div className="lg:grid grid-cols-5 mt- md:mt-24 flex-col gap-10 p-5 lg:p-0 lg:w-11/12 items-center justify-center ">
         <div
-          data-aos="fade-right"
+         
           className="col-span-2 lg:flex justify-start hidden"
         >
           <Image
@@ -94,7 +94,7 @@ const CTA = () => {
           />
         </div>
         <main
-          data-aos="fade-left"
+         
           className=" col-span-3 flex flex-col items-center lg:items-start md:gap-6  "
         >
           <div className="lg:text-3xl text- p-3 font-bold text-start bg-white md:p-5 py-3 md:py-5     rounded-md ">
@@ -108,7 +108,7 @@ const CTA = () => {
           </div>
 
           <div
-            data-aos="fade-right"
+           
             className="col-span-1 flex justify-end lg:hidden py-10"
           >
             <Image
@@ -122,7 +122,7 @@ const CTA = () => {
           </div>
 
           <p
-            data-aos="fade-left"
+           
             className="lg:text-2xl md:text-xl text- text-[#323232] font-medium"
           >
             With our experience and dedication to providing excellent services,

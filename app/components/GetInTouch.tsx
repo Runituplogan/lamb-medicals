@@ -54,20 +54,20 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
       <div className="w-full mx-auto max-w-[1200px] flex flex-col md:flex-row gap-7 md:gap-8 lg:gap-20 xl:gap-28">
         <div className="md:w-[50%]">
           <h1
-            data-aos="fade-up"
+           
             className="font-bold text-[32px] sm:text-2xl md:text-3xl xl:text-5xl pb-7  lg:text-4xl text-black font-rubik"
           >
             {data?.headerText}
           </h1>
 
           <p
-            data-aos="fade-up"
+           
             className="xl:block hidden text-lg leading-loose w-full text-black"
           >
             {data?.BodyText}
           </p>
           <p
-            data-aos="fade-up"
+           
             className="lg:hidden block text-base leading-loose w-full text-black mt-3"
           >
             {data?.BodyText}
@@ -80,10 +80,10 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
             src="/location.png"
             alt="location map" 
             className="mt-7 w-full md:w-auto md:h-auto"
-            data-aos="fade-up"
+           
           />
         </div>
-        <div data-aos="fade-up " className="md:w-[50%] w-full">
+        <div className="md:w-[50%] w-full">
           <form
             onSubmit={sendEmail}
             className="w-full h-full flex flex-col justify-between space-y-5 xs:space-y-10 font-work_sans"

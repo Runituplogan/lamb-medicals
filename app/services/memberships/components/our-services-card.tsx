@@ -36,7 +36,7 @@ export default function OurServicesCard({ service }: OurServicesCardProps) {
   return (
     <article
       className="grid gap-[2rem] rounded-md bg-white p-[2.4rem]"
-      data-aos="fade-up"
+     
     >
       <hgroup className="flex items-center gap-[1.2rem]">
         <span className="inline-flex size-[4rem] items-center justify-center rounded-md bg-primary text-white text-2xl">

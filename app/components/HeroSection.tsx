@@ -12,33 +12,33 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
     >
       {/* Background image for mobile view */}
       <img
-        data-aos="fade-right"
+       
         src={data?.backgroundImage}
         alt="memberships"
         className="absolute inset-0 h-screen object-cover object-center xs:hidden block"
       />
       <div className="relative h-full z-10 flex flex-col items-center gap-4 lg:gap-7 xs:mt-8 md:mt-0 md:py-10 py-20 justify-center text-center container max-w-[900px]">
         <h1
-          data-aos="fade-up"
+         
           className="xl:text-[70px] md:text-6xl xs:text-5xl text-[32px] text-white font-bold"
         >
           {data?.headerText}
         </h1>
         <p
-          data-aos="fade-up"
+         
           className="xl:text-lg text-white  leading-relaxed lg:block hidden w-[80%] text-center font-work_sans"
         >
           {data?.bodyText}
         </p>
         <p
-          data-aos="fade-up"
+         
           className="text-white md:text-center leading-loose block  text-center lg:hidden font-work_sans text-[16px]"
         >
           {data?.bodyText}
         </p>
 
         <div
-          data-aos="fade-up"
+         
           className="xs:flex hidden mx-auto self-center h-max justify-center items-center gap-5 mt-8 font-poppins font-semibold"
         >
           <Link href={'/schedule-online'}>
@@ -49,7 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
         </div>
 
         <div
-          data-aos="fade-up"
+         
           className="w-full mx-auto xs:hidden mt-8 font-poppins font-semibold "
         >
           <Link href={'/schedule-online'}>

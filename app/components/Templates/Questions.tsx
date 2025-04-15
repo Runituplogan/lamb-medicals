@@ -15,13 +15,13 @@ const Questions:React.FC<QuestionsProps> = ({data}) => {
       <div className="w-full mx-auto max-w-[1200px] flex flex-col gap-7 md:gap-10 divide-y-[0.4px] divide-[#D9D9D9]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           <h1
-            data-aos="fade-up"
+           
             className="text-black font-bold text-[32px] sm:text-2xl md:text-3xl lg:text-4xl xl:text-[70px] leading-tight"
           >
             {/* Questions? We've Got The Answers Here For You */}
             {data?.headerText}
           </h1>
-          <div data-aos="fade-up" className="font-work_sans">
+          <div className="font-work_sans">
             <p className="text-black text-base sm:text-lg md:text-xl">
               {/* Find quick answers to common queries in our FAQs section, designed
               to address your most pressing questions and provide you with the

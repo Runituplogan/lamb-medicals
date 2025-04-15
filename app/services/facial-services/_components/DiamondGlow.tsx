@@ -20,7 +20,7 @@ const DiamondGlow:React.FC<DiamondGlowProps>=({data}) =>{
         btnLink={`/schedule-online`}
         btnText={`${data?.cta_button.text}`}
       />
-      <div className="grid md:grid-cols-2 gap-7" data-aos="zoom-in">
+      <div className="grid md:grid-cols-2 gap-7">
         {/* <Image
           src="/images/facial-services/diamondglow-1.png"
           alt="diamonGold"
