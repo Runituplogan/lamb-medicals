@@ -13,7 +13,7 @@ interface laserVainProps {
 
 export default function LaserVeinTherapy({ data, questions }: laserVainProps) {
   return (
-    <Wrapper id="laser-wart-removal" className="grid gap-[4rem] py-[2rem]">
+    <Wrapper id="laser-wart-removal" className="grid gap-[2.5rem] py-[2rem]">
       <ServicesIntro
         title={data?.headerText}
         description={<p>{data?.bodyText}</p>}

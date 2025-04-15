@@ -11,7 +11,7 @@ interface MiraDryProps {
 }
 const MiraDry: React.FC<MiraDryProps> = ({ data, faqs }) => {
   return (
-    <Wrapper id="mira-dry" className="grid gap-[4rem]">
+    <Wrapper id="mira-dry" className="grid gap-[2.5em]">
       <ServicesIntro
         title={`${data?.headerText}`}
         description={
@@ -25,7 +25,7 @@ const MiraDry: React.FC<MiraDryProps> = ({ data, faqs }) => {
             Ideal for those with hyperhidrosis or anyone wanting to avoid harsh
             deodorants, miraDry delivers immediate results—you’ll leave your
             appointment sweat- and odor-free. With a{" "}
-            <span className="font-work_sans font-bold text-black">90% </span>
+            <span className="font-work_sans font-bold text-black">90% </span> 
             ‘Worth It’ rating on realself.com, most patients are thrilled after
             just one treatment. */}
           </span>

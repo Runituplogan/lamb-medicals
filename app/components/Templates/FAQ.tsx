@@ -13,7 +13,7 @@ const FAQ = ({ data }: { data?: IFaq[] }) => {
   
 
   return (
-    <section className="w-full bg-white py-10 md:py-20 px-8 md:px-10 xl:px-5">
+    <section className="w-full bg-white px-8 md:px-10 xl:px-5">
       <div
        // data-aos="fade-up"
         className="flex w-full max-w-[1200px] flex-col gap-7 divide-y-[0.4px] divide-[#D9D9D9] md:gap-10 mx-auto"
