@@ -27,7 +27,7 @@ export default function ServicesFAQ({
           {title}
         </h4>
         <p
-          className={`${align === "left" ? "text-left" : "text-center"} font-work_sans text-md font-normal leading-[2.4rem] tracking-[1.24px] text-black lg:text-lg lg:leading-[3.5rem]`}
+          className={`${align === "left" ? "text-left" : "text-center"} font-rubik text-md font-normal leading-[2.4rem] tracking-[1.24px] text-black lg:text-md lg:leading-[3.5rem]`}
         >
           {description}
         </p>

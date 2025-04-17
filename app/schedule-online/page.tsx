@@ -82,10 +82,10 @@ useEffect(() => {
         <h1 className="text-black font-rubik font-semibold text-2xl md:text-3xl lg:text-[35px] xl:text-[45px] 2xl:text-[48px] w-[90%] md:block hidden">
           {section.headerText}
         </h1>
-        <p className="font-medium text-sm lg:text-md text-black font-work_sans md:w-[90%] mt-5">
+        <p className="font-medium text-sm lg:text-md text-black  md:w-[90%] mt-5">
           {section.bodyText}
         </p>
-        <form className="w-full space-y-8 xs:space-y-10 font-work_sans mt-10" onSubmit={handleSubmit}>
+        <form className="w-full space-y-8 xs:space-y-10  mt-10" onSubmit={handleSubmit}>
           {section.formFields?.map((field, index) => (
             <div className="w-full" key={index}>
               {field.type !== "button" && <label className="text-black" htmlFor={field.label.toLowerCase().replace(/\s/g, "-")}>

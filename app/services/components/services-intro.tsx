@@ -26,7 +26,7 @@ export default function ServicesIntro({
         {title}
       </h3>
 
-      <div className="grid w-full gap-8 font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[3.5rem]">
+      <div className="grid w-full gap-8  text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[3.5rem]">
         {description}
       </div>
       <BookNowButton
@@ -39,4 +39,4 @@ export default function ServicesIntro({
   );
 }
 
-// className="font-work_sans text-md font-normal leading-[2.8rem] tracking-[0.02em] text-opacity-80 lg:text-md lg:leading-[3.5rem]"
+// className=" text-md font-normal leading-[2.8rem] tracking-[0.02em] text-opacity-80 lg:text-md lg:leading-[3.5rem]"

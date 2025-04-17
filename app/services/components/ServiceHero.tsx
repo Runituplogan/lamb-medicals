@@ -51,13 +51,13 @@ const ServiceHeroSection:React.FC<ServiceHeroSectionProps> = ({data}) => {
         </h1>
         <p
          
-          className="hidden w-[80%] text-center leading-relaxed text-white md:text-left lg:block xl:text-lg font-work_sans font-medium"
+          className="hidden w-[80%] text-center leading-relaxed text-white md:text-left lg:block xl:text-lg  font-medium"
         >
         {data?.bodyText}
         </p>
         <p
          
-          className="block leading-loose text-white lg:hidden font-work_sans font-medium"
+          className="block leading-loose text-white lg:hidden  font-medium"
         >
          {data?.bodyText}
         </p>

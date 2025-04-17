@@ -35,7 +35,7 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
           </h1>
           <p
            
-            className="text-white mt-6 text-md md:text-lg lg:text-xl font-work_sans"
+            className="text-white mt-6 text-md md:text-lg lg:text-xl "
           >
             {data?.bodyText}
             {/* We invite you to experience the difference that true personalized

@@ -58,7 +58,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className="fixed left-0 right-0 top-0 z-50 bg-white py-1 font-work_sans lg:pr-7 border-b xs:border-none border-[#DAE0E6]"
+      className="fixed left-0 right-0 top-0 z-50 bg-white py-1  lg:pr-7 border-b xs:border-none border-[#DAE0E6]"
     >
       <Wrapper>
         <div className="flex items-center justify-between px-6 py-3 md:px-8 md:py-4 lg:px-8">

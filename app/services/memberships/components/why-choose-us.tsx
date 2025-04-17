@@ -9,9 +9,9 @@ interface whyusProps {
 }
 
 export default function WhyChooseUs({ data }: whyusProps) {
-  console.log({ data });
+
   return (
-    <Wrapper className="grid items-start gap-[2.4rem] pb-[8rem] pt-10 xs:gap-[8rem] xs:pt-0 md:grid-rows-[38rem] xl:grid-cols-[58rem_1fr]">
+    <Wrapper className=" items-start gap-[2.4rem] pb-[8rem] pt-10 grid xs:gap-[8rem] xs:pt-0 xl:grid-cols-[58rem_1fr]">
       <div className="flex w-full flex-col gap-[2.4rem] px-2">
         <h3
           className="font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-black xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]"
@@ -20,7 +20,7 @@ export default function WhyChooseUs({ data }: whyusProps) {
           {data?.headerText}
         </h3>
         <p
-          className="font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]"
+          className=" text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]"
          
         >
           {data?.bodyText}
@@ -40,7 +40,7 @@ export default function WhyChooseUs({ data }: whyusProps) {
               <h6 className="font-rubik text-md font-medium text-black lg:text-lg">
                 {feature?.title}
               </h6>
-              <p className="font-work_sans text-sm font-normal text-black lg:text-md">
+              <p className=" text-sm font-normal text-black lg:text-md">
                 {feature?.bodyText}
               </p>
             </div>

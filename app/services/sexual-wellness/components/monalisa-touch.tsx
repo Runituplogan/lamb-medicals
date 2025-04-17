@@ -43,7 +43,7 @@ const MonalisaTouch: React.FC<MonalisaTouchProps> = ({ data, faqs }) => {
         </div>
       </ServicesAfterEffects>
       <p
-        className="grid w-full gap-8 font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]"
+        className="grid w-full gap-8  text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]"
        
       >
         {data?.subBodyText}

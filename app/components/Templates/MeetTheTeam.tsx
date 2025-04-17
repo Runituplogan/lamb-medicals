@@ -73,7 +73,7 @@ const MeetTheTeam = () => {
         <h1 className="font-rubik text-5xl font-semibold text-black">
           {data?.headerText}
         </h1>
-        <h2 className="mt-5 font-work_sans text-lg text-black">
+        <h2 className="mt-5 text-lg text-black">
           {/* Get to know the passionate professionals behind Lamb Medical. */}
           {data?.bodyText}
         </h2>

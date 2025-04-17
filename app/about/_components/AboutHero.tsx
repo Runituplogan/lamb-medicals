@@ -28,7 +28,7 @@ const AboutSection: React.FC<AboutHeroSectionProps>  = ({data}) => {
         </p>
         <p
          
-          className="block leading-loose text-white lg:hidden sm:text-lg font-work_sans font-medium"
+          className="block leading-loose text-white lg:hidden sm:text-lg  font-medium"
         >
           {/* At Lamb Medical, we know your time is valuable. That’s why we offer
           personalized, concierge-style care, giving you direct access to your

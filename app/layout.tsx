@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 };
 
 const workSans = Work_Sans({
-  variable: "--font-work_sans",
+  variable: "--",
   subsets: ["latin"],
   display: "swap",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],

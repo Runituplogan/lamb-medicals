@@ -42,10 +42,10 @@ const Dermaplanning: React.FC<DermaplaningProps> = ({ data }) => {
         className="object-cover xs:hidden block"
       /> */}
 
-      <p className="font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]">
+      <p className=" text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]">
         {data?.additional_infos[0].bodyText}
       </p>
-      <p className="font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]">
+      <p className=" text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]">
         {data?.additional_infos[1].bodyText}
       </p>
     </Wrapper>

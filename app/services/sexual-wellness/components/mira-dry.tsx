@@ -18,14 +18,14 @@ const MiraDry: React.FC<MiraDryProps> = ({ data, faqs }) => {
           <span>
             {data?.bodyText}
             {/* miraDry is the only{" "}
-            <span className="font-work_sans font-bold text-black">
+            <span className=" font-bold text-black">
               FDA-approved{" "}
             </span>
             treatment for permanent reduction of underarm sweat, odor, and hair.
             Ideal for those with hyperhidrosis or anyone wanting to avoid harsh
             deodorants, miraDry delivers immediate results—you’ll leave your
             appointment sweat- and odor-free. With a{" "}
-            <span className="font-work_sans font-bold text-black">90% </span> 
+            <span className=" font-bold text-black">90% </span> 
             ‘Worth It’ rating on realself.com, most patients are thrilled after
             just one treatment. */}
           </span>

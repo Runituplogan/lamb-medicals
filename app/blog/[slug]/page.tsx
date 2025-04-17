@@ -154,11 +154,11 @@ export default async function BlogPost({ params }: any) {
                      : item.title|| ""}
                  </p>
    
-                 <p className="text-black font-medium text-sm lg:text-mdmt-5 font-work_sans">
+                 <p className="text-black font-medium text-sm lg:text-mdmt-5 ">
                    {new Date(item.publishedAt).toDateString()}
                  </p>
    
-                 <p className="text-black font-[400] text-sm lg:text-mdmt-6 font-work_sans">
+                 <p className="text-black font-[400] text-sm lg:text-mdmt-6 ">
                    {item.body?.[0]?.children?.[0]?.text?.length > 100
                      ? item.body[0].children[0].text.substring(0, 100) + "..."
                      : item.body?.[0]?.children?.[0]?.text || ""}
@@ -166,7 +166,7 @@ export default async function BlogPost({ params }: any) {
                </div>
    
                <Link href={`/blog/${item.slug?.current}`}>
-                 <button className="rounded-md bg-primary px-4 py-2.5 text-white font-work_sans mt-7 text-sm md:text-md ease transition-all duration-300 hover:opacity-65">
+                 <button className="rounded-md bg-primary px-4 py-2.5 text-white  mt-7 text-sm md:text-md ease transition-all duration-300 hover:opacity-65">
                    Read more
                  </button>
                </Link>

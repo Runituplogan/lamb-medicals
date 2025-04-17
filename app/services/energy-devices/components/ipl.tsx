@@ -18,7 +18,7 @@ const IPL: React.FC<IPLProps> = ({ data, iplFaq }) => {
         description={data?.bodyText as string}
       />
       <p
-        className="font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]"
+        className=" text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]"
        
       >
         {data?.subsection.bodyText}

@@ -54,7 +54,7 @@ const ExperienceLamb: React.FC<Section2Props> = ({ data }) => {
           </h1>
           <p
            
-            className="mt-6 font-work_sans text-md text-black md:text-lg lg:text-xl"
+            className="mt-6  text-md text-black md:text-lg lg:text-xl"
           >
             {data?.bodyText}
           </p>

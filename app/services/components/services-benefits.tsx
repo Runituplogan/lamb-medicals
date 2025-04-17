@@ -19,7 +19,7 @@ export default function ServicesBenefits({
       </h3>
       <ul className="grid gap-[0.6ren] lg:gap-[1rem]">
         <h5
-          className="w-full font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]"
+          className="w-full  text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]"
          
         >
           {!!description && description}
@@ -28,7 +28,7 @@ export default function ServicesBenefits({
         {benefits.map((benefit, index) => (
           <li
             key={index}
-            className="list-inside list-disc px-[1.2rem] font-work_sans text-md font-medium leading-[3.5rem] tracking-[0.02em] text-black xs:text-md xl:px-[3.5rem]"
+            className="list-inside list-disc px-[1.2rem]  text-md font-medium leading-[3.5rem] tracking-[0.02em] text-black xs:text-md xl:px-[3.5rem]"
            
           >
             {benefit}

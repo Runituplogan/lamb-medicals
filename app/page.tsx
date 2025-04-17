@@ -105,8 +105,7 @@ export default function Home() {
               {section1?.headerText}
             </h1>
             <p
-             
-              className="text-black mt-6 text-md xs:text-lg lg:text-xl font-work_sans"
+              className="text-black mt-6 text-md xs:text-lg lg:text-md "
             >
               {section1?.bodyText}
             </p>

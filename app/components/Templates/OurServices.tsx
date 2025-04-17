@@ -45,7 +45,7 @@ const OurServices: React.FC<Section3Props> = () => {
 
         <h2
          
-          className="mt-5 font-work_sans leading-loose text-black md:text-lg lg:w-[70%] xl:w-[60%]"
+          className="mt-5  leading-loose text-black md:text-lg lg:w-[70%] xl:w-[60%]"
         >
           {data?.bodyText}
         </h2>

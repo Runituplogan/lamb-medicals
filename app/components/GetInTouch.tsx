@@ -86,7 +86,7 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
         <div className="md:w-[50%] w-full">
           <form
             onSubmit={sendEmail}
-            className="w-full h-full flex flex-col justify-between space-y-5 xs:space-y-10 font-work_sans"
+            className="w-full h-full flex flex-col justify-between space-y-5 xs:space-y-10 "
           >
             {data?.form?.fields.map((field) => (
               <div key={field.name} className="w-full">

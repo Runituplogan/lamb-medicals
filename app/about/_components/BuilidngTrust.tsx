@@ -20,7 +20,7 @@ const BuilidngTrust: React.FC<BuildTrustSectionProps>  = ({data}) => {
           </h1>
           <h2
            
-            className="mt-5 font-work_sans text-center leading-loose text-black md:text-lg w-full"
+            className="mt-5  text-center leading-loose text-black md:text-lg w-full"
           >
             {/* From preventive care and wellness programs to advanced treatments
             and personalized health plans, our offerings are designed to empower

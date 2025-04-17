@@ -27,10 +27,10 @@ const AethesticsMembership: React.FC<AethesticsMembershipProps> = ({
             <h4 className="font-rubik text-[21px] font-semibold text-black xs:text-[3.2rem]">
               {member?.title}
             </h4>
-            <p className="pb-[1.8rem] font-work_sans text-[16px] font-medium leading-[3rem] tracking-[0.02em] text-black xs:text-lg">
+            <p className="pb-[1.8rem]  text-[16px] font-medium leading-[3rem] tracking-[0.02em] text-black xs:text-lg">
               {member?.description}
             </p>
-            <ul className="flex flex-wrap items-center gap-x-[1rem] pb-[2.4rem] font-work_sans">
+            <ul className="flex flex-wrap items-center gap-x-[1rem] pb-[2.4rem] ">
               {member.services.map((item, index) => (
                 <li
                   className="flex items-center gap-4 text-[14px] font-semibold leading-[3rem] tracking-[0.02em] text-black xs:text-md"

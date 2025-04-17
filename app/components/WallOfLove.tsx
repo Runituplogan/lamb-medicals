@@ -58,7 +58,7 @@ const WallOfLove: React.FC<Section5Props> = ({ data }) => {
   }, [controls, slides.length]);
 
   return (
-    <section className="h-full w-full bg-white py-28 md:pb-32 md:pt-56">
+    <section className="h-full w-full bg-white py-12 pb-20">
       <h1
        
         className="w-full px-5 text-center font-rubik text-[32px] font-semibold leading-tight text-black sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[128px]"
@@ -86,7 +86,7 @@ const Card: React.FC<any> = ({ image, testimonial, name, occupation, social, use
   const toggleReadMore = () => setIsExpanded(!isExpanded);
 
   return (
-    <div className="h-full w-[500px] rounded-md bg-white px-5 py-7 font-work_sans shadow-md shadow-[#00000012] lg:px-8">
+    <div className="h-full w-[500px] rounded-md bg-white px-5 py-7  shadow-md shadow-[#00000012] lg:px-8">
       {/* User Info */}
       <div className="gap3 flex w-full items-center justify-between">
         <div className="flex items-center justify-start gap-3">

@@ -26,13 +26,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
         </h1>
         <p
          
-          className="xl:text-lg text-white  leading-relaxed lg:block hidden w-[80%] text-center font-work_sans"
+          className="xl:text-lg text-white  leading-relaxed lg:block hidden w-[80%] text-center "
         >
           {data?.bodyText}
         </p>
         <p
          
-          className="text-white md:text-center leading-loose block  text-center lg:hidden font-work_sans text-md"
+          className="text-white md:text-center leading-loose block  text-center lg:hidden  text-md"
         >
           {data?.bodyText}
         </p>

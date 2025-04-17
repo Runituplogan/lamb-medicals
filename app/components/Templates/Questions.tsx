@@ -21,8 +21,8 @@ const Questions:React.FC<QuestionsProps> = ({data}) => {
             {/* Questions? We've Got The Answers Here For You */}
             {data?.headerText}
           </h1>
-          <div className="font-work_sans">
-            <p className="text-black text-md sm:text-lg md:text-xl">
+          <div className="">
+            <p className="text-black text-md sm:text-md md:text-lg">
               {/* Find quick answers to common queries in our FAQs section, designed
               to address your most pressing questions and provide you with the
               information you need. Many questions surround concierge medicine,
