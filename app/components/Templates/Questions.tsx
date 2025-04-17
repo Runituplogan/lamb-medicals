@@ -22,7 +22,7 @@ const Questions:React.FC<QuestionsProps> = ({data}) => {
             {data?.headerText}
           </h1>
           <div className="font-work_sans">
-            <p className="text-black text-base sm:text-lg md:text-xl">
+            <p className="text-black text-md sm:text-lg md:text-xl">
               {/* Find quick answers to common queries in our FAQs section, designed
               to address your most pressing questions and provide you with the
               information you need. Many questions surround concierge medicine,

@@ -49,7 +49,7 @@ const FaqItemButton: React.FC<FaqItemButtonProps> = ({ item, isExpanded, onToggl
   return (
     <div className={`${isExpanded ? "" : "pb-8"} w-full pt-5`}>
       <div className="flex w-full items-center justify-between gap-3">
-        <p className="w-[90%] xs:w-full font-rubik text-[14px] font-medium text-black md:text-base lg:text-lg">
+        <p className="w-[90%] xs:w-full font-rubik text-[14px] font-medium text-black md:text-md lg:text-lg">
           {item.question}
         </p>
         <button
@@ -70,7 +70,7 @@ const FaqItemButton: React.FC<FaqItemButtonProps> = ({ item, isExpanded, onToggl
       >
         <div
           ref={contentRef}
-          className="w-full py-4 text-sm font-medium text-black sm:text-sm md:pr-7 md:text-base lg:pr-10 xl:pr-16"
+          className="w-full py-4 text-sm font-medium text-black sm:text-sm md:pr-7 md:text-md lg:pr-10 xl:pr-16"
         >
           <p>{item.answer}</p>
         </div>

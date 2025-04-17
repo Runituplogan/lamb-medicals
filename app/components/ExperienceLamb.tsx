@@ -54,7 +54,7 @@ const ExperienceLamb: React.FC<Section2Props> = ({ data }) => {
           </h1>
           <p
            
-            className="mt-6 font-work_sans text-base text-black md:text-lg lg:text-xl"
+            className="mt-6 font-work_sans text-md text-black md:text-lg lg:text-xl"
           >
             {data?.bodyText}
           </p>
@@ -72,10 +72,10 @@ const ExperienceLamb: React.FC<Section2Props> = ({ data }) => {
                   <BiCheck size={23} color="#12121299" />
                 </div>
                 <div className="">
-                  <p className="text-sm font-medium md:text-base lg:text-lg">
+                  <p className="text-sm font-medium md:text-md lg:text-lg">
                     {item.title}
                   </p>
-                  <p className="text-xs sm:text-sm lg:text-base">
+                  <p className="text-xs sm:text-sm lg:text-md">
                     {item.description}
                   </p>
                 </div>
@@ -86,7 +86,7 @@ const ExperienceLamb: React.FC<Section2Props> = ({ data }) => {
             <button
              
               onClick={() => setIsExpanded((prev) => !prev)}
-              className="mt-10 h-20 w-full xs:w-max rounded-md bg-primary px-12 font-poppins text-sm font-semibold text-white transition hover:opacity-70 sm:text-base md:px-14"
+              className="mt-10 h-20 w-full xs:w-max rounded-md bg-primary px-12 font-poppins text-sm font-semibold text-white transition hover:opacity-70 sm:text-md md:px-14"
             >
               {isExpanded ? "See Less" : "See all benefits"}
             </button>

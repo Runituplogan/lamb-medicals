@@ -71,7 +71,7 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
             {data?.subsections[2].title}
           </h3>
 
-          <div className="grid w-full gap-8 font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]">
+          <div className="grid w-full gap-8 font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]">
             {data?.subsections[2].bodyText}
           </div>
         </div>

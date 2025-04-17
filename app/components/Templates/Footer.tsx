@@ -83,11 +83,11 @@ const Footer = () => {
               className="w-72 md:w-auto"
               alt="lamb medical logo"
             />
-            <p className="mt-7 text-[14px] font-medium text-white lg:text-base xl:text-lg">
+            <p className="mt-7 text-[14px] font-medium text-white lg:text-md xl:text-lg">
              {data1?.bodyText}
             </p>
 
-            <p className="mt-8 text-[16px] font-semibold md:text-base lg:text-lg">
+            <p className="mt-8 text-[16px] font-semibold md:text-md lg:text-lg">
               {data1?.companyLinks.socials.headerText}
             </p>
 
@@ -133,7 +133,7 @@ const Footer = () => {
           </div>
 
           {/* Company */}
-          <div className="w-full pl-0 text-[16px] md:text-base lg:pl-10 lg:text-lg xl:pl-20 2xl:pl-28">
+          <div className="w-full pl-0 text-[16px] md:text-md lg:pl-10 lg:text-lg xl:pl-20 2xl:pl-28">
             <h2 className="font-semibold">{data1?.companyLinks.headerText}</h2>
 
             <div className="mt-6 flex w-full flex-col space-y-4">
@@ -163,7 +163,7 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="w-full pl-0 text-[16px] md:text-base lg:pl-10 lg:text-lg xl:pl-20">
+          <div className="w-full pl-0 text-[16px] md:text-md lg:pl-10 lg:text-lg xl:pl-20">
             <h2 className="font-semibold">Contact</h2>
 
             <div className="mt-6 flex w-full flex-col space-y-4">
@@ -193,7 +193,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 w-full border-t border-white pb-10 pt-16 text-center">
-          <p className="text-[16px] text-white sm:text-sm lg:text-base">
+          <p className="text-[16px] text-white sm:text-sm lg:text-md">
             {data1?.companyLinks.copyright}
           </p>
         </div>

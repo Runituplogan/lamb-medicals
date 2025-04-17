@@ -42,7 +42,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
           className="xs:flex hidden mx-auto self-center h-max justify-center items-center gap-5 mt-8 font-poppins font-semibold"
         >
           <Link href={'/schedule-online'}>
-            <button className="text-white h-20 px-12 md:px-14 rounded-md bg-primary transition hover:opacity-70 xs:text-base text-sm">
+            <button className="text-white h-20 px-12 md:px-14 rounded-md bg-primary transition hover:opacity-70 xs:text-md text-sm">
               {data?.buttonPrimaryText}
             </button>
           </Link>
@@ -53,7 +53,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
           className="w-full mx-auto xs:hidden mt-8 font-poppins font-semibold "
         >
           <Link href={'/schedule-online'}>
-            <button className="text-white h-20 px-12 md:px-14 rounded-md bg-primary transition hover:opacity-70 xs:text-base text-sm">
+            <button className="text-white h-20 px-12 md:px-14 rounded-md bg-primary transition hover:opacity-70 xs:text-md text-sm">
               {data?.buttonPrimaryText}
             </button>
           </Link>

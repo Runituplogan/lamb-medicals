@@ -166,7 +166,7 @@ export default async function BlogPost({ params }: any) {
                </div>
    
                <Link href={`/blog/${item.slug?.current}`}>
-                 <button className="rounded-md bg-primary px-4 py-2.5 text-white font-work_sans mt-7 text-sm md:text-base ease transition-all duration-300 hover:opacity-65">
+                 <button className="rounded-md bg-primary px-4 py-2.5 text-white font-work_sans mt-7 text-sm md:text-md ease transition-all duration-300 hover:opacity-65">
                    Read more
                  </button>
                </Link>

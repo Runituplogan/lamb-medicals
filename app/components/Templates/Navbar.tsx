@@ -258,7 +258,7 @@ const NavLink = ({ item }: { item: INavItems }) => {
       </Link>
       {item.subItems && isExpanded && (
         <div className="absolute -left-1/2 top-14 z-50 mt-2 max-h-max h-[85vh] min-w-max rounded-md bg-white p-8 shadow-lg overflow-y-auto">
-          <h2 className="mb-6 text-xs text-[#8E9BAE] md:text-base xl:text-[18px]">
+          <h2 className="mb-6 text-xs text-[#8E9BAE] md:text-md xl:text-[18px]">
             {item.label}
           </h2>
           <div
@@ -294,7 +294,7 @@ export default Navbar;
 
 // {item.subItems && isExpanded && (
 //   <div className="w- to fixed left-0 top-24 z-50 mt-2 w-screen min-w-max rounded-md bg-white px-8 py-10 shadow-lg md:px-16 lg:px-32 lg:py-14">
-//     <h2 className="mb-6 text-xs text-[#8E9BAE] md:text-base xl:text-[18px]">
+//     <h2 className="mb-6 text-xs text-[#8E9BAE] md:text-md xl:text-[18px]">
 //       {item.label}
 //     </h2>
 //     <div

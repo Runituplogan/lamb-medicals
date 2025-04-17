@@ -67,12 +67,12 @@ const ServiceHeroSection:React.FC<ServiceHeroSectionProps> = ({data}) => {
           className="mt-8 flex h-max items-center justify-center gap-6 font-poppins font-semibold md:justify-start md:gap-10 xs:w-max w-full px-3 xs:px-0"
         >
           <Link href="#service-section" className="xs:w-max w-full">
-            <button className="xs:w-max w-full h-20 rounded-md bg-primary text-white transition hover:opacity-70 text-sm lg:text-base xs:px-14">
+            <button className="xs:w-max w-full h-20 rounded-md bg-primary text-white transition hover:opacity-70 text-sm lg:text-md xs:px-14">
               {data?.cta_buttons[0].text}
             </button>
           </Link>
           <Link href="/schedule-online" className="xs:w-max w-full">
-            <button className="xs:w-max w-full h-20 rounded-md bg-white text-sm lg:text-base text-black transition hover:opacity-70 xs:px-14">
+            <button className="xs:w-max w-full h-20 rounded-md bg-white text-sm lg:text-md text-black transition hover:opacity-70 xs:px-14">
             {data?.cta_buttons[1].text}
             </button>
           </Link>

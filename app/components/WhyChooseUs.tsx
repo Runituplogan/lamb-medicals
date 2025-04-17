@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
           className="border-[#056FC5] bg-white border-2 p-4 rounded-md flex flex-col gap-2"
         >
           <div className="flex items-end">
-            <div className="bg-[#056FC533] text-[#056FC5] p-3 font-bold rounded-lg text-base gap-3 flex items-center">
+            <div className="bg-[#056FC533] text-[#056FC5] p-3 font-bold rounded-lg text-md gap-3 flex items-center">
               <AiOutlineLike className="text-[#056FC5] font-bold text-xl" />
               <p>Why choose us</p>
             </div>

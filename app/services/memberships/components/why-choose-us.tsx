@@ -20,7 +20,7 @@ export default function WhyChooseUs({ data }: whyusProps) {
           {data?.headerText}
         </h3>
         <p
-          className="font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]"
+          className="font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]"
          
         >
           {data?.bodyText}
@@ -37,10 +37,10 @@ export default function WhyChooseUs({ data }: whyusProps) {
               <CheckIcon />
             </i>
             <div className="flex flex-col gap-[0.8rem]">
-              <h6 className="font-rubik text-base font-medium text-black lg:text-lg">
+              <h6 className="font-rubik text-md font-medium text-black lg:text-lg">
                 {feature?.title}
               </h6>
-              <p className="font-work_sans text-sm font-normal text-black lg:text-base">
+              <p className="font-work_sans text-sm font-normal text-black lg:text-md">
                 {feature?.bodyText}
               </p>
             </div>

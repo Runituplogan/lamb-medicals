@@ -33,7 +33,7 @@ export default function ServicesHero({
           {title}
         </h2>
         <p
-          className="font-work_sans text-base font-normal leading-[2.8rem] tracking-[0.02em] text-opacity-80 lg:text-md lg:leading-[3.5rem]"
+          className="font-work_sans text-md font-normal leading-[2.8rem] tracking-[0.02em] lg:text-md lg:leading-[3.5rem]"
          
         >
           {description}

@@ -43,12 +43,12 @@ export default function OurServicesCard({ service }: OurServicesCardProps) {
           {iconMap[service.icon] ? <FontAwesomeIcon icon={iconMap[service.icon]} /> : null}
         </span>
         {service.title.startsWith("(coming soon!)") && (
-          <span className="font-work_sans text-base font-semibold tracking-[0.02em] text-black">
+          <span className="font-work_sans text-md font-semibold tracking-[0.02em] text-black">
             (coming soon!)
           </span>
         )}
       </hgroup>
-      <p className="font-work_sans text-base leading-[2.8rem] tracking-[0.02em] text-black">
+      <p className="font-work_sans text-md leading-[2.8rem] tracking-[0.02em] text-black">
         {cleanTitle}
       </p>
     </article>

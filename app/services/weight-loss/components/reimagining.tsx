@@ -49,7 +49,7 @@ const ReImaging: React.FC<ReImagingProps> = ({ data, faqs }) => {
         <h3 className="font-rubik text-[32px] xs:text-[4.8rem] font-semibold leading-[4rem] text-black">
           {data?.headerText}
         </h3>
-        <p className="mx-auto grid xs:w-[80%] gap-8 font-work_sans text-[14px] xs:text-md font-medium leading-[3.2rem] tracking-[0.02rem] text-black opacity-80">
+        <p className="mx-auto grid xs:w-[80%] gap-8 font-work_sans text-[14px] xs:text-md font-medium leading-[3.2rem] tracking-[0.02rem] text-black">
           {data?.bodyText}
         </p>
       </section>

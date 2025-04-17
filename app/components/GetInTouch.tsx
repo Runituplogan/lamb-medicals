@@ -68,7 +68,7 @@ const GetInTouch: React.FC<getInTouchProps> = ({ data }) => {
           </p>
           <p
            
-            className="lg:hidden block text-base leading-loose w-full text-black mt-3"
+            className="lg:hidden block text-md leading-loose w-full text-black mt-3"
           >
             {data?.BodyText}
           </p>

@@ -52,7 +52,7 @@ const OurServices: React.FC<Section3Props> = () => {
        {data?.features && data?.features?.length > 3 && <button
          
           onClick={() => setIsExpanded((prev) => !prev)}
-          className="xs:w-max w-full font-poppins mt-10 h-20 rounded-md bg-primary px-12 text-sm font-semibold text-white transition hover:opacity-70 sm:text-base md:px-14"
+          className="xs:w-max w-full font-poppins mt-10 h-20 rounded-md bg-primary px-12 text-sm font-semibold text-white transition hover:opacity-70 sm:text-md md:px-14"
         >
           {isExpanded ? "See Less" : "See all services"}
         </button>}

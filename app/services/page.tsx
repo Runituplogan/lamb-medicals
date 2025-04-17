@@ -35,7 +35,7 @@ export default function Page() {
           <p className="text-lg font-bold sm:text-xl md:text-2xl lg:text-md">
             {heroData?.information[0].BodyText}
           </p>
-          <p className="text-base font-medium sm:text-lg md:text-md">
+          <p className="text-md font-medium sm:text-lg md:text-md">
             {heroData?.information[0].headerText}
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function Page() {
           <p className="text-lg font-bold sm:text-xl md:text-2xl lg:text-md">
             {heroData?.information[1].headerText}
           </p>
-          <p className="text-base font-medium sm:text-lg md:text-md">
+          <p className="text-md font-medium sm:text-lg md:text-md">
             {heroData?.information[1].BodyText}
           </p>
         </div>
