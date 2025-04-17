@@ -15,7 +15,6 @@ const Transformation: React.FC<TransformationProps> = ({ data }) => {
       <div className="flex w-full flex-col gap-[2.4rem]">
         <h3
           className="font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-black xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]"
-         
         >
           {data?.headerText}
         </h3>

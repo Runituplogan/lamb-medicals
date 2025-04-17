@@ -103,6 +103,13 @@ interface HomepageSection2 {
   buttonPrimaryLink?: string;
 }
 
+interface FeatureType {
+  title: string;
+  description: string;
+  image: string;
+  linkText?: string;
+}
+
 interface OurServicesType {
   type: string;
   headerText?: string;

@@ -58,9 +58,9 @@ export default function FacialServices() {
   const dermaplanning = facialServicesPageData.content.find((item: DermaplaningType) => item.type === "section4");
   const peels = facialServicesPageData.content.find((item: PeelsType) => item.type === "section5");
   const ellebanaLashLift = facialServicesPageData.content.find((item: EllebanaLashLiftType) => item.type === "section6");
-
-  return (
-    <Fragment >
+ 
+  return ( 
+    <Fragment>
       <ServicesHero
         image={heroData?.image as string}
         title={heroData?.headerText as string}

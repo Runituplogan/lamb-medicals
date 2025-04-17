@@ -35,10 +35,10 @@ const OurServices: React.FC<OurServicesProps> = ({ data }) => {
     <section className="bg-primary-light py-[5rem]">
       <Wrapper className="grid gap-[2rem]">
         <hgroup className="grid gap-[2rem]">
-          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[3.7rem] text-black xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
+          <h3 className="font-rubik text-[3.2rem] font-semibold text-black xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4rem] xl:leading-[4rem]">
             {data?.headerText}
           </h3>
-          <p className="w-full  text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:w-[60%] md:leading-[3.6rem] lg:text-lg xxl:w-[40%] xxl:text-md xxl:leading-[4.5rem]">
+          <p className="w-full  text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg  xxl:text-md xxl:leading-[4.5rem]">
             {data?.bodyText}
           </p>
         </hgroup>

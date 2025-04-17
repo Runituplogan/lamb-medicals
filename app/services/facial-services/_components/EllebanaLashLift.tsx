@@ -45,9 +45,9 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
         alt="ellana lash lift"
         className="object-cover md:hidden block"
       /> */}
-      <div className="w-full space-y-[2rem]">
-        <div className="space-y-[2rem] pt-[2rem]">
-          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[2.4rem] text-black xs:text-[4rem] lg:text-[5.8rem] lg:leading-[3.2rem] xl:leading-[6rem]">
+      <div className="w-full space-y-[1rem]">
+        <div className="space-y-[1rem]">
+          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[2.4rem] text-black xs:text-[3rem] lg:text-[3.8rem] lg:leading-[3.2rem] xl:leading-[6rem]">
             {data?.subsections[0].title}
           </h3>
 
@@ -56,8 +56,8 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
           </div>
         </div>
 
-        <div className="space-y-[2rem] pt-[2rem]">
-          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[2.4rem] text-black xs:text-[4rem] lg:text-[5.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
+        <div className="space-y-[1rem]">
+          <h3 className="font-rubik text-[2.2rem] font-semibold leading-[2.4rem] text-black xs:text-[4rem] lg:text-[3.8rem] lg:leading-[4.2rem] xl:leading-[6rem]">
             {data?.subsections[1].title}
           </h3>
 
@@ -66,21 +66,20 @@ const EllebanaLashList: React.FC<EllebanaLashListProps> = ({ data }) => {
           </div>
         </div>
 
-        <div className="space-y-[2rem] pt-[2rem]">
-          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[6rem] text-black xs:text-[46.57px]">
+        <div className="space-y-[1rem]">
+          <h3 className="font-rubik text-[3.2rem] font-semibold leading-[2.4rem] text-black xs:text-[3rem] lg:text-[3.8rem] lg:leading-[3.2rem] xl:leading-[6rem]">
             {data?.subsections[2].title}
           </h3>
 
-          <div className="grid w-full gap-8  text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]">
+          <div className="grid w-full gap-8  text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]">
             {data?.subsections[2].bodyText}
           </div>
         </div>
       </div>
       <div className="py-16">
-        <h3 className="w-full font-rubik text-[3.2rem] font-semibold leading-[6rem] text-black xs:text-[4rem] md:text-center">
+        <h3 className="w-full font-rubik text-[2.2rem] font-semibold leading-[6rem] text-black xs:text-[4rem] md:text-center">
           {data?.before_and_after[0].title}
         </h3>
-
         <div className="mt-16 grid w-full grid-cols-1 gap-10 md:grid-cols-2">
           {data?.before_and_after[0].images.map((item, index) => (
             <div className="relative" key={index}>

@@ -10,9 +10,21 @@ import Preloader from "../Preloader";
 const MAX_ACTIVE_WIDTH = 300;
 const MAX_INACTIVE_WIDTH = 150;
 
-interface MeetTheTeamSectionProps {
-  data?: MeetTeamType;
+
+function debounce<T extends (...args: unknown[]) => void>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: ReturnType<typeof setTimeout>;
+
+  return function (this: ThisParameterType<T>, ...args: Parameters<T>): void {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      func.apply(this, args);
+    }, wait);
+  };
 }
+
 
 const MeetTheTeam = () => {
   const { meetTheTeamPageData } = useMeetTheTeamPage();
@@ -22,19 +34,35 @@ const MeetTheTeam = () => {
   );
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [containerWidth, setContainerWidth] = useState<number>(0);
+  const [containerWidth, setContainerWidth] = useState<number>(
+    typeof window !== "undefined" ? window.innerWidth : 1200
+  );
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    if (!containerRef.current) return;
+
     const updateWidth = () => {
       if (containerRef.current) {
         setContainerWidth(containerRef.current.offsetWidth);
       }
     };
 
+    const debouncedUpdate = debounce(updateWidth, 100);
+    window.addEventListener("resize", debouncedUpdate);
+
+    const resizeObserver = new ResizeObserver(debouncedUpdate);
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current);
+    }
+
+    // Initial measurement
     updateWidth();
-    window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", debouncedUpdate);
+    };
   }, []);
 
   if (
@@ -64,7 +92,7 @@ const MeetTheTeam = () => {
   const inactiveCount = (totalMembers && totalMembers - 1) || 0;
   const inactiveWidth = Math.min(
     MAX_INACTIVE_WIDTH,
-    remainingWidth / inactiveCount,
+    remainingWidth / inactiveCount
   );
 
   return (
@@ -74,10 +102,12 @@ const MeetTheTeam = () => {
           {data?.headerText}
         </h1>
         <h2 className="mt-5 text-lg text-black">
-          {/* Get to know the passionate professionals behind Lamb Medical. */}
           {data?.bodyText}
         </h2>
-        <div ref={containerRef} className="mt-10 flex w-full">
+        <div 
+          ref={containerRef} 
+          className="mt-10 flex w-full min-w-[300px]"
+        >
           {data?.teamMembers.map((member, index) => (
             <div
               key={index}
@@ -87,7 +117,7 @@ const MeetTheTeam = () => {
               style={{
                 width:
                   activeIndex === index
-                    ? window.innerWidth >= 640 // 640px (sm screen)
+                    ? window.innerWidth >= 640
                       ? `${MAX_ACTIVE_WIDTH}px`
                       : "100%"
                     : window.innerWidth >= 640
@@ -103,13 +133,17 @@ const MeetTheTeam = () => {
                 className="h-[400px] w-full object-cover transition-all duration-300"
                 alt={member.name}
                 unoptimized
+                priority={index === activeIndex}
               />
 
               {activeIndex === index && (
                 <div className="absolute bottom-0 left-0 right-0 m-4 flex min-w-[200px] items-center justify-between rounded bg-white p-4 shadow-md">
                   {index > 0 && (
                     <div
-                      onClick={() => handleClick(index, "left")}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleClick(index, "left");
+                      }}
                       className="absolute left-2 cursor-pointer rounded-full bg-[#F1F1F1] p-2"
                     >
                       <MdChevronRight className="rotate-180 text-xl text-[#8E9BAE]" />
@@ -117,10 +151,14 @@ const MeetTheTeam = () => {
                   )}
 
                   <div
-                    className={`flex w-full flex-col items-center ${index > 0 && data?.teamMembers && index < data?.teamMembers?.length - 1 ? "text-center" : "text-left"}`}
+                    className={`flex w-full flex-col items-center ${
+                      index > 0 && data?.teamMembers && index < data?.teamMembers?.length - 1 
+                        ? "text-center" 
+                        : "text-left"
+                    }`}
                   >
                     <h3 className="text-lg font-bold">{member.name}</h3>
-                    <p className="text-gray-600 text-sm font-medium">
+                    <p className="text-sm font-medium text-gray-600">
                       {member.role}
                     </p>
                   </div>
@@ -128,7 +166,10 @@ const MeetTheTeam = () => {
                   {data?.teamMembers &&
                     index < data?.teamMembers.length - 1 && (
                       <div
-                        onClick={() => handleClick(index, "right")}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleClick(index, "right");
+                        }}
                         className="absolute right-2 cursor-pointer rounded-full bg-[#F1F1F1] p-2"
                       >
                         <MdChevronRight className="text-xl text-[#8E9BAE]" />
@@ -138,7 +179,7 @@ const MeetTheTeam = () => {
               )}
 
               {activeIndex !== index && (
-                <div className="absolute left-0 top-0 h-full w-full bg-[black] opacity-50" />
+                <div className="absolute left-0 top-0 h-full w-full bg-black opacity-50" />
               )}
             </div>
           ))}

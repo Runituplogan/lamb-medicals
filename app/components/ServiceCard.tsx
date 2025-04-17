@@ -4,7 +4,6 @@ import { IServices } from "../data/services";
 const ServiceCard = ({ title, description, link, bgImgSrc }: IServices) => {
   return (
     <div
-     
       style={{
         backgroundImage: `url(${bgImgSrc})`,
       }}

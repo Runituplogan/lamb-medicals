@@ -93,7 +93,6 @@ export default function Home() {
         <div className="w-full max-w-[1500px] grid lg:grid-cols-2 gap-10 lg:gap-20 xl:gap-32 2xl:gap-48">
           <div className="w-full my-auto">
             <h1
-             
               className="text-black md:block hidden font-rubik font-semibold text-6xl leading-tight"
             >
               {section1?.headerText}
@@ -105,7 +104,7 @@ export default function Home() {
               {section1?.headerText}
             </h1>
             <p
-              className="text-black mt-6 text-md xs:text-lg lg:text-md "
+              className="text-black mt-6 text-md xs:text-lg lg:text-[2.2rem] "
             >
               {section1?.bodyText}
             </p>
