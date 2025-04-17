@@ -13,7 +13,7 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
       style={{
         backgroundImage: "url(/blue-background.png",
       }}
-      className="w-full px-4 sm:px-10 md:px-14 py-28 lg:py-40 xl:py-48 bg-cover bg-no-repeat"
+      className="w-full px-4 sm:px-10 md:px-14 py-28 lg:py-35 xl:py-38 bg-cover bg-no-repeat"
     >
       <div className="w-full max-w-[1500px] grid lg:grid-cols-2 gap-16 sm:gap-20 lg:gap-32 2xl:gap-48">
         <div className="w-full my-auto">
@@ -86,12 +86,12 @@ const RedefineHealthCare: React.FC<RedefineHealthCareProps>= ({data}) => {
             </Link>
           </div>
         </div>
-        <div className="xs:block hidden">
+        <div className="xs:block max-h-[600px] hidden">
           <Image
             src={`${data?.image}`}
             width={1000}
             height={1000}
-            className="w-full h-full"
+            className="w-full h-full object-cover"
             alt="empowering"
           />
         </div>

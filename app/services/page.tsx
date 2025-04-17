@@ -32,18 +32,18 @@ export default function Page() {
       <ServiceHeroSection data={heroData} />
       <div className="flex w-full flex-col items-center justify-center gap-16 bg-primary py-20 font-work_sans text-white md:flex-row md:gap-20 md:py-28 lg:gap-36 lg:py-36 xl:gap-48">
         <div className="flex flex-col items-center justify-center gap-5">
-          <p className="text-lg font-bold sm:text-xl md:text-2xl lg:text-[36px]">
+          <p className="text-lg font-bold sm:text-xl md:text-2xl lg:text-md">
             {heroData?.information[0].BodyText}
           </p>
-          <p className="text-base font-medium sm:text-lg md:text-[20px]">
+          <p className="text-base font-medium sm:text-lg md:text-md">
             {heroData?.information[0].headerText}
           </p>
         </div>
         <div className="flex flex-col items-center justify-center gap-5">
-          <p className="text-lg font-bold sm:text-xl md:text-2xl lg:text-[36px]">
+          <p className="text-lg font-bold sm:text-xl md:text-2xl lg:text-md">
             {heroData?.information[1].headerText}
           </p>
-          <p className="text-base font-medium sm:text-lg md:text-[20px]">
+          <p className="text-base font-medium sm:text-lg md:text-md">
             {heroData?.information[1].BodyText}
           </p>
         </div>

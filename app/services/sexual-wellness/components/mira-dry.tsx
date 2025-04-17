@@ -32,7 +32,7 @@ const MiraDry: React.FC<MiraDryProps> = ({ data, faqs }) => {
         }
       />
 
-      <ServicesAfterEffects className="grid-cols-1 xs:grid-rows-[52rem]">
+      <ServicesAfterEffects className="grid-cols-1 mb-[6rem] xs:grid-rows-[52rem]">
         <div className="relative col-span-full h-full">
           <Image
             src={`${data?.image}`}

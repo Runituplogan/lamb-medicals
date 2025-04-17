@@ -22,7 +22,7 @@ const PRPRejuvenation: React.FC<PRPRejuvenationProp> = ({ data, question }) => {
         btnStyle={data?.cta_button?.style}
         btnLink="/schedule-online"
       />
-      <ServicesAfterEffects className="grid-cols-1 grid-rows-[56rem_48rem]">
+      <ServicesAfterEffects className="grid-cols-1 mb-5 grid-rows-[56rem_48rem]">
         <div className="relative h-full col-span-full">
           <Image
             src="/images/injectable-treatments/prp-rejuvenation-1.png"

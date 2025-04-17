@@ -89,7 +89,7 @@ export default function Home() {
       <HeroSection data={heroData ?? { type: "hero" }} />
 
       {/* Empowering your look */}
-      <Wrapper className="w-full px-5 py-16 sm:px-10 md:p-14">
+      <Wrapper className="w-full px-5 py-16 sm:px-10 md:pt-[120px]">
         <div className="w-full max-w-[1500px] grid lg:grid-cols-2 gap-10 lg:gap-20 xl:gap-32 2xl:gap-48">
           <div className="w-full my-auto">
             <h1
@@ -106,7 +106,7 @@ export default function Home() {
             </h1>
             <p
              
-              className="text-black mt-6 text-[14px] xs:text-lg lg:text-xl font-work_sans"
+              className="text-black mt-6 text-md xs:text-lg lg:text-xl font-work_sans"
             >
               {section1?.bodyText}
             </p>

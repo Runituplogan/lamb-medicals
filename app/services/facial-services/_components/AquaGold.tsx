@@ -53,7 +53,7 @@ const AquaGold: React.FC<FacialServiceProps> = ({ data, aquaGoldFaq }) => {
         className="object-cover xs:hidden block"
       /> */}
 
-      <p className="my-4 font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-[black] text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+      <p className="my-4 font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-[black] xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]">
         {data?.sections[0].bodyText}
         {/* The microchannel screw-like design safely and consistently delivers
         therapeutics at a consistent depth with minimal damage to the dermis,
@@ -83,7 +83,7 @@ const AquaGold: React.FC<FacialServiceProps> = ({ data, aquaGoldFaq }) => {
           className="object-cover"
         /> */}
 
-      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+      <p className="font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]">
         {data?.sections[1].bodyText}
       </p>
       <ServicesFAQ

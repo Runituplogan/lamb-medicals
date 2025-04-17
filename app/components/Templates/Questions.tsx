@@ -11,8 +11,8 @@ interface QuestionsProps {
 const Questions:React.FC<QuestionsProps> = ({data}) => {
   
   return (
-    <section className="w-full py-10 px-5 md:py-20 lg:py-32 bg-white font-rubik">
-      <div className="w-full mx-auto max-w-[1200px] flex flex-col gap-7 md:gap-10 divide-y-[0.4px] divide-[#D9D9D9]">
+    <section className="w-full py-10 md:py-20 lg:py-32 bg-white font-rubik">
+      <div className="w-full mx-auto px-5 max-w-[1200px] flex flex-col gap-7 md:gap-10 divide-y-[0.4px] divide-[#D9D9D9]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           <h1
            

@@ -16,7 +16,7 @@ const ServiceCard = ({ title, description, link, bgImgSrc }: IServices) => {
             {title}
           </h1>
 
-          <p className="text-sm font-thin text-white md:mt-5 md:text-base lg:text-[20px] mt-2">
+          <p className="text-sm font-thin text-white md:mt-5 md:text-base lg:text-md mt-2">
             {description}
           </p>
         </div>

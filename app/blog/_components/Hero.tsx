@@ -21,7 +21,7 @@ export default function Hero({data}: heroSectionProps) {
         </h1>
         <p
          
-          className="hidden text-left leading-relaxed text-white lg:block text-[14px] sm:text-lg lg:text-[18px] font-work_sans"
+          className="hidden text-left leading-relaxed text-white lg:block text-[12px] sm:text-lg lg:text-md font-work_sans"
         >
          {data?.bodyText}
         </p>

@@ -57,7 +57,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
         </li>
       </ul>
 
-      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+      <p className="font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]">
         {data?.subsections[0].bodyText}
       </p>
 
@@ -94,7 +94,7 @@ const Peels: React.FC<PeelsProps> = ({ data }) => {
           </h2>
         </li>
       </ul>
-      <p className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]">
+      <p className="font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-black text-opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]">
         {data?.subsections[1].bodyText}
       </p>
       <figure

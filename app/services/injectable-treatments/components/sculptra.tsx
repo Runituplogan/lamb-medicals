@@ -28,7 +28,7 @@ const Sculptra: React.FC<SculptraProps> = ({ data, question }) => {
       </ServicesAfterEffects>
       <ServicesAfterEffects
         title={data?.subsection?.headerText}
-        className="grid grid-cols-2 grid-rows-none gap-[1rem] [&>figcaption]:text-left"
+        className="grid grid-cols-2 grid-rows-none gap-[1rem] [&>figcaption]:text-center"
       >
         {data?.subsection?.images?.map((image: any, index) => (
           <div

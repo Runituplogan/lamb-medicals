@@ -34,7 +34,7 @@ const OurServices: React.FC<Section3Props> = () => {
     }
   
   return (
-    <section className="w-full bg-[#F1F1F1] px-5 py-10 md:py-20 lg:py-32">
+    <section className="w-full bg-[#F1F1F1] px-5 py-10 md:py-20 lg:py-25">
       <div className="mx-auto w-full max-w-[1400px] p-5 sm:p-10 md:p-14">
         <h1
          

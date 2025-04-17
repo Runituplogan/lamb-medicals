@@ -14,7 +14,7 @@ interface KybellaProps {
 
 const Kybella:React.FC <KybellaProps> =({data, question}) => {
   return (
-    <Wrapper id="kybella" className="grid gap-[4rem]">
+    <Wrapper id="kybella" className="grid py-6 gap-[4rem]">
       <ServicesIntro
         title="Kybella (Double chin)"
         description="Kybella is the first and only FDA approved injectable treatment of double chin. Kybella works by breaking down and destroyong the fat cells under the chin. Once they are destroyed, they will not return."

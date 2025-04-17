@@ -18,7 +18,7 @@ const ConciergeFamily: React.FC<ConciergeFamilyProps> = ({ data }) => {
         </h3>
 
         <p
-          className="font-work_sans text-[1.4rem] font-medium leading-[2.4rem] tracking-[0.02rem] text-white opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-[2.3rem] xxl:leading-[4.5rem]"
+          className="font-work_sans text-md font-medium leading-[2.4rem] tracking-[0.02rem] text-white opacity-80 xs:text-md xs:leading-[3rem] md:leading-[3.6rem] lg:text-lg xxl:text-md xxl:leading-[4.5rem]"
          
         >
           {data?.bodyText}
@@ -33,7 +33,7 @@ const ConciergeFamily: React.FC<ConciergeFamilyProps> = ({ data }) => {
               <i className="flex size-[2.2rem] shrink-0 items-center justify-center rounded-full bg-white text-black xs:size-[3.2rem]">
                 <CheckIcon />
               </i>
-              <span className="text-left font-rubik text-[1.4rem] font-medium leading-[2rem] text-white xs:text-lg xl:text-start">
+              <span className="text-left font-rubik text-md font-medium leading-[2rem] text-white xs:text-lg xl:text-start">
                 {item}
               </span>
             </li>
