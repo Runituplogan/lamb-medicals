@@ -61,7 +61,7 @@ const OurServices: React.FC<OurServicesProps> = ({ data }) => {
                     <span className="font-semibold">(coming soon!)</span>
                   )}
                 </hgroup>
-                <p className=" text-md leading-[2.8rem] tracking-[0.02em] text-black">
+                <p className="text-md md:h-[11rem] tracking-[0.02em] text-black">
                   {service?.title.replace("(coming soon!)", "")}
                 </p>
               </article>
